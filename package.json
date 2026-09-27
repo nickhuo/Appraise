@@ -3,6 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "explore": "bun run src/cli.ts explore",
+    "recreate": "bun run src/cli.ts recreate",
+    "recommend": "bun run src/cli.ts recommend",
+    "present": "bun run src/cli.ts present",
     "check": "tsc --noEmit",
     "test": "bun test"
   },
