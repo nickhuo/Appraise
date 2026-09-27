@@ -36,7 +36,7 @@ if (command === "explore") {
   }).finally(() => device.close());
   console.log(JSON.stringify({
     runId: graph.runId, status: graph.status, reason: graph.reason, states: graph.states.length, edges: graph.edges.length,
-    viewer: join("runs", values.app, graph.runId, "index.html"),
+    productModel: join("runs", values.app, graph.runId, "product-model.json"),
   }, null, 2));
 } else if (command === "recreate") {
   const { values } = parseArgs({

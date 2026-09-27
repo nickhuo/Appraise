@@ -11,7 +11,6 @@ import {
   toEntrances, toProductModel,
 } from "./graph.ts";
 import { capture, isSameState, peek, reveal } from "./page.ts";
-import { renderViewer } from "./viewer.ts";
 
 const POST_ACTION_MS = 800;
 const LOADING_POLL_MS = 3_000;
@@ -69,7 +68,6 @@ export async function exploreApp(options: {
   };
   const save = async () => {
     await writeFile(join(runDirectory, "graph.json"), JSON.stringify(graph, null, 1));
-    await writeFile(join(runDirectory, "index.html"), renderViewer(graph, runDirectory, projectRoot));
     if (graph.states.length > 0) await writeFile(join(runDirectory, "product-model.json"), `${JSON.stringify(toProductModel(graph), null, 2)}\n`);
   };
   const knownScreens = (): KnownScreen[] => graph.screens.map((screen) => ({
