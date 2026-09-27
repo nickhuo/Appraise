@@ -9,6 +9,9 @@ import type { DeviceAction, MonetizationFact } from "./observation.ts";
  */
 export type RunStatus = "complete" | "incomplete" | "blocked" | "failed";
 
+/** What happened to an entrance: executed, still queued, or why it could not be. */
+export type EntranceStatus = "pending" | "explored" | "blocked" | "no_effect" | "unreachable" | "timeout" | "disabled";
+
 type Evidence = {
   step: number;
   screenshot: string;
@@ -41,6 +44,8 @@ export type ProductModel = {
       coverage?: "pending" | "explored" | "blocked" | "covered" | "skipped" | "deferred";
       coveredBy?: string | null;
       blockReason?: string | null;
+      status?: EntranceStatus;
+      location?: { step: number; bounds: { x: number; y: number; width: number; height: number }; onScreen: boolean };
     }>;
     evidence: Evidence[];
     monetization: Array<MonetizationFact & { id: string }>;

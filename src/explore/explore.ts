@@ -242,6 +242,7 @@ export async function exploreApp(options: {
       const problem = result.kind === "missing" ? "not on this page" : "no visible effect";
       if (element) {
         entrance.locator = locatorOf(graph.captures[fromStep]!, element.number);
+        entrance.step = fromStep;
         entrance.name = element.name || entrance.name;
         await log(`  result: ${problem}; retrying with "${entrance.name}"`);
       } else {

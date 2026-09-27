@@ -1,5 +1,5 @@
 import type { MonetizationFact } from "../domain/observation.ts";
-import type { ProductModel, RunStatus } from "../domain/product-model.ts";
+import type { EntranceStatus, ProductModel, RunStatus } from "../domain/product-model.ts";
 import { validateSnapshot } from "../domain/product-model.ts";
 import { type Analysis, type BlockedReason, modelElements, type Usage } from "./analyst.ts";
 import type { Capture, PageElement } from "./page.ts";
@@ -8,7 +8,6 @@ const PAYMENT = /confirm purchase|buy now|pay now|place order|subscribe now/i;
 // Exploration must never change the signed-in account, report anyone, or end the session.
 const ACCOUNT_CHANGE = /edit profile|save changes|log ?out|sign ?out|delete|change password|post publicly|send email|report|block|follow|favou?rite/i;
 
-export type EntranceStatus = "pending" | "explored" | "blocked" | "no_effect" | "unreachable" | "timeout" | "disabled";
 export type Locator = Pick<PageElement, "kind" | "className" | "resourceId" | "name" | "rect" | "onScreen">;
 
 export type Entrance = {
@@ -16,6 +15,8 @@ export type Entrance = {
   name: string;
   reason: string;
   locator: Locator;
+  // The observation the locator was read from.
+  step: number;
   text: string | null;
   submit: boolean;
   blockedReason: BlockedReason | null;
@@ -87,7 +88,7 @@ export function toEntrances(evidence: Capture, analysis: Analysis, offset: numbe
     return {
       key: `${offset + index + 1}_${name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").slice(0, 32) || "element"}`,
       name, reason: entrance.reason, text: entrance.text, submit: entrance.submit, blockedReason,
-      locator: locatorOf(evidence, entrance.number),
+      locator: locatorOf(evidence, entrance.number), step: evidence.step,
       status: blockedReason ? "blocked" : "pending", note: blockedReason, attempts: 0,
     };
   });
@@ -156,6 +157,8 @@ export function toProductModel(graph: Graph): ProductModel {
           key: entrance.key, description: entrance.name, isCore: true, explored: entrance.status === "explored",
           coverage: entrance.status === "pending" ? "pending" as const : entrance.status === "explored" ? "explored" as const : "blocked" as const,
           blockReason: ["pending", "explored"].includes(entrance.status) ? undefined : entrance.note ?? entrance.status,
+          status: entrance.status,
+          location: { step: entrance.step, bounds: entrance.locator.rect, onScreen: entrance.locator.onScreen },
         })),
         evidence: state.steps.map(evidence),
         monetization: state.monetization.map(({ kind, description, basis }, index) => ({ id: `${state.id}-m${index + 1}`, kind, description, basis })),
