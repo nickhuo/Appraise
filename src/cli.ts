@@ -5,32 +5,44 @@ import { setTracingDisabled } from "@openai/agents";
 
 import { AndroidDevice } from "./explore/device.ts";
 import { exploreApp } from "./explore/explore.ts";
+import { runPipeline } from "./pipeline.ts";
 import { runPresent } from "./present/present.ts";
 import { runRecreate } from "./recreate/recreate.ts";
 import { runRecommend } from "./recommend/recommend.ts";
 
 const projectRoot = resolve(import.meta.dir, "..");
+const E2E_MAX_ACTIONS = 5;
 const [command, ...argumentsList] = process.argv.slice(2);
 
-if (command !== "explore" && command !== "recreate" && command !== "recommend" && command !== "present") {
-  console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
+if (command !== "explore" && command !== "e2e" && command !== "recreate" && command !== "recommend" && command !== "present") {
+  console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--model <id>]\n       bun run src/cli.ts e2e --app <name> [--package <id>] [--device <id>] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
   process.exit(2);
 }
 
-if (command === "explore") {
+if (command === "explore" || command === "e2e") {
   setTracingDisabled(true);
   const { values } = parseArgs({
     args: argumentsList,
-    options: { app: { type: "string" }, package: { type: "string" }, device: { type: "string" }, "max-actions": { type: "string" }, model: { type: "string" } },
+    options: {
+      app: { type: "string" }, package: { type: "string" }, device: { type: "string" }, model: { type: "string" },
+      ...(command === "explore" && { "max-actions": { type: "string" } }),
+    },
     strict: true,
   });
   if (!values.app || !/^[a-z0-9_-]+$/.test(values.app)) throw new Error("--app must be a lowercase name containing letters, numbers, _ or -");
   const knownApps = await Bun.file(join(projectRoot, "apps.json")).json() as Record<string, string>;
   const packageId = values.package ?? knownApps[values.app];
   if (!packageId) throw new Error(`No package ID for ${values.app}; pass --package`);
-  const maxActions = Number(values["max-actions"] ?? 30);
+  const maxActions = command === "e2e" ? E2E_MAX_ACTIONS : Number(values["max-actions"] ?? 30);
   if (!Number.isInteger(maxActions) || maxActions < 1 || maxActions > 200) throw new Error("--max-actions must be an integer from 1 to 200");
   const device = await AndroidDevice.connect(values.device);
+  if (command === "e2e") {
+    const result = await runPipeline({
+      appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: (line) => console.log(line),
+    }).finally(() => device.close());
+    console.log(`\n━━ Done ━━\n  mock   ${result.mock}\n  slides ${result.slides}`);
+    process.exit(0);
+  }
   const graph = await exploreApp({
     appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: (line) => console.error(line),
   }).finally(() => device.close());

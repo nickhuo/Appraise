@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "explore": "bun run src/cli.ts explore",
+    "e2e": "bun run src/cli.ts e2e",
     "recreate": "bun run src/cli.ts recreate",
     "recommend": "bun run src/cli.ts recommend",
     "present": "bun run src/cli.ts present",
