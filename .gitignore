@@ -1,0 +1,9 @@
+/Sketchpad/
+/node_modules/
+/data/
+/runs/
+.env
+.env.local
+/src/**/AGENT.md
+/.appium/
+.DS_Store
