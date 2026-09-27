@@ -25,8 +25,8 @@ test("present shows only final approved revisions and keeps observed evidence di
       app: { key: "app", packageId: "com.example", version: null },
       states: [{
         id: "observed-limit", screen: "Chat limit", variant: "default", summary: "Limit reached",
-        isCore: true, isModal: false, fingerprint: "limit", viewport: { width: 1, height: 1 },
-        elements: [], visual: { layout: "", colors: [], typography: "", copy: [], assets: [] },
+        isCore: true, isModal: false, viewport: { width: 1, height: 1 },
+        visual: { copy: [] },
         groups: [], evidence: [{ step: 0, screenshot, elementTree }], monetization: [],
       }],
       transitions: [],

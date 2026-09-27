@@ -1,4 +1,4 @@
-import type { ActionGroup, Boundary, DeviceAction, MonetizationFact, ScreenElement, Visual } from "./observation.ts";
+import type { DeviceAction, MonetizationFact } from "./observation.ts";
 
 /**
  * Why an exploration run stopped; `stopReason` carries the specific cause.
@@ -31,17 +31,15 @@ export type ProductModel = {
     summary: string;
     isCore: boolean;
     isModal: boolean;
-    boundary?: Boundary | null;
-    fingerprint?: string;
     viewport: { width: number; height: number };
-    elements?: ScreenElement[];
-    visual: Pick<Visual, "copy"> & Partial<Omit<Visual, "copy">>;
-    groups: Array<Omit<ActionGroup, "memberRefs"> & { memberRefs?: string[] } & {
+    visual: { copy: string[] };
+    groups: Array<{
+      key: string;
+      description: string;
+      isCore: boolean;
       explored: boolean;
       coverage?: "pending" | "explored" | "blocked" | "covered" | "skipped" | "deferred";
       coveredBy?: string | null;
-      queuedWith?: string | null;
-      skipReason?: string | null;
       blockReason?: string | null;
     }>;
     evidence: Evidence[];
@@ -55,7 +53,6 @@ export type ProductModel = {
     action: DeviceAction;
     outcome: string;
     changeSummary: string | null;
-    toolResult?: string | null;
     evidence: Evidence;
   }>;
 };

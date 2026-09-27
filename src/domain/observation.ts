@@ -31,25 +31,3 @@ export type MonetizationFact = {
   description: string;
   basis: "observed" | "inferred";
 };
-
-export type Visual = {
-  layout: string;
-  colors: string[];
-  typography: string;
-  copy: string[];
-  assets: Array<{ description: string; bounds: number[] }>;
-};
-
-export type ActionGroup = {
-  key: string;
-  description: string;
-  memberRefs: string[];
-  isCore: boolean;
-  journeyRole?: "entry" | "required_step" | "supporting";
-};
-
-export type Boundary = {
-  kind: "camera" | "photo_library" | "os_settings" | "permission" | "external_browser" | "external_app";
-  required: boolean;
-  reason: string;
-};
