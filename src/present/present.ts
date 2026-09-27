@@ -12,30 +12,9 @@ type Concept = {
   observedScreen: string;
   observedSummary: string;
   evidenceId: string;
-  evidencePath: string | null;
-  screenshot: string | null;
-  resume: { stateId: string; screen: string; screenshot: string | null };
-};
-
-const demoProposal: Proposal = {
-  id: "demo-refill",
-  revision: 0,
-  title: "Extra conversation time when it matters",
-  opportunityType: "product_change",
-  entryStateId: "demo-chat-limit",
-  evidenceIds: ["demo-chat-limit"],
-  trigger: "A user reaches a conversation limit during an active task.",
-  userNeed: "Finish the conversation without losing context.",
-  eligibility: "Free users at the limit",
-  productChange: "Offer one extra conversation turn at the existing limit.",
-  reward: "One extra conversation turn",
-  optIn: "Watch a short ad to continue",
-  fulfillment: "Add the turn after the ad completes, then return to the same chat.",
-  declinePath: "Close the offer and keep the existing limit screen available.",
-  failurePath: "Return to the limit screen without granting a turn.",
-  businessImpact: "Test whether occasional extra turns reduce frustration without replacing subscriptions.",
-  validationPlan: "Measure offer acceptance, turn usage, return to chat, and subscription conversion.",
-  assumptions: ["The conversation limit and reward size are illustrative demo data."],
+  evidencePath: string;
+  screenshot: string;
+  resume: { stateId: string; screen: string; screenshot: string };
 };
 
 function escapeHtml(value: string): string {
@@ -58,7 +37,7 @@ function phone(label: string, isProposed: boolean, screen: string): string {
   return `<figure class="phone-wrap"><figcaption class="phone-label">${escapeHtml(label)}<span class="phone-tag${isProposed ? " proposed" : ""}">${isProposed ? "Proposed" : "Observed"}</span></figcaption><div class="phone">${screen}</div></figure>`;
 }
 
-function conceptSlides(concept: Concept, appName: string, isDemo: boolean): string[] {
+function conceptSlides(concept: Concept): string[] {
   const { proposal, observedScreen, observedSummary, evidenceId, screenshot, resume } = concept;
   // Proposals written before on-screen copy existed get generic copy built from a short reward label.
   const reward = preview(proposal.reward.replace(/^(?:after|once|when|if)\b[^,]*,\s*/i, "").replace(/^the user (?:can|gets|receives)\s+/i, "").split(/[,;.—]|\s(?:after|before|when|once|not)\s|\b(?:applied|credited|delivered|granted)\b/i)[0]!.trim()
@@ -75,14 +54,13 @@ function conceptSlides(concept: Concept, appName: string, isDemo: boolean): stri
       .replace(/\s*\((?:state|evidence|coverage)[^)]*\)/gi, "")
       .replace(/\s+in state [0-9a-f-]+/gi, ""), 145))
     .join(" ") || preview(proposal.validationPlan, 170);
-  const prefix = isDemo ? "Illustrative demo" : `Proposal ${escapeHtml(proposal.id)} · revision ${escapeHtml(String(proposal.revision))}`;
-  const source = isDemo ? "Demo data" : `Observed screen: ${escapeHtml(observedScreen)} · evidence: ${escapeHtml(evidenceId)}` +
+  const prefix = `Proposal ${escapeHtml(proposal.id)} · revision ${escapeHtml(String(proposal.revision))}`;
+  const source = `Observed screen: ${escapeHtml(observedScreen)} · evidence: ${escapeHtml(evidenceId)}` +
     (resume.stateId !== evidenceId ? ` · resumes on ${escapeHtml(resume.screen)} (${escapeHtml(resume.stateId)})` : "");
-  const appHeader = `<div class="app-head"><span class="app-mark">${escapeHtml(appName.slice(0, 1).toUpperCase())}</span><strong>${escapeHtml(appName)}</strong></div>`;
   const button = (copy: string, secondary = false): string => `<div class="mock-button${secondary ? " secondary" : ""}">${escapeHtml(copy)}</div>`;
   // Proposed UI is drawn over the observed screen, so the change reads as part of the real app rather than a new one.
   const screen = (background: string | null, overlay: Overlay, content = ""): string => {
-    const base = background ? `<img class="observed-screen" src="${background}" alt="" />` : `${appHeader}<div class="demo-screen"></div>`;
+    const base = background ? `<img class="observed-screen" src="${background}" alt="" />` : "";
     const scrim = overlay === "sheet" ? `<div class="scrim"></div>` : "";
     return `${base}${scrim}${overlay === "none" ? "" : `<div class="overlay ${overlay}">${content}</div>`}`;
   };
@@ -118,117 +96,94 @@ function conceptSlides(concept: Concept, appName: string, isDemo: boolean): stri
 
 export async function runPresent(options: {
   projectRoot: string;
-  demo?: boolean;
-  appKey?: string;
-  runId?: string;
-  recommendationDirectory?: string;
-  mockDirectory?: string;
+  appKey: string;
+  runId: string;
+  recommendationDirectory: string;
+  mockDirectory: string;
   proposalId?: string;
 }): Promise<{ outputDirectory: string; slides: number; approved: number }> {
+  const { appKey, runId, recommendationDirectory, mockDirectory } = options;
+  if (!/^[a-z0-9_-]+$/.test(appKey) || !/^[a-zA-Z0-9_-]+$/.test(runId)) throw new Error("Invalid app or run ID");
   const [template, rendererSource] = await Promise.all([
     readFile(new URL("./index.html", import.meta.url), "utf8"),
     readFile(new URL(import.meta.url)),
   ]);
-  let concepts: Concept[];
-  let appName: string;
-  let outputRoot: string;
-  let mockLink: string | null = null;
   const inputHash = createHash("sha256").update(template).update(rendererSource);
-  if (options.demo) {
-    if (options.appKey || options.runId || options.recommendationDirectory || options.mockDirectory || options.proposalId) {
-      throw new Error("--demo cannot be combined with run inputs");
-    }
-    concepts = [{ proposal: demoProposal, observedScreen: "Demo chat limit", observedSummary: "The conversation is paused at an illustrative limit.", evidenceId: "demo-chat-limit", evidencePath: null, screenshot: null,
-      resume: { stateId: "demo-chat-limit", screen: "Demo chat limit", screenshot: null } }];
-    appName = "Sample app";
-    outputRoot = join(options.projectRoot, "runs", "demo", "flows");
-    inputHash.update(JSON.stringify(concepts));
-  } else {
-    const { appKey, runId, recommendationDirectory, mockDirectory } = options;
-    if (!appKey || !/^[a-z0-9_-]+$/.test(appKey) || !runId || !/^[a-zA-Z0-9_-]+$/.test(runId) || !recommendationDirectory || !mockDirectory) {
-      throw new Error("Present requires --app, --run, --recommend-dir, and --mock-dir");
-    }
-    const runDirectory = await realpath(join(options.projectRoot, "runs", appKey, runId));
-    const recommendationRoot = await realpath(recommendationDirectory);
-    const mockRoot = await realpath(mockDirectory);
-    for (const directory of [recommendationRoot, mockRoot]) {
-      const path = relative(runDirectory, directory);
-      if (path.startsWith("..") || isAbsolute(path)) throw new Error("Present inputs must belong to the selected run");
-    }
-    const [snapshotBytes, proposalBytes, judgmentBytes, mockBytes] = await Promise.all([
-      readFile(join(runDirectory, "product-model.json")),
-      readFile(join(recommendationRoot, "proposals.json")),
-      readFile(join(recommendationRoot, "judgments.json")),
-      readFile(join(mockRoot, "manifest.json")),
-    ]);
-    const snapshot = JSON.parse(snapshotBytes.toString()) as ProductModel;
-    const proposalFile = JSON.parse(proposalBytes.toString()) as { runId: string; proposals: Proposal[] };
-    const judgmentFile = JSON.parse(judgmentBytes.toString()) as { runId: string; judgments: Judgment[]; approvedProposalIds: string[] };
-    const mock = JSON.parse(mockBytes.toString()) as MockManifest;
-    validateSnapshot(snapshot);
-    if (snapshot.runId !== runId || snapshot.app.key !== appKey || proposalFile.runId !== runId || judgmentFile.runId !== runId || mock.runId !== runId || mock.app !== appKey) {
-      throw new Error("Present inputs do not match the selected run");
-    }
-    const evidenceIds = new Set([
-      ...snapshot.states.map((state) => state.id),
-      ...snapshot.transitions.map((transition) => transition.id),
-      ...snapshot.states.flatMap((state) => state.monetization.map((fact) => fact.id)),
-    ]);
-    concepts = [];
-    const readScreenshot = async (state: ProductModel["states"][number]): Promise<string> => {
-      const screenshotPath = await realpath(resolve(options.projectRoot, state.evidence[0]!.screenshot));
-      const path = relative(runDirectory, screenshotPath);
-      if (path.startsWith("..") || isAbsolute(path)) throw new Error(`Screenshot for ${state.id} is outside this run`);
-      const imageBytes = await readFile(screenshotPath);
-      if (!imageBytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) {
-        throw new Error(`Screenshot for ${state.id} is not a PNG`);
-      }
-      inputHash.update(imageBytes);
-      return `data:image/png;base64,${imageBytes.toString("base64")}`;
-    };
-    const approvedIds = options.proposalId ? [options.proposalId] : judgmentFile.approvedProposalIds;
-    for (const proposalId of approvedIds) {
-      if (!judgmentFile.approvedProposalIds.includes(proposalId)) throw new Error(`Proposal ${proposalId} is not approved`);
-      const decisions = judgmentFile.judgments.filter((judgment) => judgment.proposalId === proposalId)
-        .sort((left, right) => right.revision - left.revision);
-      const judgment = decisions[0];
-      const proposal = proposalFile.proposals.find((item) => item.id === proposalId && item.revision === judgment?.revision);
-      const state = snapshot.states.find((item) => item.id === proposal?.entryStateId);
-      const resumeState = snapshot.states.find((item) => item.id === (proposal?.resumeStateId ?? proposal?.entryStateId));
-      if (!judgment || judgment.decision !== "pass" || judgment.hardFailures.length || !proposal || !state || !resumeState ||
-          !proposal.evidenceIds.length || proposal.evidenceIds.some((id) => !evidenceIds.has(id)) ||
-          !mock.states.some((item) => item.id === state.id)) {
-        throw new Error(`Approved proposal ${proposalId} has no valid final pass, entry state, or mock state`);
-      }
-      const [screenshot, resumeScreenshot] = [await readScreenshot(state), await readScreenshot(resumeState)];
-      concepts.push({ proposal, observedScreen: state.screen, observedSummary: state.summary,
-        evidenceId: state.id, evidencePath: state.evidence[0]!.screenshot, screenshot,
-        resume: { stateId: resumeState.id, screen: resumeState.screen, screenshot: resumeScreenshot } });
-    }
-    appName = appKey;
-    outputRoot = join(runDirectory, "flows");
-    inputHash.update(snapshotBytes).update(proposalBytes).update(judgmentBytes).update(mockBytes);
-    mockLink = mockRoot;
+  const runDirectory = await realpath(join(options.projectRoot, "runs", appKey, runId));
+  const recommendationRoot = await realpath(recommendationDirectory);
+  const mockRoot = await realpath(mockDirectory);
+  for (const directory of [recommendationRoot, mockRoot]) {
+    const path = relative(runDirectory, directory);
+    if (path.startsWith("..") || isAbsolute(path)) throw new Error("Present inputs must belong to the selected run");
   }
+  const [snapshotBytes, proposalBytes, judgmentBytes, mockBytes] = await Promise.all([
+    readFile(join(runDirectory, "product-model.json")),
+    readFile(join(recommendationRoot, "proposals.json")),
+    readFile(join(recommendationRoot, "judgments.json")),
+    readFile(join(mockRoot, "manifest.json")),
+  ]);
+  const snapshot = JSON.parse(snapshotBytes.toString()) as ProductModel;
+  const proposalFile = JSON.parse(proposalBytes.toString()) as { runId: string; proposals: Proposal[] };
+  const judgmentFile = JSON.parse(judgmentBytes.toString()) as { runId: string; judgments: Judgment[]; approvedProposalIds: string[] };
+  const mock = JSON.parse(mockBytes.toString()) as MockManifest;
+  validateSnapshot(snapshot);
+  if (snapshot.runId !== runId || snapshot.app.key !== appKey || proposalFile.runId !== runId || judgmentFile.runId !== runId || mock.runId !== runId || mock.app !== appKey) {
+    throw new Error("Present inputs do not match the selected run");
+  }
+  const evidenceIds = new Set([
+    ...snapshot.states.map((state) => state.id),
+    ...snapshot.transitions.map((transition) => transition.id),
+    ...snapshot.states.flatMap((state) => state.monetization.map((fact) => fact.id)),
+  ]);
+  const concepts: Concept[] = [];
+  const readScreenshot = async (state: ProductModel["states"][number]): Promise<string> => {
+    const screenshotPath = await realpath(resolve(options.projectRoot, state.evidence[0]!.screenshot));
+    const path = relative(runDirectory, screenshotPath);
+    if (path.startsWith("..") || isAbsolute(path)) throw new Error(`Screenshot for ${state.id} is outside this run`);
+    const imageBytes = await readFile(screenshotPath);
+    if (!imageBytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) {
+      throw new Error(`Screenshot for ${state.id} is not a PNG`);
+    }
+    inputHash.update(imageBytes);
+    return `data:image/png;base64,${imageBytes.toString("base64")}`;
+  };
+  const approvedIds = options.proposalId ? [options.proposalId] : judgmentFile.approvedProposalIds;
+  for (const proposalId of approvedIds) {
+    if (!judgmentFile.approvedProposalIds.includes(proposalId)) throw new Error(`Proposal ${proposalId} is not approved`);
+    const decisions = judgmentFile.judgments.filter((judgment) => judgment.proposalId === proposalId)
+      .sort((left, right) => right.revision - left.revision);
+    const judgment = decisions[0];
+    const proposal = proposalFile.proposals.find((item) => item.id === proposalId && item.revision === judgment?.revision);
+    const state = snapshot.states.find((item) => item.id === proposal?.entryStateId);
+    const resumeState = snapshot.states.find((item) => item.id === (proposal?.resumeStateId ?? proposal?.entryStateId));
+    if (!judgment || judgment.decision !== "pass" || judgment.hardFailures.length || !proposal || !state || !resumeState ||
+        !proposal.evidenceIds.length || proposal.evidenceIds.some((id) => !evidenceIds.has(id)) ||
+        !mock.states.some((item) => item.id === state.id)) {
+      throw new Error(`Approved proposal ${proposalId} has no valid final pass, entry state, or mock state`);
+    }
+    const [screenshot, resumeScreenshot] = [await readScreenshot(state), await readScreenshot(resumeState)];
+    concepts.push({ proposal, observedScreen: state.screen, observedSummary: state.summary,
+      evidenceId: state.id, evidencePath: state.evidence[0]!.screenshot, screenshot,
+      resume: { stateId: resumeState.id, screen: resumeState.screen, screenshot: resumeScreenshot } });
+  }
+  const outputRoot = join(runDirectory, "flows");
+  inputHash.update(snapshotBytes).update(proposalBytes).update(judgmentBytes).update(mockBytes);
   const outputDirectory = join(outputRoot, inputHash.update(options.proposalId ?? "").digest("hex"));
-  const slides = concepts.flatMap((concept) => conceptSlides(concept, appName, Boolean(options.demo)));
-  if (!slides.length) slides.push(`<section class="slide empty"><div class="slide-top"><span>Appraise · ${escapeHtml(appName)}</span><span>1 / 1</span></div><h1>No approved recommendation</h1><p>No proposal passed the judge for this run. Review the judgments before presenting an idea.</p></section>`);
-  const link = mockLink ? `<a class="mock-link" href="${escapeHtml(relative(outputDirectory, join(mockLink, "index.html")))}">Open interactive mock ↗</a>` : "";
-  const html = template.replace("__SLIDES__", slides.join("\n"))
-    .replace("__MOCK_LINK__", link)
-    .replace("__DEMO_LABEL__", options.demo ? "Demo data · not an observed app" : "Observed screens and illustrative proposed screens");
+  const slides = concepts.flatMap(conceptSlides);
+  if (!slides.length) slides.push(`<section class="slide empty"><div class="slide-top"><span>Appraise · ${escapeHtml(appKey)}</span><span>1 / 1</span></div><h1>No approved recommendation</h1><p>No proposal passed the judge for this run. Review the judgments before presenting an idea.</p></section>`);
+  const link = `<a class="mock-link" href="${escapeHtml(relative(outputDirectory, join(mockRoot, "index.html")))}">Open interactive mock ↗</a>`;
+  const html = template.replace("__SLIDES__", slides.join("\n")).replace("__MOCK_LINK__", link);
   await mkdir(outputDirectory, { recursive: true });
   await Promise.all([
     writeFile(join(outputDirectory, "index.html"), html),
     writeFile(join(outputDirectory, "manifest.json"), `${JSON.stringify({
-      app: appName, runId: options.runId ?? null, demo: Boolean(options.demo),
+      app: appKey, runId,
       approvedProposalIds: concepts.map((concept) => concept.proposal.id),
       sources: concepts.map((concept) => ({
         proposalId: concept.proposal.id, revision: concept.proposal.revision,
         entryStateId: concept.evidenceId, resumeStateId: concept.resume.stateId, screenshot: concept.evidencePath,
       })),
-      slides: slides.length, recommendationDirectory: options.recommendationDirectory ?? null,
-      mockDirectory: options.mockDirectory ?? null,
+      slides: slides.length, recommendationDirectory, mockDirectory,
     }, null, 2)}\n`),
   ]);
   return { outputDirectory, slides: slides.length, approved: concepts.length };

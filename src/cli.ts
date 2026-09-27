@@ -13,7 +13,7 @@ const projectRoot = resolve(import.meta.dir, "..");
 const [command, ...argumentsList] = process.argv.slice(2);
 
 if (command !== "explore" && command !== "recreate" && command !== "recommend" && command !== "present") {
-  console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --demo\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
+  console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
   process.exit(2);
 }
 
@@ -71,13 +71,16 @@ if (command === "explore") {
   const { values } = parseArgs({
     args: argumentsList,
     options: {
-      demo: { type: "boolean" }, app: { type: "string" }, run: { type: "string" },
+      app: { type: "string" }, run: { type: "string" },
       "recommend-dir": { type: "string" }, "mock-dir": { type: "string" }, "proposal-id": { type: "string" },
     },
     strict: true,
   });
+  if (!values.app || !values.run || !values["recommend-dir"] || !values["mock-dir"]) {
+    throw new Error("Present requires --app, --run, --recommend-dir and --mock-dir");
+  }
   const presented = await runPresent({
-    projectRoot, demo: values.demo, appKey: values.app, runId: values.run,
+    projectRoot, appKey: values.app, runId: values.run,
     recommendationDirectory: values["recommend-dir"], mockDirectory: values["mock-dir"],
     proposalId: values["proposal-id"],
   });
