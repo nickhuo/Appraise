@@ -95,7 +95,6 @@ function parseSource(xml: string): Node[] {
   return root.children.flatMap((node) => node.className === "hierarchy" ? node.children : [node]);
 }
 
-const shortClass = (className: string) => className.slice(className.lastIndexOf(".") + 1);
 const area = (rect: Rect) => rect.width * rect.height;
 // React Native joins every child text into a container's content-desc, so names are capped.
 const ownName = (node: Node) => (node.attributes.text || node.attributes["content-desc"] || node.attributes.hint || "").trim().slice(0, NAME_LENGTH);
@@ -122,7 +121,6 @@ function readSource(xml: string, viewport: { width: number; height: number }): O
   const elements: PageElement[] = [];
   const texts: string[] = [];
   let loading = false;
-  const intersectsScreen = (rect: Rect) => rect.x < viewport.width && rect.y < viewport.height && rect.x + rect.width > 0 && rect.y + rect.height > 0;
   const walk = (node: Node, outer: PageElement | null, repeated: boolean, inScroller: boolean) => {
     if (IGNORED_PACKAGES.test(node.attributes.package ?? "")) return;
     const onScreen = node.attributes.displayed === "true";
@@ -130,8 +128,10 @@ function readSource(xml: string, viewport: { width: number; height: number }): O
     // Over the screen it is hidden (a closed drawer); beside it, it belongs to another page of a pager or carousel;
     // outside any scroll container (a hidden toolbar) no scrolling brings it in.
     const isBeside = node.rect.x >= viewport.width || node.rect.x + node.rect.width <= 0;
-    if (!onScreen && (intersectsScreen(node.rect) || isBeside || !inScroller)) return;
-    const className = shortClass(node.className);
+    const intersectsScreen = node.rect.x < viewport.width && node.rect.y < viewport.height &&
+      node.rect.x + node.rect.width > 0 && node.rect.y + node.rect.height > 0;
+    if (!onScreen && (intersectsScreen || isBeside || !inScroller)) return;
+    const className = node.className.slice(node.className.lastIndexOf(".") + 1);
     if (onScreen && className.endsWith("ProgressBar")) loading = true;
     const text = node.attributes.text?.trim();
     if (text && !texts.includes(text)) texts.push(text);
@@ -165,18 +165,14 @@ function readSource(xml: string, viewport: { width: number; height: number }): O
   // The raw source churns with every animation, so "did anything change" compares what is visible instead.
   const visible = elements.filter((element) => element.onScreen).map((element) => [element.name, element.rect.x, element.rect.y, element.enabled]);
   const contentKey = createHash("sha1").update(JSON.stringify([visible, texts])).digest("hex");
-  const actionKeys = actionKeysOf(elements);
-  return { elements, texts: texts.slice(0, 200), loading, contentKey, actionKeys, signature: createHash("sha1").update(actionKeys.join("\n")).digest("hex").slice(0, 12) };
-}
-
-/** A state's identity: which actions the page offers, including disabled and off-screen ones, independent of scroll position. */
-function actionKeysOf(elements: PageElement[]): string[] {
+  // State identity includes disabled and off-screen actions, independent of scroll position.
   const keys = elements.map((element) => [
     element.kind, element.className, element.resourceId,
     // Digits are masked so counters and timestamps do not split a state; inputs lose their hint once they hold text.
     element.kind === "type" || element.repeated || element.name.length > SHORT_NAME_LENGTH ? "" : element.name.replace(/[\d\s/.,:]*\d[\d\s/.,:]*/g, "#"),
   ].join("|"));
-  return [...new Set(keys)].sort();
+  const actionKeys = [...new Set(keys)].sort();
+  return { elements, texts: texts.slice(0, 200), loading, contentKey, actionKeys, signature: createHash("sha1").update(actionKeys.join("\n")).digest("hex").slice(0, 12) };
 }
 
 /** Reads the screen until its signature repeats, within a fixed time budget; an animating screen returns unsettled. */

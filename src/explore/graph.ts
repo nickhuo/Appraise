@@ -133,7 +133,6 @@ export function routeToScreen(graph: Graph, from: string, screenId: string): Gra
 
 /** Exports the graph in the ProductModel shape that recreate, recommend and present already read. */
 export function toProductModel(graph: Graph): ProductModel {
-  const screenName = (state: GraphState) => graph.screens.find((screen) => screen.id === state.screenId)!.name;
   const evidence = (step: number) => {
     const evidence = graph.captures[step]!;
     return { step, screenshot: evidence.screenshot, elementTree: evidence.elementTree, ...evidence.scroll && { scroll: evidence.scroll } };
@@ -149,8 +148,9 @@ export function toProductModel(graph: Graph): ProductModel {
     },
     states: graph.states.map((state) => {
       const first = graph.captures[state.steps[0]!]!;
+      const screen = graph.screens.find((screen) => screen.id === state.screenId)!.name;
       return {
-        id: state.id, screen: screenName(state), variant: state.variant, summary: state.summary, isCore: true, isModal: false,
+        id: state.id, screen, variant: state.variant, summary: state.summary, isCore: true, isModal: false,
         viewport: graph.viewport,
         visual: { copy: first.texts.slice(0, 40) },
         groups: state.entrances.map((entrance) => ({

@@ -27,9 +27,6 @@ type Attempt = ({ kind: "arrived"; stateId: string; step: number } & Tap) | ({ k
 
 class OutOfBudget extends Error {}
 
-// A UiAutomator2 request that hangs (a huge or churning page) surfaces as a timeout; restarting the app usually clears it.
-const isDeviceTimeout = (error: unknown) => error instanceof Error && /timed out|timeout/i.test(error.message);
-
 export async function exploreApp(options: {
   appKey: string;
   packageId: string;
@@ -338,7 +335,8 @@ export async function exploreApp(options: {
     await save();
     let recoveries = 0;
     const recover = async (error: unknown, entrances: Entrance[]) => {
-      if (!isDeviceTimeout(error) || ++recoveries > MAX_DEVICE_RECOVERIES) throw error;
+      // Hung UiAutomator2 requests can recover after restarting the app.
+      if (!(error instanceof Error && /timed out|timeout/i.test(error.message)) || ++recoveries > MAX_DEVICE_RECOVERIES) throw error;
       for (const entrance of entrances.filter((item) => item.status === "pending")) {
         entrance.status = "unreachable";
         entrance.note = "the device stopped responding";
