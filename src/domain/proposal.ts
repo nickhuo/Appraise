@@ -1,3 +1,11 @@
+/** Short on-screen copy for each proposed step, written by the proposer and reviewed with the proposal. */
+export type ProposalScreens = {
+  entry: { title: string; detail: string };
+  choice: { title: string; detail: string; accept: string; decline: string };
+  inUse: { request: string; response: string; badge: string };
+  after: { title: string; detail: string };
+};
+
 export type Proposal = {
   id: string;
   revision: number;
@@ -19,6 +27,8 @@ export type Proposal = {
   businessImpact: string;
   validationPlan: string;
   assumptions: string[];
+  // Absent in proposals written before on-screen copy was part of a proposal.
+  screens?: ProposalScreens;
 };
 
 export type JudgmentScores = {

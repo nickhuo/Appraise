@@ -5,7 +5,7 @@ import { isAbsolute, join, relative, resolve } from "node:path";
 import type { MockManifest } from "../domain/mock.ts";
 import type { ProductModel } from "../domain/product-model.ts";
 import { validateSnapshot } from "../domain/product-model.ts";
-import type { Judgment, Proposal } from "../domain/proposal.ts";
+import type { Judgment, Proposal, ProposalScreens } from "../domain/proposal.ts";
 
 type Concept = {
   proposal: Proposal;
@@ -52,7 +52,7 @@ function preview(value: string, limit: number): string {
   return `${clipped.slice(0, clipped.lastIndexOf(" ") > 0 ? clipped.lastIndexOf(" ") : limit).trimEnd()}…`;
 }
 
-type Overlay = "none" | "banner" | "sheet" | "full" | "toast";
+type Overlay = "none" | "banner" | "sheet" | "full" | "use";
 
 function phone(label: string, isProposed: boolean, screen: string): string {
   return `<figure class="phone-wrap"><figcaption class="phone-label">${escapeHtml(label)}<span class="phone-tag${isProposed ? " proposed" : ""}">${isProposed ? "Proposed" : "Observed"}</span></figcaption><div class="phone">${screen}</div></figure>`;
@@ -60,8 +60,15 @@ function phone(label: string, isProposed: boolean, screen: string): string {
 
 function conceptSlides(concept: Concept, appName: string, isDemo: boolean): string[] {
   const { proposal, observedScreen, observedSummary, evidenceId, screenshot, resume } = concept;
-  const reward = preview(proposal.reward.split(/[,;.—]|\s(?:after|before|when|once|not)\s|\b(?:applied|credited|delivered|granted)\b/i)[0]!.trim()
-    .replace(/^One additional /i, "One extra "), 72);
+  // Proposals written before on-screen copy existed get generic copy built from a short reward label.
+  const reward = preview(proposal.reward.replace(/^(?:after|once|when|if)\b[^,]*,\s*/i, "").replace(/^the user (?:can|gets|receives)\s+/i, "").split(/[,;.—]|\s(?:after|before|when|once|not)\s|\b(?:applied|credited|delivered|granted)\b/i)[0]!.trim()
+    .replace(/^One additional /i, "One extra ").replace(/^\w/, (first) => first.toUpperCase()), 72);
+  const copy: ProposalScreens = proposal.screens ?? {
+    entry: { title: reward, detail: "Watch a short ad · optional" },
+    choice: { title: reward, detail: "Watch a short ad to get it. Skip it and nothing changes.", accept: "Watch ad", decline: "No thanks" },
+    inUse: { request: "", response: reward, badge: "Reward" },
+    after: { title: "Reward used", detail: "Normal use continues" },
+  };
   const title = preview(proposal.title.split(",")[0]!, 100);
   const validation = proposal.assumptions.slice(0, 2)
     .map((assumption) => preview(assumption
@@ -84,15 +91,16 @@ function conceptSlides(concept: Concept, appName: string, isDemo: boolean): stri
   const steps = {
     observed: phone("01 · Existing state", false, screen(screenshot, "none")),
     trigger: phone("02 · Proposed mechanic", true, screen(offerScreenshot, "banner",
-      `<span class="play" aria-hidden="true">▶</span><span><strong>${escapeHtml(reward)}</strong><small>Watch a short ad · optional</small></span>`)),
+      `<span class="play" aria-hidden="true">▶</span><span><strong>${escapeHtml(copy.entry.title)}</strong><small>${escapeHtml(copy.entry.detail)}</small></span>`)),
     offer: phone("03 · Clear choice", true, screen(offerScreenshot, "sheet",
-      `<p class="mock-eyebrow">Optional reward</p><h3>${escapeHtml(reward)}</h3><p>Watch a short ad to get it. Skip it and nothing changes.</p>${button("Watch ad")}${button("No thanks", true)}`)),
+      `<p class="mock-eyebrow">Optional reward</p><h3>${escapeHtml(copy.choice.title)}</h3><p>${escapeHtml(copy.choice.detail)}</p>${button(copy.choice.accept)}${button(copy.choice.decline, true)}`)),
     ad: phone("04 · Rewarded ad", true, screen(null, "full",
       `<div class="ad-top"><span>Reward in 0:12</span><span class="ad-close" aria-hidden="true">×</span></div><div class="ad-creative">Sponsored</div><div class="ad-progress"><span></span></div>`)),
-    granted: phone("05 · Reward granted", true, screen(resume.screenshot, "toast",
-      `<span class="check" aria-hidden="true">✓</span><span><strong>Reward unlocked</strong><small>${escapeHtml(reward)}</small></span>`)),
-    resumed: phone("06 · Back to the task", true, screen(resume.screenshot, "banner",
-      `<span class="check" aria-hidden="true">✓</span><span><strong>${escapeHtml(reward)}</strong><small>Ready to use here</small></span>`)),
+    inUse: phone("05 · Reward in use", true, screen(resume.screenshot, "use",
+      (copy.inUse.request ? `<p class="request">${escapeHtml(copy.inUse.request)}</p>` : "") +
+      `<div class="response"><span class="reward-badge"><span aria-hidden="true">✓</span> ${escapeHtml(copy.inUse.badge)}</span><p>${escapeHtml(copy.inUse.response)}</p></div>`)),
+    after: phone("06 · After the reward", true, screen(resume.screenshot, "banner",
+      `<span class="info" aria-hidden="true">i</span><span><strong>${escapeHtml(copy.after.title)}</strong><small>${escapeHtml(copy.after.detail)}</small></span>`)),
   };
   const arrow = `<span class="flow-arrow" aria-hidden="true">→</span>`;
   const slide = (part: number, heading: string, lead: string, left: string, right: string, notes: string) =>
@@ -100,10 +108,10 @@ function conceptSlides(concept: Concept, appName: string, isDemo: boolean): stri
     `<div class="story">${left}${arrow}${right}<div class="notes">${notes}</div></div></section>`;
   return [
     slide(1, title, preview(proposal.userNeed, 145), steps.observed, steps.trigger,
-      `<h2>What changes</h2><p>An optional ad offer unlocks ${escapeHtml(reward.toLowerCase())}. The original task remains available.</p><h2>Where it appears</h2><p>${escapeHtml(preview(observedSummary, 170))}</p><p class="source">${source}</p>`),
+      `<h2>What changes</h2><p>${escapeHtml(preview(proposal.productChange, 170))}</p><h2>Where it appears</h2><p>${escapeHtml(preview(observedSummary, 170))}</p><p class="source">${source}</p>`),
     slide(2, "The user chooses the exchange", preview(proposal.optIn, 145), steps.offer, steps.ad,
       `<h2>If they decline</h2><p>${escapeHtml(preview(proposal.declinePath, 145))}</p><h2>If the ad fails</h2><p>If no ad is available, the offer is hidden and the existing path remains.</p><p class="source">Ad content is simulated. ${source}</p>`),
-    slide(3, "Value arrives before the task resumes", preview(proposal.fulfillment, 145), steps.granted, steps.resumed,
+    slide(3, "The reward is used inside the task", preview(proposal.fulfillment, 145), steps.inUse, steps.after,
       `<h2>Product case</h2><p>${escapeHtml(preview(proposal.businessImpact, 170))}</p><h2>What to validate</h2><p>${escapeHtml(validation)}</p><p class="source">${source}</p>`),
   ];
 }

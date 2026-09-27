@@ -24,6 +24,12 @@ export const proposalSchema = z.object({
   businessImpact: z.string().min(1),
   validationPlan: z.string().min(1),
   assumptions: z.array(z.string()),
+  screens: z.object({
+    entry: z.object({ title: z.string().min(1), detail: z.string().min(1) }),
+    choice: z.object({ title: z.string().min(1), detail: z.string().min(1), accept: z.string().min(1), decline: z.string().min(1) }),
+    inUse: z.object({ request: z.string().min(1), response: z.string().min(1), badge: z.string().min(1) }),
+    after: z.object({ title: z.string().min(1), detail: z.string().min(1) }),
+  }),
 }) satisfies z.ZodType<Proposal>;
 
 export interface Proposer {
@@ -37,6 +43,7 @@ const instructions = [
   "Read the shared app context first: observed states with their monetization facts, observed transitions, and optional supplemental pricing context. Core user tasks are core, non-modal states; core user flows are transitions leaving core states; value anchors are observed quota, currency, or entitlement facts. Observed value anchors are clues, not proof that extra value can be granted; a proposed new reward mechanic must be labeled as a product change. Cite only state, transition, or monetization IDs from the context. Monetization facts are mobile observations and supplementalContext is not; neither a generic in-app-purchase label nor a quota alone establishes plan prices and paid benefits. Keep offer copy faithful to the exact paid entitlement: a 2× allowance is not unlimited access. Put unknown grantability, pricing, costs, and business metrics in assumptions. Never present an estimate of revenue uplift as measured fact.",
   "When a subscription paywall was observed, consider whether an optional, one-use sample after the user declines would help them understand a specific paid benefit. Keep the normal exit and subscription offer intact; label any new decline or sample flow as proposed if it was not observed. Rewarded value must not undercut existing monetization: a user who would pay should still see and choose the paid path first, so place the offer after the user declines or leaves a purchase surface rather than on it, and keep the reward smaller than the paid benefit.",
   "entryStateId is the observed state where the trigger happens. resumeStateId is the observed state where the user continues their task after receiving the reward: usually the entry state, but when the offer follows leaving a screen, such as closing a paywall, it is the state that screen returns to, and the offer appears there. Cite both in evidenceIds, with the transition between them when one was observed.",
+  "screens is the short copy a user would see on each proposed screen, each line at most 60 characters and faithful to the exact reward: entry is the offer as it first appears on the page; choice is the opt-in sheet with a title, one line on the exchange, and accept and decline labels; inUse shows the reward being used in the user's own task, as the request or action the user makes, what the app returns because of the reward, and a small badge marking it as the rewarded use; after is what the user sees once the reward is used up, making clear that normal use and the paid path are unchanged.",
   "Place the offer on an observed screen or transition. Verify that the cited trigger and control belong to the same user flow; a quota shown in one workflow does not prove that it also governs another workflow's regenerate or edit action. Observations from another workflow cannot establish how this workflow's badge or counter updates. A visible quota counter does not establish what happens at exhaustion, and a listed paid benefit does not establish where free access is blocked. Label unobserved gates and reward grants as product changes instead of claiming they already exist. An added limit must have independent product value; do not reduce existing free value solely to create ad demand. Return 2–5 candidates when the evidence supports them, or an empty list when the app is too poorly observed.",
 ].join("\n\n");
 

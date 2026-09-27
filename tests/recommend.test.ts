@@ -70,6 +70,12 @@ function proposal(id: string, overrides: Partial<Proposal> = {}): Proposal {
     businessImpact: "may substitute for a paid message allowance",
     validationPlan: "measure reward use and subscription conversion",
     assumptions: [],
+    screens: {
+      entry: { title: "One more message", detail: "Watch a short ad" },
+      choice: { title: "Keep chatting", detail: "Watch an ad for one message", accept: "Watch ad", decline: "No thanks" },
+      inUse: { request: "One more question", response: "Here is the answer", badge: "Rewarded message" },
+      after: { title: "Daily messages used", detail: "Upgrade for more" },
+    },
     ...overrides,
   };
 }
