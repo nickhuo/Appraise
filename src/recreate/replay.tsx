@@ -1,182 +1,173 @@
 import { useRef, useState, type CSSProperties } from "react";
 import { createRoot } from "react-dom/client";
 
-import type { MockPreview } from "../domain/mock.ts";
+import type { MockEntrance, MockPreview, MockTransition } from "../domain/mock.ts";
 
-const preview = JSON.parse(document.querySelector<HTMLScriptElement>("#mock-data")!.textContent!) as MockPreview;
-const MAX_REVIEW_HISTORY = 100;
-const ACTION_ICONS = { tap: "⌖", type: "T", swipe: "↕", back: "←", wait: "◷" };
-const SWIPE_ARROWS = { up: "↑", down: "↓", left: "←", right: "→", none: "" };
+const { manifest, images } = JSON.parse(document.querySelector<HTMLScriptElement>("#mock-data")!.textContent!) as MockPreview;
+const MAX_HISTORY = 100;
+const STATUS_TEXT: Record<MockEntrance["status"], string> = {
+  explored: "done", pending: "pending", blocked: "blocked", no_effect: "no effect", unreachable: "unreachable", timeout: "timed out", disabled: "disabled",
+};
+const tone = (status: MockEntrance["status"]) => status === "explored" ? "done" : status === "pending" ? "todo" : "stop";
 
-type ReplayLocation = { step: number; transitionId: string | null };
+const stateById = new Map(manifest.states.map((state) => [state.id, state]));
+const observationByStep = new Map(manifest.observations.map((observation) => [observation.step, observation]));
+const transitionById = new Map(manifest.transitions.map((transition) => [transition.id, transition]));
+const words = (value: string) => value.replaceAll("_", " ");
+const title = (stateId: string) => `${words(stateById.get(stateId)!.screen)} · ${words(stateById.get(stateId)!.variant)}`;
+const firstStep = (stateId: string) => stateById.get(stateId)!.observationSteps[0]!;
+const rootId = observationByStep.get(manifest.initialStep)!.stateId;
 
-function Replay({ manifest, images }: MockPreview) {
-  const [location, setLocation] = useState<ReplayLocation>({ step: manifest.initialStep, transitionId: null });
-  const [history, setHistory] = useState<ReplayLocation[]>([]);
-  const [showHints, setShowHints] = useState(true);
-  const [status, setStatus] = useState("");
-  const gesture = useRef<{ id: number; x: number; y: number } | null>(null);
-  const didSwipe = useRef(false);
+// Discovery tree: each state hangs under the first navigation that reached it; every other transition is a link.
+const treeEdge = new Map<string, MockTransition | null>([[rootId, null]]);
+const children = new Map<string, MockTransition[]>();
+for (const transition of manifest.transitions) {
+  if (transition.outcome !== "navigated" || !transition.to || treeEdge.has(transition.to) || !treeEdge.has(transition.from)) continue;
+  treeEdge.set(transition.to, transition);
+  children.set(transition.from, [...(children.get(transition.from) ?? []), transition]);
+}
+const roots = [rootId, ...manifest.states.map((state) => state.id).filter((id) => !treeEdge.has(id))];
+
+function TreeNode({ stateId, current, go }: { stateId: string; current: string; go: (step: number) => void }) {
+  const state = stateById.get(stateId)!;
+  const done = state.entrances.filter((entrance) => entrance.status === "explored").length;
+  const links = manifest.transitions.filter((transition) => transition.from === stateId && treeEdge.get(transition.to ?? "") !== transition);
+  const kids = children.get(stateId) ?? [];
+  return <li>
+    <button className="node" aria-current={stateId === current ? "true" : undefined} onClick={() => go(firstStep(stateId))}>
+      <img src={images[observationByStep.get(firstStep(stateId))!.evidence.screenshot]} alt="" loading="lazy" />
+      <span><strong>{words(state.screen)}</strong><small>{words(state.variant)}</small></span>
+      <span className="count" title="entrances done / chosen">{done}/{state.entrances.length}</span>
+    </button>
+    {links.map((transition) => <button key={transition.id} className="link" title={transition.label}
+      onClick={() => transition.targetStep !== null && go(transition.targetStep)}>
+      {transition.targetStep === null ? "↗ left app" : transition.to === stateId ? "↻ in place" : `↪ ${title(transition.to!)}`}
+    </button>)}
+    {kids.length > 0 && <ul className="tree">{kids.map((transition) =>
+      <TreeNode key={transition.id} stateId={transition.to!} current={current} go={go} />)}</ul>}
+  </li>;
+}
+
+function Replay() {
+  const [step, setStep] = useState(manifest.initialStep);
+  const [selected, setSelected] = useState<string | null>(null);
+  const [history, setHistory] = useState<number[]>([]);
+  const [caption, setCaption] = useState("");
+  const drag = useRef<{ id: number; y: number } | null>(null);
+  const didDrag = useRef(false);
   const lastWheel = useRef(0);
-  const observation = manifest.observations.find((item) => item.step === location.step)!;
-  const state = manifest.states.find((item) => item.id === observation.stateId)!;
-  const actions = manifest.transitions.filter((item) => item.from === state.id);
-  const transition = actions.find((item) => item.id === location.transitionId);
-  const action = transition?.action;
-  const bounds = transition?.bounds;
-  const destination = manifest.states.find((item) => item.id === transition?.to);
-  const isTapTarget = action?.type === "tap" || (action?.type === "back" && bounds !== null);
+  const observation = observationByStep.get(step)!;
+  const state = stateById.get(observation.stateId)!;
+  const { width, height } = observation.viewport;
+
+  function show(next: number, entranceKey: string | null = null, note = ""): void {
+    if (next !== step) setHistory((items) => [...items, step].slice(-MAX_HISTORY));
+    setStep(next);
+    setSelected(entranceKey);
+    setCaption(note);
+  }
+
+  const locate = (entrance: MockEntrance) => show(entrance.step ?? step, entrance.key, entrance.bounds ? "" : "Not on a recorded screen");
+
+  function follow(entrance: MockEntrance): void {
+    const transition = transitionById.get(entrance.transitionId!)!;
+    if (transition.targetStep === null) {
+      show(transition.sourceStep, entrance.key, "Left the app");
+      return;
+    }
+    show(transition.targetStep, null, transition.action.type === "type" ? `Typed “${transition.action.text}”${transition.action.submit ? " + Enter" : ""}` : "");
+  }
+
   // Frames recorded while scrolling to an element: moving the content down shows a frame scrolled down from this one,
   // or goes back to the frame this one was scrolled up from.
   const frameToward = (direction: "up" | "down") => {
-    const reverse = direction === "down" ? "up" : "down";
-    if (observation.scroll?.direction === reverse) return observation.scroll.from;
-    return manifest.observations.find((item) => item.scroll?.from === observation.step && item.scroll.direction === direction)?.step ?? null;
+    if (observation.scroll && observation.scroll.direction !== direction) return observation.scroll.from;
+    return manifest.observations.find((item) => item.scroll?.from === step && item.scroll.direction === direction)?.step ?? null;
   };
-  const scrollFrames = { up: frameToward("up"), down: frameToward("down") };
-  function scrollPage(direction: "up" | "down"): void {
-    const frame = scrollFrames[direction];
-    if (frame === null) return;
-    setLocation({ step: frame, transitionId: null });
-    setStatus(`Scrolled ${direction}.`);
-  }
-  const viewportStyle = { "--device-width": observation.viewport.width, "--device-height": observation.viewport.height } as CSSProperties;
-  const targetStyle: CSSProperties | undefined = bounds ? {
-    left: `${bounds.x / observation.viewport.width * 100}%`,
-    top: `${bounds.y / observation.viewport.height * 100}%`,
-    width: `${bounds.width / observation.viewport.width * 100}%`,
-    height: `${bounds.height / observation.viewport.height * 100}%`,
-  } : undefined;
+  const frames = { up: frameToward("up"), down: frameToward("down") };
+  const scroll = (direction: "up" | "down") => { const frame = frames[direction]; if (frame !== null) show(frame); };
 
-  function visit(next: ReplayLocation): void {
-    setHistory((items) => [...items, location].slice(-MAX_REVIEW_HISTORY));
-    setLocation(next);
-    setStatus("");
-  }
+  const percent = (bounds: NonNullable<MockEntrance["bounds"]>): CSSProperties => ({
+    left: `${bounds.x / width * 100}%`, top: `${bounds.y / height * 100}%`,
+    width: `${bounds.width / width * 100}%`, height: `${bounds.height / height * 100}%`,
+  });
+  const destination = (entrance: MockEntrance) => {
+    const transition = entrance.transitionId ? transitionById.get(entrance.transitionId)! : null;
+    if (!transition) return STATUS_TEXT[entrance.status];
+    return transition.targetStep === null ? "↗ left app" : transition.to === state.id ? "↻ here" : `→ ${title(transition.to!)}`;
+  };
+  const counts = manifest.states.flatMap((item) => item.entrances).reduce((total, entrance) => {
+    total[tone(entrance.status)] += 1;
+    return total;
+  }, { done: 0, todo: 0, stop: 0 });
 
-  function followTransition(): void {
-    if (!transition) return;
-    if (transition.targetStep === null) {
-      setStatus(`Recorded outcome: ${transition.outcome}. No destination state was observed.`);
-      return;
-    }
-    visit({ step: transition.targetStep, transitionId: null });
-    setStatus(`Replayed ${transition.action.type}: ${transition.label}.`);
-  }
+  return <>
+    <header>
+      <h1>{manifest.app}</h1>
+      <span className="meta">{manifest.runStatus} · {manifest.states.length} states · {manifest.transitions.length} actions</span>
+      <span className="legend">
+        <span><i className="dot done" /> done {counts.done}</span>
+        <span><i className="dot todo" /> pending {counts.todo}</span>
+        <span title="blocked, unreachable, no effect, timed out or disabled"><i className="dot stop" /> not done {counts.stop}</span>
+      </span>
+    </header>
+    <main>
+      <nav aria-label="States"><ul className="tree">{roots.map((id) => <TreeNode key={id} stateId={id} current={state.id} go={(next) => show(next)} />)}</ul></nav>
 
-  return <main className="workspace">
-    <aside className="sidebar">
-      <div className="session-title"><p className="eyebrow">Recorded state graph</p><h1>{manifest.app}</h1><p className="secondary">{manifest.states.length} states · {manifest.transitions.length} actions</p></div>
-      <nav aria-label="Recorded states">
-        <div className="section-label">States<span>{manifest.states.length}</span></div>
-        <ul className="path-list">{manifest.states.map((item) =>
-          <li key={item.id}><button className="path-step" data-state-id={item.id} aria-current={item.id === state.id ? "page" : undefined} onClick={() => {
-            if (item.id !== state.id) visit({ step: item.observationSteps[0]!, transitionId: null });
-          }}>
-            <span className="step-copy"><strong>{item.screen.replaceAll("_", " ")}</strong><span>{item.variant.replaceAll("_", " ")}</span></span>
-            {item.id === state.id && <span className="current-dot" aria-hidden="true" />}
-          </button></li>
-        )}</ul>
-      </nav>
-      <div className="session-footer"><span className="session-status">{manifest.runStatus}</span><p>Select a state, then choose one of its recorded actions.</p></div>
-    </aside>
-
-    <section className="viewer" aria-label="App preview">
-      <div className="viewer-toolbar"><span>{state.screen.replaceAll("_", " ")} · observation {observation.step}</span>
-        <button id="show-hints" className="quiet-button" aria-pressed={showHints} disabled={!action} onClick={() => setShowHints(!showHints)}><span aria-hidden="true">⌖</span> Action hints</button>
-      </div>
-      <div className="canvas">
-        <div id="stage" data-step={observation.step} data-state-id={state.id} style={viewportStyle}>
-          <img id="screen" src={images[observation.evidence.screenshot]} width={observation.viewport.width} height={observation.viewport.height} alt={`${state.screen}, observation ${observation.step}`} draggable={false} />
-          <div className="interaction" style={{ touchAction: action?.type === "swipe" ? "none" : "auto" }}
-            onClick={() => setStatus(action ? "Use the selected action’s control or matching gesture." : "Choose an action to see its recorded screenshot and interaction.")}
-            onClickCapture={(event) => { if (didSwipe.current) { event.stopPropagation(); event.preventDefault(); didSwipe.current = false; } }}
-            onPointerDown={(event) => {
-              if (!event.isPrimary) return;
-              didSwipe.current = false;
-              gesture.current = { id: event.pointerId, x: event.clientX, y: event.clientY };
-              if (action?.type === "swipe") event.currentTarget.setPointerCapture(event.pointerId);
-            }}
-            onPointerCancel={() => { gesture.current = null; }}
-            onWheel={(event) => {
-              if (Math.abs(event.deltaY) < 30 || Date.now() - lastWheel.current < 600) return;
-              lastWheel.current = Date.now();
-              scrollPage(event.deltaY > 0 ? "down" : "up");
-            }}
-            onPointerUp={(event) => {
-              if (!gesture.current || gesture.current.id !== event.pointerId) return;
-              const dx = event.clientX - gesture.current.x;
-              const dy = event.clientY - gesture.current.y;
-              gesture.current = null;
-              if (Math.max(Math.abs(dx), Math.abs(dy)) < 40) return;
-              didSwipe.current = true;
-              const direction = Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? "right" : "left") : (dy > 0 ? "down" : "up");
-              if (action?.type !== "swipe") {
-                if (direction === "up" || direction === "down") scrollPage(direction === "up" ? "down" : "up");
-              } else if (action.direction === direction) followTransition();
-              else setStatus(`This action requires a swipe ${action.direction}.`);
-            }}>
-            {bounds && transition && isTapTarget && <button id="hotspot" className={showHints ? "show" : ""} aria-label={transition.label} style={targetStyle}
-              onClick={(event) => { event.stopPropagation(); followTransition(); }} />}
-            {showHints && bounds && action?.type === "type" && <div className="input-target" style={targetStyle} aria-hidden="true" />}
-            {showHints && action && !isTapTarget && <div className="gesture-hint" aria-hidden="true">
-              <strong>{action.type === "swipe" ? SWIPE_ARROWS[action.direction] : ACTION_ICONS[action.type]}</strong>
-              <span>{action.type === "swipe" ? `Swipe ${action.direction}` : action.type === "type" ? (action.text === "" ? "Submit existing input" : "Use recorded text below") : action.type === "wait" ? "Wait for result" : "Android Back"}</span>
-            </div>}
-          </div>
-          {scrollFrames.up !== null && <button className="scroll-cue top" aria-label="Scroll up" onClick={() => scrollPage("up")}>↑ more above</button>}
-          {scrollFrames.down !== null && <button className="scroll-cue bottom" aria-label="Scroll down" onClick={() => scrollPage("down")}>↓ more below</button>}
-        </div>
-      </div>
-      <p className="device-caption">{observation.viewport.width} × {observation.viewport.height} px<span>{transition ? "Selected action’s source screenshot" : observation.scroll ? `Scrolled ${observation.scroll.direction}` : "Original screenshot"}</span></p>
-      <div className="playback">
-        {action?.type === "type" && action.text !== "" && <div className="recorded-input"><label htmlFor="recorded-text">Recorded text</label>
-          <textarea id="recorded-text" readOnly value={action.text ?? ""} rows={3} aria-describedby="input-note" />
-          <p id="input-note">{action.submit ? "Includes Enter to submit." : "Types without submitting."} Only this recorded input is replayed.</p>
-        </div>}
-        <div className="playback-buttons">
-          <button id="previous" className="icon-button" aria-label="Previous view" title="Previous view (review history)" disabled={!history.length} onClick={() => {
-            setLocation(history[history.length - 1]!); setHistory(history.slice(0, -1)); setStatus("");
+      <section className="stage-column" aria-label="Screen">
+        <div className="toolbar">
+          <button aria-label="Back" title="Back" disabled={!history.length} onClick={() => {
+            setStep(history.at(-1)!); setHistory(history.slice(0, -1)); setSelected(null); setCaption("");
           }}>←</button>
-          <button id="perform" className="primary-button" disabled={!transition} onClick={followTransition}>
-            <span>{transition ? `${transition.action.type === "tap" ? "Tap: " : ""}${transition.label}` : actions.length ? "Select an action" : "No recorded actions"}</span>
-            <span aria-hidden="true">{action ? ACTION_ICONS[action.type] : "—"}</span>
-          </button>
-          <button id="restart" className="icon-button" aria-label="Reset view" title="Reset view" onClick={() => {
-            setLocation({ step: manifest.initialStep, transitionId: null }); setHistory([]); setStatus("");
-          }}>↺</button>
+          <button aria-label="Restart" title="Restart" onClick={() => { setStep(manifest.initialStep); setHistory([]); setSelected(null); setCaption(""); }}>↺</button>
         </div>
-        <p id="status" role="status" aria-live="polite">{status || (transition ? "Execute the selected action to follow its recorded transition." : actions.length ? "Choose an available action. Each may lead to a different state." : "No outgoing actions were recorded for this state.")}</p>
-      </div>
-    </section>
-
-    <aside className="inspector" aria-label="State and actions">
-      <p className="eyebrow">Current state</p><h2>{state.screen.replaceAll("_", " ")}</h2><span className="variant">{state.variant.replaceAll("_", " ")}</span>
-      <section className="inspector-section"><h3>Available actions<span className="action-type">{actions.length}</span></h3>
-        <p className="action-help">Select an action to view its source screenshot and parameters.</p>
-        <div className="action-list">{actions.map((item) => {
-          const target = manifest.states.find((candidate) => candidate.id === item.to);
-          return <button key={item.id} className="action-option" data-transition-id={item.id} aria-pressed={item.id === transition?.id} onClick={() => {
-            setLocation({ step: item.sourceStep, transitionId: item.id }); setStatus("");
+        <div id="stage" style={{ "--ratio": `${width} / ${height}` } as CSSProperties}
+          onClickCapture={(event) => { if (didDrag.current) { event.stopPropagation(); didDrag.current = false; } }}
+          onPointerDown={(event) => { if (event.isPrimary) { drag.current = { id: event.pointerId, y: event.clientY }; didDrag.current = false; } }}
+          onPointerCancel={() => { drag.current = null; }}
+          onPointerUp={(event) => {
+            if (drag.current?.id !== event.pointerId) return;
+            const dy = event.clientY - drag.current.y;
+            drag.current = null;
+            if (Math.abs(dy) < 40) return;
+            didDrag.current = true;
+            scroll(dy < 0 ? "down" : "up");
+          }}
+          onWheel={(event) => {
+            if (Math.abs(event.deltaY) < 30 || Date.now() - lastWheel.current < 600) return;
+            lastWheel.current = Date.now();
+            scroll(event.deltaY > 0 ? "down" : "up");
           }}>
-            <span className="action-icon" aria-hidden="true">{ACTION_ICONS[item.action.type]}</span>
-            <span className="action-copy"><strong>{item.label}</strong><span>{item.action.type} · {target ? `${target.screen.replaceAll("_", " ")} / ${target.variant.replaceAll("_", " ")}` : `No destination · ${item.outcome}`}</span></span>
-          </button>;
-        })}</div>
-        {!actions.length && <p>No recorded actions.</p>}
-        {transition && <div className="selected-action"><p>{transition.action.reason}</p>
-          <div className="destination"><span>Destination</span><strong>{destination ? `${destination.screen.replaceAll("_", " ")} / ${destination.variant.replaceAll("_", " ")}` : "No observed state"}</strong></div>
-          <p className="secondary">Source observation {transition.sourceStep} · outcome: {transition.outcome}</p>
-        </div>}
+          <img src={images[observation.evidence.screenshot]} alt={title(state.id)} draggable={false} />
+          {state.entrances.map((entrance, index) => {
+            if (entrance.step !== step || !entrance.bounds) return null;
+            const props = { className: `box ${tone(entrance.status)}`, style: percent(entrance.bounds), "data-selected": entrance.key === selected || undefined, title: `${entrance.name} · ${destination(entrance)}` };
+            return entrance.transitionId
+              ? <button key={entrance.key} {...props} aria-label={`${entrance.name}, ${destination(entrance)}`} onClick={() => follow(entrance)}><b>{index + 1}</b></button>
+              : <div key={entrance.key} {...props}><b>{index + 1}</b></div>;
+          })}
+          {frames.up !== null && <button className="cue top" onClick={() => scroll("up")}>↑ more</button>}
+          {frames.down !== null && <button className="cue bottom" onClick={() => scroll("down")}>↓ more</button>}
+        </div>
+        <p className="caption" role="status">{caption}</p>
       </section>
-      <details><summary>State summary</summary><p>{state.summary}</p></details>
-      <details><summary>Exploration coverage</summary><p>{manifest.runStatus}: {manifest.stopReason.replaceAll("_", " ")}</p></details>
-      <details><summary>Unexplored groups <span>{state.unexploredGroups.length}</span></summary>
-        {state.unexploredGroups.length ? <ul>{state.unexploredGroups.map((group, index) => <li key={index}>{group}</li>)}</ul> : <p>No additional unexplored groups recorded.</p>}
-      </details>
-      <details><summary>Source evidence</summary><dl><dt>State</dt><dd>{state.id}</dd><dt>Screenshot</dt><dd>{observation.evidence.screenshot}</dd><dt>Element tree</dt><dd>{observation.evidence.elementTree}</dd></dl></details>
-    </aside>
-  </main>;
+
+      <aside aria-label="Entrances">
+        <h2>{words(state.screen)}<small>{words(state.variant)}</small></h2>
+        {state.entrances.length ? <ol className="entrances">{state.entrances.map((entrance, index) =>
+          <li key={entrance.key}>
+            <div className={`entrance ${tone(entrance.status)}`} data-selected={entrance.key === selected || undefined}>
+              <button className="locate" title={entrance.name} onClick={() => locate(entrance)}>
+                <span className="n">{index + 1}</span><i className="dot" /><span className="name">{entrance.name}</span>
+              </button>
+              {entrance.transitionId
+                ? <button className="to" title={destination(entrance)} onClick={() => follow(entrance)}>{destination(entrance)}</button>
+                : <span className="to">{destination(entrance)}</span>}
+            </div>
+          </li>)}</ol> : <p className="empty">No entrances chosen here.</p>}
+      </aside>
+    </main>
+  </>;
 }
 
-createRoot(document.getElementById("root")!).render(<Replay {...preview} />);
+createRoot(document.getElementById("root")!).render(<Replay />);

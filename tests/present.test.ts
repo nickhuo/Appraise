@@ -48,8 +48,8 @@ test("present shows only final approved revisions and keeps observed evidence di
       { proposalId: "rejected", revision: 0, decision: "reject", scores, hardFailures: ["No value"], rationale: "", feedback: "" },
     ];
     const mock: MockManifest = {
-      version: 3, runId: "run-1", inputHash: "mock-1", app: "app", runStatus: "complete", stopReason: "done",
-      initialStep: 0, states: [{ id: "observed-limit", screen: "Chat limit", variant: "default", summary: "", observationSteps: [0], unexploredGroups: [] }],
+      version: 4, runId: "run-1", inputHash: "mock-1", app: "app", runStatus: "complete", stopReason: "done",
+      initialStep: 0, states: [{ id: "observed-limit", screen: "Chat limit", variant: "default", summary: "", observationSteps: [0], entrances: [] }],
       observations: [{ step: 0, stateId: "observed-limit", viewport: { width: 1, height: 1 }, evidence: { screenshot, elementTree } }],
       transitions: [],
     };
