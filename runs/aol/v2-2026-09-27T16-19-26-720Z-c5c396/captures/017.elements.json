@@ -1,0 +1,28 @@
+[
+  {
+    "ref": "n1",
+    "type": "Button",
+    "text": "Not now",
+    "identifier": "com.aol.mobile.aolapp:id/cancel",
+    "coordinates": {
+      "x": 157,
+      "y": 1477,
+      "width": 291,
+      "height": 95
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "Allow Location",
+    "identifier": "com.aol.mobile.aolapp:id/ok",
+    "coordinates": {
+      "x": 524,
+      "y": 1477,
+      "width": 399,
+      "height": 95
+    },
+    "enabled": true
+  }
+]

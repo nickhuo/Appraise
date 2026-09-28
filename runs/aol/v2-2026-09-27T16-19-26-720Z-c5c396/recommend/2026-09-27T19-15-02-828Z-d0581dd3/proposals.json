@@ -1,0 +1,115 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "proposals": [
+    {
+      "id": "article-audio",
+      "revision": 0,
+      "title": "Listen to one article",
+      "opportunityType": "product_change",
+      "entryStateId": "n2",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n2",
+        "e1"
+      ],
+      "trigger": "The user has opened an article from Home and wants to keep up with the story while away from the screen.",
+      "userNeed": "Hear this article without having to read it. Completing an ad could grant one playback of this article.",
+      "eligibility": "Readers of an article for which narration and playback rights are available; exclude anyone who already has the feature through a paid entitlement.",
+      "productChange": "Add an optional Listen control on the article screen and single-article narration. Neither the control nor an ad-funded grant was observed.",
+      "reward": "One playback of the current article, not ongoing audio access.",
+      "optIn": "Tapping Listen opens a choice to watch a rewarded ad; playback starts only after the user affirmatively chooses it and the ad completes.",
+      "fulfillment": "Enable playback for the current article and return the user to that article.",
+      "declinePath": "Close the offer and continue reading normally.",
+      "failurePath": "If the ad is unavailable or unfinished, do not grant playback; return to the readable article with a non-ad retry option where appropriate.",
+      "businessImpact": "Could add ad revenue and listening utility, but narration and rights may cost money. It must not replace normal reading or a paid audio benefit; if a relevant purchase offer is introduced, show that path first and consider an ad sample only after it is declined.",
+      "validationPlan": "Run a single-article audio experiment measuring completed listens, article engagement, ad yield, narration costs, and any change in paid conversion against a no-offer group.",
+      "assumptions": [
+        "Article narration and its rights can be provided; grantability and per-play cost are unknown.",
+        "No plan price or paid audio entitlement was observed; subscription overlap and business metrics are unknown."
+      ]
+    },
+    {
+      "id": "article-audio",
+      "revision": 1,
+      "title": "Listen to this article once",
+      "opportunityType": "product_change",
+      "entryStateId": "n2",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n2",
+        "e1",
+        "e2"
+      ],
+      "trigger": "While reading an article opened from Home, the user wants to continue the story without looking at the screen.",
+      "userNeed": "Hear the current article when reading is inconvenient; a completed ad could unlock one playback.",
+      "eligibility": "Readers of articles with confirmed narration rights. Exclude users whose verified paid entitlement already includes this playback.",
+      "productChange": "Add narration and an optional Listen control to eligible articles. Neither audio nor an ad-funded grant was observed. Check actual paid entitlements before launch; if a relevant purchase offer applies, keep it first and show the ad option only after the reader leaves it.",
+      "reward": "One playback of the current article, not full-access or ongoing audio access.",
+      "optIn": "The proposed Listen control explains the one-playback reward. Playback requires an affirmative choice to watch an ad and a completed ad.",
+      "fulfillment": "Unlock playback for the current article and keep the reader on that article.",
+      "declinePath": "Dismiss the offer and continue reading normally; do not change any existing purchase offer.",
+      "failurePath": "If the ad is unavailable or unfinished, grant nothing and return to the readable article. Offer a retry only when an ad becomes available.",
+      "businessImpact": "Audio may improve article use and earn ad revenue, but narration, rights, and delivery may cost money. The offer must not restrict free reading or displace a paid benefit. The observed Telegraph full-access prompt does not establish an audio entitlement or its terms.",
+      "validationPlan": "First confirm rights, per-play costs, reader interest, and actual paid entitlements. Then test eligible-article Listen access against no offer, measuring opt-ins, completed listens, reading engagement, net ad yield after costs, and any change in subscription conversion.",
+      "assumptions": [
+        "Narration rights and a one-playback grant are technically and contractually possible; availability and costs are unknown.",
+        "Audio demand, ad yield, plan prices, paid audio benefits, and effects on subscription conversion are unknown."
+      ]
+    },
+    {
+      "id": "home-briefing",
+      "revision": 0,
+      "title": "One Home news briefing",
+      "opportunityType": "product_change",
+      "entryStateId": "n1",
+      "resumeStateId": "n1",
+      "evidenceIds": [
+        "n1",
+        "e1"
+      ],
+      "trigger": "The user is scanning Home's news stories and wants a quick overview before choosing what to read.",
+      "userNeed": "Get a concise briefing of several currently shown stories after an ad, while retaining the ability to open any story normally.",
+      "eligibility": "Home readers when enough eligible stories are available to assemble a briefing; exclude users who already receive an equivalent paid benefit.",
+      "productChange": "Add an optional Briefing control on Home that compiles attributed highlights with links to the underlying articles. Briefings and ad-funded grants were not observed.",
+      "reward": "One briefing of the current Home stories, not unlimited briefings or access to articles.",
+      "optIn": "The user taps Briefing, then explicitly chooses to watch a rewarded ad before generation begins.",
+      "fulfillment": "After a completed ad, show the briefing on Home with links to the ordinary article flow.",
+      "declinePath": "Dismiss the offer and keep browsing or opening articles as before.",
+      "failurePath": "If the ad is unavailable or unfinished, do not generate the rewarded briefing; leave the Home feed usable.",
+      "businessImpact": "Could help readers discover stories and earn ad revenue, but generation, attribution, and publisher permissions may add costs. It must not reduce the existing free feed or displace a paid benefit; any future relevant purchase path should be offered first.",
+      "validationPlan": "Test the Home briefing against the unchanged feed, tracking article opens, reading time, ad yield, generation costs, and paid conversion.",
+      "assumptions": [
+        "A useful, rights-compliant briefing can be assembled from eligible stories; grantability and cost are unknown.",
+        "No plan price or paid briefing entitlement was observed; subscription effects and business metrics are unknown."
+      ]
+    },
+    {
+      "id": "home-briefing",
+      "revision": 1,
+      "title": "One Home news briefing",
+      "opportunityType": "product_change",
+      "entryStateId": "n1",
+      "resumeStateId": "n1",
+      "evidenceIds": [
+        "n1",
+        "e1",
+        "n2"
+      ],
+      "trigger": "A reader is scanning several Home stories and wants to decide which article to open.",
+      "userNeed": "Get a quick overview of eligible stories without losing the normal article-opening path.",
+      "eligibility": "Home readers when enough stories have permission for attributed summaries. Exclude anyone with an equivalent paid entitlement; check for relevant paid benefits before launch.",
+      "productChange": "Add an optional Briefing control on Home. It would assemble short, attributed highlights from permitted stories, each linking to its article. Neither briefings nor ad-funded grants were observed.",
+      "reward": "One briefing of the currently eligible Home stories after a completed ad; no article access or recurring briefing allowance.",
+      "optIn": "Tapping Briefing opens an offer that states the one-briefing reward; generation starts only if the reader affirmatively chooses to watch the ad.",
+      "fulfillment": "After ad completion, display the briefing on Home with links into the ordinary article flow.",
+      "declinePath": "Dismiss the offer and continue browsing or opening stories normally.",
+      "failurePath": "If the ad is unavailable or unfinished, grant no briefing and return to the usable Home feed.",
+      "businessImpact": "May improve story discovery and produce ad yield, but could replace article opens or incur rights, generation, and serving costs. Preserve the free feed. No paid briefing benefit was observed; if a relevant paid offer exists, present that purchase path first and assess whether this one-use reward would undercut it.",
+      "validationPlan": "First verify publisher permissions, attribution, and reader usefulness. Then A/B test the optional briefing against the unchanged Home feed, measuring article opens, reading time, ad yield, costs, and any applicable paid conversion; stop or revise if it displaces reading or paid uptake.",
+      "assumptions": [
+        "Rights-compliant summaries can be made from enough Home stories; grantability and unit costs are unknown.",
+        "No plan pricing or paid briefing entitlement was observed. Applicable paid benefits and effects on subscriptions, normal reading, and business metrics require verification."
+      ]
+    }
+  ]
+}

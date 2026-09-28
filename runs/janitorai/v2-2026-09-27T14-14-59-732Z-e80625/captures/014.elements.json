@@ -1,0 +1,746 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "6 / 9 / 8",
+    "coordinates": {
+      "x": 819,
+      "y": 161,
+      "width": 118,
+      "height": 89
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 42,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 954,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 76,
+      "y": 471,
+      "width": 928,
+      "height": 1392
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 920,
+      "y": 1894,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "@dizzyylua",
+    "coordinates": {
+      "x": 158,
+      "y": 1912,
+      "width": 204,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "ROUTE I ARE YOU DONE YET? Ayumi came, you didn't. Not her bu",
+    "coordinates": {
+      "x": 139,
+      "y": 2401,
+      "width": 803,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "ROUTE II DON'T CRY, LOSER She forgot your one-year anniversa",
+    "coordinates": {
+      "x": 139,
+      "y": 2401,
+      "width": 803,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "ROUTE III YOU DO YOU Let your imagination be your own limit.",
+    "coordinates": {
+      "x": 139,
+      "y": 2401,
+      "width": 803,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "View",
+    "text": "LOCATION I · AYUMI'S HOUSE AYUMI'S HOUSE",
+    "coordinates": {
+      "x": 139,
+      "y": 2401,
+      "width": 803,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "B&D WEBSITE",
+    "coordinates": {
+      "x": 162,
+      "y": 2401,
+      "width": 278,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "PREMISE",
+    "coordinates": {
+      "x": 194,
+      "y": 2401,
+      "width": 204,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "View",
+    "text": "dE44kAc8km",
+    "coordinates": {
+      "x": 194,
+      "y": 2401,
+      "width": 698,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "View",
+    "text": "EXTERNAL LINKS",
+    "coordinates": {
+      "x": 377,
+      "y": 2401,
+      "width": 326,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "View",
+    "text": "Rei",
+    "coordinates": {
+      "x": 380,
+      "y": 2401,
+      "width": 50,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "View",
+    "text": "BB'S SERVER",
+    "coordinates": {
+      "x": 406,
+      "y": 2401,
+      "width": 268,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "View",
+    "text": "CHARACTER",
+    "coordinates": {
+      "x": 417,
+      "y": 2401,
+      "width": 252,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "View",
+    "text": "PINTEREST (ADOPTABLES)",
+    "coordinates": {
+      "x": 461,
+      "y": 2401,
+      "width": 455,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "View",
+    "text": "ROUTES",
+    "coordinates": {
+      "x": 687,
+      "y": 2401,
+      "width": 197,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 76,
+      "y": 21569,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 246,
+      "y": 21569,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 435,
+      "y": 21569,
+      "width": 185,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "💔 Angst",
+    "coordinates": {
+      "x": 632,
+      "y": 21569,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "🕊🗡 Dead Dove",
+    "coordinates": {
+      "x": 76,
+      "y": 21638,
+      "width": 247,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 335,
+      "y": 21638,
+      "width": 170,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "#stupidlua",
+    "coordinates": {
+      "x": 517,
+      "y": 21638,
+      "width": 175,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "PLAYING AS, fok",
+    "coordinates": {
+      "x": 79,
+      "y": 21797,
+      "width": 922,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "Chat with Ayumi",
+    "coordinates": {
+      "x": 88,
+      "y": 21939,
+      "width": 904,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 75,
+      "y": 22465,
+      "width": 69,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "@Bitofanerd",
+    "coordinates": {
+      "x": 209,
+      "y": 22480,
+      "width": 179,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "Maybe She Should Tank, Careful with reading this. It will sp",
+    "coordinates": {
+      "x": 75,
+      "y": 22562,
+      "width": 930,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "Comments, It's like cracking a transparent safe with nothing",
+    "coordinates": {
+      "x": 37,
+      "y": 22800,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "ViewGroup",
+    "text": "Your best friend who hides a lot behind her beautiful smile",
+    "coordinates": {
+      "x": 71,
+      "y": 23470,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "Your gaming buddy is your loser classmate that harbors freak",
+    "coordinates": {
+      "x": 574,
+      "y": 23470,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ViewGroup",
+    "text": "@Eve_Eclipse",
+    "coordinates": {
+      "x": 71,
+      "y": 24015,
+      "width": 180,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "ViewGroup",
+    "text": "@яeal",
+    "coordinates": {
+      "x": 574,
+      "y": 24015,
+      "width": 82,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "ViewGroup",
+    "text": "⋆. ̊.˳·˖✶𓆩𓁺𓆪✶˖·˳.⋆. ̊z z 𐰁 / In a world where childhood ",
+    "coordinates": {
+      "x": 71,
+      "y": 24066,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n38",
+    "type": "ViewGroup",
+    "text": "So.. are we going to do that thing****.?**** / What is more ",
+    "coordinates": {
+      "x": 574,
+      "y": 24066,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n39",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 24633,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n40",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 744,
+      "y": 24633,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n41",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 574,
+      "y": 24702,
+      "width": 185,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n42",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 771,
+      "y": 24702,
+      "width": 153,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n43",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 71,
+      "y": 24715,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n44",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 241,
+      "y": 24715,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n45",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 574,
+      "y": 24772,
+      "width": 143,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n46",
+    "type": "ViewGroup",
+    "text": "👩 FemPov",
+    "coordinates": {
+      "x": 729,
+      "y": 24772,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n47",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 71,
+      "y": 24784,
+      "width": 125,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n48",
+    "type": "ViewGroup",
+    "text": "📺 Anime",
+    "coordinates": {
+      "x": 208,
+      "y": 24784,
+      "width": 166,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n49",
+    "type": "ViewGroup",
+    "text": "👨 MalePov",
+    "coordinates": {
+      "x": 574,
+      "y": 24841,
+      "width": 192,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n50",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 778,
+      "y": 24841,
+      "width": 170,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n51",
+    "type": "ViewGroup",
+    "text": "🙇 Submissive",
+    "coordinates": {
+      "x": 71,
+      "y": 24854,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n52",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 308,
+      "y": 24854,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n53",
+    "type": "ViewGroup",
+    "text": "#thevalentine",
+    "coordinates": {
+      "x": 574,
+      "y": 24910,
+      "width": 210,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n54",
+    "type": "ViewGroup",
+    "text": "#freakyass",
+    "coordinates": {
+      "x": 796,
+      "y": 24910,
+      "width": 181,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n55",
+    "type": "ViewGroup",
+    "text": "💔 Angst",
+    "coordinates": {
+      "x": 71,
+      "y": 24923,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n56",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 241,
+      "y": 24923,
+      "width": 144,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n57",
+    "type": "ViewGroup",
+    "text": "#looser",
+    "coordinates": {
+      "x": 574,
+      "y": 24979,
+      "width": 140,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n58",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 726,
+      "y": 24979,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n59",
+    "type": "ViewGroup",
+    "text": "#drama",
+    "coordinates": {
+      "x": 71,
+      "y": 24992,
+      "width": 142,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n60",
+    "type": "ViewGroup",
+    "text": "#sliceoflife",
+    "coordinates": {
+      "x": 225,
+      "y": 24992,
+      "width": 183,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n61",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 71,
+      "y": 25061,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n62",
+    "type": "ViewGroup",
+    "text": "Load more",
+    "coordinates": {
+      "x": 37,
+      "y": 25223,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "ref": "n1",
+    "type": "ImageView",
+    "text": "Close",
+    "identifier": "com.aol.mobile.aolapp:id/left_button",
+    "coordinates": {
+      "x": 0,
+      "y": 153,
+      "width": 147,
+      "height": 137
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "EditText",
+    "text": "Search",
+    "identifier": "com.aol.mobile.aolapp:id/search_edit_text",
+    "coordinates": {
+      "x": 173,
+      "y": 159,
+      "width": 907,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Dante Moore Injury Update",
+    "coordinates": {
+      "x": 0,
+      "y": 412,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Justin Verlander",
+    "coordinates": {
+      "x": 0,
+      "y": 538,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Trump Booed",
+    "coordinates": {
+      "x": 0,
+      "y": 664,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Penn State Nittany Lions",
+    "coordinates": {
+      "x": 0,
+      "y": 790,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Presidents Cup",
+    "coordinates": {
+      "x": 0,
+      "y": 916,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Raoni Barcelos",
+    "coordinates": {
+      "x": 0,
+      "y": 1042,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "Suggested searches / AEW All Out 2026 Results",
+    "coordinates": {
+      "x": 0,
+      "y": 1168,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "Suggested searches / Hurricane Polo",
+    "coordinates": {
+      "x": 0,
+      "y": 1294,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

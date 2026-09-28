@@ -1,0 +1,93 @@
+[
+  {
+    "ref": "n1",
+    "type": "ImageView",
+    "text": "Close",
+    "identifier": "com.aol.mobile.aolapp:id/left_button",
+    "coordinates": {
+      "x": 0,
+      "y": 153,
+      "width": 147,
+      "height": 137
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "EditText",
+    "text": "Search",
+    "identifier": "com.aol.mobile.aolapp:id/search_edit_text",
+    "coordinates": {
+      "x": 173,
+      "y": 159,
+      "width": 907,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "TextView",
+    "text": "Delete",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 0,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "TextView",
+    "text": "Archive",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 216,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "TextView",
+    "text": "Move",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 432,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "TextView",
+    "text": "Mark as read",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 648,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "TextView",
+    "text": "More",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 864,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

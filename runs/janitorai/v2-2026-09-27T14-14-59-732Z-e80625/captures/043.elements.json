@@ -1,0 +1,626 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "8 / 0",
+    "coordinates": {
+      "x": 841,
+      "y": 161,
+      "width": 96,
+      "height": 89
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 42,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 954,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 76,
+      "y": 498,
+      "width": 928,
+      "height": 1391
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 920,
+      "y": 1920,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "@NakoMeow",
+    "coordinates": {
+      "x": 158,
+      "y": 1938,
+      "width": 238,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "@Nannikka",
+    "coordinates": {
+      "x": 545,
+      "y": 2400,
+      "width": 153,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 76,
+      "y": 2834,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 246,
+      "y": 2834,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "👨‍❤️‍👨 MLM",
+    "coordinates": {
+      "x": 407,
+      "y": 2834,
+      "width": 150,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "ViewGroup",
+    "text": "👨 MalePov",
+    "coordinates": {
+      "x": 569,
+      "y": 2834,
+      "width": 192,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 773,
+      "y": 2834,
+      "width": 169,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "ViewGroup",
+    "text": "#collage",
+    "coordinates": {
+      "x": 76,
+      "y": 2903,
+      "width": 153,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "ViewGroup",
+    "text": "#musicmania2",
+    "coordinates": {
+      "x": 241,
+      "y": 2903,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "ViewGroup",
+    "text": "#greenflagchar",
+    "coordinates": {
+      "x": 479,
+      "y": 2903,
+      "width": 228,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "ViewGroup",
+    "text": "#basketballplayer",
+    "coordinates": {
+      "x": 719,
+      "y": 2903,
+      "width": 261,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "#verygay",
+    "coordinates": {
+      "x": 76,
+      "y": 2973,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "ViewGroup",
+    "text": "#closetedasfuck",
+    "coordinates": {
+      "x": 246,
+      "y": 2973,
+      "width": 247,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "ViewGroup",
+    "text": "PLAYING AS, fok",
+    "coordinates": {
+      "x": 79,
+      "y": 3131,
+      "width": 922,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "Chat with Iven",
+    "coordinates": {
+      "x": 88,
+      "y": 3273,
+      "width": 904,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "KOPPA RHO ALPHA- KRA, Details on-Kappa Rho Alpha, KRA, frate",
+    "coordinates": {
+      "x": 37,
+      "y": 3641,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "RAVENWOOD UNIVERSITY, Lore on the Ravenwood university, coll",
+    "coordinates": {
+      "x": 37,
+      "y": 3953,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 37,
+      "y": 4287,
+      "width": 78,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 781,
+      "y": 4308,
+      "width": 262,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "Comments, 8, Be the first to comment ❤️",
+    "coordinates": {
+      "x": 37,
+      "y": 4395,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "JOCK | Ivan (Alien Stage)",
+    "coordinates": {
+      "x": 71,
+      "y": 4969,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "Ivan Carter | Shy Bf",
+    "coordinates": {
+      "x": 574,
+      "y": 4969,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "@ilxaf8",
+    "coordinates": {
+      "x": 71,
+      "y": 5514,
+      "width": 100,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "@novved",
+    "coordinates": {
+      "x": 574,
+      "y": 5514,
+      "width": 120,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "Seven minutes in heaven is all that I need when I get with h",
+    "coordinates": {
+      "x": 71,
+      "y": 5565,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "malepov → sfw intro your boyfriend loves you a lot but reall",
+    "coordinates": {
+      "x": 574,
+      "y": 5565,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 6080,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n33",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 744,
+      "y": 6080,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 574,
+      "y": 6149,
+      "width": 125,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ViewGroup",
+    "text": "🙇 Submissive",
+    "coordinates": {
+      "x": 711,
+      "y": 6149,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 574,
+      "y": 6219,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "ViewGroup",
+    "text": "👨‍❤️‍👨 MLM",
+    "coordinates": {
+      "x": 738,
+      "y": 6219,
+      "width": 151,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n38",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 71,
+      "y": 6256,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n39",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 241,
+      "y": 6256,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n40",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 574,
+      "y": 6288,
+      "width": 143,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n41",
+    "type": "ViewGroup",
+    "text": "👨 MalePov",
+    "coordinates": {
+      "x": 729,
+      "y": 6288,
+      "width": 193,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n42",
+    "type": "ViewGroup",
+    "text": "📚 Fictional",
+    "coordinates": {
+      "x": 71,
+      "y": 6325,
+      "width": 191,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n43",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 274,
+      "y": 6325,
+      "width": 153,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n44",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 574,
+      "y": 6357,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n45",
+    "type": "ViewGroup",
+    "text": "👨‍❤️‍👨 MLM",
+    "coordinates": {
+      "x": 71,
+      "y": 6395,
+      "width": 150,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n46",
+    "type": "ViewGroup",
+    "text": "👨 MalePov",
+    "coordinates": {
+      "x": 233,
+      "y": 6395,
+      "width": 193,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n47",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 71,
+      "y": 6464,
+      "width": 169,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n48",
+    "type": "ViewGroup",
+    "text": "#tillpov",
+    "coordinates": {
+      "x": 252,
+      "y": 6464,
+      "width": 141,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n49",
+    "type": "ViewGroup",
+    "text": "#alnst",
+    "coordinates": {
+      "x": 71,
+      "y": 6533,
+      "width": 124,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n50",
+    "type": "ViewGroup",
+    "text": "#alienstage",
+    "coordinates": {
+      "x": 207,
+      "y": 6533,
+      "width": 189,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n51",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 71,
+      "y": 6602,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n52",
+    "type": "ViewGroup",
+    "text": "Load more",
+    "coordinates": {
+      "x": 37,
+      "y": 6765,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

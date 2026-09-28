@@ -1,0 +1,15 @@
+[
+  {
+    "ref": "n1",
+    "type": "WebView",
+    "text": "",
+    "identifier": "com.aol.mobile.aolapp:id/webView",
+    "coordinates": {
+      "x": 0,
+      "y": 132,
+      "width": 1080,
+      "height": 2205
+    },
+    "enabled": true
+  }
+]

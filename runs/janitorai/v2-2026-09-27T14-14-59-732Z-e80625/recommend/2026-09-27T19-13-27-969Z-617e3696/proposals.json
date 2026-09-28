@@ -1,0 +1,181 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "proposals": [
+    {
+      "id": "guided-reply",
+      "revision": 0,
+      "title": "One guided reply draft",
+      "opportunityType": "product_change",
+      "entryStateId": "n5",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n5"
+      ],
+      "trigger": "In chat, the user is deciding what to write beside the observed composer and AI write for me control.",
+      "userNeed": "A reply idea in a chosen tone could help the user continue the conversation. This guided draft would be a new option, not a replacement for AI write for me.",
+      "eligibility": "Chat users who have not used this optional draft reward for the current chat session; the proposed frequency limit needs testing.",
+      "productChange": "Add a small 'Guided draft' offer beside the composer. Explain that one ad grants one tone-guided draft; leave existing writing and sending controls unchanged.",
+      "reward": "One editable, tone-guided reply draft, not a sent message.",
+      "optIn": "The user taps the offer, chooses a tone, and affirmatively chooses to watch an ad.",
+      "fulfillment": "After a completed ad, generate one draft in the composer for review and editing before sending.",
+      "declinePath": "Dismiss the offer and keep typing or use the existing controls without an ad.",
+      "failurePath": "If no ad is available or it is unfinished, grant no draft, preserve the user's text, and return to the composer.",
+      "businessImpact": "May increase chat continuation and ad revenue, but may add generation costs or displace normal use of AI write for me. The observed subscription promotes memory, speed, and swipes; this draft must not imply any of those paid benefits.",
+      "validationPlan": "Run a randomized guided-draft availability test measuring completed conversations, ad completion, generation cost, existing-control use, and subscription conversion.",
+      "assumptions": [
+        "Granting a separate guided draft is technically feasible; no existing draft allowance or gate was observed.",
+        "Ad yield, generation cost, and effects on usage and subscriptions are unknown."
+      ]
+    },
+    {
+      "id": "guided-reply",
+      "revision": 1,
+      "title": "One tone-guided reply draft",
+      "opportunityType": "product_change",
+      "entryStateId": "n5",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n5",
+        "n11",
+        "e23"
+      ],
+      "trigger": "In chat, the user is deciding how to respond beside the observed composer and “AI write for me” control.",
+      "userNeed": "A draft in a chosen tone may help the user continue the conversation, but its value beyond “AI write for me” is unproven.",
+      "eligibility": "Chat users who have not redeemed the proposed one-draft reward in the current chat session; test this frequency limit.",
+      "productChange": "Add an optional “Choose a tone for one reply draft” offer beside the composer. Explain that a completed ad unlocks one editable draft. Keep typing, “AI write for me,” and sending unchanged; do not put the offer on the subscription surface.",
+      "reward": "One tone-guided reply draft for review, not a sent message or a subscription benefit.",
+      "optIn": "The user taps the offer, chooses a tone, and explicitly taps “Watch ad for draft.”",
+      "fulfillment": "After ad completion, show the draft in a separate preview. The user may insert it into an empty composer; if text is present, never overwrite it and require the user to choose what to copy or edit.",
+      "declinePath": "Dismiss the offer and continue typing or use existing chat controls without an ad. The observed subscription offer in Model settings remains available.",
+      "failurePath": "If the ad is unavailable or unfinished, grant no draft and return to the unchanged composer, preserving any typed text.",
+      "businessImpact": "Could improve chat continuation and earn ad revenue, but generation costs and displacement of “AI write for me,” normal typing, or subscriptions may outweigh gains. Do not imply that the draft includes the subscription’s advertised memory, faster replies, or smarter swipes.",
+      "validationPlan": "Run a randomized guided-draft availability test against the unchanged chat experience. Compare chat continuation and draft use with “AI write for me” use, ad completion, generation cost, and subscription conversion to determine whether tone guidance adds incremental value.",
+      "assumptions": [
+        "Generating a separate tone-guided draft and retaining composer text are technically feasible; no existing draft allowance or gate was observed.",
+        "Ad yield, generation cost, and effects on normal usage and subscription conversion are unknown.",
+        "The observed $12.99/month subscription offer does not establish whether reply drafting is a paid benefit."
+      ]
+    },
+    {
+      "id": "temporary-persona",
+      "revision": 0,
+      "title": "Temporary persona for a new chat",
+      "opportunityType": "product_change",
+      "entryStateId": "n10",
+      "resumeStateId": "n10",
+      "evidenceIds": [
+        "n9",
+        "n10",
+        "n5",
+        "e21",
+        "e22"
+      ],
+      "trigger": "While starting a new chat, the user reaches Select Persona with only the default profile shown.",
+      "userNeed": "A one-chat persona could let the user try a different role without changing their profile or interrupting chat setup.",
+      "eligibility": "Users at persona selection who want an optional temporary persona; default selection stays available.",
+      "productChange": "Add 'Try a temporary persona' as a separate option. An ad unlocks a short, user-authored persona description for this chat only; this is a new feature, not an observed paid entitlement.",
+      "reward": "Use the temporary persona in the new chat; it expires when that chat ends and does not create a saved custom persona.",
+      "optIn": "The user chooses the temporary-persona option and explicitly agrees to watch the ad before entering its description.",
+      "fulfillment": "After ad completion, enable the description field on persona selection. Confirm then follows the observed route into chat.",
+      "declinePath": "Keep the default persona selected; Confirm continues to chat without an ad.",
+      "failurePath": "If the ad is unavailable or unfinished, retain the default selection and allow Confirm normally.",
+      "businessImpact": "Could encourage new-chat starts and earn ad revenue, while adding prompt-processing and moderation costs. It must not suggest that the subscription's observed memory, speed, or swipe benefits are included; any effect on paid conversion is unknown.",
+      "validationPlan": "A/B test the temporary-persona option against unchanged selection, tracking new-chat completion, continued chatting, ad yield, costs, safety reports, and subscription conversion.",
+      "assumptions": [
+        "Temporary persona support, its prompt cost, and moderation requirements are unverified.",
+        "No paid persona entitlement or existing custom-persona grant was observed.",
+        "Business effects and grant frequency are unknown."
+      ]
+    },
+    {
+      "id": "temporary-persona",
+      "revision": 1,
+      "title": "One-chat persona during new-chat setup",
+      "opportunityType": "product_change",
+      "entryStateId": "n10",
+      "resumeStateId": "n10",
+      "evidenceIds": [
+        "n9",
+        "e21",
+        "n10",
+        "e22",
+        "n5",
+        "n11"
+      ],
+      "trigger": "After choosing New Chat, the user reaches Select Persona, where only the default profile is shown.",
+      "userNeed": "The user may want to play a different role in this chat without changing their profile. A one-chat persona would let them try that before entering the conversation.",
+      "eligibility": "Users starting a new chat who choose the proposed option; the default persona and ad-free Confirm remain available. Availability and frequency limits require testing.",
+      "productChange": "Add an optional persona choice on Select Persona with the pre-ad copy: “Watch an ad to write a persona for this chat only.” The editable, one-chat persona and its ad grant are proposed features, not observed entitlements.",
+      "reward": "After a completed ad, the user can write one persona description for this new chat. It is not saved as a custom persona and does not include the advertised subscription benefits of more memory, faster replies, or smarter swipes.",
+      "optIn": "The user taps the temporary-persona choice, sees the one-chat terms, and explicitly chooses Watch ad. Confirm with the default persona requires no ad.",
+      "fulfillment": "On verified ad completion, enable the description field on Select Persona. After the user enters an accepted description and taps Confirm, continue through the observed route into chat using that persona for this chat only.",
+      "declinePath": "Choosing Not now leaves the default selected; Confirm continues to chat normally.",
+      "failurePath": "If no ad is available or it is unfinished, grant no temporary persona, explain that nothing changed, and leave default Confirm available. If a description cannot be accepted, offer editing or default Confirm without claiming an additional reward.",
+      "businessImpact": "Could increase new-chat engagement and generate ad revenue, but may add prompt-processing and moderation costs or delay normal chat setup. It does not replace the advertised paid memory, speed, or swipe benefits; any effect on subscription conversion is unknown.",
+      "validationPlan": "Run a limited A/B test against unchanged persona selection before broader development. Measure offer uptake, completed ads, new-chat completion, continued chatting, ad yield, moderation and processing costs, safety reports, and subscription conversion.",
+      "assumptions": [
+        "Temporary persona support, ad-completion verification, grant duration, and moderation behavior are unverified.",
+        "Demand, service costs, ad yield, subscription effects, and suitable frequency limits are unknown.",
+        "No paid persona entitlement or existing custom-persona grant was observed; subscription pricing beyond the displayed offer is unverified."
+      ]
+    },
+    {
+      "id": "single-priority-reply",
+      "revision": 0,
+      "title": "One-use sample of faster replies",
+      "opportunityType": "product_change",
+      "entryStateId": "n5",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n5",
+        "n11",
+        "e23"
+      ],
+      "trigger": "Proposed flow: after a user views the subscription offer in Model settings, declines it, and returns to chat. The settings-to-chat return and decline control were not observed.",
+      "userNeed": "The user could experience the advertised faster-replies benefit on their next chat reply before deciding whether ongoing access is worthwhile.",
+      "eligibility": "Users who explicitly decline the subscription offer and return to chat, with no prior sample; exclude subscribers.",
+      "productChange": "Keep the subscription offer and normal settings exit intact. Add a proposed decline-and-return path; only back in chat, show an optional ad offer for priority processing of one next reply. Do not place it on the subscription surface.",
+      "reward": "Priority processing for one generated reply only, not the subscription's ongoing faster replies, additional memory, or smarter swipes. Do not promise a particular response time.",
+      "optIn": "Back in chat, the user explicitly taps 'Watch an ad for one priority reply' before sending their next message.",
+      "fulfillment": "After ad completion, mark the next eligible generated reply for priority processing, then consume the one-use sample.",
+      "declinePath": "Continue chatting normally or return to the subscription offer later; declining the ad changes no existing access.",
+      "failurePath": "If the ad is unavailable or unfinished, send and process replies normally without consuming the sample.",
+      "businessImpact": "A sample might clarify a paid benefit and earn ad revenue, but could cannibalize subscriptions or raise priority-serving costs. Preserve the full subscription offer and limit the sample to one reply.",
+      "validationPlan": "Randomize eligible users after the proposed decline-and-return flow to sample offer versus no sample; compare subscription conversion, reply latency, retention, ad yield, and priority-serving cost.",
+      "assumptions": [
+        "Model settings shows a $12.99/month subscription message advertising faster replies, but no paywall, decline action, return transition, or actual speed difference was observed.",
+        "One-reply priority processing and reliable fulfillment are technically unverified.",
+        "Pricing beyond the displayed monthly amount, service cost, ad yield, and conversion effects are unknown."
+      ]
+    },
+    {
+      "id": "single-priority-reply",
+      "revision": 1,
+      "title": "One priority reply after leaving Model settings",
+      "opportunityType": "product_change",
+      "entryStateId": "n5",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n5",
+        "n11",
+        "e23"
+      ],
+      "trigger": "Proposed: after viewing the subscription message in Model settings without subscribing, the user returns to chat. Show the optional offer in chat, not in settings. A return transition and a decline control were not observed.",
+      "userNeed": "The user wants to continue a conversation. One noticeably faster reply could help them understand the advertised faster-replies benefit before considering ongoing access.",
+      "eligibility": "Non-subscribers who viewed the Model settings subscription message, left without subscribing, and have not used this one-time sample; show only when priority capacity is available.",
+      "productChange": "Keep the displayed subscription offer and normal settings exit intact. Add a post-return offer in chat and a one-reply priority route; do not add a restriction to normal replies.",
+      "reward": "Priority processing for the next eligible generated reply only—not ongoing faster replies, more memory, or smarter swipes. Promise no specific response time.",
+      "optIn": "In chat, the user affirmatively taps 'Watch an ad for one priority reply' and completes the ad before sending a message.",
+      "fulfillment": "On completed ad viewing, reserve one priority reply. Apply it to the next eligible generated reply and consume it only when that reply receives priority processing.",
+      "declinePath": "Dismiss the offer and chat normally. The subscription offer remains available in Model settings.",
+      "failurePath": "If the ad is unavailable or unfinished, grant nothing and leave normal chat available. If priority processing fails after a completed ad, disclose the failure and retain the one-use reward for a later eligible reply.",
+      "businessImpact": "A noticeable sample could clarify the paid benefit and earn ad revenue; it could also substitute for a subscription or increase serving costs. Showing the paid path first and limiting the sample to one reply reduces, but does not remove, those risks.",
+      "validationPlan": "First pilot the priority route to establish that users perceive a meaningful latency improvement without degrading normal replies. If it does, randomize eligible users after the proposed return to chat to offer versus no offer; compare subscription conversion, normal chat usage, perceived and measured latency, retention, ad yield, and incremental serving cost.",
+      "assumptions": [
+        "Model settings displays '$12.99/month' beside a message advertising faster replies; an actual paywall, decline control, return transition, and measured speed difference were not observed.",
+        "A non-disruptive return-to-chat trigger, subscription-status check, and reliable one-reply priority fulfillment can be implemented.",
+        "Grantability, priority capacity, pricing beyond the displayed amount, service costs, ad yield, and business effects are unknown."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "User avatar / Luzia",
+    "identifier": "navBarContent",
+    "coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 279
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "",
+    "identifier": "buttonNavBack",
+    "coordinates": {
+      "x": 21,
+      "y": 143,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "",
+    "identifier": "buttonSearch",
+    "coordinates": {
+      "x": 933,
+      "y": 143,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Our new chat",
+    "identifier": "chatTitleView",
+    "coordinates": {
+      "x": 42,
+      "y": 271,
+      "width": 996,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "EditText",
+    "text": "",
+    "identifier": "inputBar",
+    "coordinates": {
+      "x": 42,
+      "y": 2028,
+      "width": 996,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "Button",
+    "text": "",
+    "identifier": "buttonAddComposer",
+    "coordinates": {
+      "x": 21,
+      "y": 2133,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "Confirm button",
+    "identifier": "sendButton",
+    "coordinates": {
+      "x": 933,
+      "y": 2133,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

@@ -1,0 +1,307 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "proposals": [
+    {
+      "id": "faster-reply-sample",
+      "revision": 0,
+      "title": "One faster reply after leaving Model settings",
+      "opportunityType": "product_change",
+      "entryStateId": "n11",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n11",
+        "n5",
+        "e23"
+      ],
+      "trigger": "After a user views the subscription offer in Model settings and returns to chat without subscribing. The return and post-exit offer are proposed; only the path into settings was observed.",
+      "userNeed": "Get the next character reply sooner while continuing the conversation.",
+      "eligibility": "Non-subscribers who leave Model settings without subscribing, subject to ad availability and capacity for a faster reply.",
+      "productChange": "Add an optional, single-use faster-reply grant on the returned chat screen. Keep Subscribe now in Model settings and do not change normal reply speed.",
+      "reward": "One faster character reply—not ongoing faster replies or other subscription benefits.",
+      "optIn": "User explicitly chooses to watch an ad after returning to chat.",
+      "fulfillment": "After ad completion, mark the next sent message for faster processing; consume the grant when its reply is delivered.",
+      "declinePath": "Dismiss the offer and chat at normal speed; the subscription offer remains available in Model settings.",
+      "failurePath": "If the ad is unavailable or unfinished, grant nothing and leave normal chat available.",
+      "businessImpact": "May demonstrate the paid faster-replies benefit, but could reduce subscriptions or increase priority-serving costs. Normal chat remains unchanged.",
+      "validationPlan": "Randomize eligible settings exits to offer versus no offer; compare subscription starts, reply latency, chat activity, ad completion, and serving cost.",
+      "assumptions": [
+        "A faster single reply can be granted and reliably distinguished from normal service.",
+        "Actual serving costs, subscription conversion, and net revenue effects are unknown.",
+        "The return from Model settings to chat was not observed."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Try one faster reply",
+          "detail": "Back in chat? Watch an ad for one faster reply."
+        },
+        "choice": {
+          "title": "One faster reply",
+          "detail": "Watch an ad; your next reply gets faster service.",
+          "accept": "Watch ad",
+          "decline": "Not now"
+        },
+        "inUse": {
+          "request": "Send my next message",
+          "response": "Your character replies with faster service.",
+          "badge": "Ad: 1 faster reply"
+        },
+        "after": {
+          "title": "Faster reply used",
+          "detail": "Chat normally, or revisit the subscription offer."
+        }
+      }
+    },
+    {
+      "id": "faster-reply-sample",
+      "revision": 1,
+      "title": "One faster reply after leaving Model settings",
+      "opportunityType": "product_change",
+      "entryStateId": "n11",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n11",
+        "n5",
+        "e23"
+      ],
+      "trigger": "After a non-subscriber leaves Model settings without subscribing and returns to chat. Chat-to-settings navigation was observed; the exit and post-exit offer are proposed. Show no ad offer on the settings page.",
+      "userNeed": "Continue the conversation and try the faster-replies benefit advertised in Model settings before deciding whether to subscribe.",
+      "eligibility": "Non-subscribers who have not used this one-time sample, after a verified settings exit, only when an ad and meaningfully faster serving capacity are available.",
+      "productChange": "Add a one-time, one-reply priority-serving grant on the returned chat screen. Preserve Subscribe now and all existing settings and chat behavior.",
+      "reward": "One faster character reply, not ongoing faster replies, more memory, or smarter swipes.",
+      "optIn": "The user explicitly taps Watch ad on the post-exit offer and completes the ad before sending a message.",
+      "fulfillment": "Apply the grant to the next sent chat message and consume it when that character reply is delivered. Confirm that it received faster service.",
+      "declinePath": "Dismiss the offer and continue normal chat. The user can still return to Model settings and choose Subscribe now.",
+      "failurePath": "If the ad is unavailable, unfinished, or faster capacity cannot be secured, grant nothing and keep normal chat available. Do not consume a completed-ad grant without delivering its faster reply.",
+      "businessImpact": "A single sample may clarify a paid benefit, but it could divert subscriptions or add priority-serving costs. Limit it to one use per eligible account; leave paid benefits and normal chat unchanged.",
+      "validationPlan": "First verify the settings-exit route, grant reliability, capacity, and a meaningful latency difference. Then randomize eligible exits to one-time offer versus no offer. Compare subscription starts, chat activity, ad completion, delivered latency, and serving cost; stop if paid conversion is harmed or faster service cannot be delivered.",
+      "assumptions": [
+        "Leaving Model settings can return the user to chat; that exit was not observed.",
+        "A one-reply faster grant, account-level one-use limit, and capacity check can be implemented reliably.",
+        "Pricing beyond the observed $12.99/month display, serving costs, conversion, and net revenue effects are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Try one faster reply",
+          "detail": "Back in chat? Watch an ad for one faster reply."
+        },
+        "choice": {
+          "title": "One faster reply",
+          "detail": "Watch an ad for one faster character reply.",
+          "accept": "Watch ad",
+          "decline": "Not now"
+        },
+        "inUse": {
+          "request": "Send my next chat message",
+          "response": "The character replies with faster service.",
+          "badge": "Ad sample: 1 faster reply"
+        },
+        "after": {
+          "title": "Sample used",
+          "detail": "Chat normally; the subscription offer is unchanged."
+        }
+      }
+    },
+    {
+      "id": "chat-catchup",
+      "revision": 0,
+      "title": "Optional recent-chat recap",
+      "opportunityType": "product_change",
+      "entryStateId": "n5",
+      "resumeStateId": "n5",
+      "evidenceIds": [
+        "n5",
+        "e19",
+        "e22"
+      ],
+      "trigger": "When a user returns to an existing chat and wants to catch up before replying.",
+      "userNeed": "Recall the recent exchange without rereading it. A short recap matters immediately before composing a response.",
+      "eligibility": "Users returning to a chat with at least five eligible recent messages, if recap generation and an ad are available.",
+      "productChange": "Add an optional three-bullet recap of the last five messages. Display it to the user only; do not add model memory or restrict existing chat access.",
+      "reward": "One user-visible, three-bullet recent-chat recap.",
+      "optIn": "User taps the recap offer and affirmatively chooses to watch an ad.",
+      "fulfillment": "After ad completion, generate and display the recap in the same chat without sending a message.",
+      "declinePath": "Close the offer and continue reading or composing normally.",
+      "failurePath": "If the ad is unavailable or unfinished, show no recap and preserve the chat and composer.",
+      "businessImpact": "Could improve return-to-chat use and earn ad revenue, but adds generation and moderation costs and might substitute for some perceived value of paid memory. It does not grant the model more memory.",
+      "validationPlan": "Run a return-to-chat offer holdout; measure subsequent replies, subscriptions, ad completion, recap quality reports, and cost per recap.",
+      "assumptions": [
+        "Recap generation, eligibility checks, and safe handling of chat content can be implemented.",
+        "Subscription effects, ad yield, and generation costs are unknown.",
+        "A recap does not reproduce the subscription's model-memory benefit."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Catch up on this chat",
+          "detail": "Watch an ad for a recap of the last 5 messages."
+        },
+        "choice": {
+          "title": "Recent-chat recap",
+          "detail": "Watch an ad for one 3-bullet recap.",
+          "accept": "Watch ad",
+          "decline": "Keep reading"
+        },
+        "inUse": {
+          "request": "Show my recent-chat recap",
+          "response": "Three bullets summarize the last 5 messages.",
+          "badge": "Ad recap"
+        },
+        "after": {
+          "title": "Recap complete",
+          "detail": "Chat normally; subscription options are unchanged."
+        }
+      }
+    },
+    {
+      "id": "chat-catchup",
+      "revision": 1,
+      "title": "Optional recap when continuing a chat",
+      "opportunityType": "product_change",
+      "entryStateId": "n3",
+      "resumeStateId": "n3",
+      "evidenceIds": [
+        "n2",
+        "e2",
+        "n3",
+        "n11"
+      ],
+      "trigger": "After the user chooses Continue latest chat and reaches the chat, offer a recap only if enough recent messages exist. This is not triggered by closing an image or starting a new chat.",
+      "userNeed": "Recall the recent exchange before replying without rereading it. Whether five messages provide a useful recap is untested.",
+      "eligibility": "Users who enter an existing chat through Continue latest chat and have at least five eligible recent messages; at most one recap per chat per day, subject to ad and generation availability. The observation does not establish how often chats qualify.",
+      "productChange": "Add an optional, user-visible three-bullet recap of the last five messages near the chat composer. It neither changes existing chat access nor adds model memory.",
+      "reward": "One three-bullet recap of the last five messages, shown only to the user.",
+      "optIn": "The user taps the offer and explicitly chooses to watch an ad. Do not place it on the subscription surface.",
+      "fulfillment": "After the ad completes, generate and display the recap in the same chat without sending a message or changing the model's memory.",
+      "declinePath": "Dismiss the offer and continue reading or composing normally; subscription options remain available.",
+      "failurePath": "If the ad is unavailable or unfinished, grant no recap and leave the chat and composer unchanged.",
+      "businessImpact": "May help users reply and earn ad revenue, but generation and safety review add costs. A user-visible recap is distinct from the subscription's more memory, faster replies, and smarter swipes, yet could still reduce some users' willingness to subscribe. Normal chat use and paid benefits remain unchanged.",
+      "validationPlan": "First measure how often continued chats have five eligible messages. Then run an eligible-user offer holdout measuring subsequent replies, recap usefulness and quality reports, ad completion, subscriptions, and cost per recap.",
+      "assumptions": [
+        "Recent-message eligibility and safe recap generation can be implemented; neither was observed.",
+        "The usefulness of a five-message recap is unknown.",
+        "Ad yield, generation and safety costs, and subscription effects are unknown.",
+        "The recap does not provide the subscription's model-memory benefit."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Catch up before replying?",
+          "detail": "Watch an ad to recap the last 5 messages."
+        },
+        "choice": {
+          "title": "Recent-chat recap",
+          "detail": "Watch an ad for one 3-bullet recap.",
+          "accept": "Watch ad",
+          "decline": "Keep reading"
+        },
+        "inUse": {
+          "request": "Show my recent-chat recap",
+          "response": "3 bullets recap the last 5 messages.",
+          "badge": "Ad recap"
+        },
+        "after": {
+          "title": "Recap used",
+          "detail": "Keep chatting; paid options are unchanged."
+        }
+      }
+    },
+    {
+      "id": "character-scene-starter",
+      "revision": 0,
+      "title": "Optional scene starter on a character profile",
+      "opportunityType": "product_change",
+      "entryStateId": "n2",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n1",
+        "n2",
+        "e1"
+      ],
+      "trigger": "After opening a character profile from discovery, before deciding whether to start or continue a chat.",
+      "userNeed": "Get one concrete idea for interacting with the character. A brief starter can help when the profile describes several possible scenarios.",
+      "eligibility": "Visitors to a character profile with sufficient approved description, where generation and an ad are available.",
+      "productChange": "Add an optional AI-generated, character-specific scene starter on the profile. Do not hide existing scenarios, intros, or chat controls.",
+      "reward": "One short scene starter displayed on the profile; it does not start or extend a chat.",
+      "optIn": "User taps the profile offer and explicitly chooses to watch an ad.",
+      "fulfillment": "After ad completion, show the generated starter on the same profile; the user can then choose the existing chat path.",
+      "declinePath": "Dismiss the offer and use the profile and chat controls normally.",
+      "failurePath": "If the ad is unavailable or unfinished, generate no starter and leave the profile usable.",
+      "businessImpact": "Could help users choose a character and increase chats, but generation and safety review add costs; ad placement could distract from normal discovery. Subscription effects are unknown.",
+      "validationPlan": "Randomize eligible profile views to offer versus no offer; compare chat starts, continued chats, ad completion, subscriptions, safety reports, and cost per starter.",
+      "assumptions": [
+        "Safe character-specific starters can be generated without changing creator-provided content.",
+        "Ad yield, generation costs, and effects on subscriptions or chat use are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Need a scene idea?",
+          "detail": "Watch an ad for one starter for this character."
+        },
+        "choice": {
+          "title": "Get one scene starter",
+          "detail": "Watch an ad for a short, new scene idea.",
+          "accept": "Watch ad",
+          "decline": "Use profile"
+        },
+        "inUse": {
+          "request": "Show a scene idea for this character",
+          "response": "One short character-specific starter appears.",
+          "badge": "Ad scene idea"
+        },
+        "after": {
+          "title": "Scene idea ready",
+          "detail": "Start chatting normally; paid options are unchanged."
+        }
+      }
+    },
+    {
+      "id": "character-scene-starter",
+      "revision": 1,
+      "title": "Optional starter for a character's own scenario",
+      "opportunityType": "product_change",
+      "entryStateId": "n2",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n1",
+        "e1",
+        "n2",
+        "n11"
+      ],
+      "trigger": "After a visitor opens a character profile and reads its creator-provided scenarios and intros, offer a starter below that content for someone considering their own scenario.",
+      "userNeed": "Find an opening idea when the listed intros do not fit, without replacing the creator's work.",
+      "eligibility": "Profile visitors who request an idea, have not received a rewarded starter for that profile in the current session, and are viewing a character whose description is suitable for safe generation. Requires an available ad.",
+      "productChange": "Add an optional, one-use generated starter below the existing scenarios and intros. Keep those choices and chat controls visible and unchanged; do not put the offer on a purchase surface.",
+      "reward": "One short character-specific opening idea displayed on the profile. It neither starts nor extends a chat and grants no subscription benefit.",
+      "optIn": "The visitor taps the offer, then explicitly chooses to watch an ad for the starter.",
+      "fulfillment": "After ad completion, generate and display the starter on the same profile. Mark this session's offer used; the visitor chooses how to start or continue chatting.",
+      "declinePath": "Dismiss the offer and use creator intros, the profile, and chat controls normally.",
+      "failurePath": "If no ad is available or viewing is unfinished, grant nothing and leave the profile usable. If generation fails after a completed ad, retain the earned starter for retry without another ad.",
+      "businessImpact": "May increase chat starts, but could divert attention from creator intros or normal discovery. Ads may offset generation and safety costs; effects on subscriptions and the observed paid benefits—more memory, faster replies, and smarter swipes—are unknown. Existing chat use and the subscription offer stay intact.",
+      "validationPlan": "Randomize eligible profile views to this offer or no offer. Compare chat starts and continued chats, creator-intro selection, ad completion and yield, starter generation and safety costs, reports, and subscription conversion. Check whether additional chats come at the expense of creator-intro use.",
+      "assumptions": [
+        "Character details can support safe starter generation without altering creator content.",
+        "Per-session reward tracking and retry after completed-ad generation failure can be implemented.",
+        "Ad yield, generation and moderation costs, and effects on chat use and subscriptions are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Want an idea for your own scenario?",
+          "detail": "Watch an ad for one opening idea."
+        },
+        "choice": {
+          "title": "Get one opening idea",
+          "detail": "Watch an ad for one character-specific starter.",
+          "accept": "Watch ad",
+          "decline": "Use profile"
+        },
+        "inUse": {
+          "request": "Suggest an opening for my own scenario",
+          "response": "One short idea for this character appears.",
+          "badge": "Ad starter · 1 use"
+        },
+        "after": {
+          "title": "Starter used",
+          "detail": "Use creator intros or chat normally; Plus is unchanged."
+        }
+      }
+    }
+  ]
+}

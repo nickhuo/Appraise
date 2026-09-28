@@ -30,13 +30,13 @@ The current implementation addresses the brief as follows. Artifact paths below 
 
 ### Sample coverage
 
-These are the latest local sample models inspected on September 27, 2026. Their run directories also contain the generated mocks, recommendations and flows. `runs/` is gitignored; include the selected directories when sharing a delivery, or regenerate them with the commands below.
+These are the latest exploration runs for each app, selected on September 27, 2026 (Pacific time). Run IDs use UTC timestamps. The three linked run directories are committed with their evidence; new runs remain gitignored. Janitor and AOL also include generated mocks, recommendations and flows. The latest Luzia run contains exploration artifacts only.
 
 
 | App     | Product model                                                                 | What the run captured                                                                               | Stop condition                                                           |
 | ------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | Janitor | [Model](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/product-model.json) | 11 states, 23 transitions: character discovery, detail, chat, persona selection and model settings. | Action budget reached; some steps also timed out.                        |
-| Luzia   | [Model](runs/luzia/v2-2026-09-27T16-46-24-458Z-3fc81d/product-model.json)     | 9 states, 20 transitions: chat, routines and the Luzia Plus paywall.                                | Media prerequisites and navigation/no-effect failures left work blocked. |
+| Luzia   | [Model](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/product-model.json)     | 13 states, 25 transitions: chat, the Plus paywall, app discovery, creation and draft editing.       | Action budget reached.                                                  |
 | AOL     | [Model](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/product-model.json)       | 5 states, 9 transitions: home, articles, search and sign-in.                                        | Login, permission and unavailable-element blockers.                      |
 | OOC     | No model included.                                                            | Previous emulator attempts ended when the app closed itself.                                        | Core experience not explored.                                            |
 

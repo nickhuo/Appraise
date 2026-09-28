@@ -1,0 +1,722 @@
+{
+  "version": 4,
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "inputHash": "57e02e61d4cab06743439538d41f30e9b5cfeb915dcc467d15ad06c23fc9c5e8",
+  "app": "aol",
+  "runStatus": "blocked",
+  "stopReason": "remaining entrances need a person or could not be reached",
+  "initialStep": 1,
+  "states": [
+    {
+      "id": "n1",
+      "screen": "home",
+      "variant": "default",
+      "summary": "The user can browse news articles, search, check weather, or open Inbox.",
+      "observationSteps": [
+        1,
+        7,
+        10,
+        11,
+        14,
+        15,
+        16,
+        18
+      ],
+      "entrances": [
+        {
+          "key": "1_the_telegraph_10_engineering_mar",
+          "name": "The Telegraph / 10 engineering marvels you must see in your ",
+          "status": "explored",
+          "transitionId": "e1",
+          "step": 1,
+          "bounds": {
+            "x": 0,
+            "y": 625,
+            "width": 1080,
+            "height": 884
+          }
+        },
+        {
+          "key": "2_inbox",
+          "name": "Inbox",
+          "status": "explored",
+          "transitionId": "e3",
+          "step": 1,
+          "bounds": {
+            "x": 0,
+            "y": 2187,
+            "width": 540,
+            "height": 150
+          }
+        },
+        {
+          "key": "3_search",
+          "name": "Search",
+          "status": "explored",
+          "transitionId": "e4",
+          "step": 1,
+          "bounds": {
+            "x": 954,
+            "y": 164,
+            "width": 105,
+            "height": 105
+          }
+        },
+        {
+          "key": "4_entertainment",
+          "name": "Entertainment",
+          "status": "explored",
+          "transitionId": "e6",
+          "step": 1,
+          "bounds": {
+            "x": 313,
+            "y": 290,
+            "width": 284,
+            "height": 126
+          }
+        },
+        {
+          "key": "5_local",
+          "name": "Local",
+          "status": "explored",
+          "transitionId": "e7",
+          "step": 1,
+          "bounds": {
+            "x": 618,
+            "y": 290,
+            "width": 159,
+            "height": 126
+          }
+        },
+        {
+          "key": "6_tap_here_for_weather",
+          "name": "Tap here for weather",
+          "status": "explored",
+          "transitionId": "e8",
+          "step": 1,
+          "bounds": {
+            "x": 80,
+            "y": 460,
+            "width": 921,
+            "height": 126
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "screen": "article",
+      "variant": "default",
+      "summary": "The Telegraph article is open, and you can scroll to read it or open a related story.",
+      "observationSteps": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "entrances": [
+        {
+          "key": "1_the_telegraph_the_20_buildings_y",
+          "name": "The 20 buildings you must visit in your lifetime",
+          "status": "explored",
+          "transitionId": "e2",
+          "step": 4,
+          "bounds": {
+            "x": 713,
+            "y": 2020,
+            "width": 315,
+            "height": 29
+          }
+        },
+        {
+          "key": "2_islands_the_world_s_largest_beav",
+          "name": "The secret behind the Sagrada Familia's final towers: Stone,",
+          "status": "unreachable",
+          "transitionId": null,
+          "step": null,
+          "bounds": null
+        },
+        {
+          "key": "3_express_uk_moment_huge_new_bridg",
+          "name": "10 engineering marvels you must see in your lifetime",
+          "status": "unreachable",
+          "transitionId": null,
+          "step": null,
+          "bounds": null
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "screen": "aol_sign_in",
+      "variant": "default",
+      "summary": "The user can enter an AOL account identifier to sign in, recover a username, or create an account.",
+      "observationSteps": [
+        9
+      ],
+      "entrances": [
+        {
+          "key": "1_email_or_phone_number",
+          "name": "Email or phone number",
+          "status": "blocked",
+          "transitionId": null,
+          "step": 9,
+          "bounds": {
+            "x": 154,
+            "y": 683,
+            "width": 772,
+            "height": 55
+          }
+        },
+        {
+          "key": "2_next",
+          "name": "Next",
+          "status": "blocked",
+          "transitionId": null,
+          "step": 9,
+          "bounds": {
+            "x": 105,
+            "y": 985,
+            "width": 871,
+            "height": 160
+          }
+        },
+        {
+          "key": "3_create_account",
+          "name": "Create account",
+          "status": "blocked",
+          "transitionId": null,
+          "step": 9,
+          "bounds": {
+            "x": 105,
+            "y": 1336,
+            "width": 871,
+            "height": 161
+          }
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "screen": "search",
+      "variant": "default",
+      "summary": "The search field is ready for a query, or the user can select a suggested search.",
+      "observationSteps": [
+        12,
+        13
+      ],
+      "entrances": [
+        {
+          "key": "1_search",
+          "name": "Search",
+          "status": "explored",
+          "transitionId": "e5",
+          "step": 12,
+          "bounds": {
+            "x": 173,
+            "y": 159,
+            "width": 907,
+            "height": 126
+          }
+        },
+        {
+          "key": "2_suggested_searches_dante_moore_i",
+          "name": "Suggested searches / Dante Moore Injury Update",
+          "status": "unreachable",
+          "transitionId": null,
+          "step": 12,
+          "bounds": {
+            "x": 0,
+            "y": 412,
+            "width": 1080,
+            "height": 126
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "screen": "home",
+      "variant": "location_permission_prompt",
+      "summary": "A location permission prompt covers the Home news feed; you can dismiss it or choose to allow location for weather.",
+      "observationSteps": [
+        17
+      ],
+      "entrances": [
+        {
+          "key": "1_not_now",
+          "name": "Not now",
+          "status": "explored",
+          "transitionId": "e9",
+          "step": 17,
+          "bounds": {
+            "x": 157,
+            "y": 1477,
+            "width": 291,
+            "height": 95
+          }
+        },
+        {
+          "key": "2_allow_location",
+          "name": "Allow Location",
+          "status": "blocked",
+          "transitionId": null,
+          "step": 17,
+          "bounds": {
+            "x": 524,
+            "y": 1477,
+            "width": 399,
+            "height": 95
+          }
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "step": 1,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/001.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/001.elements.json"
+      }
+    },
+    {
+      "step": 2,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/002.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/002.elements.json"
+      }
+    },
+    {
+      "step": 3,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/003.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/003.elements.json"
+      }
+    },
+    {
+      "step": 4,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/004.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/004.elements.json"
+      },
+      "scroll": {
+        "from": 3,
+        "direction": "down"
+      }
+    },
+    {
+      "step": 5,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/005.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/005.elements.json"
+      }
+    },
+    {
+      "step": 6,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/006.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/006.elements.json"
+      }
+    },
+    {
+      "step": 7,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/007.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/007.elements.json"
+      }
+    },
+    {
+      "step": 9,
+      "stateId": "n3",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/009.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/009.elements.json"
+      }
+    },
+    {
+      "step": 10,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/010.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/010.elements.json"
+      }
+    },
+    {
+      "step": 11,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/011.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/011.elements.json"
+      }
+    },
+    {
+      "step": 12,
+      "stateId": "n4",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/012.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/012.elements.json"
+      }
+    },
+    {
+      "step": 13,
+      "stateId": "n4",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/013.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/013.elements.json"
+      }
+    },
+    {
+      "step": 14,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/014.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/014.elements.json"
+      }
+    },
+    {
+      "step": 15,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/015.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/015.elements.json"
+      }
+    },
+    {
+      "step": 16,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/016.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/016.elements.json"
+      }
+    },
+    {
+      "step": 17,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/017.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/017.elements.json"
+      }
+    },
+    {
+      "step": 18,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/018.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/018.elements.json"
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "sourceStep": 1,
+      "targetStep": 2,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 540,
+        "y": 1067,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "The Telegraph / 10 engineering marvels you must see in your ",
+        "groupKey": "1_the_telegraph_10_engineering_mar"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 625,
+        "width": 1080,
+        "height": 884
+      },
+      "outcome": "navigated",
+      "label": "The Telegraph / 10 engineering marvels you must see in your "
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n2",
+      "sourceStep": 4,
+      "targetStep": 5,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 871,
+        "y": 2035,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "The 20 buildings you must visit in your lifetime",
+        "groupKey": "1_the_telegraph_the_20_buildings_y"
+      },
+      "bounds": {
+        "x": 713,
+        "y": 2020,
+        "width": 315,
+        "height": 29
+      },
+      "outcome": "changed_in_place",
+      "label": "The 20 buildings you must visit in your lifetime"
+    },
+    {
+      "id": "e3",
+      "from": "n1",
+      "to": "n3",
+      "sourceStep": 7,
+      "targetStep": 9,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 270,
+        "y": 2262,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Inbox",
+        "groupKey": "2_inbox"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 2187,
+        "width": 540,
+        "height": 150
+      },
+      "outcome": "navigated",
+      "label": "Inbox"
+    },
+    {
+      "id": "e4",
+      "from": "n1",
+      "to": "n4",
+      "sourceStep": 11,
+      "targetStep": 12,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 1007,
+        "y": 217,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Search",
+        "groupKey": "3_search"
+      },
+      "bounds": {
+        "x": 954,
+        "y": 164,
+        "width": 105,
+        "height": 105
+      },
+      "outcome": "navigated",
+      "label": "Search"
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": null,
+      "sourceStep": 12,
+      "targetStep": null,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 627,
+        "y": 222,
+        "text": "weather forecast",
+        "submit": true,
+        "direction": "none",
+        "reason": "Search",
+        "groupKey": "1_search"
+      },
+      "bounds": {
+        "x": 173,
+        "y": 159,
+        "width": 907,
+        "height": 126
+      },
+      "outcome": "left_app",
+      "label": "Type and submit"
+    },
+    {
+      "id": "e6",
+      "from": "n1",
+      "to": "n1",
+      "sourceStep": 14,
+      "targetStep": 15,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 455,
+        "y": 353,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Entertainment",
+        "groupKey": "4_entertainment"
+      },
+      "bounds": {
+        "x": 313,
+        "y": 290,
+        "width": 284,
+        "height": 126
+      },
+      "outcome": "changed_in_place",
+      "label": "Entertainment"
+    },
+    {
+      "id": "e7",
+      "from": "n1",
+      "to": "n1",
+      "sourceStep": 15,
+      "targetStep": 16,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 438,
+        "y": 206,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Local",
+        "groupKey": "5_local"
+      },
+      "bounds": {
+        "x": 358,
+        "y": 143,
+        "width": 159,
+        "height": 126
+      },
+      "outcome": "changed_in_place",
+      "label": "Local"
+    },
+    {
+      "id": "e8",
+      "from": "n1",
+      "to": "n5",
+      "sourceStep": 16,
+      "targetStep": 17,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 541,
+        "y": 376,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Tap here for weather",
+        "groupKey": "6_tap_here_for_weather"
+      },
+      "bounds": {
+        "x": 80,
+        "y": 313,
+        "width": 921,
+        "height": 126
+      },
+      "outcome": "navigated",
+      "label": "Tap here for weather"
+    },
+    {
+      "id": "e9",
+      "from": "n5",
+      "to": "n1",
+      "sourceStep": 17,
+      "targetStep": 18,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 303,
+        "y": 1525,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Not now",
+        "groupKey": "1_not_now"
+      },
+      "bounds": {
+        "x": 157,
+        "y": 1477,
+        "width": 291,
+        "height": 95
+      },
+      "outcome": "navigated",
+      "label": "Not now"
+    }
+  ]
+}

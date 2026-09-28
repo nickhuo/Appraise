@@ -1,0 +1,76 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "Close sheet",
+    "coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 1563
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "Drag handle",
+    "coordinates": {
+      "x": 478,
+      "y": 1563,
+      "width": 126,
+      "height": 127
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Take Photo",
+    "coordinates": {
+      "x": 42,
+      "y": 1690,
+      "width": 318,
+      "height": 210
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Attach Photos",
+    "identifier": "buttonAttachPhotos",
+    "coordinates": {
+      "x": 381,
+      "y": 1690,
+      "width": 318,
+      "height": 210
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Attach Files",
+    "coordinates": {
+      "x": 720,
+      "y": 1690,
+      "width": 318,
+      "height": 210
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "View",
+    "text": "Deep reasoning / Luzia / Smarter, deeper answers",
+    "identifier": "buttonReasoningMode",
+    "coordinates": {
+      "x": 0,
+      "y": 2066,
+      "width": 1080,
+      "height": 166
+    },
+    "enabled": true
+  }
+]

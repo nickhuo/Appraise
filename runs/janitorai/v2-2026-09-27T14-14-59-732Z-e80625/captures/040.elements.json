@@ -1,0 +1,1238 @@
+[
+  {
+    "ref": "n1",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 954,
+      "y": 163,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ViewGroup",
+    "text": "All",
+    "coordinates": {
+      "x": 50,
+      "y": 305,
+      "width": 145,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ViewGroup",
+    "text": "Limited Only",
+    "coordinates": {
+      "x": 201,
+      "y": 305,
+      "width": 300,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "Following",
+    "coordinates": {
+      "x": 50,
+      "y": 430,
+      "width": 255,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "Favorites",
+    "coordinates": {
+      "x": 311,
+      "y": 430,
+      "width": 247,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "Trending",
+    "coordinates": {
+      "x": 564,
+      "y": 430,
+      "width": 242,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ViewGroup",
+    "text": "Hidden Gems",
+    "coordinates": {
+      "x": 812,
+      "y": 430,
+      "width": 224,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 601,
+      "y": 792,
+      "width": 95,
+      "height": 95
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 944,
+      "y": 792,
+      "width": 95,
+      "height": 95
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "1 / 295",
+    "coordinates": {
+      "x": 719,
+      "y": 818,
+      "width": 202,
+      "height": 43
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "ViewGroup",
+    "text": "Ariba | Your Fiery Childhood Friend",
+    "coordinates": {
+      "x": 63,
+      "y": 929,
+      "width": 443,
+      "height": 536
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "ViewGroup",
+    "text": "Eileen | Original Series Vol. 3",
+    "coordinates": {
+      "x": 574,
+      "y": 929,
+      "width": 443,
+      "height": 536
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "ViewGroup",
+    "text": "@Nora_Eva",
+    "coordinates": {
+      "x": 63,
+      "y": 1482,
+      "width": 148,
+      "height": 34
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "ViewGroup",
+    "text": "@Seru",
+    "coordinates": {
+      "x": 574,
+      "y": 1482,
+      "width": 87,
+      "height": 34
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "ViewGroup",
+    "text": "Ariba is a beautiful, expressive, 18 years old girl who is 4",
+    "coordinates": {
+      "x": 63,
+      "y": 1533,
+      "width": 443,
+      "height": 360
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "ViewGroup",
+    "text": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━, ✦ The Silver Tide of Highspi",
+    "coordinates": {
+      "x": 574,
+      "y": 1533,
+      "width": 443,
+      "height": 518
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 63,
+      "y": 2008,
+      "width": 158,
+      "height": 57
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n18",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 233,
+      "y": 2008,
+      "width": 177,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "ViewGroup",
+    "text": "📚 Fictional",
+    "coordinates": {
+      "x": 63,
+      "y": 2077,
+      "width": 191,
+      "height": 58
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "🪢 Scenario",
+    "coordinates": {
+      "x": 266,
+      "y": 2077,
+      "width": 194,
+      "height": 58
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 63,
+      "y": 2147,
+      "width": 185,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "👨 MalePov",
+    "coordinates": {
+      "x": 260,
+      "y": 2147,
+      "width": 193,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 2166,
+      "width": 158,
+      "height": 57
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 744,
+      "y": 2166,
+      "width": 177,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 72,
+      "y": 2169,
+      "width": 168,
+      "height": 168
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 264,
+      "y": 2169,
+      "width": 168,
+      "height": 168
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 456,
+      "y": 2169,
+      "width": 168,
+      "height": 168
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 648,
+      "y": 2169,
+      "width": 168,
+      "height": 168
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 840,
+      "y": 2169,
+      "width": 168,
+      "height": 168
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "#musicmania2",
+    "coordinates": {
+      "x": 63,
+      "y": 2216,
+      "width": 225,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 574,
+      "y": 2235,
+      "width": 125,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "🎮 Game",
+    "coordinates": {
+      "x": 711,
+      "y": 2235,
+      "width": 160,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 574,
+      "y": 2305,
+      "width": 185,
+      "height": 58
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 771,
+      "y": 2305,
+      "width": 153,
+      "height": 58
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 574,
+      "y": 2374,
+      "width": 143,
+      "height": 26
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "ViewGroup",
+    "text": "Kalicoatl: Empress of the Saurian Empire",
+    "coordinates": {
+      "x": 63,
+      "y": 2536,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "ViewGroup",
+    "text": "Your Dragonkin Mercenary",
+    "coordinates": {
+      "x": 574,
+      "y": 2536,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n38",
+    "type": "ViewGroup",
+    "text": "@AdamTheRaptor08",
+    "coordinates": {
+      "x": 63,
+      "y": 3089,
+      "width": 274,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n39",
+    "type": "ViewGroup",
+    "text": "@AkyLovesDalmatians",
+    "coordinates": {
+      "x": 574,
+      "y": 3089,
+      "width": 302,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n40",
+    "type": "ViewGroup",
+    "text": "Kalicoatl is the current Empress of the Saurian Empire, and ",
+    "coordinates": {
+      "x": 63,
+      "y": 3140,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n41",
+    "type": "ViewGroup",
+    "text": "---------------🐉🗡️---------------",
+    "coordinates": {
+      "x": 574,
+      "y": 3140,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n42",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 63,
+      "y": 3575,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n43",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 233,
+      "y": 3575,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n44",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 3641,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n45",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 744,
+      "y": 3641,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n46",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 63,
+      "y": 3644,
+      "width": 125,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n47",
+    "type": "ViewGroup",
+    "text": "📚 Fictional",
+    "coordinates": {
+      "x": 200,
+      "y": 3644,
+      "width": 192,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n48",
+    "type": "ViewGroup",
+    "text": "📚 Fictional",
+    "coordinates": {
+      "x": 574,
+      "y": 3710,
+      "width": 191,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n49",
+    "type": "ViewGroup",
+    "text": "🦄 Non-human",
+    "coordinates": {
+      "x": 777,
+      "y": 3710,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n50",
+    "type": "ViewGroup",
+    "text": "🦄 Non-human",
+    "coordinates": {
+      "x": 63,
+      "y": 3714,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n51",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 300,
+      "y": 3714,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n52",
+    "type": "ViewGroup",
+    "text": "🕊🗡 Dead Dove",
+    "coordinates": {
+      "x": 574,
+      "y": 3780,
+      "width": 247,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n53",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 833,
+      "y": 3780,
+      "width": 144,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n54",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 63,
+      "y": 3783,
+      "width": 169,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n55",
+    "type": "ViewGroup",
+    "text": "🐺 Furry",
+    "coordinates": {
+      "x": 574,
+      "y": 3849,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n56",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 735,
+      "y": 3849,
+      "width": 170,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n57",
+    "type": "ViewGroup",
+    "text": "#reptilegirlsupremacy",
+    "coordinates": {
+      "x": 63,
+      "y": 3852,
+      "width": 309,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n58",
+    "type": "ViewGroup",
+    "text": "#dragonkin",
+    "coordinates": {
+      "x": 574,
+      "y": 3918,
+      "width": 184,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n59",
+    "type": "ViewGroup",
+    "text": "#fantasy",
+    "coordinates": {
+      "x": 770,
+      "y": 3918,
+      "width": 154,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n60",
+    "type": "ViewGroup",
+    "text": "#scalie",
+    "coordinates": {
+      "x": 574,
+      "y": 3987,
+      "width": 136,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n61",
+    "type": "ViewGroup",
+    "text": "The Neet Porn Addicted Weirdo Is Now Your Step Sis",
+    "coordinates": {
+      "x": 63,
+      "y": 4150,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n62",
+    "type": "ViewGroup",
+    "text": "Synyster Gates",
+    "coordinates": {
+      "x": 574,
+      "y": 4150,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n63",
+    "type": "ViewGroup",
+    "text": "@RottenOne",
+    "coordinates": {
+      "x": 63,
+      "y": 4703,
+      "width": 165,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n64",
+    "type": "ViewGroup",
+    "text": "@Shadow_0d_09",
+    "coordinates": {
+      "x": 574,
+      "y": 4703,
+      "width": 222,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n65",
+    "type": "ViewGroup",
+    "text": "||Meet Wren, Your Goonette Step Sis.|| 20(F) Premise**:** Wr",
+    "coordinates": {
+      "x": 63,
+      "y": 4754,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n66",
+    "type": "ViewGroup",
+    "text": "AUTHOR'S NOTE: HEEEEEEEEEEEEELPPPPPPPPPPP- / also me: MAKING",
+    "coordinates": {
+      "x": 574,
+      "y": 4754,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n67",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 63,
+      "y": 5229,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n68",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 233,
+      "y": 5229,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n69",
+    "type": "ViewGroup",
+    "text": "🙇 Submissive",
+    "coordinates": {
+      "x": 63,
+      "y": 5298,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n70",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 300,
+      "y": 5298,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n71",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 5347,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n72",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 744,
+      "y": 5347,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n73",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 63,
+      "y": 5368,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n74",
+    "type": "ViewGroup",
+    "text": "#gooner",
+    "coordinates": {
+      "x": 227,
+      "y": 5368,
+      "width": 150,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n75",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 574,
+      "y": 5416,
+      "width": 185,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n76",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 771,
+      "y": 5416,
+      "width": 144,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n77",
+    "type": "ViewGroup",
+    "text": "#NEET",
+    "coordinates": {
+      "x": 63,
+      "y": 5437,
+      "width": 132,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n78",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 574,
+      "y": 5486,
+      "width": 169,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n79",
+    "type": "ViewGroup",
+    "text": "Форма голоса",
+    "coordinates": {
+      "x": 63,
+      "y": 5648,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n80",
+    "type": "ViewGroup",
+    "text": "Wise Arna",
+    "coordinates": {
+      "x": 574,
+      "y": 5648,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n81",
+    "type": "ViewGroup",
+    "text": "@Kim_Dragon0",
+    "coordinates": {
+      "x": 63,
+      "y": 6201,
+      "width": 202,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n82",
+    "type": "ViewGroup",
+    "text": "@GodSend__XxX",
+    "coordinates": {
+      "x": 574,
+      "y": 6201,
+      "width": 221,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n83",
+    "type": "ViewGroup",
+    "text": "Имя персонажа: / Сёко Нисимия (Shoko Nishimiya) / Возраст:",
+    "coordinates": {
+      "x": 63,
+      "y": 6252,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n84",
+    "type": "ViewGroup",
+    "text": "BL/MLM | (Zenless Zone Zero) Wise Arna | Why’s my boyfriend ",
+    "coordinates": {
+      "x": 574,
+      "y": 6252,
+      "width": 443,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n85",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 6673,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n86",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 744,
+      "y": 6673,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n87",
+    "type": "ViewGroup",
+    "text": "🎮 Game",
+    "coordinates": {
+      "x": 574,
+      "y": 6742,
+      "width": 159,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n88",
+    "type": "ViewGroup",
+    "text": "👨‍❤️‍👨 MLM",
+    "coordinates": {
+      "x": 745,
+      "y": 6742,
+      "width": 151,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n89",
+    "type": "ViewGroup",
+    "text": "#wise",
+    "coordinates": {
+      "x": 574,
+      "y": 6812,
+      "width": 120,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n90",
+    "type": "ViewGroup",
+    "text": "#zenlesszonezero",
+    "coordinates": {
+      "x": 706,
+      "y": 6812,
+      "width": 263,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n91",
+    "type": "ViewGroup",
+    "text": "#zzz",
+    "coordinates": {
+      "x": 574,
+      "y": 6881,
+      "width": 106,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n92",
+    "type": "ViewGroup",
+    "text": "#possessive",
+    "coordinates": {
+      "x": 692,
+      "y": 6881,
+      "width": 198,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n93",
+    "type": "ViewGroup",
+    "text": "#boyfriend",
+    "coordinates": {
+      "x": 574,
+      "y": 6950,
+      "width": 178,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n94",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 63,
+      "y": 7044,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n95",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 233,
+      "y": 7044,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n96",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 63,
+      "y": 7113,
+      "width": 176,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n97",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 251,
+      "y": 7113,
+      "width": 126,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n98",
+    "type": "ViewGroup",
+    "text": "📺 Anime",
+    "coordinates": {
+      "x": 63,
+      "y": 7183,
+      "width": 165,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n99",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 240,
+      "y": 7183,
+      "width": 144,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n100",
+    "type": "ViewGroup",
+    "text": "👨 MalePov",
+    "coordinates": {
+      "x": 63,
+      "y": 7252,
+      "width": 192,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n101",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 601,
+      "y": 31147,
+      "width": 95,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n102",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 944,
+      "y": 31147,
+      "width": 95,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n103",
+    "type": "ViewGroup",
+    "text": "1 / 295",
+    "coordinates": {
+      "x": 719,
+      "y": 31173,
+      "width": 202,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

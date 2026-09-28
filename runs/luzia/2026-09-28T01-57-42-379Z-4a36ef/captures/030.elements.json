@@ -1,0 +1,65 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "",
+    "identifier": "buttonNavBack",
+    "coordinates": {
+      "x": 21,
+      "y": 132,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 196,
+      "y": 649,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 758,
+      "y": 649,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Discard changes",
+    "identifier": "editReviewDiscard",
+    "coordinates": {
+      "x": 42,
+      "y": 2185,
+      "width": 487,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Save changes",
+    "identifier": "editReviewKeep",
+    "coordinates": {
+      "x": 550,
+      "y": 2185,
+      "width": 488,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "judgments": [
+    {
+      "proposalId": "article-audio",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 2
+      },
+      "hardFailures": [],
+      "rationale": "n2 shows an article being read, and e1 confirms entry from Home, so an optional Listen offer fits this screen. One playback has plausible value, but the observations do not establish demand for audio, narration rights, or an existing audio entitlement. The proposal explains the ad exchange, preserves normal reading on decline or failure, and defines fulfillment. Rights, costs, ad yield, and possible diversion from paid access remain unverified; the Telegraph full-access prompt in e2 does not establish an AOL audio benefit.",
+      "feedback": "Validate narration rights and costs for eligible articles, test whether readers want audio, and check actual paid entitlements before setting the offer’s placement.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "article-audio",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 3,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 2
+      },
+      "hardFailures": [],
+      "rationale": "Reading an opened article is observed (n2, e1), so optional playback has a plausible use, but demand for audio is unobserved. The proposal clearly exchanges a completed ad for one playback and preserves normal reading on decline or failure. The Telegraph full-access prompt (e2) does not establish an audio entitlement or its price; excluding relevant paid users and checking entitlements limits, but does not resolve, cannibalization risk. Narration rights, delivery costs, ad yield, and paid-benefit overlap remain unverified. Those are validation dependencies rather than observed contradictions.",
+      "feedback": "Confirm narration rights and paid audio entitlements for eligible articles, then test reader interest and net yield against a no-offer control before building broadly.",
+      "decision": "reject"
+    },
+    {
+      "proposalId": "home-briefing",
+      "revision": 0,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "Home shows multiple stories (n1), and a story can be opened from the feed (e1), supporting the proposed briefing task and entry point. The briefing itself is new, so its usefulness is untested. The offer explains the ad exchange, preserves normal browsing if declined, and defines fulfillment and failure paths. Ad yield, generation costs, publisher permissions, and effects on article opens or paid conversion remain unknown; the observed evidence does not establish a paid briefing benefit.",
+      "feedback": "Validate briefing usefulness and rights-compliant attribution, then measure whether it increases discovery or replaces article opens. Check any applicable paid entitlements before testing the offer.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "home-briefing",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "A one-time briefing could help readers choose among Home stories (n1), while links preserve the observed article-opening path (e1, n2). The opt-in, decline, completion, and failure paths are coherent. Value remains untested, and publisher permissions and summary costs are unknown. Ad yield could be offset by fewer article opens; relevant paid benefits have not been established. The proposal does not claim an observed quota or entitlement.",
+      "feedback": "Verify permissions for enough Home stories and check exact paid benefits before testing. Make the offer explicitly say that completing an ad unlocks one briefing, then measure whether it adds discovery without reducing reading or paid uptake.",
+      "decision": "reject"
+    }
+  ],
+  "approvedProposalIds": []
+}

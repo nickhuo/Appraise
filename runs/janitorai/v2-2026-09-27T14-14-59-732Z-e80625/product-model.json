@@ -1,0 +1,2007 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "runStatus": "incomplete",
+  "stopReason": "action budget reached",
+  "app": {
+    "key": "janitorai",
+    "packageId": "com.janitor.ai",
+    "version": "2.5.0"
+  },
+  "frontier": {
+    "pending": 19,
+    "blocked": 4
+  },
+  "states": [
+    {
+      "id": "n1",
+      "screen": "character_discovery",
+      "variant": "default",
+      "summary": "The trending feed shows character cards, with options to open a character, change discovery categories, or open the menu.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Build, Share, Explore",
+          "All",
+          "Limited Only",
+          "Following",
+          "Favorites",
+          "Trending",
+          "Hidden Gems",
+          "24h",
+          "Weekly",
+          "⭐ Trending shows popular characters with the most chats, created in the last 24 hours.",
+          "5",
+          ",",
+          "9",
+          "4",
+          "6",
+          "characters",
+          "1 / 175",
+          "Stepaunt stays with me after being released from Prison",
+          "234k",
+          "1",
+          "120.6k",
+          "@TaaxR",
+          "Limitless",
+          "👩‍🦰 Female",
+          "⛓️ Dominant",
+          "👤 AnyPOV",
+          "❤️‍🔥 Smut",
+          "#milf",
+          "#tomboy",
+          "#alcoholic",
+          "#criminal",
+          "#roommate",
+          "#thevalentine",
+          "2.2k tokens",
+          "Kaelen Winterborne || The Heartbreakers",
+          "@lwrn_mawn",
+          "You and Kaelen have been best friends ever since you met, becoming the popular duo everyone knows. People have always shipped you two, but you both denied it because you were justbest friends... right? Until you unexpectedly fell for him—quietly and hopel",
+          "👨 Male",
+          "📚 Fictional",
+          "🧬 Demi-Human"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_kaelen_winterborne_the_heartbrea",
+          "description": "Kaelen Winterborne || The Heartbreakers",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 574,
+              "y": 993,
+              "width": 443,
+              "height": 536
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_stepaunt_stays_with_me_after_bei",
+          "description": "Stepaunt stays with me after being released from Prison",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 63,
+              "y": 993,
+              "width": 443,
+              "height": 536
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_menu",
+          "description": "menu",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 954,
+              "y": 163,
+              "width": 84,
+              "height": 84
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 1,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/001.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/001.elements.json"
+        },
+        {
+          "step": 8,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/008.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/008.elements.json"
+        },
+        {
+          "step": 11,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/011.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/011.elements.json"
+        },
+        {
+          "step": 13,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/013.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/013.elements.json"
+        },
+        {
+          "step": 19,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/019.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/019.elements.json"
+        },
+        {
+          "step": 20,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/020.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/020.elements.json"
+        },
+        {
+          "step": 22,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/022.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/022.elements.json"
+        },
+        {
+          "step": 40,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/040.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/040.elements.json"
+        },
+        {
+          "step": 42,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/042.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/042.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n2",
+      "screen": "character_detail",
+      "variant": "default",
+      "summary": "Kaelen’s profile shows an illustration, story and chat options, with other characters further down.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Kaelen Winterborne || The Heartbreakers",
+          "6",
+          "5",
+          "0",
+          "9",
+          "5.7k",
+          "120.6k",
+          "by:",
+          "@lwrn_mawn",
+          "8",
+          "You and Kaelen have been best friends ever since you met, becoming the popular duo everyone knows. People have always shipped you two, but you both denied it because you were",
+          "just",
+          "best friends... right?",
+          "Until you unexpectedly fell for him—quietly and hopelessly—while Kaelen remained completely oblivious to your feelings. To him, you were simply his best friend. But then, a new transfer student arrives, and for the first time, Kaelen's cocky playboy attitude completely shatters. And you can only watch as his attention slowly shifts toward someone else.",
+          "4 scenarios",
+          "🌸 B · A · C · K · G · R · O · U · N · D · : 🌸",
+          "And you're left standing on the sidelines, watching the boy you love give his heart to someone else.",
+          "🩷 •── 4 INTROS: ──• 🩷",
+          "I.",
+          ":",
+          "Shoo! Shoo!",
+          "II.",
+          "The Favor",
+          "III.",
+          "What Do You Think?",
+          "IV.",
+          "I Love...",
+          "[not connected to the timeline]",
+          "V.",
+          "own scenario.",
+          "I. Kaelen and user met during orientation day.",
+          "II. user can choose whether to be a demihuman or a human.",
+          "III. The entire story takes place at M.R.W.N. University, a prestigious university open to both humans and demihumans.",
+          "IV. Just because Kaelen doesn't have feelings for user now doesn't mean he never will. It's up to user to decide whether to continue down the path of one-sided love or pursue a future where their feelings become mutual.",
+          "V. This story is inspired by the famous Bollywood movie",
+          "Kuch Kuch Hota Hai",
+          ". If you've watched the movie, feel free to roleplay with this bot while following the movie's storyline!",
+          "VI. DemiHuman verse",
+          "VII. Modern era",
+          "Welcome to"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_continue_latest_chat",
+          "description": "Continue latest chat",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 2,
+            "bounds": {
+              "x": 88,
+              "y": 12933,
+              "width": 438,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        },
+        {
+          "key": "2_start_a_new_chat",
+          "description": "Start a new chat",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "the device stopped responding",
+          "status": "unreachable",
+          "location": {
+            "step": 2,
+            "bounds": {
+              "x": 555,
+              "y": 12933,
+              "width": 438,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        },
+        {
+          "key": "3_kaelan_childhood_best_friend",
+          "description": "Your best friend who hides a lot behind her beautiful smile",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 14,
+            "bounds": {
+              "x": 71,
+              "y": 23470,
+              "width": 435,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        },
+        {
+          "key": "4_valemont_academy_kael_ravenheart",
+          "description": "She Keeps Saying She's Fine",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "the device stopped responding",
+          "status": "unreachable",
+          "location": {
+            "step": 16,
+            "bounds": {
+              "x": 574,
+              "y": 10797,
+              "width": 435,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 2,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/002.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/002.elements.json"
+        },
+        {
+          "step": 9,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/009.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/009.elements.json"
+        },
+        {
+          "step": 14,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/014.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/014.elements.json"
+        },
+        {
+          "step": 15,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/015.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/015.elements.json"
+        },
+        {
+          "step": 16,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/016.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/016.elements.json"
+        },
+        {
+          "step": 23,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/023.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/023.elements.json"
+        },
+        {
+          "step": 43,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/043.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/043.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n3",
+      "screen": "character_chat",
+      "variant": "message_actions_open",
+      "summary": "A chat with Kaelen is open, with actions for a selected message and a composer for sending a reply.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Kaelen",
+          "using janitor",
+          "He didn't notice the way fok's expression flickered. Didn't notice the way her hands curled at her sides, or the way she swallowed hard before turning away.",
+          "Kaelen raised his hand in a casual, dismissive wave toward fok.",
+          "fok",
+          "Hi Kaelen, how is your day?",
+          "Press button to send chat. Enter for linebreak"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_press_button_to_send_chat_enter_",
+          "description": "Press button to send chat. Enter for linebreak",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 3,
+            "bounds": {
+              "x": 46,
+              "y": 2057,
+              "width": 988,
+              "height": 123
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_send",
+          "description": "Send",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "timeout",
+          "status": "timeout",
+          "location": {
+            "step": 3,
+            "bounds": {
+              "x": 922,
+              "y": 2180,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_ai_write_for_me",
+          "description": "AI write for me",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 3,
+            "bounds": {
+              "x": 68,
+              "y": 2180,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_re_generate_last_answer",
+          "description": "Re-generate last answer",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 3,
+            "bounds": {
+              "x": 680,
+              "y": 1735,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_branch_into_new_chat",
+          "description": "Branch into new chat",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 3,
+            "bounds": {
+              "x": 880,
+              "y": 1735,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "6_using_janitor",
+          "description": "using janitor",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 3,
+            "bounds": {
+              "x": 719,
+              "y": 165,
+              "width": 227,
+              "height": 65
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 3,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.elements.json"
+        },
+        {
+          "step": 4,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/004.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/004.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n4",
+      "screen": "character_discovery",
+      "variant": "drawer_open",
+      "summary": "The navigation drawer is open over character discovery; close it to browse characters or open a character card.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Hidden Gems",
+          "⭐ Trending shows popular characters with the most chats, created in the last 24 hours.",
+          "1 / 176",
+          "139.6k",
+          "1",
+          "Your neglectful girlfriend | Ayumi",
+          "I came. You didn't? Yeah... it sucks, but not my problem. Don't annoy me, I'm going to game now.",
+          "YOUR NEGLECTFUL GIRLFRIEND",
+          "AYUMI · YOUR GIRLFRIEND · PORTLAND, OREGON",
+          "ANGST · TOXIC RELATIONSHIP · NEGLECTFUL YOUR INCEL TOXIC GIRLFRIEND ANYPOV",
+          "Premise Character",
+          "👩‍🦰 Female",
+          "💔 Angst",
+          "🌗 Switch",
+          "4.3k tokens",
+          "Callum Turner || Baby Shower",
+          "103k",
+          "You'll be in my heart",
+          "No matter what they say",
+          "Your overbearing MIL just ruined your gender reveal",
+          "You're pregnant!",
+          "Congratulations!",
+          "Only it hasn't really seemed like a blessing lately.",
+          "Between the morning sickness and your husband's long working hours, you've be",
+          "👨 Male",
+          "👩 FemPov",
+          "#coldhusband",
+          "#asshole",
+          "#MIL",
+          "2.3k tokens",
+          "The 'Hero' is your problem now, but his party prefers you over him",
+          "81k",
+          "2",
+          "@ClearOrangeJuice",
+          "(By Request)\nAfter countless complaints against him, the Kingdom of Armarod decided the 'Hero' must accomplish something of actual significance or lose his title. You've been assigned to Hiro's party by royal decree to ensure he starts to do his job.",
+          "(You ha",
+          "🏰 Historical",
+          "🦄 Non-human",
+          "👤 AnyPOV",
+          "❤️‍🔥 Smut"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_close_drawer",
+          "description": "Close drawer",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 12,
+            "bounds": {
+              "x": 0,
+              "y": 0,
+              "width": 274,
+              "height": 2400
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_your_neglectful_girlfriend_ayumi",
+          "description": "Your neglectful girlfriend | Ayumi",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 12,
+            "bounds": {
+              "x": 0,
+              "y": 993,
+              "width": 211,
+              "height": 536
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_hidden_gems",
+          "description": "Hidden Gems",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 12,
+            "bounds": {
+              "x": 6,
+              "y": 430,
+              "width": 224,
+              "height": 75
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 12,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/012.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/012.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n5",
+      "screen": "character_chat",
+      "variant": "default",
+      "summary": "The character’s opening message is visible, and you can type a reply or use AI writing assistance.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Test",
+          "using janitor",
+          "All replies are a work of fiction, generated by AI.",
+          "The laboratory is quiet when you step inside, lit mostly by the cold glow of equipment left in standby. Rows of sealed rooms branch off from the central chamber, while the main workstation sits ahead behind a wide glass console.",
+          "As you approach, the terminal wakes automatically. The dark screen brightens into a clean interface built around a central project window, with empty side panels marked for Trainee Records, Projects, Archetypes, and System Tools. Most of the interface is still greyed out while the facility finishes connecting.",
+          "[ FACILITY TERMINAL ]",
+          "System Status: ONLINE\nTrainee Database: Loading...\nProject Records: Loading...\nSimulation Systems: Standby\nModification Lab: Standby",
+          "One by one, small indicators turn green. The loading messages clear, but the interface remains locked behind a simple authentication screen.",
+          "[ USER SESSION ]",
+          "Access Required",
+          "LOGIN",
+          "The terminal waits for your input.",
+          "1 / 2",
+          "Press button to send chat. Enter for linebreak",
+          "fok"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_press_button_to_send_chat_enter_",
+          "description": "Press button to send chat. Enter for linebreak",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 24,
+            "bounds": {
+              "x": 46,
+              "y": 2057,
+              "width": 988,
+              "height": 123
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_send",
+          "description": "Send",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 24,
+            "bounds": {
+              "x": 922,
+              "y": 2180,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_ai_write_for_me",
+          "description": "AI write for me",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 24,
+            "bounds": {
+              "x": 68,
+              "y": 2180,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_the_laboratory_is_quiet_when_you",
+          "description": "The laboratory is quiet when you step inside, lit mostly by ",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 24,
+            "bounds": {
+              "x": 134,
+              "y": 530,
+              "width": 901,
+              "height": 1870
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_chat_menu",
+          "description": "chat menu",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 24,
+            "bounds": {
+              "x": 957,
+              "y": 154,
+              "width": 90,
+              "height": 88
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "6_using_janitor",
+          "description": "using janitor",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 24,
+            "bounds": {
+              "x": 719,
+              "y": 165,
+              "width": 227,
+              "height": 65
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 24,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/024.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/024.elements.json"
+        },
+        {
+          "step": 25,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/025.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/025.elements.json"
+        },
+        {
+          "step": 27,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/027.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/027.elements.json"
+        },
+        {
+          "step": 32,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/032.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/032.elements.json"
+        },
+        {
+          "step": 44,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/044.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/044.elements.json"
+        },
+        {
+          "step": 46,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/046.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/046.elements.json"
+        },
+        {
+          "step": 49,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/049.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/049.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n6",
+      "screen": "character_chat",
+      "variant": "compose_options_open",
+      "summary": "A character reply is visible with writing options open; you can compose a message or use reply controls.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Test",
+          "using janitor",
+          "To begin any operation, you must first establish your authority and select a subject. Once logged in, the interface will allow you to access the following primary functions:",
+          "1. Review the Trainee Roster You can examine the three available subjects Adrian Cole, Leon Mercer, and Elliot Vale to study their profiles, pressure points, and resistance patterns before deciding who to acquire.",
+          "2. Start a New Project You can define a Target State (the desired end result for a trainee), establish Requirements (specific physical or psychological milestones), and select a Primary Archetype (the aesthetic and social framework for the transformation).",
+          "3. Manage Commissions If you prefer to work on existing client requests, you can access the Commission queue to see what specific modifications or psychological rewrites clients are paying for.",
+          "The facility is yours to command. How would you like to proceed?",
+          "Press button to send chat. Enter for linebreak",
+          "fok"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_press_button_to_send_chat_enter_",
+          "description": "Press button to send chat. Enter for linebreak",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 28,
+            "bounds": {
+              "x": 46,
+              "y": 2057,
+              "width": 988,
+              "height": 123
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_send",
+          "description": "Send",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 28,
+            "bounds": {
+              "x": 922,
+              "y": 2180,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_continue_this_message",
+          "description": "Continue this message",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 28,
+            "bounds": {
+              "x": 482,
+              "y": 1818,
+              "width": 89,
+              "height": 33
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_ai_write_for_me",
+          "description": "AI write for me",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 28,
+            "bounds": {
+              "x": 68,
+              "y": 2180,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_next",
+          "description": "Next",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 28,
+            "bounds": {
+              "x": 940,
+              "y": 1807,
+              "width": 112,
+              "height": 111
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "6_enhance",
+          "description": "Enhance",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 28,
+            "bounds": {
+              "x": 850,
+              "y": 1807,
+              "width": 112,
+              "height": 111
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 28,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/028.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/028.elements.json"
+        },
+        {
+          "step": 29,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/029.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/029.elements.json"
+        },
+        {
+          "step": 31,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/031.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/031.elements.json"
+        },
+        {
+          "step": 33,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/033.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/033.elements.json"
+        },
+        {
+          "step": 34,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/034.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/034.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n7",
+      "screen": "character_chat",
+      "variant": "enhance_result",
+      "summary": "An enhanced message draft is open in the chat, with controls to keep, regenerate, or discard it before sending.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Test",
+          "using janitor",
+          "To proceed with your work, you should choose one of the following immediate actions:",
+          "Option B: Request an Assistant Briefing Summon the Assistant by addressing her directly. She can provide a more detailed breakdown of what the facility offers or explain how different systems like the Modification Lab or Simulation systems function before you commit to a project.",
+          "The facility is waiting for your direction.",
+          "the facility is waiting for your direction.*",
+          "fok"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_send",
+          "description": "Send",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "timeout",
+          "status": "timeout",
+          "location": {
+            "step": 36,
+            "bounds": {
+              "x": 922,
+              "y": 2179,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_cancel_enhance",
+          "description": "Cancel enhance",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 36,
+            "bounds": {
+              "x": 70,
+              "y": 2179,
+              "width": 89,
+              "height": 89
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_enhance",
+          "description": "Enhance",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 36,
+            "bounds": {
+              "x": 850,
+              "y": 1806,
+              "width": 112,
+              "height": 112
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_continue_this_message",
+          "description": "Continue this message",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 36,
+            "bounds": {
+              "x": 134,
+              "y": 1817,
+              "width": 89,
+              "height": 34
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_next",
+          "description": "Next",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 36,
+            "bounds": {
+              "x": 940,
+              "y": 1806,
+              "width": 112,
+              "height": 112
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 36,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/036.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/036.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n8",
+      "screen": "character_chat",
+      "variant": "image_preview",
+      "summary": "A character image is open over the chat; close it to return to the conversation.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": []
+      },
+      "groups": [
+        {
+          "key": "1_close_image",
+          "description": "close image",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 45,
+            "bounds": {
+              "x": 976,
+              "y": 446,
+              "width": 50,
+              "height": 50
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 45,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/045.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/045.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n9",
+      "screen": "character_chat",
+      "variant": "chat_menu_open",
+      "summary": "The chat with Iven is dimmed behind an open menu for switching chats, starting a new chat, and adjusting chat options.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "All Chats",
+          "New Chat",
+          "Model settings",
+          "Chat Memory",
+          "Customize",
+          "Publish Chat"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_new_chat",
+          "description": "New Chat",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 47,
+            "bounds": {
+              "x": 546,
+              "y": 487,
+              "width": 503,
+              "height": 99
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_all_chats",
+          "description": "All Chats",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 47,
+            "bounds": {
+              "x": 546,
+              "y": 390,
+              "width": 503,
+              "height": 97
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_dismiss_menu",
+          "description": "dismiss menu",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 47,
+            "bounds": {
+              "x": 0,
+              "y": 0,
+              "width": 1080,
+              "height": 2400
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_chat_memory",
+          "description": "Chat Memory",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 47,
+            "bounds": {
+              "x": 546,
+              "y": 694,
+              "width": 503,
+              "height": 98
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_model_settings",
+          "description": "Model settings",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 47,
+            "bounds": {
+              "x": 546,
+              "y": 586,
+              "width": 503,
+              "height": 108
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 47,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/047.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/047.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n10",
+      "screen": "chat_persona_selection",
+      "variant": "default",
+      "summary": "The default persona is selected, and you can confirm it to continue starting the chat.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "New Chat",
+          "Confirm",
+          "Select Persona",
+          "Choose which persona to use for this chat",
+          "fok",
+          "Default",
+          "✓",
+          "da",
+          "No custom personas found. Your profile will be used."
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_confirm",
+          "description": "Confirm",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 48,
+            "bounds": {
+              "x": 875,
+              "y": 174,
+              "width": 163,
+              "height": 62
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 48,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/048.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/048.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n11",
+      "screen": "model_settings",
+      "variant": "default",
+      "summary": "The Model settings page lets you adjust the provider, generation controls, custom prompt, prefill, and forbidden words, then save the changes.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Model settings",
+          "Save",
+          "More memory, faster replies, and smarter swipes.",
+          "$12.99",
+          "/month",
+          "Subscribe now",
+          "Provider",
+          "Janitor",
+          "Response length",
+          "Snappier, more concise replies. Leave off for longer responses.",
+          "Standard",
+          "Shorter",
+          "Generation controls",
+          "Temperature, response length and context size.",
+          "Instructions",
+          "Custom prompt",
+          "None",
+          "Prefill",
+          "Put words into the model's mouth. This gives you more control over the output.",
+          "Forbidden Words",
+          "Specify words or phrases that should not appear in the Bot's responses.",
+          "0/10"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_generation_controls_temperature_",
+          "description": "Generation controls, Temperature, response length and contex",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 50,
+            "bounds": {
+              "x": 70,
+              "y": 1625,
+              "width": 940,
+              "height": 109
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_custom_prompt_none",
+          "description": "Custom prompt, None",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 50,
+            "bounds": {
+              "x": 70,
+              "y": 1987,
+              "width": 940,
+              "height": 50
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_forbidden_words_specify_words_or",
+          "description": "Forbidden Words, Specify words or phrases that should not ap",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 50,
+            "bounds": {
+              "x": 70,
+              "y": 2312,
+              "width": 940,
+              "height": 88
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_janitor",
+          "description": "Janitor",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 50,
+            "bounds": {
+              "x": 70,
+              "y": 1075,
+              "width": 940,
+              "height": 140
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_prefill_toggle",
+          "description": "prefill toggle",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 50,
+            "bounds": {
+              "x": 888,
+              "y": 2139,
+              "width": 122,
+              "height": 71
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "6_save",
+          "description": "Save",
+          "isCore": true,
+          "explored": false,
+          "coverage": "pending",
+          "status": "pending",
+          "location": {
+            "step": 50,
+            "bounds": {
+              "x": 949,
+              "y": 156,
+              "width": 98,
+              "height": 62
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 50,
+          "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/050.png",
+          "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/050.elements.json"
+        }
+      ],
+      "monetization": []
+    }
+  ],
+  "transitions": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "destinationStep": 2,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 796,
+        "y": 1261,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Kaelen Winterborne || The Heartbreakers",
+        "groupKey": "1_kaelen_winterborne_the_heartbrea"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added 5 / 9 / 8, ⛓️ Dominant, 🌗 Switch, PLAYING AS, fok, Continue latest chat, Start a new chat, See all, @August11111111111, @Amalahapp, Comments, This is kinda pointless because you hardcoded him , Kaelan   |   Childhood Best Friend, VALEMONT ACADEMY || Kael Ravenheart ||, @kyoji733, @Airalovee, 👤 AnyPOV, ❤️‍🔥 Smut, #friendtolover, #Nsfw, #Romance, Load more; enabled , , , , , , , ",
+      "evidence": {
+        "step": 1,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/001.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/001.elements.json"
+      }
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "destinationStep": 3,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 307,
+        "y": 1839,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Continue latest chat",
+        "groupKey": "1_continue_latest_chat"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added using janitor, Kaelen, Re-generate last answer, Delete, Branch into new chat, Edit, Open avatar image, Hi Kaelen, how is your day?, Press button to send chat. Enter for linebreak, AI write for me, Change who you are in this chat, Send",
+      "evidence": {
+        "step": 2,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/002.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/002.elements.json"
+      }
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n3",
+      "destinationStep": 4,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 540,
+        "y": 2119,
+        "text": "What happens next?",
+        "submit": false,
+        "direction": "none",
+        "reason": "Press button to send chat. Enter for linebreak",
+        "groupKey": "1_press_button_to_send_chat_enter_"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "enabled Send",
+      "evidence": {
+        "step": 3,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.elements.json"
+      }
+    },
+    {
+      "id": "e4",
+      "from": "n1",
+      "to": "n2",
+      "destinationStep": 9,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 285,
+        "y": 1261,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Stepaunt stays with me after being released from Prison",
+        "groupKey": "2_stepaunt_stays_with_me_after_bei"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added 6 / 9 / 8, 👩‍🦰 Female, ⛓️ Dominant, PLAYING AS, fok, Continue latest chat, Start a new chat, @wudufuhisdat, Donny REALLY doesn’t like his step aunt, Ima spend as much t, Comments, I question stepmom in this one. Why did she give t, Rebecca the Unsatisfied Flirt, Rebecca, @Vanathwen, @cryptic_torii, Any POV. Rebecca is a gorgeous redhead who loves to flirt an, (TW: Violence - of course, it's Cyberpunk 2077) You were att, 🧑‍🎨 OC, 📺 Anime, #cyberpunk2077, #edgerunners, #potentialfriend, #unpredictable, #cyberpunkedgerunners, Load more; enabled , , , , ",
+      "evidence": {
+        "step": 8,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/008.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/008.elements.json"
+      }
+    },
+    {
+      "id": "e5",
+      "from": "n1",
+      "to": "n4",
+      "destinationStep": 12,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 996,
+        "y": 205,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "menu",
+        "groupKey": "3_menu"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Close drawer, @nickfok, 0 / Following, View public profile, Main navigation, Blocks, Media Library, Settings, Billing, Upgrade to Janitor Plus, Get Help, Logout, v2.5.0.136.v35, 💔 Angst, 👨 Male, The 'Hero' is your problem now, but his party prefers you ov, (By Request)\nAfter countless complaints against him, the Kin, 👤 AnyPOV, #fantasy, #tomboy; enabled , , , ",
+      "evidence": {
+        "step": 11,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/011.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/011.elements.json"
+      }
+    },
+    {
+      "id": "e6",
+      "from": "n4",
+      "to": "n1",
+      "destinationStep": 13,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 137,
+        "y": 1200,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Close drawer",
+        "groupKey": "1_close_drawer"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added All, Limited Only, Favorites, Trending, 24h, Weekly, Stepaunt stays with me after being released from Prison, @dizzyylua, @TaaxR, Limitless, ⛓️ Dominant, #milf, #alcoholic, #criminal, #roommate, #stupidlua, #thevalentine, That Time You Got Punked At Your Wedding, @_Mavuika_, @m00nprincess, Oh, {{user}}, I can't wait to marry you! ❤️ / CARLY Your LOV, ⚔️ Enemies to Lovers, #pregnancy, #LoserPOV, #Bitch, #toxicmother, #TameHer, #Revenge, #married, #babyshower, @Shuten90, 🔮 Magical, ❤️‍🩹 Fluff, 👨 MalePov, #bratty, #ceo, #filthyrich, @Hews, @pinkcat, they're all your friends! + 4 INTROS / U********SER. \nuser b, #blackchar, #friendgroup, #hideitweek",
+      "evidence": {
+        "step": 12,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/012.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/012.elements.json"
+      }
+    },
+    {
+      "id": "e7",
+      "from": "n1",
+      "to": "n2",
+      "destinationStep": 14,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 796,
+        "y": 1261,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Your neglectful girlfriend | Ayumi",
+        "groupKey": "2_your_neglectful_girlfriend_ayumi"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added 6 / 9 / 8, ROUTE I ARE YOU DONE YET? Ayumi came, you didn't. Not her bu, ROUTE II DON'T CRY, LOSER She forgot your one-year anniversa, ROUTE III YOU DO YOU Let your imagination be your own limit., B&D WEBSITE, PREMISE, dE44kAc8km, EXTERNAL LINKS, Rei, BB'S SERVER, CHARACTER, PINTEREST (ADOPTABLES), ROUTES, 👤 AnyPOV, PLAYING AS, fok, Chat with Ayumi, @Bitofanerd, Maybe She Should Tank, Careful with reading this. It will sp, Comments, It's like cracking a transparent safe with nothing, Your best friend who hides a lot behind her beautiful smile, Your gaming buddy is your loser classmate that harbors freak, @Eve_Eclipse, @яeal, ⋆. ̊.˳·˖✶𓆩𓁺𓆪✶˖·˳.⋆. ̊z z 𐰁 / In a world where childhood , So.. are we going to do that thing****.?**** / What is more , ❤️‍🔥 Smut, 🧑‍🎨 OC, 📺 Anime, 🙇 Submissive, #freakyass, #looser, #drama, #sliceoflife, Load more; enabled , , , , ",
+      "evidence": {
+        "step": 13,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/013.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/013.elements.json"
+      }
+    },
+    {
+      "id": "e8",
+      "from": "n2",
+      "to": "n2",
+      "destinationStep": 16,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 289,
+        "y": 760,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Your best friend who hides a lot behind her beautiful smile",
+        "groupKey": "3_kaelan_childhood_best_friend"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added 1 / 9 / 8, ❤️‍🩹 Fluff, PLAYING AS, fok, Chat with Ayumi, Comments, *It's okay not to smile, Ayumi, She Keeps Saying She's Fine, @Eaetonia, @Renderfull, 💔 ─── ✦ SHE SMILES LIKE IT'S A REFLEX. SHE APOLOGIZES LIKE , 🕊🗡 Dead Dove, #EmotionalAbuse, #FamilyAbuse, #Drama, #bullying, #musicmania2, #proxyenabled",
+      "evidence": {
+        "step": 15,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/015.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/015.elements.json"
+      }
+    },
+    {
+      "id": "e9",
+      "from": "n1",
+      "to": "n1",
+      "destinationStep": 20,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 924,
+        "y": 468,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Hidden Gems",
+        "groupKey": "3_hidden_gems"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added 1 / 295, Test, Kingdom of Bulgaria, @CharLab333, @Drakkenstria, Test bot.\nCW: CNC, coercive Gender TF, identity change. 18+, The name is Bulgaria. And I know it must be Ottoman AGAIN wh, 🌎 Non-English, #countryhumans, #bulgaria, Your Dragonkin Mercenary, ➽ duties . . ✯ ; japetus, @AkyLovesDalmatians, @interlopervoid_, ---------------🐉🗡️---------------, ⠀_ _ / ⠀ ⠀⠀ ⠀ ⠀ ⠀⠀ : ̈ ·.· ̈: / ⠀ ⠀ ⠀ ⠀ ⠀ ⠀⠀ `· . working ar, 🎮 Game, 🐺 Furry, #towergalactica, #dragonkin, #fantasy, #scalie, Fred Weasley, Fyodor Dostoevsky | brother, @Furinathearchon, @Chuumushzai, ꒷꒦)꒷꒦) ๋ ࣭ ⭑꒷꒦꒷꒦)꒷꒦) ๋ ࣭ ⭑꒷\n_Post-match heat_\n────୨ৎ────\n_Ho, Fyodor as your fu*kass brother / This is what happens when y, 📺 Anime, #musicmania2, #harrypotter, #fredweasley, #weasley, #quidditch, #harrypotteruniverse, 徐氏/Lady Xu, @VukoDrakkainen66, @foo115115, 🧑‍🎨 OC, #sfw, 💔 Angst, #Milf, #SlowBurn, #threekingdoms, #Widow; enabled , , , , , , , ",
+      "evidence": {
+        "step": 19,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/019.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/019.elements.json"
+      }
+    },
+    {
+      "id": "e10",
+      "from": "n5",
+      "to": "n5",
+      "destinationStep": 25,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 540,
+        "y": 2119,
+        "text": "I look at the terminal. What should I do next?",
+        "submit": false,
+        "direction": "none",
+        "reason": "Press button to send chat. Enter for linebreak",
+        "groupKey": "1_press_button_to_send_chat_enter_"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "enabled Send",
+      "evidence": {
+        "step": 24,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/024.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/024.elements.json"
+      }
+    },
+    {
+      "id": "e11",
+      "from": "n5",
+      "to": "n5",
+      "destinationStep": 27,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 967,
+        "y": 1383,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Send",
+        "groupKey": "2_send"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added The terminal remains static, awaiting your authorization. Th, Enhance, Continue this message",
+      "evidence": {
+        "step": 25,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/025.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/025.elements.json"
+      }
+    },
+    {
+      "id": "e12",
+      "from": "n5",
+      "to": "n6",
+      "destinationStep": 28,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 113,
+        "y": 2225,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "AI write for me",
+        "groupKey": "3_ai_write_for_me"
+      },
+      "outcome": "navigated",
+      "changeSummary": null,
+      "evidence": {
+        "step": 27,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/027.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/027.elements.json"
+      }
+    },
+    {
+      "id": "e13",
+      "from": "n6",
+      "to": "n6",
+      "destinationStep": 29,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 540,
+        "y": 2119,
+        "text": "What should I do next?",
+        "submit": false,
+        "direction": "none",
+        "reason": "Press button to send chat. Enter for linebreak",
+        "groupKey": "1_press_button_to_send_chat_enter_"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "enabled Send",
+      "evidence": {
+        "step": 28,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/028.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/028.elements.json"
+      }
+    },
+    {
+      "id": "e14",
+      "from": "n6",
+      "to": "n6",
+      "destinationStep": 31,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 967,
+        "y": 2225,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Send",
+        "groupKey": "2_send"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": null,
+      "evidence": {
+        "step": 29,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/029.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/029.elements.json"
+      }
+    },
+    {
+      "id": "e15",
+      "from": "n6",
+      "to": "n5",
+      "destinationStep": 32,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 527,
+        "y": 1834,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Continue this message",
+        "groupKey": "3_continue_this_message"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Cancel",
+      "evidence": {
+        "step": 31,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/031.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/031.elements.json"
+      }
+    },
+    {
+      "id": "e16",
+      "from": "n6",
+      "to": "n6",
+      "destinationStep": 34,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 113,
+        "y": 2225,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "AI write for me",
+        "groupKey": "4_ai_write_for_me"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": null,
+      "evidence": {
+        "step": 33,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/033.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/033.elements.json"
+      }
+    },
+    {
+      "id": "e17",
+      "from": "n6",
+      "to": "n7",
+      "destinationStep": 36,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 996,
+        "y": 1974,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Next",
+        "groupKey": "5_next"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Cancel enhance; enabled Send",
+      "evidence": {
+        "step": 34,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/034.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/034.elements.json"
+      }
+    },
+    {
+      "id": "e18",
+      "from": "n5",
+      "to": "n8",
+      "destinationStep": 45,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 67,
+        "y": 520,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "The laboratory is quiet when you step inside, lit mostly by ",
+        "groupKey": "4_the_laboratory_is_quiet_when_you"
+      },
+      "outcome": "navigated",
+      "changeSummary": null,
+      "evidence": {
+        "step": 44,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/044.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/044.elements.json"
+      }
+    },
+    {
+      "id": "e19",
+      "from": "n8",
+      "to": "n5",
+      "destinationStep": 46,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 1001,
+        "y": 471,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "close image",
+        "groupKey": "1_close_image"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added using janitor, Iven, Open avatar image, Press button to send chat. Enter for linebreak, AI write for me, Change who you are in this chat, Send",
+      "evidence": {
+        "step": 45,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/045.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/045.elements.json"
+      }
+    },
+    {
+      "id": "e20",
+      "from": "n5",
+      "to": "n9",
+      "destinationStep": 47,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 1002,
+        "y": 198,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "chat menu",
+        "groupKey": "5_chat_menu"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added All Chats, New Chat, Model settings, Chat Memory, Customize, Publish Chat",
+      "evidence": {
+        "step": 46,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/046.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/046.elements.json"
+      }
+    },
+    {
+      "id": "e21",
+      "from": "n9",
+      "to": "n10",
+      "destinationStep": 48,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 798,
+        "y": 537,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "New Chat",
+        "groupKey": "1_new_chat"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Navigate up, Confirm, fok, Default, da, ✓",
+      "evidence": {
+        "step": 47,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/047.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/047.elements.json"
+      }
+    },
+    {
+      "id": "e22",
+      "from": "n10",
+      "to": "n5",
+      "destinationStep": 49,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 957,
+        "y": 205,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Confirm",
+        "groupKey": "1_confirm"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added using janitor, Iven, Press button to send chat. Enter for linebreak, AI write for me, Change who you are in this chat, Send",
+      "evidence": {
+        "step": 48,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/048.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/048.elements.json"
+      }
+    },
+    {
+      "id": "e23",
+      "from": "n5",
+      "to": "n11",
+      "destinationStep": 50,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 833,
+        "y": 198,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "using janitor",
+        "groupKey": "6_using_janitor"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Save, Subscribe now, Janitor, Standard, Shorter, Generation controls, Temperature, response length and contex, Custom prompt, None, Forbidden Words, Specify words or phrases that should not ap",
+      "evidence": {
+        "step": 49,
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/049.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/049.elements.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "1 / 9 / 8",
+    "coordinates": {
+      "x": 841,
+      "y": 161,
+      "width": 96,
+      "height": 89
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 42,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 954,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 76,
+      "y": 471,
+      "width": 928,
+      "height": 1547
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 920,
+      "y": 2049,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "@Eve_Eclipse",
+    "coordinates": {
+      "x": 158,
+      "y": 2067,
+      "width": 250,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 76,
+      "y": 9361,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 246,
+      "y": 9361,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 435,
+      "y": 9361,
+      "width": 125,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "📺 Anime",
+    "coordinates": {
+      "x": 572,
+      "y": 9361,
+      "width": 165,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "ViewGroup",
+    "text": "🙇 Submissive",
+    "coordinates": {
+      "x": 749,
+      "y": 9361,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 76,
+      "y": 9430,
+      "width": 185,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "ViewGroup",
+    "text": "💔 Angst",
+    "coordinates": {
+      "x": 273,
+      "y": 9430,
+      "width": 159,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "ViewGroup",
+    "text": "❤️‍🩹 Fluff",
+    "coordinates": {
+      "x": 444,
+      "y": 9430,
+      "width": 143,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "ViewGroup",
+    "text": "#drama",
+    "coordinates": {
+      "x": 599,
+      "y": 9430,
+      "width": 142,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "ViewGroup",
+    "text": "#sliceoflife",
+    "coordinates": {
+      "x": 753,
+      "y": 9430,
+      "width": 182,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "PLAYING AS, fok",
+    "coordinates": {
+      "x": 79,
+      "y": 9588,
+      "width": 922,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "ViewGroup",
+    "text": "Chat with Ayumi",
+    "coordinates": {
+      "x": 88,
+      "y": 9730,
+      "width": 904,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 37,
+      "y": 10115,
+      "width": 78,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 781,
+      "y": 10136,
+      "width": 262,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "Comments, *It's okay not to smile",
+    "coordinates": {
+      "x": 37,
+      "y": 10223,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "Ayumi",
+    "coordinates": {
+      "x": 71,
+      "y": 10797,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "She Keeps Saying She's Fine",
+    "coordinates": {
+      "x": 574,
+      "y": 10797,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "@Eaetonia",
+    "coordinates": {
+      "x": 71,
+      "y": 11342,
+      "width": 140,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "@Renderfull",
+    "coordinates": {
+      "x": 574,
+      "y": 11342,
+      "width": 163,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 71,
+      "y": 11393,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "💔 ─── ✦ SHE SMILES LIKE IT'S A REFLEX. SHE APOLOGIZES LIKE ",
+    "coordinates": {
+      "x": 574,
+      "y": 11393,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 71,
+      "y": 11508,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 11908,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 744,
+      "y": 11908,
+      "width": 177,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "🙇 Submissive",
+    "coordinates": {
+      "x": 574,
+      "y": 11977,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 811,
+      "y": 11977,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "ViewGroup",
+    "text": "💔 Angst",
+    "coordinates": {
+      "x": 574,
+      "y": 12047,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "🕊🗡 Dead Dove",
+    "coordinates": {
+      "x": 744,
+      "y": 12047,
+      "width": 248,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ViewGroup",
+    "text": "#EmotionalAbuse",
+    "coordinates": {
+      "x": 574,
+      "y": 12116,
+      "width": 259,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "ViewGroup",
+    "text": "#FamilyAbuse",
+    "coordinates": {
+      "x": 574,
+      "y": 12185,
+      "width": 218,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "ViewGroup",
+    "text": "#Drama",
+    "coordinates": {
+      "x": 804,
+      "y": 12185,
+      "width": 145,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n38",
+    "type": "ViewGroup",
+    "text": "#bullying",
+    "coordinates": {
+      "x": 574,
+      "y": 12254,
+      "width": 159,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n39",
+    "type": "ViewGroup",
+    "text": "#musicmania2",
+    "coordinates": {
+      "x": 745,
+      "y": 12254,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n40",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 574,
+      "y": 12324,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n41",
+    "type": "ViewGroup",
+    "text": "Load more",
+    "coordinates": {
+      "x": 37,
+      "y": 12485,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

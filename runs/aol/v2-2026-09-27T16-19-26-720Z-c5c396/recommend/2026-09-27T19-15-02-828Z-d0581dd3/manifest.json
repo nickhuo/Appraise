@@ -1,0 +1,53 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "inputHash": "3b171c66d214baeadbdbce136c9d934e30d5feb8824ee902726b7b44dc880a22",
+  "contextSource": null,
+  "previousRecommendation": null,
+  "model": "gpt-6-sol",
+  "promptVersion": 2,
+  "usage": [
+    {
+      "stage": "propose",
+      "requests": 1,
+      "inputTokens": 3248,
+      "outputTokens": 1713
+    },
+    {
+      "stage": "revise",
+      "requests": 1,
+      "inputTokens": 3810,
+      "outputTokens": 594
+    },
+    {
+      "stage": "revise",
+      "requests": 1,
+      "inputTokens": 3799,
+      "outputTokens": 592
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 3410,
+      "outputTokens": 619
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 3464,
+      "outputTokens": 563
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 3403,
+      "outputTokens": 441
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 3467,
+      "outputTokens": 593
+    }
+  ],
+  "createdAt": "2026-09-27T19:15:02.830Z"
+}

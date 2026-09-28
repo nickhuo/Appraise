@@ -1,0 +1,305 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "Sidebar button. Double tap or slide two fingers from the lef",
+    "identifier": "com.aol.mobile.aolapp:id/profile_layout",
+    "coordinates": {
+      "x": 0,
+      "y": 159,
+      "width": 828,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "Tap here for weather",
+    "coordinates": {
+      "x": 0,
+      "y": 460,
+      "width": 749,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 594,
+      "y": 461,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "The Telegraph / 10 engineering marvels you must see in your ",
+    "identifier": "com.aol.mobile.aolapp:id/root_view",
+    "coordinates": {
+      "x": 0,
+      "y": 625,
+      "width": 828,
+      "height": 884
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ImageView",
+    "text": "Save this article",
+    "identifier": "com.aol.mobile.aolapp:id/iv_save",
+    "coordinates": {
+      "x": 197,
+      "y": 1454,
+      "width": 42,
+      "height": 42
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ImageView",
+    "text": "Share this news article",
+    "identifier": "com.aol.mobile.aolapp:id/iv_share",
+    "coordinates": {
+      "x": 281,
+      "y": 1454,
+      "width": 42,
+      "height": 42
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "More options",
+    "coordinates": {
+      "x": 583,
+      "y": 1509,
+      "width": 126,
+      "height": 106
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "best-dating-guides.com in Taboola advertising section · Spon",
+    "coordinates": {
+      "x": 49,
+      "y": 1524,
+      "width": 696,
+      "height": 289
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "best-dating-guides.com in Taboola advertising section",
+    "coordinates": {
+      "x": 49,
+      "y": 1524,
+      "width": 339,
+      "height": 48
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "View",
+    "text": "Image for Taboola Advertising Unit",
+    "coordinates": {
+      "x": 742,
+      "y": 1524,
+      "width": 287,
+      "height": 289
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "Sponsored: learn about this recommendation (opens dialog)",
+    "coordinates": {
+      "x": 420,
+      "y": 1537,
+      "width": 42,
+      "height": 40
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "San Jose: Lonely Asian Matures Nearby",
+    "coordinates": {
+      "x": 49,
+      "y": 1598,
+      "width": 644,
+      "height": 110
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "ViewGroup",
+    "text": "HuffPost / The 1 big mistake you should never, ever make wit",
+    "identifier": "com.aol.mobile.aolapp:id/root_view",
+    "coordinates": {
+      "x": 0,
+      "y": 1829,
+      "width": 1080,
+      "height": 367
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "ImageView",
+    "text": "Save this article",
+    "identifier": "com.aol.mobile.aolapp:id/iv_save",
+    "coordinates": {
+      "x": 194,
+      "y": 2116,
+      "width": 42,
+      "height": 42
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "ImageView",
+    "text": "Share this news article",
+    "identifier": "com.aol.mobile.aolapp:id/iv_share",
+    "coordinates": {
+      "x": 278,
+      "y": 2116,
+      "width": 42,
+      "height": 42
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "View",
+    "text": "Inbox",
+    "coordinates": {
+      "x": 0,
+      "y": 2187,
+      "width": 540,
+      "height": 150
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "Food Republic / This pasta is so tasty Alex Guarnaschelli sa",
+    "identifier": "com.aol.mobile.aolapp:id/root_view",
+    "coordinates": {
+      "x": 0,
+      "y": 2196,
+      "width": 1080,
+      "height": 204
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "TextView",
+    "text": "Delete",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 0,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "TextView",
+    "text": "Archive",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 216,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "TextView",
+    "text": "Move",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 432,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "TextView",
+    "text": "Mark as read",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 648,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "TextView",
+    "text": "More",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 864,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ImageView",
+    "text": "Save this article",
+    "identifier": "com.aol.mobile.aolapp:id/iv_save",
+    "coordinates": {
+      "x": 195,
+      "y": 2483,
+      "width": 42,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ImageView",
+    "text": "Share this news article",
+    "identifier": "com.aol.mobile.aolapp:id/iv_share",
+    "coordinates": {
+      "x": 279,
+      "y": 2483,
+      "width": 42,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

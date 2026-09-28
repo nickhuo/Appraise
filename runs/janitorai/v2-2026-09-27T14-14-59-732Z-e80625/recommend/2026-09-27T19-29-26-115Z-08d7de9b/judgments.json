@@ -1,0 +1,99 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "judgments": [
+    {
+      "proposalId": "faster-reply-sample",
+      "revision": 0,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 3,
+        "businessFit": 2,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "A faster character reply has clear value during chat (n5), and Model settings explicitly advertises faster replies as part of a $12.99/month subscription (n11). The observed path leads from chat into settings (e23), but the proposed return and offer placement were not observed. A one-reply grant is a coherent hypothesis, though faster-service capacity is unverified. Offering the same benefit immediately after a subscription pitch could divert users who would pay; the net effect is unknown.",
+      "feedback": "Validate the settings-exit path and priority-serving capacity before testing. Include subscription starts and serving cost in the test, as proposed, and stop the offer if it harms paid conversion or cannot deliver a meaningfully faster reply.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "faster-reply-sample",
+      "revision": 1,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "A faster reply has clear value in the observed chat task (n5), and Model settings explicitly advertises faster replies at $12.99/month (n11). The observed chat-to-settings transition (e23) supports the proposed context, but the return route and latency benefit remain unverified. The offer explains one reply before the ad, allows dismissal, and defines fulfillment and failure handling. A one-time sample limits—but does not eliminate—subscription diversion and serving-cost risk. SDK, capacity, and revenue effects are unknown.",
+      "feedback": "Verify the settings-to-chat exit and that a completed ad reliably delivers a meaningfully faster next reply. Test whether the sample reduces subscription starts before expanding it.",
+      "decision": "pass"
+    },
+    {
+      "proposalId": "chat-catchup",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 3,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "A user-visible recap could help someone resume a conversation, and n5 shows the chat and composer where it would appear. The offer explains the ad exchange, allows normal reading and composing if declined, and defines fulfillment. But the cited transitions do not establish the proposed return-to-chat moment: e19 closes an image preview, while e22 follows New Chat. The usefulness of recapping only five messages is untested. n11 establishes a $12.99/month offer for more memory, faster replies, and smarter swipes; a user-visible recap is distinct from model memory, but subscription substitution remains possible. Ad availability, recap quality, costs, and revenue are unknown. The proposed implementation and failure path are coherent without evidence of a specific technical obstacle.",
+      "feedback": "Validate that users actually resume existing chats with enough recent messages, then test whether the recap improves replies without reducing subscriptions. Measure recap quality and cost alongside ad completion.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "chat-catchup",
+      "revision": 1,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "A recap could help users resume replying: n2 shows Continue latest chat, e2 leads to a chat with a composer (n3), and the offer preserves normal chat use. Its value after only five messages is untested. The $12.99/month offer in n11 promises more memory, faster replies, and smarter swipes—not a user-visible recap—but subscription diversion and recap costs remain unknown. Ad delivery and safe generation are ordinary unverified implementation dependencies.",
+      "feedback": "Define which messages qualify for a safe recap, then test recap usefulness and subscription impact against an eligible-user holdout before expanding the offer.",
+      "decision": "pass"
+    },
+    {
+      "proposalId": "character-scene-starter",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "A character-specific starter could help users choose what to say, though demand is unproven. Discovery leads to a profile (n1, e1), and the profile already presents multiple scenarios and chat paths (n2), making the proposed optional offer a good surface fit. The offer explains the ad exchange, preserves normal profile use, and defines completion and failure behavior. The starter does not duplicate the observed paid benefits—more memory, faster replies, and smarter swipes at $12.99/month (n11)—but ad revenue, generation cost, safety, and subscription effects are unknown. Implementation is coherent but unverified.",
+      "feedback": "Test whether starters increase chat starts without displacing use of creator-provided intros; measure generation and safety costs alongside ad yield and subscription effects.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "character-scene-starter",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "The character profile shows creator-provided intros and an “own scenario” option (n2), making a separate opening idea a plausible aid, though unmet demand is unobserved. The proposed offer sits on that profile without blocking its chat controls (n2, e1). Its ad exchange, decline path, and post-completion reward are clear. The reward does not claim the paid benefits shown in n11—more memory, faster replies, and smarter swipes—but effects on subscriptions, creator-intro use, ad yield, and generation costs remain unknown. Ad integration, safe generation, and retry tracking are ordinary unverified implementation dependencies.",
+      "feedback": "Validate whether profile visitors actually want a starter and whether it increases chat starts without displacing creator intros; measure completed-ad yield against generation and moderation costs.",
+      "decision": "reject"
+    }
+  ],
+  "approvedProposalIds": [
+    "faster-reply-sample",
+    "chat-catchup"
+  ]
+}

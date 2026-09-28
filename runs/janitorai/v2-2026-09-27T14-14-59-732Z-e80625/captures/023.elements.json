@@ -1,0 +1,386 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "8 / 0",
+    "coordinates": {
+      "x": 841,
+      "y": 161,
+      "width": 96,
+      "height": 89
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 42,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 954,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 76,
+      "y": 402,
+      "width": 928,
+      "height": 954
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 920,
+      "y": 1387,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "@CharLab333",
+    "coordinates": {
+      "x": 158,
+      "y": 1405,
+      "width": 255,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 76,
+      "y": 2036,
+      "width": 158,
+      "height": 58
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "🕊🗡 Dead Dove",
+    "coordinates": {
+      "x": 246,
+      "y": 2036,
+      "width": 248,
+      "height": 58
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "PLAYING AS, fok",
+    "coordinates": {
+      "x": 79,
+      "y": 2195,
+      "width": 922,
+      "height": 130
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "Chat with Test",
+    "coordinates": {
+      "x": 88,
+      "y": 2337,
+      "width": 904,
+      "height": 63
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "ViewGroup",
+    "text": "Comments, 8, Be the first to comment ❤️",
+    "coordinates": {
+      "x": 37,
+      "y": 2704,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "ViewGroup",
+    "text": "Hucow training facility",
+    "coordinates": {
+      "x": 71,
+      "y": 3277,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "ViewGroup",
+    "text": "test bot",
+    "coordinates": {
+      "x": 574,
+      "y": 3277,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "ViewGroup",
+    "text": "@BarManPerson",
+    "coordinates": {
+      "x": 71,
+      "y": 3822,
+      "width": 222,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "ViewGroup",
+    "text": "@m3tallica.sniffer",
+    "coordinates": {
+      "x": 574,
+      "y": 3822,
+      "width": 243,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "ViewGroup",
+    "text": "Very cool facility bot. So so many tokens. Need strong LLM. ",
+    "coordinates": {
+      "x": 71,
+      "y": 3873,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "❝ this is a test bot. that’s it. ❞",
+    "coordinates": {
+      "x": 574,
+      "y": 3873,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 4038,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n19",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 744,
+      "y": 4038,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "⛓️ Dominant",
+    "coordinates": {
+      "x": 574,
+      "y": 4107,
+      "width": 203,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 789,
+      "y": 4107,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 574,
+      "y": 4177,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "🕊🗡 Dead Dove",
+    "coordinates": {
+      "x": 738,
+      "y": 4177,
+      "width": 248,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 71,
+      "y": 4546,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "👭 Multiple",
+    "coordinates": {
+      "x": 241,
+      "y": 4546,
+      "width": 187,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "🙇 Submissive",
+    "coordinates": {
+      "x": 71,
+      "y": 4615,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 308,
+      "y": 4615,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 71,
+      "y": 4685,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "#TheValentine",
+    "coordinates": {
+      "x": 235,
+      "y": 4685,
+      "width": 222,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "#proxies",
+    "coordinates": {
+      "x": 71,
+      "y": 4754,
+      "width": 153,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 236,
+      "y": 4754,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "Load more",
+    "coordinates": {
+      "x": 37,
+      "y": 4916,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

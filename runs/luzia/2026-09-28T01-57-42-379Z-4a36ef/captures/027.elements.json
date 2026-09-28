@@ -1,0 +1,166 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "Notifications",
+    "identifier": "appsHubNotifications",
+    "coordinates": {
+      "x": 933,
+      "y": 137,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "Explore",
+    "identifier": "appsHubTabEXPLORE",
+    "coordinates": {
+      "x": 320,
+      "y": 138,
+      "width": 210,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Images / Yesterday",
+    "coordinates": {
+      "x": 42,
+      "y": 429,
+      "width": 231,
+      "height": 333
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Photoedit / Yesterday",
+    "coordinates": {
+      "x": 305,
+      "y": 429,
+      "width": 231,
+      "height": 333
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Saved",
+    "identifier": "myAppsLibraryTabSAVED",
+    "coordinates": {
+      "x": 42,
+      "y": 827,
+      "width": 167,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "View",
+    "text": "Published",
+    "identifier": "myAppsLibraryTabPUBLISHED",
+    "coordinates": {
+      "x": 262,
+      "y": 827,
+      "width": 229,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "Color Flood / Input needed / Expires in 30 days",
+    "coordinates": {
+      "x": 0,
+      "y": 955,
+      "width": 1080,
+      "height": 247
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "Manage app",
+    "coordinates": {
+      "x": 913,
+      "y": 1017,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "Changes ready / Tap to see what changed / Review",
+    "identifier": "appsHubBuildBannerReady",
+    "coordinates": {
+      "x": 42,
+      "y": 1924,
+      "width": 996,
+      "height": 161
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ImageView",
+    "text": "Close",
+    "coordinates": {
+      "x": 912,
+      "y": 1942,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "Chat",
+    "identifier": "bottomBarHomeChats",
+    "coordinates": {
+      "x": 11,
+      "y": 2169,
+      "width": 338,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "Services",
+    "identifier": "bottomBarServices",
+    "coordinates": {
+      "x": 370,
+      "y": 2169,
+      "width": 339,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "View",
+    "text": "Create",
+    "identifier": "bottomBarAppsHub",
+    "coordinates": {
+      "x": 730,
+      "y": 2169,
+      "width": 339,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

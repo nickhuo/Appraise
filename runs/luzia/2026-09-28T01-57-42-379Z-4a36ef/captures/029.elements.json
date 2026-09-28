@@ -1,0 +1,114 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "",
+    "identifier": "buttonNavBack",
+    "coordinates": {
+      "x": 21,
+      "y": 132,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "Mute sound",
+    "identifier": "muteButton",
+    "coordinates": {
+      "x": 931,
+      "y": 286,
+      "width": 119,
+      "height": 119
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "Start puzzle",
+    "identifier": "startButton",
+    "coordinates": {
+      "x": 107,
+      "y": 1457,
+      "width": 864,
+      "height": 139
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "Button",
+    "text": "Flood with color 1",
+    "coordinates": {
+      "x": 57,
+      "y": 1882,
+      "width": 179,
+      "height": 129
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n5",
+    "type": "Button",
+    "text": "Flood with color 2",
+    "coordinates": {
+      "x": 254,
+      "y": 1882,
+      "width": 179,
+      "height": 129
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n6",
+    "type": "Button",
+    "text": "Flood with color 3",
+    "coordinates": {
+      "x": 451,
+      "y": 1882,
+      "width": 179,
+      "height": 129
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n7",
+    "type": "Button",
+    "text": "Flood with color 4",
+    "coordinates": {
+      "x": 645,
+      "y": 1882,
+      "width": 179,
+      "height": 129
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n8",
+    "type": "Button",
+    "text": "Flood with color 5",
+    "coordinates": {
+      "x": 842,
+      "y": 1882,
+      "width": 179,
+      "height": 129
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n9",
+    "type": "Button",
+    "text": "Restart puzzle",
+    "identifier": "restartButton",
+    "coordinates": {
+      "x": 57,
+      "y": 2029,
+      "width": 964,
+      "height": 140
+    },
+    "enabled": true
+  }
+]

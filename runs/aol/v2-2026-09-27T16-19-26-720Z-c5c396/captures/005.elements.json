@@ -1,0 +1,435 @@
+[
+  {
+    "ref": "n1",
+    "type": "ImageView",
+    "text": "Back",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_back_button",
+    "coordinates": {
+      "x": 21,
+      "y": 185,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ViewGroup",
+    "text": "View Comments / Font size / Share link on Facebook",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_engagement_bar",
+    "coordinates": {
+      "x": 0,
+      "y": 2190,
+      "width": 1080,
+      "height": 147
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ImageView",
+    "text": "View Comments",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_engagement_bar_comments_icon",
+    "coordinates": {
+      "x": 53,
+      "y": 2237,
+      "width": 63,
+      "height": 63
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ImageView",
+    "text": "Font size",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_engagement_bar_img_font_size_icon_right",
+    "coordinates": {
+      "x": 616,
+      "y": 2238,
+      "width": 63,
+      "height": 63
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ImageView",
+    "text": "Share link on Facebook",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_engagement_bar_facebook_icon",
+    "coordinates": {
+      "x": 732,
+      "y": 2238,
+      "width": 63,
+      "height": 63
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ImageView",
+    "text": "Copy link",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_engagement_bar_link_icon",
+    "coordinates": {
+      "x": 848,
+      "y": 2238,
+      "width": 63,
+      "height": 63
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ImageView",
+    "text": "Share article",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_engagement_bar_share_icon",
+    "coordinates": {
+      "x": 964,
+      "y": 2238,
+      "width": 63,
+      "height": 63
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "Barcelona’s",
+    "coordinates": {
+      "x": 52,
+      "y": 2400,
+      "width": 199,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "funded and reconstructed the church",
+    "coordinates": {
+      "x": 52,
+      "y": 2400,
+      "width": 900,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "View",
+    "text": "Try full access to The Telegraph free today. Unlock their aw",
+    "coordinates": {
+      "x": 52,
+      "y": 2400,
+      "width": 950,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "Beijing’s",
+    "coordinates": {
+      "x": 178,
+      "y": 2400,
+      "width": 144,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "Renaissance city",
+    "coordinates": {
+      "x": 230,
+      "y": 2400,
+      "width": 294,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "View",
+    "text": "La Sagrada Família",
+    "coordinates": {
+      "x": 369,
+      "y": 2400,
+      "width": 334,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "View",
+    "text": "France’s",
+    "coordinates": {
+      "x": 466,
+      "y": 2400,
+      "width": 145,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "View",
+    "text": "Rome’s",
+    "coordinates": {
+      "x": 516,
+      "y": 2400,
+      "width": 129,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "View",
+    "text": "Doge’s Palace",
+    "coordinates": {
+      "x": 713,
+      "y": 2400,
+      "width": 244,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "View",
+    "text": "Chicago",
+    "coordinates": {
+      "x": 800,
+      "y": 2400,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "EditText",
+    "text": "",
+    "coordinates": {
+      "x": 100,
+      "y": 35672,
+      "width": 880,
+      "height": 210
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "View",
+    "text": "Sign up",
+    "coordinates": {
+      "x": 723,
+      "y": 35883,
+      "width": 257,
+      "height": 126
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n20",
+    "type": "TextView",
+    "text": "ADVERTISEMENT",
+    "identifier": "com.aol.mobile.aolapp:id/display_ad_type",
+    "coordinates": {
+      "x": 413,
+      "y": 36194,
+      "width": 255,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "The Telegraph / 10 engineering marvels you must see in your ",
+    "coordinates": {
+      "x": 0,
+      "y": 37117,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ImageView",
+    "text": "10 engineering marvels you must see in your lifetime",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 37148,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "Euronews / The secret behind the Sagrada Familia's final tow",
+    "coordinates": {
+      "x": 0,
+      "y": 37494,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ImageView",
+    "text": "The secret behind the Sagrada Familia's final towers: Stone,",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 37525,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "Ok Magazine / How Kate Middleton Still Religiously Follows P",
+    "coordinates": {
+      "x": 0,
+      "y": 37871,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ImageView",
+    "text": "How Kate Middleton Still Religiously Follows Prince Philip's",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 37902,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "View",
+    "text": "Koprez in Taboola advertising section Sponsored: learn about",
+    "coordinates": {
+      "x": 53,
+      "y": 38280,
+      "width": 658,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "View",
+    "text": "Sponsored: learn about this recommendation (opens dialog)",
+    "coordinates": {
+      "x": 53,
+      "y": 38280,
+      "width": 42,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "View",
+    "text": "Heel pain is not from your shoes. Meet the real culprit.",
+    "coordinates": {
+      "x": 53,
+      "y": 38280,
+      "width": 614,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "View",
+    "text": "More options",
+    "coordinates": {
+      "x": 557,
+      "y": 38280,
+      "width": 126,
+      "height": 103
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "View",
+    "text": "Image for Taboola Advertising Unit",
+    "coordinates": {
+      "x": 706,
+      "y": 38280,
+      "width": 322,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "People / Airbnb Renter Shoots Alleged Home Invasion Suspect,",
+    "coordinates": {
+      "x": 0,
+      "y": 38653,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "ImageView",
+    "text": "Airbnb Renter Shoots Alleged Home Invasion Suspect, 18, Tryi",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 38684,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "Eating Well / What Happens to Your Brain When You Read, Acco",
+    "coordinates": {
+      "x": 0,
+      "y": 39030,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ImageView",
+    "text": "What Happens to Your Brain When You Read, According to a New",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 39061,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

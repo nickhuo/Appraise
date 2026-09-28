@@ -1,0 +1,74 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 168,
+      "height": 216
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "Weekly / $ 1.99",
+    "coordinates": {
+      "x": 42,
+      "y": 1880,
+      "width": 318,
+      "height": 174
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Monthly / $ 4.99",
+    "coordinates": {
+      "x": 381,
+      "y": 1880,
+      "width": 318,
+      "height": 174
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Annual / $ 39.99",
+    "coordinates": {
+      "x": 720,
+      "y": 1880,
+      "width": 318,
+      "height": 174
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Start 3-day free Trial",
+    "coordinates": {
+      "x": 0,
+      "y": 2092,
+      "width": 1080,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "View",
+    "text": "Terms & Conditions",
+    "coordinates": {
+      "x": 396,
+      "y": 2191,
+      "width": 289,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

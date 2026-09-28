@@ -1,0 +1,40 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "",
+    "identifier": "buttonNavBack",
+    "coordinates": {
+      "x": 21,
+      "y": 132,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "EditText",
+    "text": "",
+    "coordinates": {
+      "x": 84,
+      "y": 455,
+      "width": 912,
+      "height": 336
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Generate",
+    "identifier": "createComposerCta",
+    "coordinates": {
+      "x": 666,
+      "y": 802,
+      "width": 351,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

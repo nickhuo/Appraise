@@ -1,0 +1,86 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 2400
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "All Chats",
+    "coordinates": {
+      "x": 546,
+      "y": 390,
+      "width": 503,
+      "height": 97
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "New Chat",
+    "coordinates": {
+      "x": 546,
+      "y": 487,
+      "width": 503,
+      "height": 99
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "Button",
+    "text": "Model settings",
+    "coordinates": {
+      "x": 546,
+      "y": 586,
+      "width": 503,
+      "height": 108
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "Button",
+    "text": "Chat Memory",
+    "coordinates": {
+      "x": 546,
+      "y": 694,
+      "width": 503,
+      "height": 98
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "Button",
+    "text": "Customize",
+    "coordinates": {
+      "x": 546,
+      "y": 792,
+      "width": 503,
+      "height": 98
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "Button",
+    "text": "Publish Chat",
+    "coordinates": {
+      "x": 546,
+      "y": 890,
+      "width": 503,
+      "height": 109
+    },
+    "enabled": true
+  }
+]

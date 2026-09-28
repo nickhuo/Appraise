@@ -1,0 +1,802 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "runStatus": "blocked",
+  "stopReason": "remaining entrances need a person or could not be reached",
+  "app": {
+    "key": "aol",
+    "packageId": "com.aol.mobile.aolapp",
+    "version": "7.81.0"
+  },
+  "frontier": {
+    "pending": 0,
+    "blocked": 7
+  },
+  "states": [
+    {
+      "id": "n1",
+      "screen": "home",
+      "variant": "default",
+      "summary": "The user can browse news articles, search, check weather, or open Inbox.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Home",
+          "See the latest news",
+          "Top Stories",
+          "Entertainment",
+          "Local",
+          "Sports",
+          "Business",
+          "Tap here for weather",
+          "The Telegraph",
+          "10 engineering marvels you must see in your lifetime",
+          "4d ago",
+          "best-dating-guides.com",
+          "·",
+          "Ad",
+          "San Jose: Lonely Asian Matures Nearby",
+          "HuffPost",
+          "The 1 big mistake you should never, ever make with your passport",
+          "5h ago",
+          "Food Republic",
+          "This pasta is so tasty Alex Guarnaschelli said it made her 'tear up' with excitement",
+          "3h ago",
+          "Inbox",
+          "Delete",
+          "Archive",
+          "Move",
+          "Mark as read",
+          "More"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_the_telegraph_10_engineering_mar",
+          "description": "The Telegraph / 10 engineering marvels you must see in your ",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 0,
+              "y": 625,
+              "width": 1080,
+              "height": 884
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_inbox",
+          "description": "Inbox",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 0,
+              "y": 2187,
+              "width": 540,
+              "height": 150
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_search",
+          "description": "Search",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 954,
+              "y": 164,
+              "width": 105,
+              "height": 105
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "4_entertainment",
+          "description": "Entertainment",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 313,
+              "y": 290,
+              "width": 284,
+              "height": 126
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "5_local",
+          "description": "Local",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 618,
+              "y": 290,
+              "width": 159,
+              "height": 126
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "6_tap_here_for_weather",
+          "description": "Tap here for weather",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 1,
+            "bounds": {
+              "x": 80,
+              "y": 460,
+              "width": 921,
+              "height": 126
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 1,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/001.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/001.elements.json"
+        },
+        {
+          "step": 7,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/007.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/007.elements.json"
+        },
+        {
+          "step": 10,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/010.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/010.elements.json"
+        },
+        {
+          "step": 11,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/011.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/011.elements.json"
+        },
+        {
+          "step": 14,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/014.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/014.elements.json"
+        },
+        {
+          "step": 15,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/015.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/015.elements.json"
+        },
+        {
+          "step": 16,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/016.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/016.elements.json"
+        },
+        {
+          "step": 18,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/018.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/018.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n2",
+      "screen": "article",
+      "variant": "default",
+      "summary": "The Telegraph article is open, and you can scroll to read it or open a related story.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "The Telegraph",
+          "10 engineering marvels you must see in your lifetime",
+          "Christopher Beanland",
+          "Sep. 23, 2026 5:00 AM PT",
+          "My Dog Ignored His Fresh Water and Drank From a Mud Puddle",
+          "SelenePets",
+          "·",
+          "Ad",
+          "Don’t miss our daily roundup.",
+          "Stay informed with a handpicked selection of the day's top AOL stories, delivered to your inbox.",
+          "Enter your email",
+          "Sign up",
+          "ADVERTISEMENT",
+          "More Stories",
+          "The 20 buildings you must visit in your lifetime",
+          "6d ago",
+          "The World's Largest Beaver Dam Is Tucked Away In Canada's Largest National Park",
+          "3d ago",
+          "Moment huge new bridge for 200mph trains lifted over one of UK's biggest motorways",
+          "6hr ago",
+          "Koprez",
+          "Heel pain is not from your shoes. Meet the real culprit.",
+          "How Kate Middleton Still Religiously Follows Prince Philip's 'Golden Rule' for Royals",
+          "2hr ago",
+          "What Happens to Your Brain When You Read, According to a New Study",
+          "3hr ago"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_the_telegraph_the_20_buildings_y",
+          "description": "The 20 buildings you must visit in your lifetime",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 2,
+            "bounds": {
+              "x": 713,
+              "y": 5351,
+              "width": 315,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        },
+        {
+          "key": "2_islands_the_world_s_largest_beav",
+          "description": "The secret behind the Sagrada Familia's final towers: Stone,",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "not on this page",
+          "status": "unreachable",
+          "location": {
+            "step": 5,
+            "bounds": {
+              "x": 713,
+              "y": 37525,
+              "width": 315,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        },
+        {
+          "key": "3_express_uk_moment_huge_new_bridg",
+          "description": "10 engineering marvels you must see in your lifetime",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "not on this page",
+          "status": "unreachable",
+          "location": {
+            "step": 5,
+            "bounds": {
+              "x": 713,
+              "y": 37148,
+              "width": 315,
+              "height": 0
+            },
+            "onScreen": false
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 2,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/002.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/002.elements.json"
+        },
+        {
+          "step": 3,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/003.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/003.elements.json"
+        },
+        {
+          "step": 4,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/004.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/004.elements.json",
+          "scroll": {
+            "from": 3,
+            "direction": "down"
+          }
+        },
+        {
+          "step": 5,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/005.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/005.elements.json"
+        },
+        {
+          "step": 6,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/006.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/006.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n3",
+      "screen": "aol_sign_in",
+      "variant": "default",
+      "summary": "The user can enter an AOL account identifier to sign in, recover a username, or create an account.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Sign in | AOL",
+          "Sign in to AOL",
+          "Email or phone number",
+          "Forgot username",
+          "Next",
+          "Create account",
+          "Help",
+          "Terms",
+          "Privacy"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_email_or_phone_number",
+          "description": "Email or phone number",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "login",
+          "status": "blocked",
+          "location": {
+            "step": 9,
+            "bounds": {
+              "x": 154,
+              "y": 683,
+              "width": 772,
+              "height": 55
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_next",
+          "description": "Next",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "login",
+          "status": "blocked",
+          "location": {
+            "step": 9,
+            "bounds": {
+              "x": 105,
+              "y": 985,
+              "width": 871,
+              "height": 160
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "3_create_account",
+          "description": "Create account",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "login",
+          "status": "blocked",
+          "location": {
+            "step": 9,
+            "bounds": {
+              "x": 105,
+              "y": 1336,
+              "width": 871,
+              "height": 161
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 9,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/009.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/009.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n4",
+      "screen": "search",
+      "variant": "default",
+      "summary": "The search field is ready for a query, or the user can select a suggested search.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Search",
+          "SUGGESTED SEARCHES",
+          "Dante Moore Injury Update",
+          "Justin Verlander",
+          "Trump Booed",
+          "Penn State Nittany Lions",
+          "Presidents Cup",
+          "Raoni Barcelos",
+          "AEW All Out 2026 Results",
+          "Hurricane Polo"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_search",
+          "description": "Search",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 12,
+            "bounds": {
+              "x": 173,
+              "y": 159,
+              "width": 907,
+              "height": 126
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_suggested_searches_dante_moore_i",
+          "description": "Suggested searches / Dante Moore Injury Update",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "not on this page",
+          "status": "unreachable",
+          "location": {
+            "step": 12,
+            "bounds": {
+              "x": 0,
+              "y": 412,
+              "width": 1080,
+              "height": 126
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 12,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/012.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/012.elements.json"
+        },
+        {
+          "step": 13,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/013.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/013.elements.json"
+        }
+      ],
+      "monetization": []
+    },
+    {
+      "id": "n5",
+      "screen": "home",
+      "variant": "location_permission_prompt",
+      "summary": "A location permission prompt covers the Home news feed; you can dismiss it or choose to allow location for weather.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Allow Location permission to get the most accurate weather forecasts",
+          "Do you want to allow Location permission?",
+          "Not now",
+          "Allow Location"
+        ]
+      },
+      "groups": [
+        {
+          "key": "1_not_now",
+          "description": "Not now",
+          "isCore": true,
+          "explored": true,
+          "coverage": "explored",
+          "status": "explored",
+          "location": {
+            "step": 17,
+            "bounds": {
+              "x": 157,
+              "y": 1477,
+              "width": 291,
+              "height": 95
+            },
+            "onScreen": true
+          }
+        },
+        {
+          "key": "2_allow_location",
+          "description": "Allow Location",
+          "isCore": true,
+          "explored": false,
+          "coverage": "blocked",
+          "blockReason": "permission",
+          "status": "blocked",
+          "location": {
+            "step": 17,
+            "bounds": {
+              "x": 524,
+              "y": 1477,
+              "width": 399,
+              "height": 95
+            },
+            "onScreen": true
+          }
+        }
+      ],
+      "evidence": [
+        {
+          "step": 17,
+          "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/017.png",
+          "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/017.elements.json"
+        }
+      ],
+      "monetization": []
+    }
+  ],
+  "transitions": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "destinationStep": 2,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 540,
+        "y": 1067,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "The Telegraph / 10 engineering marvels you must see in your ",
+        "groupKey": "1_the_telegraph_10_engineering_mar"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Back, The Telegraph, Christopher Beanland, My Dog Ignored His Fresh Water and Drank From a Mud Puddle S, SelenePets in Taboola advertising section, View Comments / Font size / Share link on Facebook, View Comments, Font size, Share link on Facebook, Copy link, Share article, Sign up, ADVERTISEMENT, The Telegraph / The 20 buildings you must visit in your life, The 20 buildings you must visit in your lifetime, Islands / The World's Largest Beaver Dam Is Tucked Away In C, The World's Largest Beaver Dam Is Tucked Away In Canada's La, Express UK / Moment huge new bridge for 200mph trains lifted, Moment huge new bridge for 200mph trains lifted over one of , Koprez in Taboola advertising section Sponsored: learn about, Heel pain is not from your shoes. Meet the real culprit.",
+      "evidence": {
+        "step": 1,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/001.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/001.elements.json"
+      }
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n2",
+      "destinationStep": 5,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 871,
+        "y": 2035,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "The 20 buildings you must visit in your lifetime",
+        "groupKey": "1_the_telegraph_the_20_buildings_y"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added View Comments / Font size / Share link on Facebook, View Comments, Font size, Share link on Facebook, Copy link, Share article, Barcelona’s, funded and reconstructed the church, Try full access to The Telegraph free today. Unlock their aw, Beijing’s, Renaissance city, La Sagrada Família, France’s, Rome’s, Doge’s Palace, Chicago, The Telegraph / 10 engineering marvels you must see in your , 10 engineering marvels you must see in your lifetime, Euronews / The secret behind the Sagrada Familia's final tow, The secret behind the Sagrada Familia's final towers: Stone,",
+      "evidence": {
+        "step": 4,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/004.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/004.elements.json",
+        "scroll": {
+          "from": 3,
+          "direction": "down"
+        }
+      }
+    },
+    {
+      "id": "e3",
+      "from": "n1",
+      "to": "n3",
+      "destinationStep": 9,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 270,
+        "y": 2262,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Inbox",
+        "groupKey": "2_inbox"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Email or phone number, Forgot username, Next, Create account, Help, Terms, Privacy",
+      "evidence": {
+        "step": 7,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/007.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/007.elements.json"
+      }
+    },
+    {
+      "id": "e4",
+      "from": "n1",
+      "to": "n4",
+      "destinationStep": 12,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 1007,
+        "y": 217,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Search",
+        "groupKey": "3_search"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Close, Suggested searches / Dante Moore Injury Update, Suggested searches / Justin Verlander, Suggested searches / Trump Booed",
+      "evidence": {
+        "step": 11,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/011.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/011.elements.json"
+      }
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": null,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 627,
+        "y": 222,
+        "text": "weather forecast",
+        "submit": true,
+        "direction": "none",
+        "reason": "Search",
+        "groupKey": "1_search"
+      },
+      "outcome": "left_app",
+      "changeSummary": null,
+      "evidence": {
+        "step": 12,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/012.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/012.elements.json"
+      }
+    },
+    {
+      "id": "e6",
+      "from": "n1",
+      "to": "n1",
+      "destinationStep": 15,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 455,
+        "y": 353,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Entertainment",
+        "groupKey": "4_entertainment"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Lighter Side, Ok Magazine / How Kate Middleton still religiously follows P, People / Who is performing at the 2026 MTV VMAs? Here are al, Sign up",
+      "evidence": {
+        "step": 14,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/014.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/014.elements.json"
+      }
+    },
+    {
+      "id": "e7",
+      "from": "n1",
+      "to": "n1",
+      "destinationStep": 16,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 438,
+        "y": 206,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Local",
+        "groupKey": "5_local"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Politics, Error getting weather / Edit locations, Edit locations, Creative Loafing Atlanta / Ordinary Days | 09/27/2026 2:00 P, More options, best-dating-guides.com in Taboola advertising section · Spon, best-dating-guides.com in Taboola advertising section, Image for Taboola Advertising Unit, Sponsored: learn about this recommendation (opens dialog), San Jose: Lonely Asian Matures Nearby, Shine My Crown / 'This is a Movement Built by Individuals': , NYDailyNews / Nor’easter slams NYC with heavy winds, rain / , Try it free*",
+      "evidence": {
+        "step": 15,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/015.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/015.elements.json"
+      }
+    },
+    {
+      "id": "e8",
+      "from": "n1",
+      "to": "n5",
+      "destinationStep": 17,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 541,
+        "y": 376,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Tap here for weather",
+        "groupKey": "6_tap_here_for_weather"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Not now, Allow Location",
+      "evidence": {
+        "step": 16,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/016.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/016.elements.json"
+      }
+    },
+    {
+      "id": "e9",
+      "from": "n5",
+      "to": "n1",
+      "destinationStep": 18,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 303,
+        "y": 1525,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Not now",
+        "groupKey": "1_not_now"
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Local, Sports, Business, Lighter Side, Politics, Error getting weather / Edit locations, Edit locations, Creative Loafing Atlanta / Ordinary Days | 09/27/2026 2:00 P, Save this article, Share this news article, More options, best-dating-guides.com in Taboola advertising section · Spon, best-dating-guides.com in Taboola advertising section, Image for Taboola Advertising Unit, Sponsored: learn about this recommendation (opens dialog), San Jose: Lonely Asian Matures Nearby, Shine My Crown / 'This is a Movement Built by Individuals': , NYDailyNews / Nor’easter slams NYC with heavy winds, rain / , Inbox, Delete, Archive, Move, Mark as read, More, Try it free*",
+      "evidence": {
+        "step": 17,
+        "screenshot": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/017.png",
+        "elementTree": "runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/captures/017.elements.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,578 @@
+[
+  {
+    "ref": "n1",
+    "type": "Button",
+    "text": "Close drawer",
+    "coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 274,
+      "height": 2400
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 148,
+      "y": 163,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ViewGroup",
+    "text": "@nickfok",
+    "coordinates": {
+      "x": 532,
+      "y": 192,
+      "width": 216,
+      "height": 61
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "0 / Following",
+    "coordinates": {
+      "x": 532,
+      "y": 275,
+      "width": 172,
+      "height": 95
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "Hidden Gems",
+    "coordinates": {
+      "x": 6,
+      "y": 430,
+      "width": 224,
+      "height": 75
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "View public profile",
+    "coordinates": {
+      "x": 318,
+      "y": 459,
+      "width": 298,
+      "height": 38
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "Button",
+    "text": "Main navigation",
+    "coordinates": {
+      "x": 306,
+      "y": 569,
+      "width": 743,
+      "height": 142
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "Button",
+    "text": "Following",
+    "coordinates": {
+      "x": 306,
+      "y": 723,
+      "width": 743,
+      "height": 142
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 138,
+      "y": 856,
+      "width": 95,
+      "height": 95
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "Button",
+    "text": "Blocks",
+    "coordinates": {
+      "x": 306,
+      "y": 877,
+      "width": 743,
+      "height": 141
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "ViewGroup",
+    "text": "1 / 176",
+    "coordinates": {
+      "x": 0,
+      "y": 882,
+      "width": 115,
+      "height": 43
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "ViewGroup",
+    "text": "Your neglectful girlfriend | Ayumi",
+    "coordinates": {
+      "x": 0,
+      "y": 993,
+      "width": 211,
+      "height": 536
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "Button",
+    "text": "Media Library",
+    "coordinates": {
+      "x": 306,
+      "y": 1030,
+      "width": 743,
+      "height": 142
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "Button",
+    "text": "Settings",
+    "coordinates": {
+      "x": 306,
+      "y": 1184,
+      "width": 743,
+      "height": 142
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "Button",
+    "text": "Billing",
+    "coordinates": {
+      "x": 306,
+      "y": 1338,
+      "width": 743,
+      "height": 142
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "ViewGroup",
+    "text": "Upgrade to Janitor Plus",
+    "coordinates": {
+      "x": 335,
+      "y": 1511,
+      "width": 743,
+      "height": 149
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "I came. You didn't? Yeah... it sucks, but not my problem. Do",
+    "coordinates": {
+      "x": 0,
+      "y": 1597,
+      "width": 211,
+      "height": 505
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "ViewGroup",
+    "text": "Get Help",
+    "coordinates": {
+      "x": 572,
+      "y": 1752,
+      "width": 212,
+      "height": 87
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "Button",
+    "text": "Logout",
+    "coordinates": {
+      "x": 306,
+      "y": 1872,
+      "width": 743,
+      "height": 142
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "v2.5.0.136.v35",
+    "coordinates": {
+      "x": 306,
+      "y": 2017,
+      "width": 743,
+      "height": 34
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 34,
+      "y": 2169,
+      "width": 168,
+      "height": 168
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 0,
+      "y": 2217,
+      "width": 115,
+      "height": 58
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "💔 Angst",
+    "coordinates": {
+      "x": 0,
+      "y": 2286,
+      "width": 124,
+      "height": 57
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "🕊🗡 Dead Dove",
+    "coordinates": {
+      "x": 0,
+      "y": 2356,
+      "width": 15,
+      "height": 44
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 27,
+      "y": 2356,
+      "width": 170,
+      "height": 44
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "Callum Turner || Baby Shower",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 211,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "You'll be in my heart / No matter what they say / Your overb",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 211,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 87,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "👩 FemPov",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 124,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "#coldhusband",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 187,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "#asshole",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 147,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "#MIL",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 50,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "ViewGroup",
+    "text": "The 'Hero' is your problem now, but his party prefers you ov",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 211,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "@ClearOrangeJuice",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 31,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ViewGroup",
+    "text": "(By Request)\nAfter countless complaints against him, the Kin",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 211,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "ViewGroup",
+    "text": "🏰 Historical",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 142,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "ViewGroup",
+    "text": "🦄 Non-human",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 190,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n38",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n39",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 91,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n40",
+    "type": "ViewGroup",
+    "text": "#erectiledysfunction",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 60,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n41",
+    "type": "ViewGroup",
+    "text": "Awww ... Expecting something else? / --- / INTRO:",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 211,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n42",
+    "type": "ViewGroup",
+    "text": "👩‍🦰 Female",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 115,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n43",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 118,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n44",
+    "type": "ViewGroup",
+    "text": "#fantasy",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 103,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n45",
+    "type": "ViewGroup",
+    "text": "#tomboy",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 132,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n46",
+    "type": "ViewGroup",
+    "text": "#genderdisguise",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 14,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n47",
+    "type": "ViewGroup",
+    "text": "1 / 176",
+    "coordinates": {
+      "x": 0,
+      "y": 2400,
+      "width": 115,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n48",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 138,
+      "y": 2400,
+      "width": 95,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

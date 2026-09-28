@@ -1,0 +1,199 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "Search",
+    "identifier": "appsHubSearch",
+    "coordinates": {
+      "x": 933,
+      "y": 137,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "My Apps",
+    "identifier": "appsHubTabMY_APPS",
+    "coordinates": {
+      "x": 42,
+      "y": 138,
+      "width": 236,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Photoedit / CREATIVE / Edit your images",
+    "coordinates": {
+      "x": 42,
+      "y": 413,
+      "width": 996,
+      "height": 723
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Photoedit / 1.9K / ·",
+    "coordinates": {
+      "x": 42,
+      "y": 1292,
+      "width": 394,
+      "height": 683
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Anima / 1.2K / ·",
+    "coordinates": {
+      "x": 468,
+      "y": 1292,
+      "width": 394,
+      "height": 683
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "View",
+    "text": "Stories / 564 / ·",
+    "coordinates": {
+      "x": 894,
+      "y": 1292,
+      "width": 186,
+      "height": 700
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "Create app",
+    "coordinates": {
+      "x": 42,
+      "y": 1975,
+      "width": 996,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "Tools",
+    "coordinates": {
+      "x": 908,
+      "y": 2024,
+      "width": 150,
+      "height": 67
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 218,
+      "y": 2101,
+      "width": 138,
+      "height": 9
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 409,
+      "y": 2101,
+      "width": 208,
+      "height": 9
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 670,
+      "y": 2101,
+      "width": 185,
+      "height": 9
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "GTA VI",
+    "coordinates": {
+      "x": 42,
+      "y": 2123,
+      "width": 482,
+      "height": 4
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "View",
+    "text": "Chess 1000 ELO",
+    "coordinates": {
+      "x": 556,
+      "y": 2123,
+      "width": 482,
+      "height": 4
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "View",
+    "text": "Chat",
+    "identifier": "bottomBarHomeChats",
+    "coordinates": {
+      "x": 11,
+      "y": 2169,
+      "width": 338,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "View",
+    "text": "Services",
+    "identifier": "bottomBarServices",
+    "coordinates": {
+      "x": 370,
+      "y": 2169,
+      "width": 339,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "View",
+    "text": "Create",
+    "identifier": "bottomBarAppsHub",
+    "coordinates": {
+      "x": 730,
+      "y": 2169,
+      "width": 339,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

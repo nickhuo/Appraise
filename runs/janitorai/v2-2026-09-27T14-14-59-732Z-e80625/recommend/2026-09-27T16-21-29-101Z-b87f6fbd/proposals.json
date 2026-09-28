@@ -1,0 +1,165 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "proposals": [
+    {
+      "id": "faster-reply-sample",
+      "revision": 0,
+      "title": "Optional one-reply speed sample",
+      "opportunityType": "product_change",
+      "entryStateId": "n11",
+      "evidenceIds": [
+        "n11",
+        "e23"
+      ],
+      "trigger": "While adjusting Model settings, the user sees the subscription offer promising faster replies. Add a proposed “Not now” choice beside it; this decline flow was not observed.",
+      "userNeed": "The user wants to understand whether faster replies would improve their chats before subscribing. Grant faster processing for one subsequent reply after an ad.",
+      "eligibility": "Non-subscribers who have not used the sample, if the app can reliably provide a faster reply.",
+      "productChange": "Add a clearly labeled, one-use sample after the proposed decline choice. Keep Subscribe now and the normal way back to chat intact.",
+      "reward": "One faster AI reply, not ongoing speed or the other advertised benefits.",
+      "optIn": "The user explicitly taps “Watch an ad for one faster reply.”",
+      "fulfillment": "After a completed ad, mark the next eligible sent message for faster processing and confirm when the sample is consumed.",
+      "declinePath": "Return to Model settings or chat without changing service.",
+      "failurePath": "If the ad is unavailable or unfinished, grant nothing and leave normal replies available.",
+      "businessImpact": "Could clarify a subscription benefit but also substitute for a paid use; serving a faster reply may increase compute cost. Normal free replies must remain unchanged.",
+      "validationPlan": "Randomize eligible settings visitors between the intact subscription offer and the offer plus sample; compare subscription starts, completed samples, reply latency, retention, and incremental serving and ad costs.",
+      "assumptions": [
+        "The advertised faster-replies benefit can be provisioned for a single reply; grantability and latency improvement are unverified.",
+        "Subscriber eligibility, ad yield, serving costs, and effects on subscriptions are unknown."
+      ]
+    },
+    {
+      "id": "faster-reply-sample",
+      "revision": 1,
+      "title": "Optional one-reply speed sample",
+      "opportunityType": "product_change",
+      "entryStateId": "n11",
+      "evidenceIds": [
+        "n11",
+        "n5",
+        "e23"
+      ],
+      "trigger": "While adjusting Model settings, the user sees a subscription offer advertising faster replies. After a proposed “Not now” choice, offer an optional sample; no decline flow or speed gate was observed.",
+      "userNeed": "Before subscribing, the user wants to know whether faster replies improve their chat. One accelerated reply would let them try that specific benefit.",
+      "eligibility": "Non-subscribers who have not used the sample, only when single-reply acceleration and an ad are available.",
+      "productChange": "Add a one-use sample offer after the proposed decline choice. Keep Subscribe now, Save, and the normal way back to chat intact; do not change free reply speed.",
+      "reward": "One faster AI reply, not ongoing speed or the other advertised subscription benefits.",
+      "optIn": "The user explicitly taps “Watch an ad for one faster reply.”",
+      "fulfillment": "After a completed ad, apply acceleration to the next eligible sent chat message. Confirm when its faster reply is delivered.",
+      "declinePath": "Skip the sample and return to settings or chat without changing service.",
+      "failurePath": "If the ad is unavailable or unfinished, grant nothing; normal replies remain available. If acceleration fails after a completed ad, keep the sample available for a later eligible reply and deliver the current reply normally.",
+      "businessImpact": "The sample might demonstrate a paid benefit and encourage subscriptions, or replace a paid use. Ads may earn revenue, while acceleration may raise serving costs. Existing subscription benefits and normal free usage remain unchanged.",
+      "validationPlan": "First run a technical and user-perception pilot to verify reliable single-reply acceleration and a noticeable latency improvement. Only then randomize eligible settings visitors between the intact subscription offer and the offer plus sample; compare subscription starts, ad completions, reply latency, perceived speed, retention, ad yield, and incremental serving costs.",
+      "assumptions": [
+        "A single reply can be accelerated reliably without changing other chat behavior; grantability and perceived improvement are unverified.",
+        "Subscriber identification, ad yield, incremental serving costs, and effects on subscriptions are unknown."
+      ]
+    },
+    {
+      "id": "smart-variant",
+      "revision": 0,
+      "title": "Ad-funded alternative character reply",
+      "opportunityType": "product_change",
+      "entryStateId": "n6",
+      "evidenceIds": [
+        "n6",
+        "n11",
+        "e17"
+      ],
+      "trigger": "In chat, the user is reviewing a character reply and has a Next control. The settings offer mentions smarter swipes, but observations do not establish that Next is a swipe or that it has a paid gate.",
+      "userNeed": "The user wants a different response that better fits the conversation. Offer one explicitly labeled, smarter alternative after an ad.",
+      "eligibility": "Users reviewing an AI reply, only if Next is confirmed to be an appropriate response-variant control; otherwise this placement must not ship.",
+      "productChange": "Add a separate “Watch for one smarter alternative” action near Next, without limiting or relabeling existing Next behavior.",
+      "reward": "One additional, higher-quality response candidate—not unlimited swipes or subscription access.",
+      "optIn": "Generate the candidate only after the user affirmatively chooses the ad offer and completes the ad.",
+      "fulfillment": "Attach the candidate to the current reply so the user can choose it or retain the original.",
+      "declinePath": "Continue using Next and the existing chat controls normally.",
+      "failurePath": "If no ad is available or it is unfinished, retain the current reply and existing controls; do not create a candidate.",
+      "businessImpact": "May earn ad revenue and demonstrate smarter swipes, but could displace subscriptions, raise generation costs, or interrupt ordinary chat.",
+      "validationPlan": "After verifying Next semantics, A/B test the additive offer against existing controls; measure candidate selection, chat continuation, subscriptions, ad revenue, and generation cost.",
+      "assumptions": [
+        "What Next does, whether smarter alternatives can be granted individually, paid-feature boundaries, generation costs, and business metrics are unknown."
+      ]
+    },
+    {
+      "id": "smart-variant",
+      "revision": 1,
+      "title": "Ad-funded enhanced reply alternative",
+      "opportunityType": "product_change",
+      "entryStateId": "n3",
+      "evidenceIds": [
+        "n3",
+        "e2",
+        "n11"
+      ],
+      "trigger": "While reviewing a character reply, the user opens its message actions, which include “Re-generate last answer.” Place a separate offer beside that action—not beside Next, whose behavior is unverified.",
+      "userNeed": "If the reply does not fit the conversation, the user can try one optional alternative without losing the current reply.",
+      "eligibility": "Non-subscribers viewing an eligible AI reply, if the app can retain both replies and generate an additional candidate. Verify how Re-generate last answer behaves before launch.",
+      "productChange": "Add “Watch an ad for one enhanced alternative” to the message actions. Use a proposed, higher-compute generation path for this one candidate; leave ordinary regeneration unchanged. Model settings advertises “smarter swipes” at $12.99/month, but its implementation and relationship to regeneration are unknown. Do not describe this reward as a paid swipe or subscription access.",
+      "reward": "One selectable alternative for the current reply, not recurring access or unlimited alternatives.",
+      "optIn": "Show the proposed one-use reward and require an affirmative tap to start the ad; generate it only after ad completion.",
+      "fulfillment": "Add the candidate alongside the current reply so the user can choose either one.",
+      "declinePath": "Close the offer and continue with Re-generate last answer or other existing chat controls normally.",
+      "failurePath": "If the ad is unavailable or unfinished, grant no candidate; keep the current reply and existing controls available.",
+      "businessImpact": "Could earn ad revenue and improve chat continuation, but extra generation may cost more or reduce subscription interest. The offer must not slow or restrict normal regeneration or misrepresent the paid benefit.",
+      "validationPlan": "First verify regeneration and paid smarter-swipes semantics. Then A/B test the additive offer against unchanged message actions among eligible non-subscribers; measure completed ads, candidate selection, chat continuation, subscription conversion, ad revenue, generation cost, and ordinary regeneration use.",
+      "assumptions": [
+        "Whether an additional candidate can be retained and granted, the higher-compute path and its quality, ad availability, subscription status, paid-feature boundaries, generation costs, and business metrics are unknown."
+      ]
+    },
+    {
+      "id": "enhance-alternative",
+      "revision": 0,
+      "title": "Second enhanced draft",
+      "opportunityType": "product_change",
+      "entryStateId": "n7",
+      "evidenceIds": [
+        "n6",
+        "n7",
+        "e17"
+      ],
+      "trigger": "The user has an enhanced chat draft open and can send, enhance again, or cancel. An enhanced-draft result was observed, but no quota or exhaustion gate was observed.",
+      "userNeed": "The user wants another wording choice before sending. Grant one additional enhanced draft after an ad.",
+      "eligibility": "Users with an open enhanced draft, if another draft can be generated without losing their work.",
+      "productChange": "Add an optional “Watch for another enhanced draft” action. It must not replace, restrict, or charge for the observed Enhance control.",
+      "reward": "One additional draft alternative for the current message.",
+      "optIn": "The user taps the ad offer and completes the ad before generation starts.",
+      "fulfillment": "Show the new alternative alongside the retained draft; let the user choose one or cancel.",
+      "declinePath": "Keep the current draft and use Send, Enhance, or Cancel enhance as usual.",
+      "failurePath": "If the ad is unavailable or unfinished, preserve the draft and all existing controls; grant no alternative.",
+      "businessImpact": "Could support ad revenue without reducing existing free value, but extra generation increases service cost and interruptions may reduce normal chat usage. Any effect on subscriptions is unknown.",
+      "validationPlan": "A/B test the additive offer on enhanced-draft screens; compare completed messages, draft acceptance, chat continuation, subscription starts, ad revenue, and incremental generation cost.",
+      "assumptions": [
+        "Individual draft grantability, whether Enhance has paid benefits elsewhere, ad yield, generation cost, and business effects are unknown."
+      ]
+    },
+    {
+      "id": "enhance-alternative",
+      "revision": 1,
+      "title": "Compare two enhanced drafts",
+      "opportunityType": "product_change",
+      "entryStateId": "n7",
+      "evidenceIds": [
+        "n6",
+        "n7",
+        "e17",
+        "n11"
+      ],
+      "trigger": "The user is reviewing an enhanced draft before sending. Send, Enhance, and Cancel enhance are visible; no quota or exhaustion gate was observed.",
+      "userNeed": "The user may want to compare another wording choice without losing the draft they are reviewing. After an ad, provide one additional draft alongside it.",
+      "eligibility": "Users with an open enhanced draft, if an additional draft can be generated and both drafts retained. No existing limit is required.",
+      "productChange": "Propose an optional “Watch an ad to compare another draft” action on the enhanced-draft screen, with a side-by-side choice. Keep the observed Enhance action unchanged; whether comparison adds value over Enhance is unproven.",
+      "reward": "One additional enhanced draft alternative for the current message, with the original draft retained.",
+      "optIn": "The user explicitly taps the offer and completes the ad before generation begins.",
+      "fulfillment": "Display both drafts and let the user select one to send or cancel.",
+      "declinePath": "Leave the current draft and the existing Send, Enhance, and Cancel enhance controls available.",
+      "failurePath": "If the ad is unavailable or unfinished, leave the draft and controls unchanged. If generation fails after a completed ad, allow a retry without another ad or retain the earned alternative until it can be delivered.",
+      "businessImpact": "Ads could add revenue, but extra generation and interruptions could raise costs or reduce normal chat use. The observed subscription offer promises more memory, faster replies, and smarter swipes—not enhanced drafts—so subscription effects are unknown. Do not reduce existing free Enhance access.",
+      "validationPlan": "Run a randomized test of the additive comparison offer against the unchanged enhanced-draft screen. Measure opt-in, delivered alternatives, selection and message-send rates, subsequent chat use, changes in existing Enhance use, subscription starts, ad revenue, and incremental generation cost. Test whether users actually prefer retained comparison over the existing Enhance action.",
+      "assumptions": [
+        "Generating and retaining a second draft, including retry after failure, is technically feasible; grantability is unverified.",
+        "Ad yield, generation and retry costs, subscription effects, and net business impact are unknown.",
+        "The observed subscription price is $12.99/month; no enhanced-draft subscription benefit was observed."
+      ]
+    }
+  ]
+}

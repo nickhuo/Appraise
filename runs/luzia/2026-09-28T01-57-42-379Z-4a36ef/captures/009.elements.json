@@ -1,0 +1,264 @@
+[
+  {
+    "ref": "n1",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 838,
+      "y": 133,
+      "width": 105,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "",
+    "identifier": "buttonSettings",
+    "coordinates": {
+      "x": 943,
+      "y": 133,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Luzia / How can I help you today?",
+    "identifier": "introCard",
+    "coordinates": {
+      "x": 32,
+      "y": 365,
+      "width": 1016,
+      "height": 169
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "SEE MORE",
+    "coordinates": {
+      "x": 772,
+      "y": 598,
+      "width": 266,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Friend",
+    "identifier": "characterCard_Friend",
+    "coordinates": {
+      "x": 42,
+      "y": 724,
+      "width": 318,
+      "height": 318
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "View",
+    "text": "Teacher",
+    "identifier": "characterCard_Teacher",
+    "coordinates": {
+      "x": 381,
+      "y": 724,
+      "width": 318,
+      "height": 318
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "Elias",
+    "identifier": "characterCard_Elias",
+    "coordinates": {
+      "x": 720,
+      "y": 724,
+      "width": 318,
+      "height": 318
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 917,
+      "y": 1101,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "Custom Bestie / Make an AI expert tailored to you",
+    "identifier": "customBestieBanner",
+    "coordinates": {
+      "x": 42,
+      "y": 1105,
+      "width": 996,
+      "height": 164
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 917,
+      "y": 1328,
+      "width": 126,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "Meet Toki, your virtual pet! / Create and take care of your ",
+    "identifier": "petBanner",
+    "coordinates": {
+      "x": 42,
+      "y": 1332,
+      "width": 996,
+      "height": 164
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 807,
+      "y": 1528,
+      "width": 53,
+      "height": 110
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 860,
+      "y": 1528,
+      "width": 84,
+      "height": 110
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "View",
+    "text": "",
+    "coordinates": {
+      "x": 944,
+      "y": 1528,
+      "width": 126,
+      "height": 110
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "View",
+    "text": "Our new chat / Today",
+    "coordinates": {
+      "x": 0,
+      "y": 1638,
+      "width": 1080,
+      "height": 159
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "View",
+    "text": "Our new chat / Today",
+    "coordinates": {
+      "x": 0,
+      "y": 1797,
+      "width": 1080,
+      "height": 159
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "View",
+    "text": "Plan day with 3 priorities / Today",
+    "coordinates": {
+      "x": 0,
+      "y": 1956,
+      "width": 1080,
+      "height": 159
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "View",
+    "text": "Image creation request / Today",
+    "coordinates": {
+      "x": 0,
+      "y": 2115,
+      "width": 1080,
+      "height": 12
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "View",
+    "text": "Chat",
+    "identifier": "bottomBarHomeChats",
+    "coordinates": {
+      "x": 11,
+      "y": 2169,
+      "width": 338,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "View",
+    "text": "Services",
+    "identifier": "bottomBarServices",
+    "coordinates": {
+      "x": 370,
+      "y": 2169,
+      "width": 339,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "View",
+    "text": "Create, New / Create",
+    "identifier": "bottomBarAppsHub",
+    "coordinates": {
+      "x": 730,
+      "y": 2169,
+      "width": 339,
+      "height": 126
+    },
+    "enabled": true
+  }
+]

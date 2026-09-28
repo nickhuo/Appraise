@@ -1,0 +1,638 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "5 / 9 / 8",
+    "coordinates": {
+      "x": 819,
+      "y": 161,
+      "width": 118,
+      "height": 89
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 42,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "Button",
+    "text": "",
+    "coordinates": {
+      "x": 954,
+      "y": 164,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 76,
+      "y": 471,
+      "width": 928,
+      "height": 1392
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 920,
+      "y": 1894,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "@lwrn_mawn",
+    "coordinates": {
+      "x": 158,
+      "y": 1912,
+      "width": 238,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 76,
+      "y": 12495,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 246,
+      "y": 12495,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "ViewGroup",
+    "text": "📚 Fictional",
+    "coordinates": {
+      "x": 407,
+      "y": 12495,
+      "width": 191,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "⛓️ Dominant",
+    "coordinates": {
+      "x": 610,
+      "y": 12495,
+      "width": 203,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "ViewGroup",
+    "text": "🧬 Demi-Human",
+    "coordinates": {
+      "x": 76,
+      "y": 12564,
+      "width": 243,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "ViewGroup",
+    "text": "😂 Comedy",
+    "coordinates": {
+      "x": 331,
+      "y": 12564,
+      "width": 188,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "ViewGroup",
+    "text": "👩 FemPov",
+    "coordinates": {
+      "x": 531,
+      "y": 12564,
+      "width": 185,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "ViewGroup",
+    "text": "🌗 Switch",
+    "coordinates": {
+      "x": 728,
+      "y": 12564,
+      "width": 169,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "ViewGroup",
+    "text": "#theheartbreakers",
+    "coordinates": {
+      "x": 76,
+      "y": 12634,
+      "width": 267,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "ViewGroup",
+    "text": "#musicmania2",
+    "coordinates": {
+      "x": 355,
+      "y": 12634,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "ViewGroup",
+    "text": "#unrequitedlove",
+    "coordinates": {
+      "x": 593,
+      "y": 12634,
+      "width": 241,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "ViewGroup",
+    "text": "PLAYING AS, fok",
+    "coordinates": {
+      "x": 79,
+      "y": 12791,
+      "width": 922,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "ViewGroup",
+    "text": "Continue latest chat",
+    "coordinates": {
+      "x": 88,
+      "y": 12933,
+      "width": 438,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "ViewGroup",
+    "text": "Start a new chat",
+    "coordinates": {
+      "x": 555,
+      "y": 12933,
+      "width": 438,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 37,
+      "y": 13318,
+      "width": 78,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 781,
+      "y": 13339,
+      "width": 262,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "ViewGroup",
+    "text": "See all",
+    "coordinates": {
+      "x": 848,
+      "y": 13427,
+      "width": 195,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 75,
+      "y": 13591,
+      "width": 69,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "ViewGroup",
+    "text": "@August11111111111",
+    "coordinates": {
+      "x": 209,
+      "y": 13606,
+      "width": 329,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "ViewGroup",
+    "text": "Gonna cry? Piss your pants maybe?, Get pranked, 71, 0, 10, 0",
+    "coordinates": {
+      "x": 75,
+      "y": 13688,
+      "width": 930,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 75,
+      "y": 13957,
+      "width": 69,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "ViewGroup",
+    "text": "@Amalahapp",
+    "coordinates": {
+      "x": 209,
+      "y": 13972,
+      "width": 191,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "ViewGroup",
+    "text": "Reemplazandolo, Pues solo como kaelen remplazo a user, user ",
+    "coordinates": {
+      "x": 75,
+      "y": 14054,
+      "width": 930,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "ViewGroup",
+    "text": "Comments, This is kinda pointless because you hardcoded him ",
+    "coordinates": {
+      "x": 37,
+      "y": 14338,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "ViewGroup",
+    "text": "Kaelan   |   Childhood Best Friend",
+    "coordinates": {
+      "x": 71,
+      "y": 14963,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "ViewGroup",
+    "text": "VALEMONT ACADEMY || Kael Ravenheart ||",
+    "coordinates": {
+      "x": 574,
+      "y": 14963,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "ViewGroup",
+    "text": "@kyoji733",
+    "coordinates": {
+      "x": 71,
+      "y": 15508,
+      "width": 139,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "ViewGroup",
+    "text": "@Airalovee",
+    "coordinates": {
+      "x": 574,
+      "y": 15508,
+      "width": 151,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "ViewGroup",
+    "text": "◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢ ───▄▀▀▀▄▄▄▄▄▄▄▀",
+    "coordinates": {
+      "x": 71,
+      "y": 15559,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "ViewGroup",
+    "text": "At Valemont Academy—an elite institution shrouded in generat",
+    "coordinates": {
+      "x": 574,
+      "y": 15559,
+      "width": 435,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 574,
+      "y": 16034,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n38",
+    "type": "ViewGroup",
+    "text": "👨 Male",
+    "coordinates": {
+      "x": 744,
+      "y": 16034,
+      "width": 149,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n39",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 574,
+      "y": 16103,
+      "width": 125,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n40",
+    "type": "ViewGroup",
+    "text": "⛓️ Dominant",
+    "coordinates": {
+      "x": 711,
+      "y": 16103,
+      "width": 204,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n41",
+    "type": "ViewGroup",
+    "text": "⚔️ Enemies to Lovers",
+    "coordinates": {
+      "x": 574,
+      "y": 16173,
+      "width": 303,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n42",
+    "type": "ViewGroup",
+    "text": "👩 FemPov",
+    "coordinates": {
+      "x": 574,
+      "y": 16242,
+      "width": 185,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n43",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 771,
+      "y": 16242,
+      "width": 226,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n44",
+    "type": "ViewGroup",
+    "text": "Limitless",
+    "coordinates": {
+      "x": 71,
+      "y": 16260,
+      "width": 158,
+      "height": 0
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n45",
+    "type": "ViewGroup",
+    "text": "🧑‍🎨 OC",
+    "coordinates": {
+      "x": 241,
+      "y": 16260,
+      "width": 126,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n46",
+    "type": "ViewGroup",
+    "text": "⛓️ Dominant",
+    "coordinates": {
+      "x": 71,
+      "y": 16329,
+      "width": 203,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n47",
+    "type": "ViewGroup",
+    "text": "👤 AnyPOV",
+    "coordinates": {
+      "x": 286,
+      "y": 16329,
+      "width": 186,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n48",
+    "type": "ViewGroup",
+    "text": "❤️‍🔥 Smut",
+    "coordinates": {
+      "x": 71,
+      "y": 16399,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n49",
+    "type": "ViewGroup",
+    "text": "#friendtolover",
+    "coordinates": {
+      "x": 235,
+      "y": 16399,
+      "width": 218,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n50",
+    "type": "ViewGroup",
+    "text": "#Nsfw",
+    "coordinates": {
+      "x": 71,
+      "y": 16468,
+      "width": 126,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n51",
+    "type": "ViewGroup",
+    "text": "#Romance",
+    "coordinates": {
+      "x": 209,
+      "y": 16468,
+      "width": 178,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n52",
+    "type": "ViewGroup",
+    "text": "#proxyenabled",
+    "coordinates": {
+      "x": 71,
+      "y": 16537,
+      "width": 225,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n53",
+    "type": "ViewGroup",
+    "text": "Load more",
+    "coordinates": {
+      "x": 37,
+      "y": 16699,
+      "width": 1006,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

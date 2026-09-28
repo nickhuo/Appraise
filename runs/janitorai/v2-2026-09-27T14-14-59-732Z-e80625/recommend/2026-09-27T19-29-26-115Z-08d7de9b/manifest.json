@@ -1,0 +1,71 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "inputHash": "acd236d4527b20ea9a5d9fd06bad18a33dbe4c16bfb31b8c05b04aa28297a7a1",
+  "contextSource": null,
+  "previousRecommendation": null,
+  "model": "gpt-6-sol",
+  "promptVersion": 2,
+  "usage": [
+    {
+      "stage": "propose",
+      "requests": 1,
+      "inputTokens": 7685,
+      "outputTokens": 2646
+    },
+    {
+      "stage": "revise",
+      "requests": 1,
+      "inputTokens": 8352,
+      "outputTokens": 806
+    },
+    {
+      "stage": "revise",
+      "requests": 1,
+      "inputTokens": 8377,
+      "outputTokens": 1108
+    },
+    {
+      "stage": "revise",
+      "requests": 1,
+      "inputTokens": 8350,
+      "outputTokens": 1014
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 7686,
+      "outputTokens": 486
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 7816,
+      "outputTokens": 392
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 7673,
+      "outputTokens": 626
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 7792,
+      "outputTokens": 469
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 7673,
+      "outputTokens": 517
+    },
+    {
+      "stage": "judge",
+      "requests": 1,
+      "inputTokens": 7825,
+      "outputTokens": 482
+    }
+  ],
+  "createdAt": "2026-09-27T19:29:26.132Z"
+}

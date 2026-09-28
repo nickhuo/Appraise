@@ -1,0 +1,200 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "proposals": [
+    {
+      "id": "article-audio",
+      "revision": 0,
+      "title": "One-article audio playback",
+      "opportunityType": "product_change",
+      "entryStateId": "n2",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n2",
+        "e1",
+        "e2"
+      ],
+      "trigger": "While reading an article, the user taps a proposed Listen control.",
+      "userNeed": "The user wants to finish the open article hands-free. A completed ad would unlock audio playback of that article once.",
+      "eligibility": "Users reading an article whose publisher permits audio playback; exclude content the app cannot lawfully play.",
+      "productChange": "Add a Listen control and one-article audio entitlement. Neither audio nor an audio gate was observed.",
+      "reward": "One playback of the currently open article, not broader article access.",
+      "optIn": "Show an optional sheet explaining the one-playback exchange; start the ad only after the user taps Watch ad.",
+      "fulfillment": "After a completed ad, start playback on the open article and mark this playback as rewarded.",
+      "declinePath": "Close the sheet and continue reading normally.",
+      "failurePath": "If the ad is unavailable or unfinished, do not grant playback; return to the article with reading unaffected.",
+      "businessImpact": "Could add ad revenue but may displace existing article ads or affect any paid audio benefit. Reading remains unchanged. Audio rights, delivery, and support may add costs.",
+      "validationPlan": "Run an article-reader holdout experiment measuring completed playbacks, net ad revenue, existing-ad displacement, reading engagement, costs, and any paid conversion.",
+      "assumptions": [
+        "Publisher audio rights and technical feasibility are unknown.",
+        "Ad fill, playback costs, paid benefits, and baseline business metrics are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Listen to this article",
+          "detail": "Watch an ad for one audio playback."
+        },
+        "choice": {
+          "title": "Play this article aloud?",
+          "detail": "One ad unlocks one playback of this article.",
+          "accept": "Watch ad",
+          "decline": "Keep reading"
+        },
+        "inUse": {
+          "request": "Play this article",
+          "response": "Playing this article aloud",
+          "badge": "Ad playback"
+        },
+        "after": {
+          "title": "Playback used",
+          "detail": "Keep reading; any paid options remain."
+        }
+      }
+    },
+    {
+      "id": "article-audio",
+      "revision": 1,
+      "title": "One-article audio playback",
+      "opportunityType": "product_change",
+      "entryStateId": "n2",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n2",
+        "e1",
+        "e2"
+      ],
+      "trigger": "While reading an open article, the user taps a proposed Listen control. Do not show the ad offer over a publisher access prompt.",
+      "userNeed": "The reader wants to finish this article hands-free. One audio playback could help when reading is inconvenient.",
+      "eligibility": "Only articles the user may already read and for which audio creation, playback, and ad-funded use are permitted. If a relevant paid audio offer exists, show that path first and consider the ad only after it is declined.",
+      "productChange": "Add a Listen control, licensed audio delivery, and a one-playback reward. No audio feature, grant, or audio gate was observed. Preserve the publisher access prompt and existing article ads.",
+      "reward": "One playback session for the open article only; no additional article access or repeat playback.",
+      "optIn": "After Listen, show the one-playback exchange and start an ad only when the reader selects Watch ad.",
+      "fulfillment": "On confirmed ad completion, start the article audio and mark that session as rewarded. Pausing and resuming within the session does not consume another reward.",
+      "declinePath": "Dismiss the sheet and keep reading. Any publisher access or paid offer remains available.",
+      "failurePath": "If no ad is available or it ends unfinished, grant no playback; return to the article without changing reading access.",
+      "businessImpact": "Ad revenue might be offset by displaced article ads or paid conversion. Reading and publisher access remain unchanged. Rights, audio delivery, ad serving, and support could add costs.",
+      "validationPlan": "First verify publisher rights and whether any paid audio benefit overlaps. If permitted, run an eligible-article reader holdout measuring completed sessions, incremental net ad revenue, article-ad displacement, reading engagement, costs, and paid conversion.",
+      "assumptions": [
+        "Publisher audio and ad-funded playback rights are unknown.",
+        "Audio delivery quality, grant feasibility, ad fill, and costs are unknown.",
+        "Paid audio entitlements, prices, hands-free demand, and baseline business metrics are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Listen to this article",
+          "detail": "Watch an ad for one audio playback."
+        },
+        "choice": {
+          "title": "Play this article aloud?",
+          "detail": "One ad unlocks one playback of this article.",
+          "accept": "Watch ad",
+          "decline": "Keep reading"
+        },
+        "inUse": {
+          "request": "Play this article",
+          "response": "Playing this article aloud",
+          "badge": "Ad playback"
+        },
+        "after": {
+          "title": "Playback used",
+          "detail": "Keep reading; paid offers stay unchanged."
+        }
+      }
+    },
+    {
+      "id": "offline-save",
+      "revision": 0,
+      "title": "Offline copy of a saved article",
+      "opportunityType": "product_change",
+      "entryStateId": "n1",
+      "resumeStateId": "n1",
+      "evidenceIds": [
+        "n1",
+        "e9"
+      ],
+      "trigger": "The user opens the observed Save this article action on a Home news item and chooses a proposed offline option.",
+      "userNeed": "The user wants that news item available without a connection. A completed ad would prepare one offline copy while preserving ordinary saving.",
+      "eligibility": "Users saving an article that the app is permitted and able to cache; ordinary Save remains available without an ad.",
+      "productChange": "Add an optional offline-copy choice to the save action, plus caching and expiry handling. Offline saving and its grant were not observed.",
+      "reward": "One eligible article cached for offline reading, subject to publisher permissions.",
+      "optIn": "Present the offline option separately from ordinary Save; cache only after an affirmative Watch ad tap and completed ad.",
+      "fulfillment": "Cache the selected article, confirm it is available offline, and leave the user on Home.",
+      "declinePath": "Proceed with ordinary Save, or cancel the save action; neither requires an ad.",
+      "failurePath": "If the ad is unavailable or unfinished, offer ordinary Save and do not claim an offline copy was created.",
+      "businessImpact": "Could monetize offline demand, but may displace feed ads or affect an unknown paid offline benefit. Ordinary saving and browsing stay unchanged. Storage, downloads, and licensing may add costs.",
+      "validationPlan": "Run a Home-save holdout experiment measuring incremental net ad revenue, ordinary saves, offline reads, feed-ad displacement, caching costs, and any paid conversion.",
+      "assumptions": [
+        "The observed Save this article action does not establish offline capability or how saves work.",
+        "Caching rights, storage costs, paid benefits, ad fill, and baseline metrics are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Save for offline reading",
+          "detail": "Watch an ad to cache this one article."
+        },
+        "choice": {
+          "title": "Keep this article offline?",
+          "detail": "One ad saves one offline copy.",
+          "accept": "Watch ad",
+          "decline": "Save normally"
+        },
+        "inUse": {
+          "request": "Save this article offline",
+          "response": "This article is ready offline",
+          "badge": "Ad offline save"
+        },
+        "after": {
+          "title": "Offline save used",
+          "detail": "Save normally; any paid options remain."
+        }
+      }
+    },
+    {
+      "id": "offline-save",
+      "revision": 1,
+      "title": "Offline copy of a Home article",
+      "opportunityType": "product_change",
+      "entryStateId": "n1",
+      "resumeStateId": "n1",
+      "evidenceIds": [
+        "n1",
+        "e9"
+      ],
+      "trigger": "On Home, the user opens an article's observed “Save this article” action. A proposed, separate offline-copy option appears alongside ordinary Save. e9 only shows that the Save control appeared; it does not show a Save tap or its result.",
+      "userNeed": "The user wants to read that article without a connection. After a completed ad, the app could cache one eligible article while leaving ordinary saving available.",
+      "eligibility": "Offer only for an article with verified caching rights and technical support. Confirm that the offer does not bypass any paid offline entitlement before launch.",
+      "productChange": "Add an optional offline-copy choice, local caching, an offline access point, and expiry handling. Neither offline access nor an ad-funded grant was observed.",
+      "reward": "One eligible article cached for offline reading.",
+      "optIn": "Keep ordinary Save available. Cache the selected article only after the user taps Watch ad and completes the ad.",
+      "fulfillment": "Confirm the copy is ready, mark that article for offline access, and return the user to Home. The offline access point is proposed.",
+      "declinePath": "Let the user use ordinary Save or cancel without watching an ad; do not change the existing Save behavior.",
+      "failurePath": "If the ad is unavailable or unfinished, do not grant an offline copy. Leave ordinary Save available.",
+      "businessImpact": "Offline reads might add ad revenue but displace feed ads or paid offline demand, if such a benefit exists. Browsing and ordinary saving remain unchanged. Downloads, storage, expiry handling, and licensing may add costs.",
+      "validationPlan": "First verify the Save flow, caching rights, and paid benefits. Then run a Home-save holdout measuring completed offline reads and incremental net revenue after displaced ads and caching costs, alongside ordinary saves and paid conversion.",
+      "assumptions": [
+        "e9 reveals a Save control after dismissing the location prompt, not how Save works.",
+        "Offline demand, caching rights, grantability, ad fill, costs, paid benefits, and baseline business metrics are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Want this article offline?",
+          "detail": "Watch an ad to cache one eligible article."
+        },
+        "choice": {
+          "title": "Keep this article offline?",
+          "detail": "Complete an ad for one offline copy.",
+          "accept": "Watch ad",
+          "decline": "Save normally"
+        },
+        "inUse": {
+          "request": "Open my offline article",
+          "response": "Your cached article opens without a connection",
+          "badge": "Ad-funded offline copy"
+        },
+        "after": {
+          "title": "Offline copy ready",
+          "detail": "Normal saves and paid options stay unchanged."
+        }
+      }
+    }
+  ]
+}

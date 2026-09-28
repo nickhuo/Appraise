@@ -1,0 +1,98 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 957,
+      "y": 154,
+      "width": 90,
+      "height": 88
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 22,
+      "y": 165,
+      "width": 78,
+      "height": 66
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ViewGroup",
+    "text": "using janitor",
+    "coordinates": {
+      "x": 719,
+      "y": 165,
+      "width": 227,
+      "height": 65
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "Kaelen",
+    "coordinates": {
+      "x": 133,
+      "y": 174,
+      "width": 541,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "EditText",
+    "text": "Press button to send chat. Enter for linebreak",
+    "coordinates": {
+      "x": 46,
+      "y": 2057,
+      "width": 988,
+      "height": 123
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "AI write for me",
+    "coordinates": {
+      "x": 68,
+      "y": 2180,
+      "width": 89,
+      "height": 89
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n7",
+    "type": "Button",
+    "text": "Change who you are in this chat",
+    "coordinates": {
+      "x": 174,
+      "y": 2180,
+      "width": 222,
+      "height": 86
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "Cancel",
+    "coordinates": {
+      "x": 922,
+      "y": 2180,
+      "width": 89,
+      "height": 89
+    },
+    "enabled": false
+  }
+]

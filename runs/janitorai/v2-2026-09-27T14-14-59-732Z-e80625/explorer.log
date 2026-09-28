@@ -1,0 +1,130 @@
+07:14:59 Exploring janitorai (com.janitor.ai) · run v2-2026-09-27T14-14-59-732Z-e80625 · up to 30 actions
+07:15:11 step 0: still loading (A JanitorAI logo appears on a dark background while the app loads; there are no controls to use yet.); waiting for the screen to stop changing
+07:16:16 step 1: character_discovery/default · new state · The trending feed shows character cards, with options to open a character, change discovery categories, or open the menu.
+07:16:16   entrances: Kaelen Winterborne || The Heartbreakers > Stepaunt stays with me after being released from Prison > menu · 75 of 119 actions shown
+07:16:16 restart · at character_discovery/default
+07:16:16   → tap "Kaelen Winterborne || The Heartbreakers" · Open a character to reach the chat experience.
+07:16:41 step 2: character_detail/default · new state · Kaelen’s profile shows an illustration, story and chat options, with other characters further down.
+07:16:41   entrances: Continue latest chat (below) > Start a new chat (below) > Kaelan   |   Childhood Best Friend (below) > VALEMONT ACADEMY || Kael Ravenheart || (below) · 36 of 53 actions shown
+07:16:41   result: reached character_detail/default · new: 5 / 9 / 8, ⛓️ Dominant, 🌗 Switch, PLAYING AS, fok
+07:16:41   → tap "Continue latest chat" · Continue the latest conversation with this character.
+07:17:36 step 3: character_chat/message_actions_open · new state · A chat with Kaelen is open, with actions for a selected message and a composer for sending a reply.
+07:17:36   entrances: Press button to send chat. Enter for linebreak > Send > AI write for me > Re-generate last answer > Branch into new chat > using janitor · 14 of 14 actions shown
+07:17:36   result: reached character_chat/message_actions_open · new: using janitor, Kaelen, Re-generate last answer, Delete
+07:17:36   → type "What happens next?" into "Press button to send chat. Enter for linebreak" · Compose the next message in the character chat.
+07:17:43   result: changed this screen in place
+07:17:43   → tap "Send" · Send the composed message after typing it.
+07:18:05 step 5: still loading (Kaelen's reply is still generating; you can read the conversation and compose your next message.); waiting for the screen to stop changing
+07:19:27   result: timeout
+07:19:39 step 7: still loading (The app is loading; no controls are available yet.); waiting for the screen to stop changing
+07:20:26 restart · at character_discovery/default
+07:20:26   → tap "Stepaunt stays with me after being released from Prison" · Open another character card to explore its conversation entry point.
+07:22:32 step 9: character_detail/default · same screen and condition, different content
+07:22:32   result: reached character_detail/default · new: 6 / 9 / 8, 👩‍🦰 Female, ⛓️ Dominant, PLAYING AS, fok
+07:22:32   → tap "Start a new chat" · Start a new conversation with this character.
+07:25:29   the device stopped responding; restarting the app (1/3)
+07:25:51 step 10: still loading (A JanitorAI logo is shown on a dark background while the app loads.); waiting for the screen to stop changing
+07:26:38 restart · at character_discovery/default
+07:26:38   → tap "menu" · Find the app's other core destinations from the menu.
+07:26:59 step 12: character_discovery/drawer_open · new state · The navigation drawer is open over character discovery; close it to browse characters or open a character card.
+07:26:59   entrances: Close drawer > Your neglectful girlfriend | Ayumi > Hidden Gems · 44 of 48 actions shown
+07:26:59   result: reached character_discovery/drawer_open · new: Close drawer, @nickfok, 0 / Following, View public profile
+07:26:59   → tap "Close drawer" · Close the drawer to browse characters.
+07:27:10   result: reached character_discovery/default · new: All, Limited Only, Favorites, Trending
+07:27:10   → tap "Your neglectful girlfriend | Ayumi" · Open a character’s profile to start chatting.
+07:27:37 step 14: character_detail/default · same screen and condition, different content
+07:27:37   result: reached character_detail/default · new: 6 / 9 / 8, ROUTE I ARE YOU DONE YET? Ayum, ROUTE II DON'T CRY, LOSER She , ROUTE III YOU DO YOU Let your 
+07:27:37   → tap "Kaelan   |   Childhood Best Friend" · Open another character to explore a chat.
+07:27:45   result: not on this page; retrying with "⋆. ̊.˳·˖✶𓆩𓁺𓆪✶˖·˳.⋆. ̊z z 𐰁 / In a world where childhood "
+07:27:45   → tap "⋆. ̊.˳·˖✶𓆩𓁺𓆪✶˖·˳.⋆. ̊z z 𐰁 / In a world where childhood " · Open another character to explore a chat.
+07:28:07   result: not on this page; retrying with "Your best friend who hides a lot behind her beautiful smile"
+07:28:07   → tap "Your best friend who hides a lot behind her beautiful smile" · Open another character to explore a chat.
+07:28:09   the screen changed before acting; looking again
+07:28:21 step 15: character_detail/default · same screen and condition, different content
+07:28:21   → tap "Your best friend who hides a lot behind her beautiful smile" · Open another character to explore a chat.
+07:28:40 step 16: character_detail/default · same screen and condition, different content
+07:28:40   result: changed this screen in place · new: 1 / 9 / 8, ❤️‍🩹 Fluff, PLAYING AS, fok, Chat with Ayumi
+07:28:40   → tap "VALEMONT ACADEMY || Kael Ravenheart ||" · Open another character to explore a chat.
+07:29:06   result: not on this page; retrying with "She Keeps Saying She's Fine"
+07:29:06   → tap "She Keeps Saying She's Fine" · Open another character to explore a chat.
+07:34:48   the device stopped responding; restarting the app (2/3)
+07:35:09 step 18: still loading (A loading screen shows the JanitorAI logo with no available actions.); waiting for the screen to stop changing
+07:36:01 restart · at character_discovery/default
+07:36:01   → tap "Hidden Gems" · Explore another character discovery collection.
+07:36:28 step 20: character_discovery/default · same screen and condition, different content
+07:36:28   result: changed this screen in place · new: 1 / 295, Test, Kingdom of Bulgaria, @CharLab333
+07:36:28 travel → character_chat
+07:36:40 step 21: still loading (A splash screen shows the JanitorAI logo; there are no controls to use yet.); waiting for the screen to stop changing
+07:37:32 step 22: character_discovery/default · same screen and condition, different content
+07:37:32 restart · at character_discovery/default
+07:37:32   replay: Kaelen Winterborne || The Heartbreakers
+07:37:53 step 23: character_detail/default · same screen and condition, different content
+07:37:53   replay: Continue latest chat
+07:38:17 step 24: character_chat/default · new state · The character’s opening message is visible, and you can type a reply or use AI writing assistance.
+07:38:17   entrances: Press button to send chat. Enter for linebreak > Send > AI write for me > The laboratory is quiet when you step inside, lit mostly by  > chat menu > using janitor · 11 of 11 actions shown
+07:38:17   → type "I look at the terminal. What should I do next?" into "Press button to send chat. Enter for linebreak" · Compose a reply to continue the chat.
+07:38:32 step 25: character_chat/default · same screen and condition, different content
+07:38:32   result: changed this screen in place
+07:38:32   → tap "Send" · Send the composed reply once enabled.
+07:38:55 step 26: still loading (A character reply is being generated, and the chat composer remains available for a follow-up message.); waiting for the screen to stop changing
+07:40:08 step 27: character_chat/default · same screen and condition, different content
+07:40:08   result: changed this screen in place · new: The terminal remains static, a, Enhance, Continue this message
+07:40:08   → tap "AI write for me" · Explore AI assistance for writing a reply.
+07:40:33 step 28: character_chat/compose_options_open · new state · A character reply is visible with writing options open; you can compose a message or use reply controls.
+07:40:33   entrances: Press button to send chat. Enter for linebreak > Send > Continue this message > AI write for me > Next > Enhance · 16 of 18 actions shown
+07:40:33   result: reached character_chat/compose_options_open
+07:40:33   → type "What should I do next?" into "Press button to send chat. Enter for linebreak" · Compose a reply to continue the chat.
+07:40:40   result: changed this screen in place
+07:40:40   → tap "Send" · Send the composed reply once enabled.
+07:41:03 step 30: still loading (The character is generating a reply; you can prepare another message or open chat controls.); waiting for the screen to stop changing
+07:41:55   result: changed this screen in place
+07:41:55   → tap "Continue this message" · Continue the character's current message.
+07:42:13 step 32: character_chat/default · same screen and condition, different content
+07:42:13   result: reached character_chat/default · new: Cancel
+07:42:13   → tap "The laboratory is quiet when you step inside, lit mostly by " · Open actions for the character’s message.
+07:42:16   the screen changed before acting; looking again
+07:42:26   → tap "AI write for me" · Try AI-assisted message writing.
+07:42:40   result: changed this screen in place
+07:42:40   → tap "Next" · See the next reply option.
+07:42:51 step 35: still loading (The character is writing a reply; you can compose a message while waiting or open chat options.); waiting for the screen to stop changing
+07:43:41 step 36: character_chat/enhance_result · new state · An enhanced message draft is open in the chat, with controls to keep, regenerate, or discard it before sending.
+07:43:41   entrances: Send > Cancel enhance > Enhance > Continue this message > Next · 10 of 10 actions shown
+07:43:41   result: reached character_chat/enhance_result · new: Cancel enhance
+07:43:41   → tap "Send" · Send the drafted message to continue the chat.
+07:44:06 step 37: still loading (A character reply is still generating while the chat composer and conversation controls remain visible.); waiting for the screen to stop changing
+07:45:33   result: timeout
+07:45:44 step 39: still loading (A pink JanitorAI logo appears on a dark loading screen with no available controls.); waiting for the screen to stop changing
+07:46:42 step 40: character_discovery/default · same screen and condition, different content
+07:46:42 restart · at character_discovery/default
+07:46:42 travel → character_chat
+07:46:54 step 41: still loading (The app is opening; only the JanitorAI logo is visible, with no controls available yet.); waiting for the screen to stop changing
+07:47:46 step 42: character_discovery/default · same screen and condition, different content
+07:47:46 restart · at character_discovery/default
+07:47:46   replay: Kaelen Winterborne || The Heartbreakers
+07:48:44 step 43: character_detail/default · same screen and condition, different content
+07:48:45   replay: Continue latest chat
+07:50:22 step 44: character_chat/default · same screen and condition, different content
+07:50:22   → tap "The laboratory is quiet when you step inside, lit mostly by " · Open actions for the character’s message.
+07:50:32 step 45: character_chat/image_preview · new state · A character image is open over the chat; close it to return to the conversation.
+07:50:32   entrances: close image · 2 of 2 actions shown
+07:50:32   result: reached character_chat/image_preview
+07:50:32   → tap "close image" · Return to the chat to continue the conversation.
+07:50:42 step 46: character_chat/default · same screen and condition, different content
+07:50:42   result: reached character_chat/default · new: using janitor, Iven, Open avatar image, Press button to send chat. Ent
+07:50:42   → tap "chat menu" · Explore conversation management options.
+07:50:52 step 47: character_chat/chat_menu_open · new state · The chat with Iven is dimmed behind an open menu for switching chats, starting a new chat, and adjusting chat options.
+07:50:52   entrances: New Chat > All Chats > dismiss menu > Chat Memory > Model settings · 7 of 7 actions shown
+07:50:52   result: reached character_chat/chat_menu_open · new: All Chats, New Chat, Model settings, Chat Memory
+07:50:52   → tap "New Chat" · Start a new conversation with Iven.
+07:51:00 step 48: chat_persona_selection/default · new state · The default persona is selected, and you can confirm it to continue starting the chat.
+07:51:00   entrances: Confirm · 3 of 3 actions shown
+07:51:00   result: reached chat_persona_selection/default · new: Navigate up, Confirm, fok, Default, da, ✓
+07:51:00   → tap "Confirm" · Confirm the selected persona and advance to the new chat.
+07:51:11 step 49: character_chat/default · same screen and condition, different content
+07:51:11   result: reached character_chat/default · new: using janitor, Iven, Press button to send chat. Ent, AI write for me
+07:51:11   → tap "using janitor" · Explore the chat’s AI model options.
+07:51:23 step 50: model_settings/default · new state · The Model settings page lets you adjust the provider, generation controls, custom prompt, prefill, and forbidden words, then save the changes.
+07:51:23   entrances: Generation controls, Temperature, response length and contex > Custom prompt, None > Forbidden Words, Specify words or phrases that should not ap > Janitor > prefill toggle > Save · 10 of 10 actions shown
+07:51:23   result: reached model_settings/default · new: Save, Subscribe now, Janitor, Standard
+07:51:23   → tap "Generation controls, Temperature, response length and contex" · Open generation controls to inspect the model’s response settings.
+07:51:25 Stopped: incomplete (action budget reached) · 11 states, 23 edges · 30 actions · 46 model calls · 189K input tokens

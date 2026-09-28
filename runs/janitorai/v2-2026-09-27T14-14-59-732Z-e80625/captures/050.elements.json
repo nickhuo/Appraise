@@ -1,0 +1,122 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 22,
+      "y": 154,
+      "width": 78,
+      "height": 66
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ViewGroup",
+    "text": "Save",
+    "coordinates": {
+      "x": 949,
+      "y": 156,
+      "width": 98,
+      "height": 62
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ViewGroup",
+    "text": "Subscribe now",
+    "coordinates": {
+      "x": 71,
+      "y": 702,
+      "width": 938,
+      "height": 120
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "ViewGroup",
+    "text": "Janitor",
+    "coordinates": {
+      "x": 70,
+      "y": 1075,
+      "width": 940,
+      "height": 140
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "ViewGroup",
+    "text": "Standard",
+    "coordinates": {
+      "x": 70,
+      "y": 1468,
+      "width": 470,
+      "height": 101
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "ViewGroup",
+    "text": "Shorter",
+    "coordinates": {
+      "x": 540,
+      "y": 1468,
+      "width": 470,
+      "height": 101
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "ViewGroup",
+    "text": "Generation controls, Temperature, response length and contex",
+    "coordinates": {
+      "x": 70,
+      "y": 1625,
+      "width": 940,
+      "height": 109
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "ViewGroup",
+    "text": "Custom prompt, None",
+    "coordinates": {
+      "x": 70,
+      "y": 1987,
+      "width": 940,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "Switch",
+    "text": "",
+    "coordinates": {
+      "x": 888,
+      "y": 2139,
+      "width": 122,
+      "height": 71
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "ViewGroup",
+    "text": "Forbidden Words, Specify words or phrases that should not ap",
+    "coordinates": {
+      "x": 70,
+      "y": 2312,
+      "width": 940,
+      "height": 88
+    },
+    "enabled": true
+  }
+]

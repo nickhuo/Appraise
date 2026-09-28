@@ -1,0 +1,66 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "judgments": [
+    {
+      "proposalId": "article-audio",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "The observed article-reading flow supports an article-level Listen offer (e1, n2, e2), but hands-free demand is unverified. The proposed sheet states the ad-for-one-playback exchange, allows readers to decline, and defines completion and failure behavior. Article advertising and a publisher access prompt are visible (n2, e2), so ad displacement and paid-benefit overlap remain business risks; no existing audio benefit is established. Publisher rights, playback delivery, and ad fill remain unverified implementation dependencies.",
+      "feedback": "Validate publisher audio rights and any paid audio entitlements before testing. Measure whether completed playbacks add net revenue without displacing article ads or paid conversion.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "article-audio",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "The open, readable article supports an article-level Listen entry (n2, e1), and hands-free playback has plausible value, though demand is unobserved. The proposal does not claim an existing audio entitlement and preserves the publisher access prompt seen in e2. Its offer explains the one-playback exchange, allows readers to decline, and defines completion and failure behavior. Publisher rights, audio delivery, ad fill, costs, and potential displacement of article ads or paid conversion remain unverified; the proposal names these risks and a validation path.",
+      "feedback": "Verify publisher audio and ad-funded-use rights, plus any overlapping paid audio benefit, before testing eligible articles. Measure net revenue and paid conversion against a reader holdout.",
+      "decision": "reject"
+    },
+    {
+      "proposalId": "offline-save",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "An offline copy could help a reader, but offline demand was not observed. The proposed choice fits the Home surface: e9 shows “Save this article,” though it does not establish how saving works or whether offline reading exists. The offer explains the one-ad exchange, preserves ordinary saving, and defines completion and failure paths. Caching rights and costs remain unverified; offline reads could also displace feed ads or a paid benefit. n1 and e9 do not establish paid entitlements or the business upside.",
+      "feedback": "Verify the Save flow, publisher caching rights, and any paid offline benefit before testing. In a holdout, measure completed offline reads and net revenue after displaced ads and caching costs.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "offline-save",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 3,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 2
+      },
+      "hardFailures": [],
+      "rationale": "An offline copy could help someone who wants to read without a connection, but that demand is unobserved. Home is a plausible entry point: e9 shows “Save this article” after the location prompt is dismissed, though it does not show what Save does. The proposal clearly offers one copy for a completed ad, preserves ordinary Save, and defines fulfillment and failure paths. Caching and an offline access point are coherent proposed work, conditional on rights and technical support. Business fit remains uncertain: offline reading could displace displayed ads, and paid offline benefits have not been verified. n1 and e9 support the Home surface, not offline demand, caching rights, or the paid-benefit tradeoff.",
+      "feedback": "Verify the ordinary Save flow, article caching rights, and any paid offline entitlement before testing the offer; then measure incremental net revenue and paid conversion against a holdout.",
+      "decision": "reject"
+    }
+  ],
+  "approvedProposalIds": []
+}

@@ -1,0 +1,96 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "judgments": [
+    {
+      "proposalId": "faster-reply-sample",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "n11 advertises faster replies for $12.99/month, and e23 connects Model settings to chat, supporting both the entry point and paid-benefit comparison. One faster reply could help a chat user evaluate speed, but demand and a noticeable latency improvement are unverified. The ad exchange, opt-in, decline, fulfillment, and failure paths are clear. Single-reply provisioning and ad economics remain unverified; subscription substitution is a business risk.",
+      "feedback": "Validate that a single reply can be reliably accelerated and feels faster before testing whether ad revenue offsets serving costs or lost subscriptions.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "faster-reply-sample",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "n11 advertises faster replies as part of a $12.99/month subscription, and e23 connects that settings screen to the chat in n5. One faster reply is therefore a relevant sample with a supported paid-benefit anchor. The offer explains the ad exchange, preserves normal use on decline, and defines completion and failure handling. Whether acceleration is noticeable, technically reliable, or commercially beneficial remains unverified.",
+      "feedback": "Pilot single-reply acceleration and test whether users notice the speed difference before testing the offer’s effect on subscriptions and ad economics.",
+      "decision": "reject"
+    },
+    {
+      "proposalId": "smart-variant",
+      "revision": 0,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 3,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 2
+      },
+      "hardFailures": [],
+      "rationale": "A selectable alternative could help users who dislike a reply, while preserving normal chat controls. n6 shows a Next control, but does not establish that it generates reply variants. n11 provides mobile evidence for the $12.99/month offer and its “smarter swipes” benefit, not a connection between that benefit and Next. e17 concerns Enhance, so it does not close that gap. The opt-in, decline, completion, and failure paths are coherent. Ad revenue, generation cost, and subscription displacement remain unknown.",
+      "feedback": "Verify what Next does and define how one ad-funded candidate differs from the paid “smarter swipes” benefit. Test whether users select the candidate and whether its generation cost or subscription impact outweighs ad revenue.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "smart-variant",
+      "revision": 1,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "A selectable alternative addresses the observed chat task without replacing normal controls: n3 and e2 show message actions including “Re-generate last answer.” The proposed offer explains the one-ad exchange, requires an affirmative tap, preserves the current reply, and defines decline, completion, and failure paths. n11 provides mobile evidence for the $12.99/month “smarter swipes” benefit, but does not establish that it is regeneration or this proposed enhancement. Ad revenue, generation cost, subscription effects, candidate retention, and the higher-compute quality gain remain unverified; the implementation is coherent but depends on those checks.",
+      "feedback": "Verify that regeneration can retain both selectable replies and clarify what paid “smarter swipes” provides before testing the offer. If the current reply cannot be retained, redesign the reward rather than replacing it after an ad.",
+      "decision": "reject"
+    },
+    {
+      "proposalId": "enhance-alternative",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "An enhanced draft and the existing Send, Enhance, and Cancel enhance controls are observed (n6, n7, e17), so the offer fits the entry point and preserves normal use. Keeping the current draft while offering an alternative could help, but no quota or exhaustion gate was observed; the added value over Enhance is unproven. The observed $12.99/month offer promises more memory, faster replies, and smarter swipes (n11), not enhanced drafts. Ad revenue, generation cost, and subscription effects remain unknown. The proposed fulfillment and failure paths are coherent, subject to ordinary unverified ad and generation dependencies.",
+      "feedback": "Validate whether users value a retained second draft over the existing Enhance action, and measure incremental generation cost without restricting that action.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "enhance-alternative",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 5,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "The offer fits the observed enhanced-draft screen: n7 shows Send, Enhance, and Cancel enhance, and e17 shows the transition into that draft state. Retaining a second draft could help users compare wording, but its value over the existing Enhance action is unproven (n6, n7). The proposal preserves normal use and defines opt-in, delivery, and failure handling. Ad yield and extra generation cost remain unknown. The $12.99/month subscription advertises memory, speed, and smarter swipes—not enhanced drafts (n11)—so the paid-benefit tradeoff is not established.",
+      "feedback": "Validate whether retained side-by-side comparison improves selection and sending over the unchanged Enhance action, while measuring incremental generation cost.",
+      "decision": "reject"
+    }
+  ],
+  "approvedProposalIds": []
+}

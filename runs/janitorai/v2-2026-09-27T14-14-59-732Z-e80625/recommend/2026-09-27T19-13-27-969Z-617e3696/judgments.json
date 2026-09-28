@@ -1,0 +1,98 @@
+{
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "judgments": [
+    {
+      "proposalId": "guided-reply",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "The composer and existing “AI write for me” control make reply assistance a credible chat need and n5 an appropriate entry point. The proposed offer explains one ad for one editable draft, with a clear decline and completion path. Its incremental value over existing assistance is unproven. n11 shows a $12.99/month subscription promoting memory, faster replies, and smarter swipes—not guided drafts—so direct paid-benefit overlap appears limited, though substitution and generation costs remain unknown. Ad delivery and completion handling are ordinary unverified implementation dependencies.",
+      "feedback": "Test whether tone guidance adds value beyond “AI write for me.” Specify that a completed draft never overwrites text already in the composer, and measure displacement of existing-control use and subscription conversion.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "guided-reply",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 5,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "The composer and “AI write for me” make the proposed chat entry point a strong fit (n5), but the added value of tone guidance is unproven. The offer explains the exchange, preserves normal chat use, and defines completion and failure paths. Model settings advertises $12.99/month for memory, faster replies, and smarter swipes—not drafting (n11, e23). Keeping the offer out of that surface limits direct subscription diversion, though displacement and economics remain unknown. A separate draft preview and ad-completion handling are coherent proposals with ordinary unverified dependencies.",
+      "feedback": "Test whether tone guidance increases chat continuation beyond “AI write for me”; verify whether drafting is a paid entitlement before finalizing the offer, and measure generation cost and subscription conversion.",
+      "decision": "reject"
+    },
+    {
+      "proposalId": "temporary-persona",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "The idea fits the observed new-chat flow: n9 leads to persona selection in n10, where only the default is available, and e22 returns to chat after Confirm. A one-chat persona has plausible value, but demand is unobserved. The proposed offer explains the ad exchange, preserves ad-free Confirm, and defines fulfillment and failure paths. n11 advertises paid memory, speed, and swipe benefits, not personas, so no observed paid entitlement is being rebranded; effects on subscriptions, ad yield, prompt cost, and safety remain unknown. Temporary-persona support and rewarded-ad completion handling are unverified but form a coherent implementation hypothesis.",
+      "feedback": "Show explicit pre-ad copy such as “Watch an ad to write a persona for this chat only.” Validate uptake, chat completion, moderation cost, and subscription conversion before building broadly.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "temporary-persona",
+      "revision": 1,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "Persona selection is an observed step in starting a new chat, and the screen shows only a default profile (n9, e21, n10, e22). A one-chat role is therefore a plausible benefit, though demand is untested. The offer explains the ad exchange, preserves ad-free Confirm, and defines completion and failure paths. It does not claim the subscription’s advertised memory, speed, or swipe benefits; the observed offer is $12.99/month (n11). Ad yield, costs, subscription effects, and temporary-persona support remain unverified, limiting business fit and feasibility.",
+      "feedback": "Prototype the one-chat persona flow and test whether users complete new chats and keep chatting after the added setup step; track moderation costs and subscription conversion alongside ad yield.",
+      "decision": "pass"
+    },
+    {
+      "proposalId": "single-priority-reply",
+      "revision": 0,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 3,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "Chat replies are a core task (n5), and Model settings advertises faster replies at $12.99/month (n11); the observed chat-to-settings transition (e23) connects the surfaces. A one-reply sample could help users assess that benefit, but reply delays and demand for faster replies were not observed. The proposed decline-and-return path is also unobserved, though clearly identified as new. Offering the sample after—not on—the subscription screen and limiting it to one reply reduces, but does not eliminate, subscription cannibalization. Priority processing and ad fulfillment are coherent proposals with unverified implementation and costs.",
+      "feedback": "Validate that a one-reply priority route produces a noticeable benefit, then test the proposed decline-and-return flow without obstructing normal chat. Measure subscription conversion alongside latency, ad yield, and serving cost.",
+      "decision": "revise"
+    },
+    {
+      "proposalId": "single-priority-reply",
+      "revision": 1,
+      "scores": {
+        "userValue": 3,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 3
+      },
+      "hardFailures": [],
+      "rationale": "A faster reply could help someone continuing a chat (n5), and Model settings advertises faster replies at $12.99/month (n11, e23). The proposed one-reply sample matches that benefit without claiming ongoing paid access. The return-to-chat trigger and any perceptible speed gain were not observed, so value and evidence remain uncertain. A one-time offer after the paid message limits, but does not eliminate, subscription substitution; ad yield and serving costs are unknown. The opt-in, normal-chat decline path, fulfillment, and failure path are coherent, though priority capacity and implementation remain unverified.",
+      "feedback": "Validate a perceptible priority-speed improvement first, then test the proposed return-to-chat trigger and measure whether the offer reduces subscription conversion.",
+      "decision": "reject"
+    }
+  ],
+  "approvedProposalIds": [
+    "temporary-persona"
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "ref": "n1",
+    "type": "ImageButton",
+    "text": "Navigate up",
+    "coordinates": {
+      "x": 0,
+      "y": 132,
+      "width": 147,
+      "height": 147
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ViewGroup",
+    "text": "Confirm",
+    "coordinates": {
+      "x": 875,
+      "y": 174,
+      "width": 163,
+      "height": 62
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ViewGroup",
+    "text": "fok, Default, da, ✓",
+    "coordinates": {
+      "x": 34,
+      "y": 465,
+      "width": 1012,
+      "height": 223
+    },
+    "enabled": true
+  }
+]

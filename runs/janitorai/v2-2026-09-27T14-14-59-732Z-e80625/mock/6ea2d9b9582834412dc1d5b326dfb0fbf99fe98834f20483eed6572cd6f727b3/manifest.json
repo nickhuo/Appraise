@@ -1,0 +1,1805 @@
+{
+  "version": 4,
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "inputHash": "6ea2d9b9582834412dc1d5b326dfb0fbf99fe98834f20483eed6572cd6f727b3",
+  "app": "janitorai",
+  "runStatus": "incomplete",
+  "stopReason": "action budget reached",
+  "initialStep": 1,
+  "states": [
+    {
+      "id": "n1",
+      "screen": "character_discovery",
+      "variant": "default",
+      "summary": "The trending feed shows character cards, with options to open a character, change discovery categories, or open the menu.",
+      "observationSteps": [
+        1,
+        8,
+        11,
+        13,
+        19,
+        20,
+        22,
+        40,
+        42
+      ],
+      "entrances": [
+        {
+          "key": "1_kaelen_winterborne_the_heartbrea",
+          "name": "Kaelen Winterborne || The Heartbreakers",
+          "status": "explored",
+          "transitionId": "e1",
+          "step": 1,
+          "bounds": {
+            "x": 574,
+            "y": 993,
+            "width": 443,
+            "height": 536
+          }
+        },
+        {
+          "key": "2_stepaunt_stays_with_me_after_bei",
+          "name": "Stepaunt stays with me after being released from Prison",
+          "status": "explored",
+          "transitionId": "e4",
+          "step": 1,
+          "bounds": {
+            "x": 63,
+            "y": 993,
+            "width": 443,
+            "height": 536
+          }
+        },
+        {
+          "key": "3_menu",
+          "name": "menu",
+          "status": "explored",
+          "transitionId": "e5",
+          "step": 1,
+          "bounds": {
+            "x": 954,
+            "y": 163,
+            "width": 84,
+            "height": 84
+          }
+        },
+        {
+          "key": "e7",
+          "name": "Your neglectful girlfriend | Ayumi",
+          "status": "explored",
+          "transitionId": "e7",
+          "step": 13,
+          "bounds": {
+            "x": 574,
+            "y": 993,
+            "width": 443,
+            "height": 536
+          }
+        },
+        {
+          "key": "e9",
+          "name": "Hidden Gems",
+          "status": "explored",
+          "transitionId": "e9",
+          "step": 19,
+          "bounds": {
+            "x": 812,
+            "y": 430,
+            "width": 224,
+            "height": 75
+          }
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "screen": "character_detail",
+      "variant": "default",
+      "summary": "Kaelen’s profile shows an illustration, story and chat options, with other characters further down.",
+      "observationSteps": [
+        2,
+        9,
+        14,
+        15,
+        16,
+        23,
+        43
+      ],
+      "entrances": [
+        {
+          "key": "1_continue_latest_chat",
+          "name": "Continue latest chat",
+          "status": "explored",
+          "transitionId": "e2",
+          "step": 2,
+          "bounds": {
+            "x": 76,
+            "y": 471,
+            "width": 928,
+            "height": 1392
+          }
+        },
+        {
+          "key": "2_start_a_new_chat",
+          "name": "Start a new chat",
+          "status": "unreachable",
+          "transitionId": null,
+          "step": null,
+          "bounds": null
+        },
+        {
+          "key": "3_kaelan_childhood_best_friend",
+          "name": "Your best friend who hides a lot behind her beautiful smile",
+          "status": "explored",
+          "transitionId": "e8",
+          "step": 15,
+          "bounds": {
+            "x": 71,
+            "y": 496,
+            "width": 435,
+            "height": 528
+          }
+        },
+        {
+          "key": "4_valemont_academy_kael_ravenheart",
+          "name": "She Keeps Saying She's Fine",
+          "status": "unreachable",
+          "transitionId": null,
+          "step": null,
+          "bounds": null
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "screen": "character_chat",
+      "variant": "message_actions_open",
+      "summary": "A chat with Kaelen is open, with actions for a selected message and a composer for sending a reply.",
+      "observationSteps": [
+        3,
+        4
+      ],
+      "entrances": [
+        {
+          "key": "1_press_button_to_send_chat_enter_",
+          "name": "Press button to send chat. Enter for linebreak",
+          "status": "explored",
+          "transitionId": "e3",
+          "step": 3,
+          "bounds": {
+            "x": 46,
+            "y": 2057,
+            "width": 988,
+            "height": 123
+          }
+        },
+        {
+          "key": "2_send",
+          "name": "Send",
+          "status": "timeout",
+          "transitionId": null,
+          "step": 3,
+          "bounds": {
+            "x": 922,
+            "y": 2180,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "3_ai_write_for_me",
+          "name": "AI write for me",
+          "status": "pending",
+          "transitionId": null,
+          "step": 3,
+          "bounds": {
+            "x": 68,
+            "y": 2180,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "4_re_generate_last_answer",
+          "name": "Re-generate last answer",
+          "status": "pending",
+          "transitionId": null,
+          "step": 3,
+          "bounds": {
+            "x": 680,
+            "y": 1735,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "5_branch_into_new_chat",
+          "name": "Branch into new chat",
+          "status": "pending",
+          "transitionId": null,
+          "step": 3,
+          "bounds": {
+            "x": 880,
+            "y": 1735,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "6_using_janitor",
+          "name": "using janitor",
+          "status": "pending",
+          "transitionId": null,
+          "step": 3,
+          "bounds": {
+            "x": 719,
+            "y": 165,
+            "width": 227,
+            "height": 65
+          }
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "screen": "character_discovery",
+      "variant": "drawer_open",
+      "summary": "The navigation drawer is open over character discovery; close it to browse characters or open a character card.",
+      "observationSteps": [
+        12
+      ],
+      "entrances": [
+        {
+          "key": "1_close_drawer",
+          "name": "Close drawer",
+          "status": "explored",
+          "transitionId": "e6",
+          "step": 12,
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 274,
+            "height": 2400
+          }
+        },
+        {
+          "key": "2_your_neglectful_girlfriend_ayumi",
+          "name": "Your neglectful girlfriend | Ayumi",
+          "status": "explored",
+          "transitionId": null,
+          "step": 12,
+          "bounds": {
+            "x": 0,
+            "y": 993,
+            "width": 211,
+            "height": 536
+          }
+        },
+        {
+          "key": "3_hidden_gems",
+          "name": "Hidden Gems",
+          "status": "explored",
+          "transitionId": null,
+          "step": 12,
+          "bounds": {
+            "x": 6,
+            "y": 430,
+            "width": 224,
+            "height": 75
+          }
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "screen": "character_chat",
+      "variant": "default",
+      "summary": "The character’s opening message is visible, and you can type a reply or use AI writing assistance.",
+      "observationSteps": [
+        24,
+        25,
+        27,
+        32,
+        44,
+        46,
+        49
+      ],
+      "entrances": [
+        {
+          "key": "1_press_button_to_send_chat_enter_",
+          "name": "Press button to send chat. Enter for linebreak",
+          "status": "explored",
+          "transitionId": "e10",
+          "step": 24,
+          "bounds": {
+            "x": 46,
+            "y": 2057,
+            "width": 988,
+            "height": 123
+          }
+        },
+        {
+          "key": "2_send",
+          "name": "Send",
+          "status": "explored",
+          "transitionId": "e11",
+          "step": 24,
+          "bounds": {
+            "x": 922,
+            "y": 2180,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "3_ai_write_for_me",
+          "name": "AI write for me",
+          "status": "explored",
+          "transitionId": "e12",
+          "step": 24,
+          "bounds": {
+            "x": 68,
+            "y": 2180,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "4_the_laboratory_is_quiet_when_you",
+          "name": "The laboratory is quiet when you step inside, lit mostly by ",
+          "status": "explored",
+          "transitionId": "e18",
+          "step": 24,
+          "bounds": {
+            "x": 134,
+            "y": 530,
+            "width": 901,
+            "height": 1870
+          }
+        },
+        {
+          "key": "5_chat_menu",
+          "name": "chat menu",
+          "status": "explored",
+          "transitionId": "e20",
+          "step": 24,
+          "bounds": {
+            "x": 957,
+            "y": 154,
+            "width": 90,
+            "height": 88
+          }
+        },
+        {
+          "key": "6_using_janitor",
+          "name": "using janitor",
+          "status": "explored",
+          "transitionId": "e23",
+          "step": 24,
+          "bounds": {
+            "x": 719,
+            "y": 165,
+            "width": 227,
+            "height": 65
+          }
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "screen": "character_chat",
+      "variant": "compose_options_open",
+      "summary": "A character reply is visible with writing options open; you can compose a message or use reply controls.",
+      "observationSteps": [
+        28,
+        29,
+        31,
+        33,
+        34
+      ],
+      "entrances": [
+        {
+          "key": "1_press_button_to_send_chat_enter_",
+          "name": "Press button to send chat. Enter for linebreak",
+          "status": "explored",
+          "transitionId": "e13",
+          "step": 28,
+          "bounds": {
+            "x": 46,
+            "y": 2057,
+            "width": 988,
+            "height": 123
+          }
+        },
+        {
+          "key": "2_send",
+          "name": "Send",
+          "status": "explored",
+          "transitionId": "e14",
+          "step": 28,
+          "bounds": {
+            "x": 922,
+            "y": 2180,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "3_continue_this_message",
+          "name": "Continue this message",
+          "status": "explored",
+          "transitionId": "e15",
+          "step": 28,
+          "bounds": {
+            "x": 482,
+            "y": 1818,
+            "width": 89,
+            "height": 33
+          }
+        },
+        {
+          "key": "4_ai_write_for_me",
+          "name": "AI write for me",
+          "status": "explored",
+          "transitionId": "e16",
+          "step": 28,
+          "bounds": {
+            "x": 68,
+            "y": 2180,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "5_next",
+          "name": "Next",
+          "status": "explored",
+          "transitionId": "e17",
+          "step": 28,
+          "bounds": {
+            "x": 940,
+            "y": 1807,
+            "width": 112,
+            "height": 111
+          }
+        },
+        {
+          "key": "6_enhance",
+          "name": "Enhance",
+          "status": "pending",
+          "transitionId": null,
+          "step": 28,
+          "bounds": {
+            "x": 850,
+            "y": 1807,
+            "width": 112,
+            "height": 111
+          }
+        }
+      ]
+    },
+    {
+      "id": "n7",
+      "screen": "character_chat",
+      "variant": "enhance_result",
+      "summary": "An enhanced message draft is open in the chat, with controls to keep, regenerate, or discard it before sending.",
+      "observationSteps": [
+        36
+      ],
+      "entrances": [
+        {
+          "key": "1_send",
+          "name": "Send",
+          "status": "timeout",
+          "transitionId": null,
+          "step": 36,
+          "bounds": {
+            "x": 922,
+            "y": 2179,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "2_cancel_enhance",
+          "name": "Cancel enhance",
+          "status": "pending",
+          "transitionId": null,
+          "step": 36,
+          "bounds": {
+            "x": 70,
+            "y": 2179,
+            "width": 89,
+            "height": 89
+          }
+        },
+        {
+          "key": "3_enhance",
+          "name": "Enhance",
+          "status": "pending",
+          "transitionId": null,
+          "step": 36,
+          "bounds": {
+            "x": 850,
+            "y": 1806,
+            "width": 112,
+            "height": 112
+          }
+        },
+        {
+          "key": "4_continue_this_message",
+          "name": "Continue this message",
+          "status": "pending",
+          "transitionId": null,
+          "step": 36,
+          "bounds": {
+            "x": 134,
+            "y": 1817,
+            "width": 89,
+            "height": 34
+          }
+        },
+        {
+          "key": "5_next",
+          "name": "Next",
+          "status": "pending",
+          "transitionId": null,
+          "step": 36,
+          "bounds": {
+            "x": 940,
+            "y": 1806,
+            "width": 112,
+            "height": 112
+          }
+        }
+      ]
+    },
+    {
+      "id": "n8",
+      "screen": "character_chat",
+      "variant": "image_preview",
+      "summary": "A character image is open over the chat; close it to return to the conversation.",
+      "observationSteps": [
+        45
+      ],
+      "entrances": [
+        {
+          "key": "1_close_image",
+          "name": "close image",
+          "status": "explored",
+          "transitionId": "e19",
+          "step": 45,
+          "bounds": {
+            "x": 976,
+            "y": 446,
+            "width": 50,
+            "height": 50
+          }
+        }
+      ]
+    },
+    {
+      "id": "n9",
+      "screen": "character_chat",
+      "variant": "chat_menu_open",
+      "summary": "The chat with Iven is dimmed behind an open menu for switching chats, starting a new chat, and adjusting chat options.",
+      "observationSteps": [
+        47
+      ],
+      "entrances": [
+        {
+          "key": "1_new_chat",
+          "name": "New Chat",
+          "status": "explored",
+          "transitionId": "e21",
+          "step": 47,
+          "bounds": {
+            "x": 546,
+            "y": 487,
+            "width": 503,
+            "height": 99
+          }
+        },
+        {
+          "key": "2_all_chats",
+          "name": "All Chats",
+          "status": "pending",
+          "transitionId": null,
+          "step": 47,
+          "bounds": {
+            "x": 546,
+            "y": 390,
+            "width": 503,
+            "height": 97
+          }
+        },
+        {
+          "key": "3_dismiss_menu",
+          "name": "dismiss menu",
+          "status": "pending",
+          "transitionId": null,
+          "step": 47,
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1080,
+            "height": 2400
+          }
+        },
+        {
+          "key": "4_chat_memory",
+          "name": "Chat Memory",
+          "status": "pending",
+          "transitionId": null,
+          "step": 47,
+          "bounds": {
+            "x": 546,
+            "y": 694,
+            "width": 503,
+            "height": 98
+          }
+        },
+        {
+          "key": "5_model_settings",
+          "name": "Model settings",
+          "status": "pending",
+          "transitionId": null,
+          "step": 47,
+          "bounds": {
+            "x": 546,
+            "y": 586,
+            "width": 503,
+            "height": 108
+          }
+        }
+      ]
+    },
+    {
+      "id": "n10",
+      "screen": "chat_persona_selection",
+      "variant": "default",
+      "summary": "The default persona is selected, and you can confirm it to continue starting the chat.",
+      "observationSteps": [
+        48
+      ],
+      "entrances": [
+        {
+          "key": "1_confirm",
+          "name": "Confirm",
+          "status": "explored",
+          "transitionId": "e22",
+          "step": 48,
+          "bounds": {
+            "x": 875,
+            "y": 174,
+            "width": 163,
+            "height": 62
+          }
+        }
+      ]
+    },
+    {
+      "id": "n11",
+      "screen": "model_settings",
+      "variant": "default",
+      "summary": "The Model settings page lets you adjust the provider, generation controls, custom prompt, prefill, and forbidden words, then save the changes.",
+      "observationSteps": [
+        50
+      ],
+      "entrances": [
+        {
+          "key": "1_generation_controls_temperature_",
+          "name": "Generation controls, Temperature, response length and contex",
+          "status": "pending",
+          "transitionId": null,
+          "step": 50,
+          "bounds": {
+            "x": 70,
+            "y": 1625,
+            "width": 940,
+            "height": 109
+          }
+        },
+        {
+          "key": "2_custom_prompt_none",
+          "name": "Custom prompt, None",
+          "status": "pending",
+          "transitionId": null,
+          "step": 50,
+          "bounds": {
+            "x": 70,
+            "y": 1987,
+            "width": 940,
+            "height": 50
+          }
+        },
+        {
+          "key": "3_forbidden_words_specify_words_or",
+          "name": "Forbidden Words, Specify words or phrases that should not ap",
+          "status": "pending",
+          "transitionId": null,
+          "step": 50,
+          "bounds": {
+            "x": 70,
+            "y": 2312,
+            "width": 940,
+            "height": 88
+          }
+        },
+        {
+          "key": "4_janitor",
+          "name": "Janitor",
+          "status": "pending",
+          "transitionId": null,
+          "step": 50,
+          "bounds": {
+            "x": 70,
+            "y": 1075,
+            "width": 940,
+            "height": 140
+          }
+        },
+        {
+          "key": "5_prefill_toggle",
+          "name": "prefill toggle",
+          "status": "pending",
+          "transitionId": null,
+          "step": 50,
+          "bounds": {
+            "x": 888,
+            "y": 2139,
+            "width": 122,
+            "height": 71
+          }
+        },
+        {
+          "key": "6_save",
+          "name": "Save",
+          "status": "pending",
+          "transitionId": null,
+          "step": 50,
+          "bounds": {
+            "x": 949,
+            "y": 156,
+            "width": 98,
+            "height": 62
+          }
+        }
+      ]
+    }
+  ],
+  "observations": [
+    {
+      "step": 1,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/001.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/001.elements.json"
+      }
+    },
+    {
+      "step": 2,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/002.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/002.elements.json"
+      }
+    },
+    {
+      "step": 3,
+      "stateId": "n3",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.elements.json"
+      }
+    },
+    {
+      "step": 4,
+      "stateId": "n3",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/004.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/004.elements.json"
+      }
+    },
+    {
+      "step": 8,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/008.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/008.elements.json"
+      }
+    },
+    {
+      "step": 9,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/009.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/009.elements.json"
+      }
+    },
+    {
+      "step": 11,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/011.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/011.elements.json"
+      }
+    },
+    {
+      "step": 12,
+      "stateId": "n4",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/012.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/012.elements.json"
+      }
+    },
+    {
+      "step": 13,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/013.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/013.elements.json"
+      }
+    },
+    {
+      "step": 14,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/014.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/014.elements.json"
+      }
+    },
+    {
+      "step": 15,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/015.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/015.elements.json"
+      }
+    },
+    {
+      "step": 16,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/016.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/016.elements.json"
+      }
+    },
+    {
+      "step": 19,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/019.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/019.elements.json"
+      }
+    },
+    {
+      "step": 20,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/020.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/020.elements.json"
+      }
+    },
+    {
+      "step": 22,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/022.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/022.elements.json"
+      }
+    },
+    {
+      "step": 23,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/023.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/023.elements.json"
+      }
+    },
+    {
+      "step": 24,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/024.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/024.elements.json"
+      }
+    },
+    {
+      "step": 25,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/025.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/025.elements.json"
+      }
+    },
+    {
+      "step": 27,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/027.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/027.elements.json"
+      }
+    },
+    {
+      "step": 28,
+      "stateId": "n6",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/028.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/028.elements.json"
+      }
+    },
+    {
+      "step": 29,
+      "stateId": "n6",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/029.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/029.elements.json"
+      }
+    },
+    {
+      "step": 31,
+      "stateId": "n6",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/031.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/031.elements.json"
+      }
+    },
+    {
+      "step": 32,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/032.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/032.elements.json"
+      }
+    },
+    {
+      "step": 33,
+      "stateId": "n6",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/033.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/033.elements.json"
+      }
+    },
+    {
+      "step": 34,
+      "stateId": "n6",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/034.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/034.elements.json"
+      }
+    },
+    {
+      "step": 36,
+      "stateId": "n7",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/036.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/036.elements.json"
+      }
+    },
+    {
+      "step": 40,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/040.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/040.elements.json"
+      }
+    },
+    {
+      "step": 42,
+      "stateId": "n1",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/042.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/042.elements.json"
+      }
+    },
+    {
+      "step": 43,
+      "stateId": "n2",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/043.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/043.elements.json"
+      }
+    },
+    {
+      "step": 44,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/044.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/044.elements.json"
+      }
+    },
+    {
+      "step": 45,
+      "stateId": "n8",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/045.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/045.elements.json"
+      }
+    },
+    {
+      "step": 46,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/046.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/046.elements.json"
+      }
+    },
+    {
+      "step": 47,
+      "stateId": "n9",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/047.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/047.elements.json"
+      }
+    },
+    {
+      "step": 48,
+      "stateId": "n10",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/048.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/048.elements.json"
+      }
+    },
+    {
+      "step": 49,
+      "stateId": "n5",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/049.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/049.elements.json"
+      }
+    },
+    {
+      "step": 50,
+      "stateId": "n11",
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "evidence": {
+        "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/050.png",
+        "elementTree": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/050.elements.json"
+      }
+    }
+  ],
+  "transitions": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "sourceStep": 1,
+      "targetStep": 2,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 796,
+        "y": 1261,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Kaelen Winterborne || The Heartbreakers",
+        "groupKey": "1_kaelen_winterborne_the_heartbrea"
+      },
+      "bounds": {
+        "x": 574,
+        "y": 993,
+        "width": 443,
+        "height": 536
+      },
+      "outcome": "navigated",
+      "label": "Kaelen Winterborne || The Heartbreakers"
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n3",
+      "sourceStep": 2,
+      "targetStep": 3,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 307,
+        "y": 1839,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Continue latest chat",
+        "groupKey": "1_continue_latest_chat"
+      },
+      "bounds": {
+        "x": 76,
+        "y": 471,
+        "width": 928,
+        "height": 1392
+      },
+      "outcome": "navigated",
+      "label": "Continue latest chat"
+    },
+    {
+      "id": "e3",
+      "from": "n3",
+      "to": "n3",
+      "sourceStep": 3,
+      "targetStep": 4,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 540,
+        "y": 2119,
+        "text": "What happens next?",
+        "submit": false,
+        "direction": "none",
+        "reason": "Press button to send chat. Enter for linebreak",
+        "groupKey": "1_press_button_to_send_chat_enter_"
+      },
+      "bounds": {
+        "x": 46,
+        "y": 2057,
+        "width": 988,
+        "height": 123
+      },
+      "outcome": "changed_in_place",
+      "label": "Type text"
+    },
+    {
+      "id": "e4",
+      "from": "n1",
+      "to": "n2",
+      "sourceStep": 8,
+      "targetStep": 9,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 285,
+        "y": 1261,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Stepaunt stays with me after being released from Prison",
+        "groupKey": "2_stepaunt_stays_with_me_after_bei"
+      },
+      "bounds": {
+        "x": 63,
+        "y": 993,
+        "width": 443,
+        "height": 536
+      },
+      "outcome": "navigated",
+      "label": "Stepaunt stays with me after being released from Prison"
+    },
+    {
+      "id": "e5",
+      "from": "n1",
+      "to": "n4",
+      "sourceStep": 11,
+      "targetStep": 12,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 996,
+        "y": 205,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "menu",
+        "groupKey": "3_menu"
+      },
+      "bounds": {
+        "x": 954,
+        "y": 163,
+        "width": 84,
+        "height": 84
+      },
+      "outcome": "navigated",
+      "label": "menu"
+    },
+    {
+      "id": "e6",
+      "from": "n4",
+      "to": "n1",
+      "sourceStep": 12,
+      "targetStep": 13,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 137,
+        "y": 1200,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Close drawer",
+        "groupKey": "1_close_drawer"
+      },
+      "bounds": {
+        "x": 0,
+        "y": 993,
+        "width": 211,
+        "height": 536
+      },
+      "outcome": "navigated",
+      "label": "Close drawer"
+    },
+    {
+      "id": "e7",
+      "from": "n1",
+      "to": "n2",
+      "sourceStep": 13,
+      "targetStep": 14,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 796,
+        "y": 1261,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Your neglectful girlfriend | Ayumi",
+        "groupKey": "2_your_neglectful_girlfriend_ayumi"
+      },
+      "bounds": {
+        "x": 574,
+        "y": 993,
+        "width": 443,
+        "height": 536
+      },
+      "outcome": "navigated",
+      "label": "Your neglectful girlfriend | Ayumi"
+    },
+    {
+      "id": "e8",
+      "from": "n2",
+      "to": "n2",
+      "sourceStep": 15,
+      "targetStep": 16,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 289,
+        "y": 760,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Your best friend who hides a lot behind her beautiful smile",
+        "groupKey": "3_kaelan_childhood_best_friend"
+      },
+      "bounds": {
+        "x": 71,
+        "y": 496,
+        "width": 435,
+        "height": 528
+      },
+      "outcome": "changed_in_place",
+      "label": "Your best friend who hides a lot behind her beautiful smile"
+    },
+    {
+      "id": "e9",
+      "from": "n1",
+      "to": "n1",
+      "sourceStep": 19,
+      "targetStep": 20,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 924,
+        "y": 468,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Hidden Gems",
+        "groupKey": "3_hidden_gems"
+      },
+      "bounds": {
+        "x": 812,
+        "y": 430,
+        "width": 224,
+        "height": 75
+      },
+      "outcome": "changed_in_place",
+      "label": "Hidden Gems"
+    },
+    {
+      "id": "e10",
+      "from": "n5",
+      "to": "n5",
+      "sourceStep": 24,
+      "targetStep": 25,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 540,
+        "y": 2119,
+        "text": "I look at the terminal. What should I do next?",
+        "submit": false,
+        "direction": "none",
+        "reason": "Press button to send chat. Enter for linebreak",
+        "groupKey": "1_press_button_to_send_chat_enter_"
+      },
+      "bounds": {
+        "x": 46,
+        "y": 2057,
+        "width": 988,
+        "height": 123
+      },
+      "outcome": "changed_in_place",
+      "label": "Type text"
+    },
+    {
+      "id": "e11",
+      "from": "n5",
+      "to": "n5",
+      "sourceStep": 25,
+      "targetStep": 27,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 967,
+        "y": 1383,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Send",
+        "groupKey": "2_send"
+      },
+      "bounds": {
+        "x": 922,
+        "y": 1338,
+        "width": 89,
+        "height": 89
+      },
+      "outcome": "changed_in_place",
+      "label": "Send"
+    },
+    {
+      "id": "e12",
+      "from": "n5",
+      "to": "n6",
+      "sourceStep": 27,
+      "targetStep": 28,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 113,
+        "y": 2225,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "AI write for me",
+        "groupKey": "3_ai_write_for_me"
+      },
+      "bounds": {
+        "x": 68,
+        "y": 2180,
+        "width": 89,
+        "height": 89
+      },
+      "outcome": "navigated",
+      "label": "AI write for me"
+    },
+    {
+      "id": "e13",
+      "from": "n6",
+      "to": "n6",
+      "sourceStep": 28,
+      "targetStep": 29,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "x": 540,
+        "y": 2119,
+        "text": "What should I do next?",
+        "submit": false,
+        "direction": "none",
+        "reason": "Press button to send chat. Enter for linebreak",
+        "groupKey": "1_press_button_to_send_chat_enter_"
+      },
+      "bounds": {
+        "x": 46,
+        "y": 2057,
+        "width": 988,
+        "height": 123
+      },
+      "outcome": "changed_in_place",
+      "label": "Type text"
+    },
+    {
+      "id": "e14",
+      "from": "n6",
+      "to": "n6",
+      "sourceStep": 29,
+      "targetStep": 31,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 967,
+        "y": 2225,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Send",
+        "groupKey": "2_send"
+      },
+      "bounds": {
+        "x": 922,
+        "y": 2180,
+        "width": 89,
+        "height": 89
+      },
+      "outcome": "changed_in_place",
+      "label": "Send"
+    },
+    {
+      "id": "e15",
+      "from": "n6",
+      "to": "n5",
+      "sourceStep": 31,
+      "targetStep": 32,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 527,
+        "y": 1834,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Continue this message",
+        "groupKey": "3_continue_this_message"
+      },
+      "bounds": {
+        "x": 482,
+        "y": 1817,
+        "width": 89,
+        "height": 34
+      },
+      "outcome": "navigated",
+      "label": "Continue this message"
+    },
+    {
+      "id": "e16",
+      "from": "n6",
+      "to": "n6",
+      "sourceStep": 33,
+      "targetStep": 34,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 113,
+        "y": 2225,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "AI write for me",
+        "groupKey": "4_ai_write_for_me"
+      },
+      "bounds": {
+        "x": 68,
+        "y": 2180,
+        "width": 89,
+        "height": 89
+      },
+      "outcome": "changed_in_place",
+      "label": "AI write for me"
+    },
+    {
+      "id": "e17",
+      "from": "n6",
+      "to": "n7",
+      "sourceStep": 34,
+      "targetStep": 36,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 996,
+        "y": 1974,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Next",
+        "groupKey": "5_next"
+      },
+      "bounds": {
+        "x": 940,
+        "y": 1918,
+        "width": 112,
+        "height": 112
+      },
+      "outcome": "navigated",
+      "label": "Next"
+    },
+    {
+      "id": "e18",
+      "from": "n5",
+      "to": "n8",
+      "sourceStep": 44,
+      "targetStep": 45,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 67,
+        "y": 520,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "The laboratory is quiet when you step inside, lit mostly by ",
+        "groupKey": "4_the_laboratory_is_quiet_when_you"
+      },
+      "bounds": {
+        "x": 11,
+        "y": 464,
+        "width": 112,
+        "height": 112
+      },
+      "outcome": "navigated",
+      "label": "The laboratory is quiet when you step inside, lit mostly by "
+    },
+    {
+      "id": "e19",
+      "from": "n8",
+      "to": "n5",
+      "sourceStep": 45,
+      "targetStep": 46,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 1001,
+        "y": 471,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "close image",
+        "groupKey": "1_close_image"
+      },
+      "bounds": {
+        "x": 976,
+        "y": 446,
+        "width": 50,
+        "height": 50
+      },
+      "outcome": "navigated",
+      "label": "close image"
+    },
+    {
+      "id": "e20",
+      "from": "n5",
+      "to": "n9",
+      "sourceStep": 46,
+      "targetStep": 47,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 1002,
+        "y": 198,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "chat menu",
+        "groupKey": "5_chat_menu"
+      },
+      "bounds": {
+        "x": 957,
+        "y": 154,
+        "width": 90,
+        "height": 88
+      },
+      "outcome": "navigated",
+      "label": "chat menu"
+    },
+    {
+      "id": "e21",
+      "from": "n9",
+      "to": "n10",
+      "sourceStep": 47,
+      "targetStep": 48,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 798,
+        "y": 537,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "New Chat",
+        "groupKey": "1_new_chat"
+      },
+      "bounds": {
+        "x": 546,
+        "y": 487,
+        "width": 503,
+        "height": 99
+      },
+      "outcome": "navigated",
+      "label": "New Chat"
+    },
+    {
+      "id": "e22",
+      "from": "n10",
+      "to": "n5",
+      "sourceStep": 48,
+      "targetStep": 49,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 957,
+        "y": 205,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "Confirm",
+        "groupKey": "1_confirm"
+      },
+      "bounds": {
+        "x": 875,
+        "y": 174,
+        "width": 163,
+        "height": 62
+      },
+      "outcome": "navigated",
+      "label": "Confirm"
+    },
+    {
+      "id": "e23",
+      "from": "n5",
+      "to": "n11",
+      "sourceStep": 49,
+      "targetStep": 50,
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "x": 833,
+        "y": 198,
+        "text": null,
+        "submit": false,
+        "direction": "none",
+        "reason": "using janitor",
+        "groupKey": "6_using_janitor"
+      },
+      "bounds": {
+        "x": 719,
+        "y": 165,
+        "width": 227,
+        "height": 65
+      },
+      "outcome": "navigated",
+      "label": "using janitor"
+    }
+  ]
+}

@@ -1,0 +1,681 @@
+[
+  {
+    "ref": "n1",
+    "type": "ImageView",
+    "text": "Back",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_back_button",
+    "coordinates": {
+      "x": 21,
+      "y": 185,
+      "width": 84,
+      "height": 84
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "View",
+    "text": "Leonardo Royal Frankfurt",
+    "coordinates": {
+      "x": 149,
+      "y": 424,
+      "width": 443,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "View",
+    "text": "Maritim Pro Arte Berlin",
+    "coordinates": {
+      "x": 52,
+      "y": 487,
+      "width": 399,
+      "height": 47
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Wizz",
+    "coordinates": {
+      "x": 424,
+      "y": 579,
+      "width": 92,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "View",
+    "text": "Motuo Hydropower Station",
+    "coordinates": {
+      "x": 214,
+      "y": -15720,
+      "width": 483,
+      "height": 48
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "View",
+    "text": "bridges",
+    "coordinates": {
+      "x": 332,
+      "y": -15187,
+      "width": 140,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "View",
+    "text": "China’s high-speed railways",
+    "coordinates": {
+      "x": 52,
+      "y": -15061,
+      "width": 931,
+      "height": 113
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "View",
+    "text": "Panama Canal",
+    "coordinates": {
+      "x": 290,
+      "y": -12722,
+      "width": 258,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "View",
+    "text": "The Radisson Panama Canal",
+    "coordinates": {
+      "x": 146,
+      "y": -11997,
+      "width": 501,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n10",
+    "type": "View",
+    "text": "United",
+    "coordinates": {
+      "x": 511,
+      "y": -11840,
+      "width": 118,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n11",
+    "type": "View",
+    "text": "Samphire Hoe",
+    "coordinates": {
+      "x": 500,
+      "y": -10304,
+      "width": 255,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n12",
+    "type": "View",
+    "text": "Pomus",
+    "coordinates": {
+      "x": 847,
+      "y": -9895,
+      "width": 123,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n13",
+    "type": "View",
+    "text": "the Radnor Arms",
+    "coordinates": {
+      "x": 721,
+      "y": -9832,
+      "width": 299,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n14",
+    "type": "View",
+    "text": "Voco The Clifton",
+    "coordinates": {
+      "x": 146,
+      "y": -9674,
+      "width": 294,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n15",
+    "type": "View",
+    "text": "Southeastern",
+    "coordinates": {
+      "x": 521,
+      "y": -9517,
+      "width": 242,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n16",
+    "type": "View",
+    "text": "it is worth seeing this bridge",
+    "coordinates": {
+      "x": 52,
+      "y": -7918,
+      "width": 950,
+      "height": 113
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n17",
+    "type": "View",
+    "text": "ANA Crowne Plaza Kobe",
+    "coordinates": {
+      "x": 146,
+      "y": -7698,
+      "width": 436,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n18",
+    "type": "View",
+    "text": "EVA Air",
+    "coordinates": {
+      "x": 427,
+      "y": -7603,
+      "width": 129,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n19",
+    "type": "View",
+    "text": "Chateau de la Resle",
+    "coordinates": {
+      "x": 52,
+      "y": -5674,
+      "width": 346,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n20",
+    "type": "View",
+    "text": "easyJet",
+    "coordinates": {
+      "x": 766,
+      "y": -5577,
+      "width": 126,
+      "height": 48
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n21",
+    "type": "View",
+    "text": "Maglevs, “levitating” trains",
+    "coordinates": {
+      "x": 52,
+      "y": -4422,
+      "width": 832,
+      "height": 113
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n22",
+    "type": "View",
+    "text": "Maritim Hotel Taicang Garden",
+    "coordinates": {
+      "x": 146,
+      "y": -3540,
+      "width": 528,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n23",
+    "type": "View",
+    "text": "China Eastern",
+    "coordinates": {
+      "x": 309,
+      "y": -3319,
+      "width": 247,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n24",
+    "type": "View",
+    "text": "The Three Gorges Dam",
+    "coordinates": {
+      "x": 52,
+      "y": -2343,
+      "width": 406,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n25",
+    "type": "View",
+    "text": "30-minute drive from Vegas",
+    "coordinates": {
+      "x": 52,
+      "y": -1902,
+      "width": 918,
+      "height": 113
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n26",
+    "type": "View",
+    "text": "The English",
+    "coordinates": {
+      "x": 146,
+      "y": -1555,
+      "width": 207,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n27",
+    "type": "View",
+    "text": "Virgin Atlantic",
+    "coordinates": {
+      "x": 424,
+      "y": -1461,
+      "width": 250,
+      "height": 50
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n28",
+    "type": "View",
+    "text": "Hilton Diagonal Mar",
+    "coordinates": {
+      "x": 52,
+      "y": 2400,
+      "width": 950,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n29",
+    "type": "View",
+    "text": "Try full access to The Telegraph free today. Unlock their aw",
+    "coordinates": {
+      "x": 52,
+      "y": 2400,
+      "width": 950,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n30",
+    "type": "View",
+    "text": "Primavera Sound",
+    "coordinates": {
+      "x": 117,
+      "y": 2400,
+      "width": 305,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n31",
+    "type": "View",
+    "text": "Mama Shelter",
+    "coordinates": {
+      "x": 146,
+      "y": 2400,
+      "width": 249,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n32",
+    "type": "View",
+    "text": "Waldorf Astoria",
+    "coordinates": {
+      "x": 146,
+      "y": 2400,
+      "width": 276,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n33",
+    "type": "View",
+    "text": "Hotel Arts",
+    "coordinates": {
+      "x": 225,
+      "y": 2400,
+      "width": 173,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n34",
+    "type": "View",
+    "text": "Meliá Barcelona Sky",
+    "coordinates": {
+      "x": 353,
+      "y": 2400,
+      "width": 357,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n35",
+    "type": "View",
+    "text": "Fly with TAP",
+    "coordinates": {
+      "x": 369,
+      "y": 2400,
+      "width": 210,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n36",
+    "type": "View",
+    "text": "Wizz Air",
+    "coordinates": {
+      "x": 456,
+      "y": 2400,
+      "width": 147,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n37",
+    "type": "View",
+    "text": "Eurostar",
+    "coordinates": {
+      "x": 456,
+      "y": 2400,
+      "width": 152,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n38",
+    "type": "View",
+    "text": "Omio",
+    "coordinates": {
+      "x": 490,
+      "y": 2400,
+      "width": 100,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n39",
+    "type": "EditText",
+    "text": "",
+    "coordinates": {
+      "x": 100,
+      "y": 8576,
+      "width": 880,
+      "height": 210
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n40",
+    "type": "View",
+    "text": "Sign up",
+    "coordinates": {
+      "x": 723,
+      "y": 8787,
+      "width": 257,
+      "height": 126
+    },
+    "enabled": false
+  },
+  {
+    "ref": "n41",
+    "type": "TextView",
+    "text": "ADVERTISEMENT",
+    "identifier": "com.aol.mobile.aolapp:id/display_ad_type",
+    "coordinates": {
+      "x": 413,
+      "y": 9098,
+      "width": 255,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n42",
+    "type": "ViewGroup",
+    "text": "The Telegraph / The 20 buildings you must visit in your life",
+    "coordinates": {
+      "x": 0,
+      "y": 10021,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n43",
+    "type": "ImageView",
+    "text": "The 20 buildings you must visit in your lifetime",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 10052,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n44",
+    "type": "ViewGroup",
+    "text": "Islands / The World's Largest Beaver Dam Is Tucked Away In C",
+    "coordinates": {
+      "x": 0,
+      "y": 10398,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n45",
+    "type": "ImageView",
+    "text": "The World's Largest Beaver Dam Is Tucked Away In Canada's La",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 10429,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n46",
+    "type": "ViewGroup",
+    "text": "Express UK / Moment huge new bridge for 200mph trains lifted",
+    "coordinates": {
+      "x": 0,
+      "y": 10775,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n47",
+    "type": "ImageView",
+    "text": "Moment huge new bridge for 200mph trains lifted over one of ",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 10806,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n48",
+    "type": "View",
+    "text": "Koprez in Taboola advertising section Sponsored: learn about",
+    "coordinates": {
+      "x": 53,
+      "y": 11184,
+      "width": 658,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n49",
+    "type": "View",
+    "text": "Sponsored: learn about this recommendation (opens dialog)",
+    "coordinates": {
+      "x": 53,
+      "y": 11184,
+      "width": 42,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n50",
+    "type": "View",
+    "text": "Heel pain is not from your shoes. Meet the real culprit.",
+    "coordinates": {
+      "x": 53,
+      "y": 11184,
+      "width": 614,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n51",
+    "type": "View",
+    "text": "More options",
+    "coordinates": {
+      "x": 557,
+      "y": 11184,
+      "width": 126,
+      "height": 103
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n52",
+    "type": "View",
+    "text": "Image for Taboola Advertising Unit",
+    "coordinates": {
+      "x": 706,
+      "y": 11184,
+      "width": 322,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n53",
+    "type": "ViewGroup",
+    "text": "Ok Magazine / How Kate Middleton Still Religiously Follows P",
+    "coordinates": {
+      "x": 0,
+      "y": 11557,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n54",
+    "type": "ImageView",
+    "text": "How Kate Middleton Still Religiously Follows Prince Philip's",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 11588,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n55",
+    "type": "ViewGroup",
+    "text": "Eating Well / What Happens to Your Brain When You Read, Acco",
+    "coordinates": {
+      "x": 0,
+      "y": 11934,
+      "width": 1080,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n56",
+    "type": "ImageView",
+    "text": "What Happens to Your Brain When You Read, According to a New",
+    "identifier": "com.aol.mobile.aolapp:id/article_sdk_related_item_image",
+    "coordinates": {
+      "x": 713,
+      "y": 11965,
+      "width": 315,
+      "height": 0
+    },
+    "enabled": true
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "app": "janitorai",
+  "runId": "v2-2026-09-27T14-14-59-732Z-e80625",
+  "approvedProposalIds": [
+    "faster-reply-sample",
+    "chat-catchup"
+  ],
+  "sources": [
+    {
+      "proposalId": "faster-reply-sample",
+      "revision": 1,
+      "entryStateId": "n11",
+      "resumeStateId": "n5",
+      "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/050.png"
+    },
+    {
+      "proposalId": "chat-catchup",
+      "revision": 1,
+      "entryStateId": "n3",
+      "resumeStateId": "n3",
+      "screenshot": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/captures/003.png"
+    }
+  ],
+  "slides": 6,
+  "recommendationDirectory": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/recommend/2026-09-27T19-29-26-115Z-08d7de9b",
+  "mockDirectory": "runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/mock/6ea2d9b9582834412dc1d5b326dfb0fbf99fe98834f20483eed6572cd6f727b3"
+}

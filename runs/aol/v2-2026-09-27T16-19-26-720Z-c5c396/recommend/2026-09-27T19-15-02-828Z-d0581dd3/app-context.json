@@ -1,0 +1,396 @@
+{
+  "runId": "v2-2026-09-27T16-19-26-720Z-c5c396",
+  "app": {
+    "key": "aol",
+    "packageId": "com.aol.mobile.aolapp",
+    "version": "7.81.0"
+  },
+  "runStatus": "blocked",
+  "stopReason": "remaining entrances need a person or could not be reached",
+  "states": [
+    {
+      "id": "n1",
+      "screen": "home",
+      "variant": "default",
+      "summary": "The user can browse news articles, search, check weather, or open Inbox.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Home",
+        "See the latest news",
+        "Top Stories",
+        "Entertainment",
+        "Local",
+        "Sports",
+        "Business",
+        "Tap here for weather",
+        "The Telegraph",
+        "10 engineering marvels you must see in your lifetime",
+        "4d ago",
+        "best-dating-guides.com",
+        "·",
+        "Ad",
+        "San Jose: Lonely Asian Matures Nearby",
+        "HuffPost",
+        "The 1 big mistake you should never, ever make with your passport",
+        "5h ago",
+        "Food Republic",
+        "This pasta is so tasty Alex Guarnaschelli said it made her 'tear up' with excitement",
+        "3h ago",
+        "Inbox",
+        "Delete",
+        "Archive",
+        "Move",
+        "Mark as read",
+        "More"
+      ],
+      "groups": [
+        {
+          "key": "1_the_telegraph_10_engineering_mar",
+          "description": "The Telegraph / 10 engineering marvels you must see in your ",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_inbox",
+          "description": "Inbox",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_search",
+          "description": "Search",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "4_entertainment",
+          "description": "Entertainment",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "5_local",
+          "description": "Local",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "6_tap_here_for_weather",
+          "description": "Tap here for weather",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        1,
+        7,
+        10,
+        11,
+        14,
+        15,
+        16,
+        18
+      ]
+    },
+    {
+      "id": "n2",
+      "screen": "article",
+      "variant": "default",
+      "summary": "The Telegraph article is open, and you can scroll to read it or open a related story.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "The Telegraph",
+        "10 engineering marvels you must see in your lifetime",
+        "Christopher Beanland",
+        "Sep. 23, 2026 5:00 AM PT",
+        "My Dog Ignored His Fresh Water and Drank From a Mud Puddle",
+        "SelenePets",
+        "·",
+        "Ad",
+        "Don’t miss our daily roundup.",
+        "Stay informed with a handpicked selection of the day's top AOL stories, delivered to your inbox.",
+        "Enter your email",
+        "Sign up",
+        "ADVERTISEMENT",
+        "More Stories",
+        "The 20 buildings you must visit in your lifetime",
+        "6d ago",
+        "The World's Largest Beaver Dam Is Tucked Away In Canada's Largest National Park",
+        "3d ago",
+        "Moment huge new bridge for 200mph trains lifted over one of UK's biggest motorways",
+        "6hr ago",
+        "Koprez",
+        "Heel pain is not from your shoes. Meet the real culprit.",
+        "How Kate Middleton Still Religiously Follows Prince Philip's 'Golden Rule' for Royals",
+        "2hr ago",
+        "What Happens to Your Brain When You Read, According to a New Study",
+        "3hr ago"
+      ],
+      "groups": [
+        {
+          "key": "1_the_telegraph_the_20_buildings_y",
+          "description": "The 20 buildings you must visit in your lifetime",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_islands_the_world_s_largest_beav",
+          "description": "The secret behind the Sagrada Familia's final towers: Stone,",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "3_express_uk_moment_huge_new_bridg",
+          "description": "10 engineering marvels you must see in your lifetime",
+          "isCore": true,
+          "coverage": "blocked"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "id": "n3",
+      "screen": "aol_sign_in",
+      "variant": "default",
+      "summary": "The user can enter an AOL account identifier to sign in, recover a username, or create an account.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Sign in | AOL",
+        "Sign in to AOL",
+        "Email or phone number",
+        "Forgot username",
+        "Next",
+        "Create account",
+        "Help",
+        "Terms",
+        "Privacy"
+      ],
+      "groups": [
+        {
+          "key": "1_email_or_phone_number",
+          "description": "Email or phone number",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "2_next",
+          "description": "Next",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "3_create_account",
+          "description": "Create account",
+          "isCore": true,
+          "coverage": "blocked"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        9
+      ]
+    },
+    {
+      "id": "n4",
+      "screen": "search",
+      "variant": "default",
+      "summary": "The search field is ready for a query, or the user can select a suggested search.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Search",
+        "SUGGESTED SEARCHES",
+        "Dante Moore Injury Update",
+        "Justin Verlander",
+        "Trump Booed",
+        "Penn State Nittany Lions",
+        "Presidents Cup",
+        "Raoni Barcelos",
+        "AEW All Out 2026 Results",
+        "Hurricane Polo"
+      ],
+      "groups": [
+        {
+          "key": "1_search",
+          "description": "Search",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_suggested_searches_dante_moore_i",
+          "description": "Suggested searches / Dante Moore Injury Update",
+          "isCore": true,
+          "coverage": "blocked"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        12,
+        13
+      ]
+    },
+    {
+      "id": "n5",
+      "screen": "home",
+      "variant": "location_permission_prompt",
+      "summary": "A location permission prompt covers the Home news feed; you can dismiss it or choose to allow location for weather.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Allow Location permission to get the most accurate weather forecasts",
+        "Do you want to allow Location permission?",
+        "Not now",
+        "Allow Location"
+      ],
+      "groups": [
+        {
+          "key": "1_not_now",
+          "description": "Not now",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_allow_location",
+          "description": "Allow Location",
+          "isCore": true,
+          "coverage": "blocked"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        17
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Back, The Telegraph, Christopher Beanland, My Dog Ignored His Fresh Water and Drank From a Mud Puddle S, SelenePets in Taboola advertising section, View Comments / Font size / Share link on Facebook, View Comments, Font size, Share link on Facebook, Copy link, Share article, Sign up, ADVERTISEMENT, The Telegraph / The 20 buildings you must visit in your life, The 20 buildings you must visit in your lifetime, Islands / The World's Largest Beaver Dam Is Tucked Away In C, The World's Largest Beaver Dam Is Tucked Away In Canada's La, Express UK / Moment huge new bridge for 200mph trains lifted, Moment huge new bridge for 200mph trains lifted over one of , Koprez in Taboola advertising section Sponsored: learn about, Heel pain is not from your shoes. Meet the real culprit.",
+      "observationStep": 1
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n2",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added View Comments / Font size / Share link on Facebook, View Comments, Font size, Share link on Facebook, Copy link, Share article, Barcelona’s, funded and reconstructed the church, Try full access to The Telegraph free today. Unlock their aw, Beijing’s, Renaissance city, La Sagrada Família, France’s, Rome’s, Doge’s Palace, Chicago, The Telegraph / 10 engineering marvels you must see in your , 10 engineering marvels you must see in your lifetime, Euronews / The secret behind the Sagrada Familia's final tow, The secret behind the Sagrada Familia's final towers: Stone,",
+      "observationStep": 4
+    },
+    {
+      "id": "e3",
+      "from": "n1",
+      "to": "n3",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Email or phone number, Forgot username, Next, Create account, Help, Terms, Privacy",
+      "observationStep": 7
+    },
+    {
+      "id": "e4",
+      "from": "n1",
+      "to": "n4",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Close, Suggested searches / Dante Moore Injury Update, Suggested searches / Justin Verlander, Suggested searches / Trump Booed",
+      "observationStep": 11
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": null,
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "text": "weather forecast"
+      },
+      "outcome": "left_app",
+      "changeSummary": null,
+      "observationStep": 12
+    },
+    {
+      "id": "e6",
+      "from": "n1",
+      "to": "n1",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Lighter Side, Ok Magazine / How Kate Middleton still religiously follows P, People / Who is performing at the 2026 MTV VMAs? Here are al, Sign up",
+      "observationStep": 14
+    },
+    {
+      "id": "e7",
+      "from": "n1",
+      "to": "n1",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Politics, Error getting weather / Edit locations, Edit locations, Creative Loafing Atlanta / Ordinary Days | 09/27/2026 2:00 P, More options, best-dating-guides.com in Taboola advertising section · Spon, best-dating-guides.com in Taboola advertising section, Image for Taboola Advertising Unit, Sponsored: learn about this recommendation (opens dialog), San Jose: Lonely Asian Matures Nearby, Shine My Crown / 'This is a Movement Built by Individuals': , NYDailyNews / Nor’easter slams NYC with heavy winds, rain / , Try it free*",
+      "observationStep": 15
+    },
+    {
+      "id": "e8",
+      "from": "n1",
+      "to": "n5",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Not now, Allow Location",
+      "observationStep": 16
+    },
+    {
+      "id": "e9",
+      "from": "n5",
+      "to": "n1",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Local, Sports, Business, Lighter Side, Politics, Error getting weather / Edit locations, Edit locations, Creative Loafing Atlanta / Ordinary Days | 09/27/2026 2:00 P, Save this article, Share this news article, More options, best-dating-guides.com in Taboola advertising section · Spon, best-dating-guides.com in Taboola advertising section, Image for Taboola Advertising Unit, Sponsored: learn about this recommendation (opens dialog), San Jose: Lonely Asian Matures Nearby, Shine My Crown / 'This is a Movement Built by Individuals': , NYDailyNews / Nor’easter slams NYC with heavy winds, rain / , Inbox, Delete, Archive, Move, Mark as read, More, Try it free*",
+      "observationStep": 17
+    }
+  ],
+  "supplementalContext": null
+}

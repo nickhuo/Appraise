@@ -1,0 +1,26 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 0,
+      "y": 0,
+      "width": 1080,
+      "height": 2400
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ViewGroup",
+    "text": "",
+    "coordinates": {
+      "x": 976,
+      "y": 446,
+      "width": 50,
+      "height": 50
+    },
+    "enabled": true
+  }
+]

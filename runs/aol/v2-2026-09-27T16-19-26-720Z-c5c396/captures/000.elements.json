@@ -1,0 +1,118 @@
+[
+  {
+    "ref": "n1",
+    "type": "ViewGroup",
+    "text": "Sidebar button. Double tap or slide two fingers from the lef",
+    "identifier": "com.aol.mobile.aolapp:id/profile_layout",
+    "coordinates": {
+      "x": 0,
+      "y": 159,
+      "width": 828,
+      "height": 126
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n2",
+    "type": "ImageButton",
+    "text": "Access your saved articles",
+    "identifier": "com.aol.mobile.aolapp:id/right_button_1",
+    "coordinates": {
+      "x": 828,
+      "y": 164,
+      "width": 105,
+      "height": 105
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n3",
+    "type": "ImageButton",
+    "text": "Search",
+    "identifier": "com.aol.mobile.aolapp:id/right_button_2",
+    "coordinates": {
+      "x": 954,
+      "y": 164,
+      "width": 105,
+      "height": 105
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n4",
+    "type": "View",
+    "text": "Inbox",
+    "coordinates": {
+      "x": 0,
+      "y": 2187,
+      "width": 540,
+      "height": 150
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n5",
+    "type": "TextView",
+    "text": "Delete",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 0,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n6",
+    "type": "TextView",
+    "text": "Archive",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 216,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n7",
+    "type": "TextView",
+    "text": "Move",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 432,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n8",
+    "type": "TextView",
+    "text": "Mark as read",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 648,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  },
+  {
+    "ref": "n9",
+    "type": "TextView",
+    "text": "More",
+    "identifier": "com.aol.mobile.aolapp:id/item_inbox",
+    "coordinates": {
+      "x": 864,
+      "y": 2421,
+      "width": 216,
+      "height": 0
+    },
+    "enabled": true
+  }
+]
