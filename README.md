@@ -1,48 +1,35 @@
 # Appraise
 
-Mobile app → product model → interactive mock → rewarded-ad proposals → slide flow. 
+Evaluating an app's monetization opportunities usually starts with walking through its user flows: what users want to accomplish, where they encounter limits, what paid plans offer, and what value an ad reward could provide. These observations often remain scattered across screenshots and notes, making them hard to trace to a final proposal.
 
-[System design](docs/system-design.md): primitives, architecture, key decisions and current limits.
+Appraise connects this work for product, monetization, design and engineering teams. It explores an app, records its core journeys in a Product Model, generates an interactive replay, proposes rewarded-ad experiences that fit the product and business model, and presents approved proposals as slides.
 
+## Walkthrough
 
-| Stage     | Command     | Needs                        | Core Output                                       |
-| --------- | ----------- | ---------------------------- | ------------------------------------------------- |
-| Explore   | `explore`   | Android emulator, OpenAI key | `product-model.json`                              |
-| Recreate  | `recreate`  | nothing                      | `mock/<hash>/index.html`                          |
-| Recommend | `recommend` | OpenAI key                   | `recommend/<id>/proposals.json`, `judgments.json` |
-| Present   | `present`   | nothing                      | `flows/<hash>/index.html`                         |
+<video src="public/replay.mov" controls playsinline preload="metadata" width="960">
 
+</video>
 
 ## Deliverables
 
 The current implementation addresses the brief as follows. Artifact paths below are relative to `runs/<app>/<run-id>/`.
 
+- The [system design](docs/system-design.md) documents the architecture, trade-offs, current limits, and next steps.
 
-| Requested deliverable       | Implementation and evidence                                                                                                                                                                                                                                                                                                                                                                                   | Remaining work                                                                                                                     |
-| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Code                        | `bun explore`, `bun recreate`, `bun recommend` (proposer + judge), and `bun present`. Source: [explore](src/explore/), [recreate](src/recreate/), [recommend](src/recommend/), [present](src/present/). Explore and Recommend use `gpt-6-sol` by default and `OPENAI_API_KEY`; Explore also needs an Android emulator and starts a local Appium server. Recreate and Present run locally without model calls. | No separate QA-loop command.                                                                                                       |
-| Product model (Goal 1)      | `product-model.json` records observed states, actions, transitions, screenshot evidence, discovered monetization facts, and unfinished or blocked entrances. The sample coverage is listed below.                                                                                                                                                                                                             | Coverage is partial; each run exports its own model. Cross-run merging and resume are not implemented in the current explorer.     |
-| Mock + QA evidence (Goal 2) | `mock/<hash>/index.html` replays the original screenshots and recorded interactions; `manifest.json` records their sources. Recreate validates evidence paths, image dimensions and transition references. See [Recreate design](docs/recreate-flow.md).                                                                                                                                                      | This is screenshot replay. A generated UI, visual diff reports, and an autonomous compare-and-correct QA loop are not implemented. |
-| Rewarded flows (Goal 4)     | `recommend/<id>/proposals.json` and `judgments.json` retain candidates, revisions, scores, reasoning and rejections. `flows/<hash>/index.html` presents approved proposals; its `manifest.json` records the inputs.                                                                                                                                                                                           | Proposed ads and rewards are illustrated, not executed in the real app.                                                            |
-| Trajectory                  | `explore.log` records decisions, actions and failures; `graph.json` retains observations and model usage; `captures/` contains screenshots, marked screenshots, page source and element lists. Recommendation manifests record model usage. [Design notes](docs/design.md) and [ablation notes](docs/function-ablation.md) explain implementation changes.                                                    | Manual setup includes installing apps and signing in. A consolidated record of all manual interventions is not yet provided.       |
-| 10–15 minute recording      | Not yet included.                                                                                                                                                                                                                                                                                                                                                                                             | Record the end-to-end walkthrough, including architecture, trade-offs, partial coverage, the missing QA loop, and next steps.      |
-
-
-### Sample coverage
-
-These are the latest exploration runs for each app, selected on September 27, 2026 (Pacific time). Run IDs use UTC timestamps. The four linked run directories are committed with their evidence. Janitor, Luzia and AOL include generated mocks, recommendations and flows; OOC contains only the emulator-blocking observation. New runs remain gitignored.
-
-Latest Luzia artifacts: [Replay](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/mock/bc6b9877be43b8ddea20739b121c0efa134983035e2f4e7a4121339dffb7b898/index.html) (13 states, 25 transitions, 31 frames) · [Present](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/flows/c2253eb363642fbd215d9cb1d8bfbe62772bd1549f38f9cdddc6f34d3f62178e/index.html) (2 approved proposals, 6 slides) · [Judgments](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/recommend/2026-09-28T02-50-47-550Z-804a4d74/judgments.json).
+- **Code:** `bun explore`, `bun recreate`, `bun recommend` (proposer + judge), and `bun present`. Source: [Explore](src/explore/), [Recreate](src/recreate/), [Recommend](src/recommend/), and [Present](src/present/). Explore and Recommend default to `gpt-6-sol` and require `OPENAI_API_KEY`. Explore also needs an Android emulator and starts a local Appium server. Recreate and Present run locally without model calls. 
+- **Product model:** `product-model.json` records observed states, actions, transitions, screenshot evidence, monetization facts, and unfinished or blocked entrances. Coverage is partial, with one model per run. Cross-run merging and resume are not implemented.
+- **Mock evidence:** `mock/<hash>/index.html` replays screenshots and recorded interactions; `manifest.json` records their sources. Recreate checks evidence paths, image dimensions, and transition references. Generated UI, visual diffs. 
+- **Rewarded flows:** `recommend/<id>/proposals.json` and `judgments.json` retain candidates, revisions, scores, reasoning, and rejections. `flows/<hash>/index.html` presents approved proposals, with input references in its manifest. Ads and rewards are illustrated, not executed in the app.
+- **Trajectory:** `explore.log` records decisions, actions, and failures; `graph.json` retains observations and model usage; `captures/` holds screenshots, page source, and element lists. Recommendation manifests record model usage.
+- **Walkthrough recording:** [Watch the video](https://drive.google.com/file/d/18xteXCndODPTi-kDQUPTOQP1Am-k8Evi/view?usp=sharing). 
 
 
-| App     | Product model                                                                 | What the run captured                                                                               | Stop condition                                                           |
-| ------- | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| Janitor | [Model](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/product-model.json) | 11 states, 23 transitions: character discovery, detail, chat, persona selection and model settings. | Action budget reached; some steps also timed out.                        |
-| Luzia   | [Model](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/product-model.json)     | 13 states, 25 transitions: chat, the Plus paywall, app discovery, creation and draft editing.       | Action budget reached.                                                  |
-| AOL     | [Model](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/product-model.json)       | 5 states, 9 transitions: home, articles, search and sign-in.                                        | Login, permission and unavailable-element blockers.                      |
-| OOC     | [Model](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/product-model.json) | 1 state, 0 transitions: the “Emulator Detected” dialog in version 0.1.20. | Emulator blocked; core experience not explored. |
-
-OOC's raw run status is `complete` because the explorer selected no entrances on the blocking dialog. This means its selected queue was empty, not that OOC's core experience was covered. The [screenshot](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.png) and [log](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/explore.log) preserve the observed limitation.
+| App     | Product model                                                                 | Replay                                                                                                                                       | Proposal / Judge JSON                                                                                                                                                                                                                            |
+| ------- | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Janitor | [Model](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/product-model.json) | [Replay](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/mock/6ea2d9b9582834412dc1d5b326dfb0fbf99fe98834f20483eed6572cd6f727b3/index.html) | [Proposal](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/recommend/2026-09-27T19-29-26-115Z-08d7de9b/proposals.json) · [Judge](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/recommend/2026-09-27T19-29-26-115Z-08d7de9b/judgments.json) |
+| Luzia   | [Model](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/product-model.json)        | [Replay](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/mock/bc6b9877be43b8ddea20739b121c0efa134983035e2f4e7a4121339dffb7b898/index.html)        | [Proposal](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/recommend/2026-09-28T02-50-47-550Z-804a4d74/proposals.json) · [Judge](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/recommend/2026-09-28T02-50-47-550Z-804a4d74/judgments.json)               |
+| AOL     | [Model](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/product-model.json)       | [Replay](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/mock/57e02e61d4cab06743439538d41f30e9b5cfeb915dcc467d15ad06c23fc9c5e8/index.html)       | [Proposal](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/recommend/2026-09-27T19-31-29-100Z-ed71e93d/proposals.json) · [Judge](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/recommend/2026-09-27T19-31-29-100Z-ed71e93d/judgments.json)             |
+| OOC     | [Model](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/product-model.json)          | Not generated                                                                                                                                | Not generated                                                                                                                                                                                                                                    |
 
 
 ## Setup
@@ -76,10 +63,6 @@ Smoke test, all four stages in one command with a 5-action explore. It prints ea
 bun e2e --app luzia
 ```
 
-Or run the stages one by one:
-
-The example uses Luzia. Each command prints JSON; copy the `runId` and `outputDirectory` values into the next command.
-
 **1. Explore** (about 20 minutes for 30 actions). Explore starts its own Appium server.
 
 Explore operates the real app to map its core user journeys. It observes screenshots and the accessibility tree, asks the model to select a small set of useful actions, executes one, then observes the result. It follows a branch until there is no pending core action, then returns to another branch. Loading screens are waited out. The run stops when the discovered queue is exhausted, the action budget is reached, or the remaining work is blocked.
@@ -88,17 +71,13 @@ Explore operates the real app to map its core user journeys. It observes screens
 bun explore --app luzia --max-actions 30
 ```
 
-The core output is `runs/luzia/<run-id>/product-model.json`: a structured graph of the observed app experience. A **state** describes a screen and its condition; a **transition** records an action and the state it reached. Each state carries screenshot and element-tree evidence, a summary, and the status of its selected entrances. The model also records observed monetization facts and why exploration stopped. Recreate, Recommend and Present consume this file. It describes the paths actually observed, not a guarantee that the entire app was covered.
-
-`graph.json` retains the full exploration record, `captures/` holds the evidence, and `explore.log` records step-by-step progress. To browse the graph visually, run Recreate below. The current explorer uses tap, type and Back actions, and scrolls when necessary to reveal a target. It marks login, payment, account-change, media and permission prerequisites as blocked; external-app handoffs are recorded before returning. Continuing through required media or permission steps is not yet supported in this implementation.
-
 **2. Recreate** (seconds, no model calls):
 
 ```bash
 bun recreate --app luzia --run <run-id>
 ```
 
-Open `mock/<hash>/index.html`. The left side is the explored state tree. Each screenshot marks its entrances: green ones were executed, blue ones are pending, and amber ones could not be done (blocked, unreachable, no effect). Tap a green box, or its `→` destination, to follow the recorded transition. Click an entrance name to show where it is. Scroll with the mouse wheel, a vertical drag, or the ↑/↓ cues.
+Open `mock/<hash>/index.html`. 
 
 **3. Recommend** (about 1 minute):
 
@@ -106,7 +85,7 @@ Open `mock/<hash>/index.html`. The left side is the explored state tree. Each sc
 bun recommend --app luzia --run <run-id>
 ```
 
-A proposer drafts candidates from the product model, and a separate judge scores each one. A weak candidate can be revised once. The output lists the proposals and the verdicts, including rejected ones.
+A proposer drafts candidates from the product model, and a separate judge scores each one. A weak candidate can be revised once. 
 
 If the app's prices were never observed, pass them as `--context <file>`, for example copied from the store listing.
 
@@ -117,7 +96,7 @@ bun present --app luzia --run <run-id> \
   --recommend-dir <recommend outputDirectory> --mock-dir <recreate outputDirectory>
 ```
 
-Open `flows/<hash>/index.html` and use ← / → to move between slides. Each approved proposal gets three slides: the existing state and the proposed mechanic, the choice and the ad, then the reward and the return to the task. The slides draw the proposal over the observed screens.
+slides
 
 ## Options
 
@@ -131,3 +110,4 @@ Open `flows/<hash>/index.html` and use ← / → to move between slides. Each ap
 bun run check
 bun test
 ```
+
