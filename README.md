@@ -19,7 +19,7 @@ The current implementation addresses the brief as follows. Artifact paths below 
 - **Mock evidence:** `mock/<hash>/index.html` replays screenshots and recorded interactions; `manifest.json` records their sources. Recreate checks evidence paths, image dimensions, and transition references. Generated UI, visual diffs. 
 - **Rewarded flows:** `recommend/<id>/proposals.json` and `judgments.json` retain candidates, revisions, scores, reasoning, and rejections. `flows/<hash>/index.html` presents approved proposals, with input references in its manifest. Ads and rewards are illustrated, not executed in the app.
 - **Trajectory:** `explore.log` records decisions, actions, and failures; `graph.json` retains observations and model usage; `captures/` holds screenshots, page source, and element lists. Recommendation manifests record model usage.
-- **Walkthrough recording:** [Watch the video](https://github.com/user-attachments/assets/364c7662-0cf7-4533-b16e-38dc7eeacf36). 
+- **Walkthrough recording:** [Watch the video](https://drive.google.com/file/d/18xteXCndODPTi-kDQUPTOQP1Am-k8Evi/view?usp=sharing). 
 
 
 | App     | Product model                                                                 | Replay                                                                                                                                       | Proposal / Judge JSON                                                                                                                                                                                                                            |
