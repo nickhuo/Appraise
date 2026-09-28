@@ -94,7 +94,7 @@ bun present --app luzia --run <run-id> \
   --recommend-dir <recommend outputDirectory> --mock-dir <recreate outputDirectory>
 ```
 
-slides
+![Rewarded-ad proposal slides](public/proposal_silde.png)
 
 ## Options
 
@@ -108,4 +108,3 @@ slides
 bun run check
 bun test
 ```
-
