@@ -38,143 +38,138 @@ The Product Model is a graph of product states. It records observed screen condi
 
 For example, a chat product might yield the path character list → character detail → chat. Sending a message may leave the user in the same chat state, while exhausting a quota changes what they can do.
 
-### Why distinguish Observation, Screen, Variant and State?
+### Why distinguish State, Screen, Variant and Observation?
 
 
 | Concept     | Meaning                                                                                                               | Purpose                                                           |
 | ----------- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| Observation | One observation of the app by the Explore agent: screenshot, page XML, controls, copy and foreground app information. | Preserve what was actually observed for replay and verification.  |
+| State       | A Screen + Variant combination, supported by one or more Observations.                                                | Provide a graph node linking entrances, transitions and evidence. |
 | Screen      | A semantic location in product navigation, such as character detail or chat.                                          | Recognize the same kind of page even when its content changes.    |
 | Variant     | A condition of a Screen, such as normal use, quota exhausted or result generated.                                     | Represent differences in what users can do on the same screen.    |
-| State       | One Variant of a Screen, supported by one or more Observations.                                                       | Provide a graph node linking entrances, transitions and evidence. |
+| Observation | One observation of a State by the Explore agent: screenshot, page XML, controls, copy and foreground app information. | Preserve what was actually observed for replay and verification.  |
 
 
-Conceptually, **State = Screen + Variant**. `chat/default` and `chat/quota_exhausted` are different States. Typing another sentence in the same chat usually produces a new Observation of the same State.
+Conceptually, **State = Screen + Variant**, and an **Observation records a State at a particular moment**. A State can have multiple Observations. `chat/default` and `chat/quota_exhausted` are different States, e.g. typing another sentence in the same chat usually produces a new Observation of the same State.
 
 Screenshots and accessibility trees serve different purposes:
 
 - Screenshots help the model interpret visuals, icons and copy.
 - The tree supplies actionable controls, identifiers and positions.
-- A State summarizes these observations; screenshots and trees remain the underlying evidence.
 
 ## 3. Explore: the agent selects actions; code manages exploration
 
-Explore aims to record the core experience. For a chat product, this may mean discovering characters, starting conversations and encountering usage limits. For a news product, it may mean browsing, reading and searching.
+**Explore simulates an app's core user journeys and records them in the Product Model**.
 
-The agent currently infers these tasks from screen information and general prompts. It does not automatically read the Google Play description or use a human-approved journey checklist. Selecting the core experience therefore still depends on model judgment. An action budget bounds exploration but does not guarantee that the right entrances are selected.
+- The agent interprets screens and selects interactions that advance the app's main experience
+- Code executes those interactions, tracks progress, and manages navigation.
 
-### Agent inputs and outputs
+The explorer follows one branch at a time, returning to unfinished entrances as needed. Each step contributes observations and action results to the recorded graph.
 
-The agent receives:
-
-- A screenshot with numbered actionable elements.
-- A list of controls.
-- Known Screens and Variants.
-
-It identifies the screen's meaning, loading status and visible monetization facts. For each new State, it proposes up to six core entrances in priority order, favoring the next step in the current user task.
+The process has four parts: identifying the current State and its core entrances, executing an action and observing its result, choosing where to explore next, and deciding when to stop.
 
 ```mermaid
-flowchart TD
-    O[Numbered screenshot, controls and known screens] --> A[Interpret Screen / Variant and current task]
-    A --> B[Select and prioritize core entrances]
-    B --> C[Return targets, reasons, input text and restrictions]
-    C --> D[Code records pending work and executes one action]
-    D -->|Observe again; call model when needed| O
+flowchart LR
+    O[Code: observe the screen] --> I{Known State?}
+    I -->|No match| A[Agent: identify State and propose core entrances]
+    I -->|Yes| K[Code: reuse pending entrances]
+    A --> R[Code: record or reuse State and entrances]
+    K --> R
+    R --> C{Continue exploring?}
+    C -->|Yes| N[Code: follow the branch or return to unfinished work]
+    N --> X[Code: execute the next action]
+    X --> O
+    C -->|No| S[Save run status and stop reason]
+    R -.-> M[(Product Model)]
+    S --> M
 ```
 
-The agent primarily selects `tap` and `type`; typing can include submission. The scheduler uses Back for navigation recovery.
+### 1. Identify the State and select core entrances
 
-Scrolling was initially an action, but moving through a page does not necessarily create a new State. An intermediate approach moved scrolling into observation, automatically scanning long pages and collecting long screenshots and actionable controls. The current approach, described below, scrolls to reveal specific targets. Repeated cards are sampled in the control list sent to the model so an entire feed does not become a queue of actions.
+A **core entrance** is an interaction selected to advance the app's main user experience, such as opening a character or sending a message. The agent infers the user's likely task from the screen and its instructions. It does not receive a predefined journey or completion checklist, and generally excludes unrelated actions such as opening Settings.
 
-### Determining the outcome of an action
+Code first checks whether the observation matches a known State. If it does, the explorer resumes unfinished actions and saves the latest observation. Otherwise, it asks the agent to identify the State using the app name, Android Activity and three inputs:
 
-Screen stability, state identity and action effects are separate questions with separate rules.
+- **A numbered screenshot** showing tappable controls in red, text inputs in blue, and disabled controls in gray.
+- **A matching control list** with each element's number, action, label, Android details and status. Repeated cards are sampled to keep the list manageable.
+- **A catalog of known Screens and Variants** to distinguish familiar screens and conditions from new ones.
+
+For a new State, the agent proposes up to ++six++ core entrances in priority order, including targets, reasons, input text and execution restrictions. If it identifies a known State, the explorer keeps that State's existing entrances.
+
+### 2. Execute an action and observe the result
+
+Code executes the selected `tap` or `type` action; typing can include submission. If the target is offscreen, code scrolls to reveal it and saves the actual interaction frame as another Observation of the same State.
+
+This is one reason for using Appium: its UI hierarchy can expose some offscreen controls, allowing the agent to choose targets beyond the current screenshot.
+
+After an action, the explorer checks the result:
 
 
-| Question                       | Current implementation                                                                                                                                                                                                                        |
-| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Is the screen stable?          | Read every 300 ms. Two consecutive identical action signatures count as stable, with a 3-second limit. On timeout, use the last observation and mark it unsettled.                                                                            |
-| Is this the same State?        | Within the same Activity, compare action-key sets. Reuse the State if they match exactly, or differ by at most two keys and no more than 10% of the larger set. Otherwise, ask the model. An existing Screen + Variant also reuses its State. |
-| Did the action have an effect? | Compare visible control names, positions, enabled flags and extracted copy. If unchanged, wait another 1.2 seconds to confirm. If changed, determine whether the result is a change within the same State or arrival at another State.        |
+| Question                       | How it is checked                                                                               |
+| ------------------------------ | ----------------------------------------------------------------------------------------------- |
+| Is the screen stable?          | Wait briefly for the controls to stop changing before recording an observation.                 |
+| Did the action have an effect? | Compare the page before and after the action. If nothing changes, wait briefly and check again. |
 
 
-### Screen-level DFS: finish a branch, then return
+The resulting observation goes through State identification again. If the action leaves the app, or navigation fails to return to the target screen, code tries Back first. If needed, it restarts the app and follows a recorded route.
 
-The scheduler first selects a pending entrance in the current State, then pending work in other States of the same Screen. After executing an entrance, it prioritizes the screen reached. When that branch has no pending work, it returns to the nearest ancestor that does.
+### 3. Follow a branch, then return
 
-In this example, A has entrances a1 and a2; B has b1 and b2; C, D and E have no further work. Solid arrows show exploration, dashed arrows show returns, and numbers indicate execution order.
+**The explorer follows one core journey at a time**. After taking an action, it continues with pending actions on the screen reached. When no pending actions remain there, it returns to the nearest screen on its navigation path with unfinished work. If none exists on that path, it checks other known screens.
 
-```mermaid
-flowchart TD
-    A[Screen A: a1, a2] -->|1. Execute a1| B[Screen B: b1, b2]
-    B -->|2. Execute b1| D[Screen D: no pending work]
-    D -.->|3. Return; B still has b2| B
-    B -->|4. Execute b2| E[Screen E: no pending work]
-    E -.->|5. Return to B| B
-    B -.->|6. B finished; return to A| A
-    A -->|7. Execute a2| C[Screen C: no pending work]
-    C -->|8. No pending work anywhere| F[Stop and export]
-```
+Within a Screen, the scheduler prioritizes entrances from the current State, then considers pending entrances recorded in other States of that Screen.
 
-The sequence is **A → B → D ⇢ B → E ⇢ B ⇢ A → C**.
+![Animated example of depth-first exploration: select core entrances, follow a branch, and backtrack to pending work.](assets/exploration-flow.gif)
 
-- Reaching a leaf ends only the current branch.
-- Encountering a cycle records the relationship without repeating completed entrances.
-- If no ancestor has pending work, the scheduler checks other known screens.
-- The tree illustrates discovery order; the saved structure is a graph.
+The sequence is **A → B → C ⇢ B → D ⇢ B ⇢ A → E**: finish the chat and voice branches before returning Home to create an image.
 
-One unresolved issue is that **returning to the same Screen does not restore the original State**. After a chat quota is consumed, the precondition for “send another message” has changed. The scheduler may still attempt an entrance from an earlier State of that Screen. This can produce an unavailable target, a disabled control, no visible effect or a different outcome; these cases do not all become `unreachable`.
+The navigation path acts as a stack for **depth-first exploration**. Completed entrances are not repeated when a cycle returns to a known State, and the saved structure remains a graph. **However, returning to a Screen does not restore its earlier State; this limitation is discussed in Section 8.**
 
-### Three edge cases with implemented handling
+### 4. Stop and record the outcome
 
-**Loading and generation.** Code detects visible progress indicators; the model can also identify skeleton screens and generation in progress. The system checks every 3 seconds against a 90-second loading deadline. On timeout, it marks the entrance `timeout` and attempts recovery. Recognized loading states do not become product nodes. However, fast state matching can bypass model analysis, so loading detection remains incomplete.
+The run ends when all discovered entrances have been explored, the remaining work is blocked, the action budget is exhausted, or an unrecovered error occurs. It records the run status and reason for stopping alongside the observed journey.
 
-**Offscreen targets.** Appium can expose some offscreen controls inside scroll containers. Code scrolls toward a target up to 12 times, stopping after two consecutive attempts without positional progress. Once the target is visible, the actual click frame is saved under the same State, so a screenshot of the page top is not used to explain a click farther down.
-
-**Leaving the app or failing to return.** If the foreground package changes after an action, the system records `left_app`, marks the entrance explored, and presses Android Back. If necessary, it restarts the app and replays a known route. External destinations do not become States; their package names remain in the log. Camera, gallery and permission entrances may also be marked blocked by the model before execution. The system does not yet consistently apply a policy of continuing through prerequisites only when essential to the core task, and it has no separate detector for system dialogs within the same package. Prompts restrict unrelated settings and account actions.
-
-These cases have handling logic, but that alone does not establish reliable device operation.
+Completing exploration does not guarantee full-app coverage or successful completion of a user's task.
 
 ## 4. Recreate: make the observed experience inspectable
 
-The Product Model lets someone who has not used the original app inspect its observed journeys. Each capture saves:
+Recreate builds an interactive mock app from the Product Model, screenshots and control files, reproducing the original app's observed core journeys. It places interaction hotspots over the original screenshots and connects recorded actions. Scroll frames reproduce the positions visited while revealing click targets.
 
-- An original-resolution PNG and a numbered PNG.
-- Page XML and control JSON.
+[https://github.com/user-attachments/assets/364c7662-0cf7-4533-b16e-38dc7eeacf36](https://github.com/user-attachments/assets/364c7662-0cf7-4533-b16e-38dc7eeacf36)
 
-Recreate reads the model and its screenshot and control files, generates interaction hotspots over the original screenshots, and connects recorded actions. Scroll frames reproduce the positions visited while revealing click targets.
+### Mock quality
 
-Delivering `product-model.json` alone is insufficient because it references image and control files by path. Include the corresponding `captures/` directory, or deliver replay HTML with embedded screenshots.
+Mock quality should be assessed along three dimensions:
 
-Recreate validates evidence sources, image dimensions and transition references. These structural checks are not a visual comparison and automatic correction QA loop.
+
+| Dimension                        | What to assess                                                                              |
+| -------------------------------- | ------------------------------------------------------------------------------------------- |
+| Flow accuracy                    | Does each State–action–result relationship match the original app?                          |
+| Journey relevance and redundancy | Do the selected entrances represent core journeys without repeating equivalent experiences? |
+| Interaction fidelity             | Do hotspots, scrolling and transitions faithfully reproduce the recorded interactions?      |
+
+
+We’re still considering how to design a suitable QA loop to improve mock quality. One idea is to introduce a human-in-the-loop feedback process, which may be the next step. The current thoughts are:
+
+- **Sample equivalent entrances**, while still representing distinct behaviors and monetization conditions. For example, if several characters follow the same chat flow, one representative entrance may be enough. A paid character with different access conditions should be explored separately.
+- **Feed incorrect flows and redundant branches back into Explore** to improve the exploration logic.
+- **Correct hotspot placement and playback errors in Recreate**, such as adjusting tap locations or fixing replay behavior.
 
 ## 5. Recommend: turn observations into reviewable proposals
 
-Recommend asks: at what moment would a user willingly watch an ad, what reward would they receive, and how would they continue after declining or after an ad failure?
+Recommend uses the Product Model and optional business context to propose rewarded-ad experiences: where to offer an ad, what the user receives, and how they continue afterward.
 
-It reads states, paths, copy and monetization facts from the Product Model. It also accepts supplemental context with an explicit source, such as subscription prices not captured during exploration.
-
-The Proposer and Judge currently receive text derived from the model; they do not reread the original screenshots. Errors in Explore's interpretation can therefore propagate downstream. A fact labeled `observed` comes from the model's interpretation of an observation; it has not necessarily been independently verified.
-
-The Proposer generates up to five candidates. Each Proposal includes:
-
-- Entry and return states, with evidence IDs.
-- Reward, user choices and fulfillment.
-- Decline and failure paths.
-- Business impact, assumptions and a validation plan.
-
-Proposed mechanics are distinguished from existing app behavior. Proposed screens cannot be treated as observed facts.
+The Proposer generates up to five candidates for Judge review. Each describes the entry point, reward, user choice, fulfillment and return paths, with supporting evidence and business assumptions.
 
 ### What does the Judge assess, and how many revisions are allowed?
 
 
-| Dimension    | Core question                                                                               | Minimum passing score |
-| ------------ | ------------------------------------------------------------------------------------------- | --------------------- |
-| User value   | Does the reward help with the current task and justify watching an ad?                      | 4                     |
-| Context fit  | Do the entry point, timing and reward fit the journey and product experience?               | 4                     |
-| Business fit | Could the offer divert users who would otherwise pay or weaken subscription value?          | 3                     |
-| Feasibility  | Are fulfillment, failure handling and the return path coherent, with explicit dependencies? | 3                     |
-| Evidence     | Do observations support the user need, entry point, reward value and paid-benefit claims?   | 4                     |
+| Dimension    | Core question                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------- |
+| User value   | Does the reward help with the current task and justify watching an ad?                      |
+| Context fit  | Do the entry point, timing and reward fit the journey and product experience?               |
+| Business fit | Could the offer divert users who would otherwise pay or weaken subscription value?          |
+| Feasibility  | Are fulfillment, failure handling and the return path coherent, with explicit dependencies? |
+| Evidence     | Do observations support the user need, entry point, reward value and paid-benefit claims?   |
 
 
 The Judge is instructed to identify hard failures, including:
@@ -184,10 +179,8 @@ The Judge is instructed to identify hard failures, including:
 - Undefined reward fulfillment.
 - Known in-app purchases without the pricing or entitlement information needed for business review.
 
-The Judge identifies these semantic problems. Code enforces hard failures and score thresholds, and checks that cited evidence IDs exist.
-
 ```mermaid
-flowchart TD
+flowchart LR
     P[Proposer: up to five candidates] --> J[Judge: five scores, hard failures and feedback]
     J --> H{Any hard failure?}
     H -->|Yes| N[Reject]
@@ -200,22 +193,14 @@ flowchart TD
     J -.-> L[Retain all revisions, scores and reasoning]
 ```
 
-A weak candidate without hard failures gets one revision. If it still falls short, it is rejected. Each candidate therefore receives at most one revision and two reviews within a Recommend call. A later manual rerun starts another round of work.
-
-Zero approvals is a valid outcome. The system does not lower its thresholds to produce slides.
+A weak candidate without hard failures gets one revision. If it still falls short, it is rejected. Each candidate therefore receives at most one revision and two reviews within a Recommend call. 
 
 ### How do we know the Judge is good?
 
-There is not yet sufficient evidence. Automated tests verify score thresholds, rejection rules, revision limits and citation checks. They do not establish product understanding or commercial value. Separate Proposer and Judge calls use the same configured model and can share biases. A valid evidence ID also does not prove that the evidence supports a specific claim.
+The point is that the **Judge has not yet been independently validated**, so a human should review its judgments before pushing to production. The next step is to conduct an independent evaluation:
 
-The next step is an independent evaluation:
-
-- Ask product and monetization reviewers to label real candidates.
 - Include negative examples: evidence borrowed from unrelated flows, exaggerated paid benefits and forced ad viewing.
-- Calibrate the rubric on one subset of examples.
-- On held-out examples, measure agreement with reviewers, false approvals, false rejections and consistency across repeated reviews.
-
-This evaluation is not yet implemented. Passing the Judge means “worth further discussion and validation.” Reward use, paid conversion cannibalization, retention and net revenue still require product experiments.
+- Calibrate the rubric on one subset of examples. Use a sample to check whether the Judge’s ratings match human expectations, then refine the rubric and test it on other examples.
 
 ## 6. Present: show customers how the proposal fits the product
 
@@ -225,9 +210,7 @@ Present reads only final approved Proposals and combines original screenshots wi
 2. User choice and the ad.
 3. Reward use and return to the task.
 
-The slides distinguish observed screens from proposed UI and link to the interactive replay. Customers can see both the current experience and the proposed change.
-
-The slides illustrate concepts; they do not serve ads, integrate an ad SDK or grant rewards. If no proposal passes, Present displays a page stating that no recommendation was approved.
+![Rewarded-ad proposal slides](../public/proposal_silde.png)
 
 ## 7. Productionization
 
@@ -282,11 +265,23 @@ bun recommend --app luzia --run <run-id> --context ./client-context.md
 
 ## 8. Limitations and next steps
 
-Current samples cover parts of Janitor, Luzia and AOL and produce replay and proposal artifacts. Early OOC emulator attempts did not reach the core experience. These samples demonstrate that the pipeline can run. They do not establish complete journey coverage, reliable backtracking or commercially effective recommendations.
+### What has been demonstrated
 
-The next priorities are:
+Runs on parts of Janitor, Luzia and AOL have produced replay and proposal artifacts. Early OOC emulator attempts did not reach the core experience.
 
-- **Narrowed exploration scope:** Since Explore mode already covers the product’s core experience, focus the next iteration on a single user journey—for example, entering the app and completing two rounds of dialogue. This provides a clear termination condition and concrete tasks without the complexity of DFS and scheduling.
-- **Exploration correctness:** Align action preconditions with `State`, reduce irrelevant entry points, prevent repeated exploration and incorrect state merges, and support controlled media/permission steps with resume functionality.
-- **Evaluation:** Build a set of human-confirmed core tasks and measure task completion, missed key entry points, incorrect merges, repeated actions, and backtracking success. Add an independent Judge evaluation afterward.
+### Main limitations
+
+
+| Limitation                                                                                              | Impact                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Returning to a Screen does not restore its earlier State.                                               | The scheduler may attempt actions whose preconditions no longer hold, such as sending a message after the chat quota is exhausted. |
+| Loading detection, system dialogs, and required media or permission steps are not handled consistently. | Core journeys may be interrupted or left incomplete.                                                                               |
+| Proposer and Judge read text from the Product Model without rechecking the screenshots.                 | Explore's interpretation errors can propagate into proposals and reviews; `observed` does not mean independently verified.         |
+
+
+### Next priorities
+
+1. **Define one bounded core journey.** Focus the next iteration on a concrete task, such as entering the app and completing two rounds of dialogue. Specify the starting conditions and completion criteria so exploration has an explicit endpoint and depends less on general DFS scheduling (Current DFS implementation might be a bit over engineering :(
+2. **Make that journey reliable.** Reduce irrelevant or repeated entrances and support controlled media and permission steps with resumption. Verify each State–action–result relationship against the original app
+3. **Evaluate before broadening scope.** Use human-confirmed tasks to measure completion, missed core entrances, incorrect merges, repeated actions and backtracking success. Then independently evaluate the Judge against product and monetization reviewers.
 
