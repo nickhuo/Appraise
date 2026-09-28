@@ -4,11 +4,7 @@ Evaluating an app's monetization opportunities usually starts with walking throu
 
 Appraise connects this work for product, monetization, design and engineering teams. It explores an app, records its core journeys in a Product Model, generates an interactive replay, proposes rewarded-ad experiences that fit the product and business model, and presents approved proposals as slides.
 
-## Walkthrough
-
-<video src="public/replay.mov" controls playsinline preload="metadata" width="960">
-
-</video>
+https://github.com/user-attachments/assets/364c7662-0cf7-4533-b16e-38dc7eeacf36
 
 ## Deliverables
 
@@ -21,7 +17,7 @@ The current implementation addresses the brief as follows. Artifact paths below 
 - **Mock evidence:** `mock/<hash>/index.html` replays screenshots and recorded interactions; `manifest.json` records their sources. Recreate checks evidence paths, image dimensions, and transition references. Generated UI, visual diffs. 
 - **Rewarded flows:** `recommend/<id>/proposals.json` and `judgments.json` retain candidates, revisions, scores, reasoning, and rejections. `flows/<hash>/index.html` presents approved proposals, with input references in its manifest. Ads and rewards are illustrated, not executed in the app.
 - **Trajectory:** `explore.log` records decisions, actions, and failures; `graph.json` retains observations and model usage; `captures/` holds screenshots, page source, and element lists. Recommendation manifests record model usage.
-- **Walkthrough recording:** [Watch the video](https://drive.google.com/file/d/18xteXCndODPTi-kDQUPTOQP1Am-k8Evi/view?usp=sharing). 
+- **Walkthrough recording:** [Watch the video](https://github.com/user-attachments/assets/364c7662-0cf7-4533-b16e-38dc7eeacf36). 
 
 
 | App     | Product model                                                                 | Replay                                                                                                                                       | Proposal / Judge JSON                                                                                                                                                                                                                            |
