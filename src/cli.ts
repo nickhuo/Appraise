@@ -1,5 +1,5 @@
 import { resolve, join } from "node:path";
-import { parseArgs } from "node:util";
+import { parseArgs, styleText } from "node:util";
 
 import { setTracingDisabled } from "@openai/agents";
 
@@ -13,6 +13,20 @@ import { runRecommend } from "./recommend/recommend.ts";
 const projectRoot = resolve(import.meta.dir, "..");
 const E2E_MAX_ACTIONS = 5;
 const [command, ...argumentsList] = process.argv.slice(2);
+
+function printProgress(message: string): void {
+  // Preserve JSON-only stdout when explore is piped or redirected.
+  const stream = command === "explore" && !process.stdout.isTTY ? process.stderr : process.stdout;
+  const content = message.replace(/^\s*\d{2}:\d{2}:\d{2} /, "").trimStart();
+  let format: Parameters<typeof styleText>[0] = "white";
+  if (/^(Stopped: failed|(no_effect|unreachable|timeout) \([1-9])/.test(content)) format = "red";
+  else if (/^(completed |done \([1-9]|Stopped: complete\b)/.test(content)) format = "green";
+  else if (/^(pending|blocked) \([1-9]|^Stopped: (incomplete|blocked)|\(blocked:/.test(content)) format = "yellow";
+  else if (/^(candidate |(pending|blocked|done) \(0\))/.test(content)) format = "gray";
+  else if (/^(progress|page |step \d+:|Exploring |Stopped:|→|travel |restart)/.test(content)) format = ["bold", "cyan"];
+  const useColor = stream.isTTY && process.env.NO_COLOR === undefined && process.env.FORCE_COLOR !== "0";
+  stream.write(`${useColor ? styleText(format, message, { validateStream: false }) : message}\n`);
+}
 
 if (command !== "explore" && command !== "e2e" && command !== "recreate" && command !== "recommend" && command !== "present") {
   console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--model <id>]\n       bun run src/cli.ts e2e --app <name> [--package <id>] [--device <id>] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
@@ -38,13 +52,13 @@ if (command === "explore" || command === "e2e") {
   const device = await AndroidDevice.connect(values.device);
   if (command === "e2e") {
     const result = await runPipeline({
-      appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: (line) => console.log(line),
+      appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: printProgress,
     }).finally(() => device.close());
     console.log(`\n━━ Done ━━\n  mock   ${result.mock}\n  slides ${result.slides}`);
     process.exit(0);
   }
   const graph = await exploreApp({
-    appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: (line) => console.error(line),
+    appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: printProgress,
   }).finally(() => device.close());
   console.log(JSON.stringify({
     runId: graph.runId, status: graph.status, reason: graph.reason, states: graph.states.length, edges: graph.edges.length,

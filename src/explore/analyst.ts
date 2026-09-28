@@ -80,13 +80,20 @@ export class Analyst {
   private readonly analysisAgent: Agent<unknown, typeof analysisSchema>;
   private readonly alternativeAgent: Agent<unknown, typeof alternativeSchema>;
 
-  constructor(model: string | Model, private readonly appName: string, private readonly projectRoot: string) {
+  constructor(
+    model: string | Model,
+    private readonly appName: string,
+    private readonly projectRoot: string,
+    private readonly log?: (line: string) => Promise<void>,
+  ) {
     this.analysisAgent = new Agent({ name: "Screen analyst", model, instructions: INSTRUCTIONS, outputType: analysisSchema });
     this.alternativeAgent = new Agent({ name: "Screen analyst", model, instructions: INSTRUCTIONS, outputType: alternativeSchema });
   }
 
   async analyze(capture: Capture, screens: KnownScreen[]): Promise<Analysis> {
     const elements = modelElements(capture);
+    await this.log?.(`\nstep ${capture.step}: agent candidates · ${elements.length} of ${capture.elements.length} elements shown`);
+    for (const element of elements) await this.log?.(`  candidate ${elementLine(element)}`);
     const known = screens.map((screen) => `${screen.id}: ${screen.name} (${screen.variants.join(", ")}) — ${screen.description}`);
     const text = [
       `App: ${this.appName}. Activity: ${capture.foreground.activity}.`,
@@ -95,21 +102,36 @@ export class Analyst {
     ].join("\n\n");
     const analysis = await this.ask(this.analysisAgent, text, capture);
     const numbers = new Set(elements.map((element) => element.number));
+    const entrances = analysis.entrances.filter((entrance) => numbers.has(entrance.number)).slice(0, MAX_ENTRANCES);
+    await this.log?.(`\nstep ${capture.step}: agent selected ${entrances.length}/${elements.length} · ${analysis.screenName}/${analysis.variantName}` +
+      ` · priority order${analysis.isLoading ? " · loading; not queued" : ""}` +
+      `${analysis.entrances.length !== entrances.length ? ` · ${analysis.entrances.length - entrances.length} invalid or excess selections discarded` : ""}`);
+    for (const [index, entrance] of entrances.entries()) {
+      const element = elements.find((item) => item.number === entrance.number)!;
+      const name = element.name || analysis.elementNames.find((item) => item.number === element.number)?.name || "unnamed";
+      await this.log?.(`  selected ${index + 1}. #${element.number} ${element.kind} ${JSON.stringify(name)}` +
+        `${entrance.text === null ? "" : ` text=${JSON.stringify(entrance.text)}`}${entrance.submit ? " submit" : ""}` +
+        `${entrance.blockedReason ? ` (blocked: ${entrance.blockedReason})` : ""}\n    ${entrance.reason}`);
+    }
     return {
       ...analysis,
       existingScreenId: screens.some((screen) => screen.id === analysis.existingScreenId) ? analysis.existingScreenId : null,
-      entrances: analysis.entrances.filter((entrance) => numbers.has(entrance.number)).slice(0, MAX_ENTRANCES),
+      entrances,
     };
   }
 
   /** Asks for the element with the same intent after an entrance had no visible effect or is not on this page. */
   async alternative(capture: Capture, entrance: { name: string; reason: string; kind: PageElement["kind"] }): Promise<number | null> {
     const elements = modelElements(capture).filter((element) => element.kind === entrance.kind);
+    await this.log?.(`\nstep ${capture.step}: agent retry candidates for ${JSON.stringify(entrance.name)} · ${elements.length} elements`);
+    for (const element of elements) await this.log?.(`  candidate ${elementLine(element)}`);
     const text = `App: ${this.appName}. The entrance "${entrance.name}" (${entrance.reason}) was planned on this kind of screen, ` +
       `but it had no effect or is not on this page, which may show other content. ` +
       `Pick the listed element that achieves the same intent here, or null if none does.\n\nElements:\n${elements.map(elementLine).join("\n")}`;
     const answer = await this.ask(this.alternativeAgent, text, capture);
-    return elements.some((element) => element.number === answer.number) ? answer.number : null;
+    const number = elements.some((element) => element.number === answer.number) ? answer.number : null;
+    await this.log?.(`step ${capture.step}: agent retry selected ${number === null ? "none" : `#${number}`} · ${answer.reason}`);
+    return number;
   }
 
   // Sends the text with the capture's marked screenshot.

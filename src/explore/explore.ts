@@ -4,7 +4,7 @@ import { join } from "node:path";
 
 import type { Model } from "@openai/agents";
 
-import { Analyst, type KnownScreen, modelElements } from "./analyst.ts";
+import { Analyst, type KnownScreen } from "./analyst.ts";
 import type { AndroidDevice } from "./device.ts";
 import {
   difference, type Entrance, type Graph, type GraphEdge, type GraphState, type Locator, locatorOf, namedElements, newMonetization, routeToScreen,
@@ -41,7 +41,13 @@ export async function exploreApp(options: {
   const runDirectory = join(projectRoot, "runs", options.appKey, runId);
   const captureDirectory = join(runDirectory, "captures");
   await mkdir(captureDirectory, { recursive: true });
-  const analyst = new Analyst(options.model ?? process.env.OPENAI_MODEL ?? "gpt-6-sol", options.appKey, projectRoot);
+  const log = async (line: string) => {
+    const separator = line.startsWith("\n") ? "\n" : "";
+    const stamped = `${separator}${new Date().toTimeString().slice(0, 8)} ${line.slice(separator.length).replaceAll("\n", "\n         ")}`;
+    options.log?.(stamped);
+    await appendFile(join(runDirectory, "explore.log"), `${stamped}\n`);
+  };
+  const analyst = new Analyst(options.model ?? process.env.OPENAI_MODEL ?? "gpt-6-sol", options.appKey, projectRoot, log);
   const graph: Graph = {
     runId, app: { key: options.appKey, packageId, version: null }, status: "running", reason: "", startedAt: new Date().toISOString(),
     viewport: device.viewport,
@@ -58,14 +64,22 @@ export async function exploreApp(options: {
   // Pending work belongs to a screen: another state of it (another character, another article) is the same place.
   const pendingOn = (screenId: string) => graph.states.filter((state) => state.screenId === screenId)
     .flatMap((state) => state.entrances).find((entrance) => entrance.status === "pending");
-  const log = async (line: string) => {
-    const stamped = `${new Date().toTimeString().slice(0, 8)} ${line}`;
-    options.log?.(stamped);
-    await appendFile(join(runDirectory, "explore.log"), `${stamped}\n`);
-  };
   const save = async () => {
     await writeFile(join(runDirectory, "graph.json"), JSON.stringify(graph, null, 1));
     if (graph.states.length > 0) await writeFile(join(runDirectory, "product-model.json"), `${JSON.stringify(toProductModel(graph), null, 2)}\n`);
+    await log(`\nprogress · ${graph.budget.used}/${graph.budget.max} actions used · ${graph.edges.length} exploration actions completed\n` +
+      `current (last confirmed): ${current ? `${current} ${label(current)}` : "unknown"}`);
+    for (const state of graph.states) {
+      await log(`\n  page ${state.id} ${label(state.id)}${state.id === current ? " (current)" : ""}`);
+      for (const status of ["pending", "blocked", "explored", "no_effect", "unreachable", "timeout", "disabled"] as const) {
+        const entrances = state.entrances.map((entrance, index) => ({ entrance, rank: index + 1 }))
+          .filter(({ entrance }) => entrance.status === status);
+        if (!entrances.length && status !== "pending" && status !== "blocked" && status !== "explored") continue;
+        await log(`    ${status === "explored" ? "done" : status} (${entrances.length}):` +
+          (entrances.length ? entrances.map(({ entrance, rank }) => `\n      ${rank}. ${JSON.stringify(entrance.name)}` +
+            `${entrance.note ? ` (${entrance.note})` : ""}`).join("") : " none"));
+      }
+    }
   };
   const knownScreens = (): KnownScreen[] => graph.screens.map((screen) => ({
     ...screen, variants: graph.states.filter((state) => state.screenId === screen.id).map((state) => state.variant),
@@ -92,6 +106,7 @@ export async function exploreApp(options: {
       const known = matches.find((state) => state.signature === evidence.signature) ?? matches[0];
       if (known) {
         known.steps.push(evidence.step);
+        await log(`step ${evidence.step}: ${label(known.id)} · known state · reusing queued entrances; no agent selection`);
         return { kind: "state", stateId: known.id, step: evidence.step };
       }
       const analysis = await analyst.analyze(evidence, knownScreens());
@@ -115,7 +130,7 @@ export async function exploreApp(options: {
       if (sameCondition) {
         sameCondition.steps.push(evidence.step);
         sameCondition.monetization.push(...newMonetization(sameCondition, analysis, evidence.step));
-        await log(`step ${evidence.step}: ${label(sameCondition.id)} · same screen and condition, different content`);
+        await log(`step ${evidence.step}: ${label(sameCondition.id)} · same screen and condition, different content · reusing queued entrances`);
         return { kind: "state", stateId: sameCondition.id, step: evidence.step };
       }
       let screenId = analysis.existingScreenId;
@@ -130,11 +145,9 @@ export async function exploreApp(options: {
       };
       state.monetization = newMonetization(state, analysis, evidence.step);
       graph.states.push(state);
-      await log(`step ${evidence.step}: ${label(state.id)} · new state · ${analysis.summary}`);
+      await log(`\nstep ${evidence.step}: ${label(state.id)} · new state\n  ${analysis.summary}`);
       if (state.monetization.length) await log(`  monetization: ${state.monetization.map((fact) => `${fact.kind}: ${fact.description}`).join(" · ")}`);
-      await log(`  entrances: ${state.entrances.map((entrance) => `${entrance.name}${entrance.locator.onScreen ? "" : " (below)"}` +
-        `${entrance.blockedReason ? ` (blocked: ${entrance.blockedReason})` : ""}`).join(" > ") || "none"}` +
-        ` · ${modelElements(evidence).length} of ${evidence.elements.length} actions shown${evidence.settled ? "" : " · screen kept changing"}`);
+      if (!evidence.settled) await log("  screen kept changing");
       return { kind: "state", stateId: state.id, step: evidence.step };
     }
   }
@@ -212,7 +225,7 @@ export async function exploreApp(options: {
   async function explore(entrance: Entrance): Promise<void> {
     const from = stateById(current!);
     const fromStep = from.steps.at(-1)!;
-    await log(`  → ${entrance.locator.kind === "type" ? `type ${JSON.stringify(entrance.text)} into` : "tap"} "${entrance.name}"${entrance.submit ? " and submit" : ""} · ${entrance.reason}`);
+    await log(`\n  → ${entrance.locator.kind === "type" ? `type ${JSON.stringify(entrance.text)} into` : "tap"} "${entrance.name}"${entrance.submit ? " and submit" : ""}\n    ${entrance.reason}`);
     const result = await attempt(entrance.locator, entrance);
     if (result.kind === "moved") {
       await log("  the screen changed before acting; looking again");
@@ -257,6 +270,9 @@ export async function exploreApp(options: {
       change: result.kind === "arrived" ? difference(graph.captures[sourceStep]!, graph.captures[result.step]!) : { added: [], removed: [], enabled: [] },
     };
     graph.edges.push(edge);
+    await log(`\n  completed ${edge.id}: ${label(from.id)} · ${edge.action.kind} ${JSON.stringify(edge.action.name)}` +
+      `${edge.action.text === null ? "" : ` text=${JSON.stringify(edge.action.text)}`}${edge.action.submit ? " submit" : ""}` +
+      ` → ${result.kind === "outside" ? result.packageName : label(result.stateId)} · ${edge.outcome}`);
     if (result.kind === "outside") {
       await log(`  result: left the app for ${result.packageName}; going back`);
       await returnToApp();
@@ -291,7 +307,7 @@ export async function exploreApp(options: {
   // the app takes another route. Reaching another state of the expected screen counts as staying on the route.
   async function travel(target: string): Promise<boolean> {
     const isThere = () => screenOf(current!) === target;
-    await log(`travel → ${screenName(target)}`);
+    await log(`\ntravel → ${screenName(target)}`);
     while (!isThere() && path.some((id) => screenOf(id) === target)) {
       spend();
       await device.press("BACK");
@@ -384,7 +400,7 @@ export async function exploreApp(options: {
     }
   } finally {
     const inputTokens = graph.usage.reduce((total, item) => total + item.inputTokens, 0);
-    await log(`Stopped: ${graph.status} (${graph.reason}) · ${graph.states.length} states, ${graph.edges.length} edges · ` +
+    await log(`\nStopped: ${graph.status} (${graph.reason}) · ${graph.states.length} states, ${graph.edges.length} edges · ` +
       `${graph.budget.used} actions · ${graph.usage.length} model calls · ${Math.round(inputTokens / 1000)}K input tokens`);
     await save();
   }
