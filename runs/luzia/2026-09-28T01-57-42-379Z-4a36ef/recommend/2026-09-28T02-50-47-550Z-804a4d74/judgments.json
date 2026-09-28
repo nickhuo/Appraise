@@ -1,0 +1,39 @@
+{
+  "runId": "2026-09-28T01-57-42-379Z-4a36ef",
+  "judgments": [
+    {
+      "proposalId": "reasoning-sample",
+      "revision": 0,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 5,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "The sample has clear value for a user returning to chat with a question (n2), and the entry point follows the observed Deep reasoning → paywall → chat path (n3-m1, e4, e5). The offer explains the one-answer exchange before the ad, preserves ordinary chat, and defines fulfillment and failure paths. Advanced reasoning is a paid benefit (n4-m2), but whether one ad-funded answer teaches its value or displaces a trial is unknown. A one-use grant and completed-ad verification are plausible implementation work, not observed capabilities.",
+      "feedback": "Validate incrementality against the unchanged paywall return, with a stop rule if trial starts or net revenue after reasoning costs decline. Grant the sample only after verified ad completion.",
+      "decision": "pass"
+    },
+    {
+      "proposalId": "alternate-app-draft",
+      "revision": 0,
+      "scores": {
+        "userValue": 4,
+        "contextFit": 4,
+        "businessFit": 3,
+        "feasibility": 3,
+        "evidence": 4
+      },
+      "hardFailures": [],
+      "rationale": "A second draft offers a useful comparison after the observed idea-to-generated-app flow (n6, e11, e12, n7). The proposed offer explains the ad exchange, preserves the original, allows dismissal, and defines fulfillment. Generating and displaying two drafts is plausible but unverified. Luzia+ prices and benefits are observed (n4), but no paid app-creation benefit is established; subscription effects, ad revenue, and generation costs remain unknown.",
+      "feedback": "Test whether alternate drafts improve opens, edits, or publishing enough to cover generation and storage costs, while monitoring subscription conversion and keeping the original editing path available.",
+      "decision": "pass"
+    }
+  ],
+  "approvedProposalIds": [
+    "reasoning-sample",
+    "alternate-app-draft"
+  ]
+}

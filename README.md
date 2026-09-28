@@ -30,7 +30,9 @@ The current implementation addresses the brief as follows. Artifact paths below 
 
 ### Sample coverage
 
-These are the latest exploration runs for each app, selected on September 27, 2026 (Pacific time). Run IDs use UTC timestamps. The three linked run directories are committed with their evidence; new runs remain gitignored. Janitor and AOL also include generated mocks, recommendations and flows. The latest Luzia run contains exploration artifacts only.
+These are the latest exploration runs for each app, selected on September 27, 2026 (Pacific time). Run IDs use UTC timestamps. The three linked run directories are committed with their evidence, generated mocks, recommendations and flows; new runs remain gitignored.
+
+Latest Luzia artifacts: [Replay](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/mock/bc6b9877be43b8ddea20739b121c0efa134983035e2f4e7a4121339dffb7b898/index.html) (13 states, 25 transitions, 31 frames) · [Present](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/flows/c2253eb363642fbd215d9cb1d8bfbe62772bd1549f38f9cdddc6f34d3f62178e/index.html) (2 approved proposals, 6 slides) · [Judgments](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/recommend/2026-09-28T02-50-47-550Z-804a4d74/judgments.json).
 
 
 | App     | Product model                                                                 | What the run captured                                                                               | Stop condition                                                           |

@@ -1,0 +1,1070 @@
+{
+  "runId": "2026-09-28T01-57-42-379Z-4a36ef",
+  "app": {
+    "key": "luzia",
+    "packageId": "co.thewordlab.luzia",
+    "version": "5.44.0"
+  },
+  "runStatus": "incomplete",
+  "stopReason": "action budget reached",
+  "states": [
+    {
+      "id": "n1",
+      "screen": "chats_home",
+      "variant": "default",
+      "summary": "The user can start a chat with Luzia or a character, resume a recent chat, or explore Services and Create.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Chats",
+        "Luzia",
+        "How can I help you today?",
+        "New chat",
+        "SEE MORE",
+        "Friend",
+        "Teacher",
+        "Elias",
+        "Custom Bestie",
+        "Make an AI expert tailored to you",
+        "Meet Toki, your virtual pet!",
+        "Create and take care of your own pet",
+        "Keep chatting",
+        "Our new chat",
+        "Today",
+        "Plan day with 3 priorities",
+        "Image creation request",
+        "Chat",
+        "Services",
+        "Create"
+      ],
+      "groups": [
+        {
+          "key": "1_luzia_how_can_i_help_you_today",
+          "description": "Luzia / How can I help you today?",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_friend",
+          "description": "Friend",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_create_new_create",
+          "description": "Create, New / Create",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "4_services",
+          "description": "Services",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "5_custom_bestie_make_an_ai_expert_",
+          "description": "Custom Bestie / Make an AI expert tailored to you",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "6_meet_toki_your_virtual_pet_creat",
+          "description": "Meet Toki, your virtual pet! / Create and take care of your ",
+          "isCore": true,
+          "coverage": "pending"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        0,
+        9,
+        11
+      ]
+    },
+    {
+      "id": "n2",
+      "screen": "luzia_chat",
+      "variant": "default",
+      "summary": "Luzia greets the user, who can ask a question or choose a suggested task.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Hello, I'm Luzia. Ask me for advice, answers, or let's talk about whatever you want. What would you like to talk about today?",
+        "Create an image",
+        "Edit a photo",
+        "Animate a photo",
+        "Help with math",
+        "Talk about life",
+        "Ask Luzia",
+        "Luzia is AI and can make mistakes. Verify important information.",
+        "Luzia",
+        "Our new chat"
+      ],
+      "groups": [
+        {
+          "key": "1_ask_luzia_message_input",
+          "description": "Ask Luzia message input",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_create_an_image",
+          "description": "Create an image",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_help_with_math",
+          "description": "Help with math",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "4_talk_about_life",
+          "description": "Talk about life",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "5_add_attachment",
+          "description": "add attachment",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "6_edit_a_photo",
+          "description": "Edit a photo",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "7_confirm_button",
+          "description": "Confirm button",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        1,
+        2,
+        5,
+        7,
+        8,
+        10
+      ]
+    },
+    {
+      "id": "n3",
+      "screen": "chat_attachments_sheet",
+      "variant": "default",
+      "summary": "The user can take or attach a photo, attach a file, or select Deep reasoning.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Take Photo",
+        "Attach Photos",
+        "Attach Files",
+        "Deep reasoning",
+        "Luzia",
+        "Smarter, deeper answers"
+      ],
+      "groups": [
+        {
+          "key": "1_deep_reasoning_luzia_smarter_dee",
+          "description": "Deep reasoning / Luzia / Smarter, deeper answers",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_attach_files",
+          "description": "Attach Files",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "3_attach_photos",
+          "description": "Attach Photos",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "4_take_photo",
+          "description": "Take Photo",
+          "isCore": true,
+          "coverage": "blocked"
+        }
+      ],
+      "monetization": [
+        {
+          "id": "n3-m1",
+          "kind": "entitlement",
+          "description": "Deep reasoning is shown with a Luzia + badge and the text “Smarter, deeper answers”.",
+          "basis": "observed"
+        }
+      ],
+      "observationSteps": [
+        3,
+        6
+      ]
+    },
+    {
+      "id": "n4",
+      "screen": "luzia_plus_paywall",
+      "variant": "default",
+      "summary": "The user can compare Luzia+ plans and benefits or close the paywall to return to the app.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Unlock Luzia+",
+        "2× images & longer chats",
+        "Advanced reasoning mode",
+        "Higher-quality image generations",
+        "Voice chat with Luzia",
+        "Create up to 5 AI characters",
+        "Exclusive tools",
+        "Weekly",
+        "$ 1.99",
+        "Monthly",
+        "$ 4.99",
+        "Most popular",
+        "Annual",
+        "$ 39.99",
+        "Start 3-day free Trial",
+        "Terms & Conditions"
+      ],
+      "groups": [
+        {
+          "key": "1_close",
+          "description": "close",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [
+        {
+          "id": "n4-m1",
+          "kind": "paywall",
+          "description": "Unlock Luzia+; Weekly $ 1.99, Monthly $ 4.99 (Most popular), Annual $ 39.99; Start 3-day free Trial.",
+          "basis": "observed"
+        },
+        {
+          "id": "n4-m2",
+          "kind": "entitlement",
+          "description": "2× images & longer chats; Advanced reasoning mode; Higher-quality image generations; Voice chat with Luzia; Create up to 5 AI characters; Exclusive tools.",
+          "basis": "observed"
+        }
+      ],
+      "observationSteps": [
+        4
+      ]
+    },
+    {
+      "id": "n5",
+      "screen": "apps_explore",
+      "variant": "default",
+      "summary": "You can browse featured apps, search for an app, or start creating one.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "My Apps",
+        "Explore",
+        "Recommended",
+        "CREATIVE",
+        "Photoedit",
+        "Edit your images",
+        "Luzia's Pick",
+        "Trending",
+        "1.9K",
+        "·",
+        "1.4K",
+        "#1",
+        "Anima",
+        "1.2K",
+        "970",
+        "#2",
+        "Stories",
+        "564",
+        "Tools",
+        "Create app",
+        "Chat",
+        "Services",
+        "Create"
+      ],
+      "groups": [
+        {
+          "key": "1_create_app",
+          "description": "Create app",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_photoedit_creative_edit_your_ima",
+          "description": "Photoedit / CREATIVE / Edit your images",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "3_anima_1_2k",
+          "description": "Anima / 1.2K / ·",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "4_stories_564",
+          "description": "Stories / 564 / ·",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "5_search",
+          "description": "Search",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "6_my_apps",
+          "description": "My Apps",
+          "isCore": true,
+          "coverage": "pending"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        12
+      ]
+    },
+    {
+      "id": "n6",
+      "screen": "create_app",
+      "variant": "default",
+      "summary": "A large idea field and two creative examples let the user begin making an app.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Create",
+        "Start with an idea or remix.",
+        "I want to make a chaotic mini-game where you tap to keep a llama from escaping.",
+        "Luzia is AI and can make mistakes. Creations are public once published.",
+        "Pixel Art Pad",
+        "Creative",
+        "Story Sparks"
+      ],
+      "groups": [
+        {
+          "key": "1_app_idea",
+          "description": "app idea",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_pixel_art_pad_creative",
+          "description": "Pixel Art Pad / Creative",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "3_story_sparks_creative",
+          "description": "Story Sparks / Creative",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "4_record_your_idea",
+          "description": "Record your idea",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "5_generate",
+          "description": "Generate",
+          "isCore": true,
+          "coverage": "pending"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        13,
+        14
+      ]
+    },
+    {
+      "id": "n7",
+      "screen": "apps_explore",
+      "variant": "generated_app_ready",
+      "summary": "Explore recommended and trending apps, search or view My Apps, and open the newly generated Color Flood app.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "My Apps",
+        "Explore",
+        "Recommended",
+        "CREATIVE",
+        "Photoedit",
+        "Edit your images",
+        "Luzia's Pick",
+        "Trending",
+        "1.9K",
+        "·",
+        "1.4K",
+        "#1",
+        "Anima",
+        "1.2K",
+        "970",
+        "#2",
+        "Stories",
+        "564",
+        "Tools",
+        "Generated: Color Flood",
+        "Tap to open",
+        "Open",
+        "Chat",
+        "Services",
+        "Create"
+      ],
+      "groups": [
+        {
+          "key": "1_generated_color_flood_tap_to_ope",
+          "description": "Generated: Color Flood / Tap to open / Open",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_my_apps",
+          "description": "My Apps",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_photoedit_creative_edit_your_ima",
+          "description": "Photoedit / CREATIVE / Edit your images",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "4_search",
+          "description": "Search",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "5_anima_1_2k",
+          "description": "Anima / 1.2K / ·",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "6_stories_564",
+          "description": "Stories / 564 / ·",
+          "isCore": true,
+          "coverage": "pending"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        15,
+        26
+      ]
+    },
+    {
+      "id": "n8",
+      "screen": "app_draft_detail",
+      "variant": "default",
+      "summary": "The Color Flood draft shows a puzzle introduction in its preview, with controls to edit the app or choose who can see it after publishing.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Color Flood",
+        "After publishing, who can see this?",
+        "Everyone",
+        "Publish",
+        "Edit"
+      ],
+      "groups": [
+        {
+          "key": "1_edit",
+          "description": "Edit",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_change_the_name_of_your_app",
+          "description": "Change the name of your app",
+          "isCore": true,
+          "coverage": "pending"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        16
+      ]
+    },
+    {
+      "id": "n9",
+      "screen": "edit_app_draft",
+      "variant": "default",
+      "summary": "A Color Flood draft preview appears above an empty idea field, with controls to play the preview or record an idea.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Edit",
+        "Color Flood",
+        "Describe your idea."
+      ],
+      "groups": [
+        {
+          "key": "1_describe_your_idea",
+          "description": "describe your idea",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_play_preview",
+          "description": "play preview",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_record_your_idea",
+          "description": "Record your idea",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "4_apply_changes",
+          "description": "Apply changes",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        17,
+        18,
+        24
+      ]
+    },
+    {
+      "id": "n10",
+      "screen": "color_flood_game",
+      "variant": "intro",
+      "summary": "An introduction explains the Color Flood rules; tap Start puzzle to enable the color controls and begin playing.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Color Flood",
+        "Color Flood controls",
+        "COLOR FLOOD",
+        "MOVES LEFT",
+        "17",
+        "1 of 64\ntiles flooded",
+        "Choose a flood color",
+        "Choose a new color to absorb matching neighboring tiles.",
+        "◉",
+        "Turn the whole board into one color before your moves run out. Start in the glowing top-left corner.",
+        "Start puzzle",
+        "Tap the button to begin"
+      ],
+      "groups": [
+        {
+          "key": "1_start_puzzle",
+          "description": "Start puzzle",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_flood_with_color_1",
+          "description": "Flood with color 1",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_flood_with_color_2",
+          "description": "Flood with color 2",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        20,
+        21,
+        22,
+        23,
+        29,
+        31
+      ]
+    },
+    {
+      "id": "n11",
+      "screen": "app_username_confirmation",
+      "variant": "default",
+      "summary": "The user can keep the displayed name or edit it before continuing, or close the sheet.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Choose how you appear on your apps",
+        "This name goes on every app you publish. Save it to continue.",
+        "@95076571",
+        "� 2–30 characters. Lowercase letters, numbers, . and _",
+        "Keep it",
+        "Save"
+      ],
+      "groups": [
+        {
+          "key": "1_close_sheet",
+          "description": "Close sheet",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        25
+      ]
+    },
+    {
+      "id": "n12",
+      "screen": "my_apps",
+      "variant": "changes_ready",
+      "summary": "The user can reopen recently used apps, continue the Color Flood draft, or review ready changes.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "My Apps",
+        "Explore",
+        "Recently used",
+        "Images",
+        "Yesterday",
+        "Photoedit",
+        "Saved",
+        "Published",
+        "Drafts",
+        "Color Flood",
+        "Input needed",
+        "Expires in 30 days",
+        "Changes ready",
+        "Tap to see what changed",
+        "Review",
+        "Chat",
+        "Services",
+        "Create"
+      ],
+      "groups": [
+        {
+          "key": "1_changes_ready_tap_to_see_what_ch",
+          "description": "Changes ready / Tap to see what changed / Review",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "2_color_flood_input_needed_expires",
+          "description": "Color Flood / Input needed / Expires in 30 days",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "3_images_yesterday",
+          "description": "Images / Yesterday",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "4_photoedit_yesterday",
+          "description": "Photoedit / Yesterday",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "5_services",
+          "description": "Services",
+          "isCore": true,
+          "coverage": "pending"
+        },
+        {
+          "key": "6_explore",
+          "description": "Explore",
+          "isCore": true,
+          "coverage": "pending"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        27
+      ]
+    },
+    {
+      "id": "n13",
+      "screen": "app_edit_review",
+      "variant": "default",
+      "summary": "The user can preview both versions of Color Flood, review the requested change, and save or discard it.",
+      "isCore": true,
+      "isModal": false,
+      "copy": [
+        "Edit",
+        "Before",
+        "Color Flood",
+        "After",
+        "What changed",
+        "Add a score and a restart button to the puzzle.",
+        "From your edited description",
+        "Discard changes",
+        "Save changes"
+      ],
+      "groups": [
+        {
+          "key": "1_save_changes",
+          "description": "Save changes",
+          "isCore": true,
+          "coverage": "blocked"
+        },
+        {
+          "key": "2_play_after_preview",
+          "description": "play after preview",
+          "isCore": true,
+          "coverage": "explored"
+        },
+        {
+          "key": "3_play_before_preview",
+          "description": "play before preview",
+          "isCore": true,
+          "coverage": "explored"
+        }
+      ],
+      "monetization": [],
+      "observationSteps": [
+        28,
+        30
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "id": "e1",
+      "from": "n1",
+      "to": "n2",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added User avatar / Luzia, Our new chat, Create an image, Edit a photo, Animate a photo, Help with math, Talk about life, Audio Button: Tap twice or hold to record. Slide up for hand",
+      "observationStep": 0
+    },
+    {
+      "id": "e2",
+      "from": "n2",
+      "to": "n2",
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "text": "How does a rainbow form?"
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Confirm button",
+      "observationStep": 1
+    },
+    {
+      "id": "e3",
+      "from": "n2",
+      "to": "n3",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Close sheet, Drag handle, Take Photo, Attach Photos, Attach Files, Deep reasoning / Luzia / Smarter, deeper answers",
+      "observationStep": 2
+    },
+    {
+      "id": "e4",
+      "from": "n3",
+      "to": "n4",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Weekly / $ 1.99, Monthly / $ 4.99, Annual / $ 39.99, Start 3-day free Trial, Terms & Conditions",
+      "observationStep": 3
+    },
+    {
+      "id": "e5",
+      "from": "n4",
+      "to": "n2",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added User avatar / Luzia, Our new chat, Confirm button",
+      "observationStep": 4
+    },
+    {
+      "id": "e6",
+      "from": "n2",
+      "to": "n3",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Close sheet, Drag handle, Take Photo, Attach Photos, Attach Files, Deep reasoning / Luzia / Smarter, deeper answers",
+      "observationStep": 5
+    },
+    {
+      "id": "e7",
+      "from": "n2",
+      "to": "n2",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added User avatar / Luzia / New, New, Audio Button: Tap twice or hold to record. Slide up for hand",
+      "observationStep": 7
+    },
+    {
+      "id": "e8",
+      "from": "n1",
+      "to": "n2",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added User avatar / Friend, Our new chat, Audio Button: Tap twice or hold to record. Slide up for hand",
+      "observationStep": 9
+    },
+    {
+      "id": "e9",
+      "from": "n1",
+      "to": "n5",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Search, My Apps, Photoedit / CREATIVE / Edit your images, Photoedit / 1.9K / ·, Anima / 1.2K / ·, Stories / 564 / ·, Create app, Tools, GTA VI, Chess 1000 ELO, Create",
+      "observationStep": 11
+    },
+    {
+      "id": "e10",
+      "from": "n5",
+      "to": "n6",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Record your idea, Pixel Art Pad / Creative, Story Sparks / Creative",
+      "observationStep": 12
+    },
+    {
+      "id": "e11",
+      "from": "n6",
+      "to": "n6",
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "text": "Make a simple puzzle game about matching colors."
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Generate",
+      "observationStep": 13
+    },
+    {
+      "id": "e12",
+      "from": "n6",
+      "to": "n7",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Search, My Apps, Photoedit / CREATIVE / Edit your images, Photoedit / 1.9K / ·, Anima / 1.2K / ·, Stories / 564 / ·, Generated: Color Flood / Tap to open / Open, Close, Tools, GTA VI, Chess 1000 ELO, Chat, Services, Create",
+      "observationStep": 14
+    },
+    {
+      "id": "e13",
+      "from": "n7",
+      "to": "n8",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Change the name of your app, Everyone, Publish, Edit",
+      "observationStep": 15
+    },
+    {
+      "id": "e14",
+      "from": "n8",
+      "to": "n9",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Delete draft, Record your idea",
+      "observationStep": 16
+    },
+    {
+      "id": "e15",
+      "from": "n9",
+      "to": "n9",
+      "action": {
+        "type": "type",
+        "targetRef": null,
+        "text": "Add a score and a restart button to the puzzle."
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "added Apply changes",
+      "observationStep": 17
+    },
+    {
+      "id": "e16",
+      "from": "n9",
+      "to": "n10",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Mute sound, Start puzzle, Flood with color 1, Flood with color 2, Flood with color 3, Flood with color 4, Flood with color 5",
+      "observationStep": 18
+    },
+    {
+      "id": "e17",
+      "from": "n10",
+      "to": "n10",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": "enabled Flood with color 1, Flood with color 2, Flood with color 3, Flood with color 4, Flood with color 5",
+      "observationStep": 20
+    },
+    {
+      "id": "e18",
+      "from": "n10",
+      "to": "n10",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": null,
+      "observationStep": 21
+    },
+    {
+      "id": "e19",
+      "from": "n10",
+      "to": "n10",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "changed_in_place",
+      "changeSummary": null,
+      "observationStep": 22
+    },
+    {
+      "id": "e20",
+      "from": "n9",
+      "to": "n11",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Close sheet, Drag handle, Keep it, Save",
+      "observationStep": 24
+    },
+    {
+      "id": "e21",
+      "from": "n11",
+      "to": "n7",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Search, My Apps, Photoedit / CREATIVE / Edit your images, Photoedit / 1.9K / ·, Anima / 1.2K / ·, Stories / 564 / ·, Changes ready / Tap to see what changed / Review, Close, Tools, GTA VI, Chess 1000 ELO, Chat, Services, Create",
+      "observationStep": 25
+    },
+    {
+      "id": "e22",
+      "from": "n7",
+      "to": "n12",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Notifications, Explore, Images / Yesterday, Photoedit / Yesterday, Saved, Published, Color Flood / Input needed / Expires in 30 days, Manage app",
+      "observationStep": 26
+    },
+    {
+      "id": "e23",
+      "from": "n12",
+      "to": "n13",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Discard changes, Save changes",
+      "observationStep": 27
+    },
+    {
+      "id": "e24",
+      "from": "n13",
+      "to": "n10",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Mute sound, Start puzzle, Flood with color 1, Flood with color 2, Flood with color 3, Flood with color 4, Flood with color 5, Restart puzzle",
+      "observationStep": 28
+    },
+    {
+      "id": "e25",
+      "from": "n13",
+      "to": "n10",
+      "action": {
+        "type": "tap",
+        "targetRef": null,
+        "text": null
+      },
+      "outcome": "navigated",
+      "changeSummary": "added Mute sound, Start puzzle, Flood with color 1, Flood with color 2, Flood with color 3, Flood with color 4, Flood with color 5",
+      "observationStep": 30
+    }
+  ],
+  "supplementalContext": null
+}

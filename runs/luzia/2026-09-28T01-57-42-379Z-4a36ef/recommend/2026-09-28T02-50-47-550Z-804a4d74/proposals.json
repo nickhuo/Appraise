@@ -1,0 +1,110 @@
+{
+  "runId": "2026-09-28T01-57-42-379Z-4a36ef",
+  "proposals": [
+    {
+      "id": "reasoning-sample",
+      "revision": 0,
+      "title": "One deep-reasoning answer after leaving the paywall",
+      "opportunityType": "product_change",
+      "entryStateId": "n4",
+      "resumeStateId": "n2",
+      "evidenceIds": [
+        "n2",
+        "n3",
+        "n3-m1",
+        "n4",
+        "n4-m2",
+        "e4",
+        "e5"
+      ],
+      "trigger": "After the user opens the Deep reasoning paywall and closes it, show a proposed optional offer back in the Luzia chat.",
+      "userNeed": "The user has a question but has not tried a deeper answer. One answer could demonstrate the benefit before they decide whether to subscribe.",
+      "eligibility": "Non-subscribers who close this paywall; at most one sample per account, subject to ad availability. Both restrictions are proposed.",
+      "productChange": "Add a one-use deep-reasoning answer after paywall dismissal. Do not change the paywall, its normal exit, or the paid entitlement.",
+      "reward": "One deep-reasoning answer to the user's next chat question, not continuing access to advanced reasoning or other Luzia+ benefits.",
+      "optIn": "On the returned chat, the user explicitly taps Watch ad and completes the ad before choosing to use the sample.",
+      "fulfillment": "Mark one subsequent question for deep reasoning, deliver its answer, and then remove the sample badge.",
+      "declinePath": "Dismiss the offer and continue the ordinary chat; the subscription offer remains available through its existing path.",
+      "failurePath": "If no ad is available or it is unfinished, grant nothing; keep the question available for normal chat and allow the user to leave.",
+      "businessImpact": "May improve understanding of Luzia+ and later subscription conversion, but could substitute for a trial or paid reasoning use. Normal chat stays available. Ad revenue and reasoning-compute costs are unknown.",
+      "validationPlan": "Randomize eligible paywall closers to this offer or the unchanged return to chat; compare trial starts, paid conversion, retention, normal-chat use, ad completion, and net revenue after compute costs.",
+      "assumptions": [
+        "The observed Deep reasoning control corresponds to the paywall's Advanced reasoning mode benefit.",
+        "A single deep-reasoning answer can be granted and accounted for separately.",
+        "Ad fill, reasoning cost, conversion, and net revenue are unknown."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Try one deeper answer",
+          "detail": "Watch an ad for one deep-reasoning answer."
+        },
+        "choice": {
+          "title": "Get one deeper answer?",
+          "detail": "Finish an ad for one chat answer.",
+          "accept": "Watch ad",
+          "decline": "Not now"
+        },
+        "inUse": {
+          "request": "How does a rainbow form?",
+          "response": "Your deep-reasoning answer is ready.",
+          "badge": "Ad sample"
+        },
+        "after": {
+          "title": "Sample used",
+          "detail": "Chat as usual; Luzia+ is still available."
+        }
+      }
+    },
+    {
+      "id": "alternate-app-draft",
+      "revision": 0,
+      "title": "An optional alternate draft for a generated app",
+      "opportunityType": "product_change",
+      "entryStateId": "n7",
+      "resumeStateId": "n7",
+      "evidenceIds": [
+        "n6",
+        "n7",
+        "e11",
+        "e12"
+      ],
+      "trigger": "After a user generates an app and sees its ready card on Explore, offer one optional alternate draft for that same idea.",
+      "userNeed": "The user wants to assess whether the generated app matches their idea. A second version offers a concrete comparison without replacing the first.",
+      "eligibility": "Users with a newly generated, accessible draft; at most one ad-funded alternate per draft. These are proposed rules.",
+      "productChange": "Add alternate-draft generation and a way to open either version. Keep the original draft and existing creation flow unchanged; no observed creation limit is asserted.",
+      "reward": "One additional generated draft based on the same app idea, with the original retained.",
+      "optIn": "The user opens the offer and explicitly chooses to watch and complete an ad before requesting the alternate.",
+      "fulfillment": "Generate the alternate draft, add it alongside the original, and let the user open either one.",
+      "declinePath": "Dismiss the offer and open or edit the original generated app as before.",
+      "failurePath": "If an ad is unavailable or unfinished, do not generate the alternate; leave the original ready card and normal controls usable.",
+      "businessImpact": "May increase useful creations and retention, but adds generation and storage costs and could displace ordinary editing. No paid app-creation benefit was observed, so subscription effects are uncertain; do not impose a new limit on normal creation.",
+      "validationPlan": "Randomize newly generated drafts to the offer or unchanged ready card; compare draft opens, edits, publishing, retention, subscription conversion, ad revenue, and incremental generation and storage costs.",
+      "assumptions": [
+        "The product can retain and display two drafts for one idea.",
+        "Alternate-generation grantability, pricing relationships, service costs, and business metrics are unknown.",
+        "No existing app-generation quota or paid creation entitlement was established by these observations."
+      ],
+      "screens": {
+        "entry": {
+          "title": "Try another take on Color Flood",
+          "detail": "Watch an ad for one alternate draft."
+        },
+        "choice": {
+          "title": "Make an alternate draft?",
+          "detail": "Finish an ad; keep your original draft.",
+          "accept": "Watch ad",
+          "decline": "Keep original"
+        },
+        "inUse": {
+          "request": "Make another Color Flood draft",
+          "response": "Alternate draft ready; original kept.",
+          "badge": "Ad draft"
+        },
+        "after": {
+          "title": "Alternate draft ready",
+          "detail": "Open either draft; creation works as before."
+        }
+      }
+    }
+  ]
+}

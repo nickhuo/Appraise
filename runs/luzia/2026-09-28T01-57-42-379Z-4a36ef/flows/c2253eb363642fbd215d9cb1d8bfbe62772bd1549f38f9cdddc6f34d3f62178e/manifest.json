@@ -1,0 +1,27 @@
+{
+  "app": "luzia",
+  "runId": "2026-09-28T01-57-42-379Z-4a36ef",
+  "approvedProposalIds": [
+    "reasoning-sample",
+    "alternate-app-draft"
+  ],
+  "sources": [
+    {
+      "proposalId": "reasoning-sample",
+      "revision": 0,
+      "entryStateId": "n4",
+      "resumeStateId": "n2",
+      "screenshot": "runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/captures/004.png"
+    },
+    {
+      "proposalId": "alternate-app-draft",
+      "revision": 0,
+      "entryStateId": "n7",
+      "resumeStateId": "n7",
+      "screenshot": "runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/captures/015.png"
+    }
+  ],
+  "slides": 6,
+  "recommendationDirectory": "runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/recommend/2026-09-28T02-50-47-550Z-804a4d74",
+  "mockDirectory": "runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/mock/bc6b9877be43b8ddea20739b121c0efa134983035e2f4e7a4121339dffb7b898"
+}
