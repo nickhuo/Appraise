@@ -6,6 +6,8 @@ Appraise connects this work for product, monetization, design and engineering te
 
 https://github.com/user-attachments/assets/364c7662-0cf7-4533-b16e-38dc7eeacf36
 
+The numbers on each button represent the agent's assessment of their importance in the user journey on the page, indicating a priority level.
+
 ## Deliverables
 
 The current implementation addresses the brief as follows. Artifact paths below are relative to `runs/<app>/<run-id>/`.
