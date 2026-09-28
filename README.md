@@ -30,7 +30,7 @@ The current implementation addresses the brief as follows. Artifact paths below 
 
 ### Sample coverage
 
-These are the latest exploration runs for each app, selected on September 27, 2026 (Pacific time). Run IDs use UTC timestamps. The three linked run directories are committed with their evidence, generated mocks, recommendations and flows; new runs remain gitignored.
+These are the latest exploration runs for each app, selected on September 27, 2026 (Pacific time). Run IDs use UTC timestamps. The four linked run directories are committed with their evidence. Janitor, Luzia and AOL include generated mocks, recommendations and flows; OOC contains only the emulator-blocking observation. New runs remain gitignored.
 
 Latest Luzia artifacts: [Replay](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/mock/bc6b9877be43b8ddea20739b121c0efa134983035e2f4e7a4121339dffb7b898/index.html) (13 states, 25 transitions, 31 frames) · [Present](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/flows/c2253eb363642fbd215d9cb1d8bfbe62772bd1549f38f9cdddc6f34d3f62178e/index.html) (2 approved proposals, 6 slides) · [Judgments](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/recommend/2026-09-28T02-50-47-550Z-804a4d74/judgments.json).
 
@@ -40,7 +40,9 @@ Latest Luzia artifacts: [Replay](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/mock
 | Janitor | [Model](runs/janitorai/v2-2026-09-27T14-14-59-732Z-e80625/product-model.json) | 11 states, 23 transitions: character discovery, detail, chat, persona selection and model settings. | Action budget reached; some steps also timed out.                        |
 | Luzia   | [Model](runs/luzia/2026-09-28T01-57-42-379Z-4a36ef/product-model.json)     | 13 states, 25 transitions: chat, the Plus paywall, app discovery, creation and draft editing.       | Action budget reached.                                                  |
 | AOL     | [Model](runs/aol/v2-2026-09-27T16-19-26-720Z-c5c396/product-model.json)       | 5 states, 9 transitions: home, articles, search and sign-in.                                        | Login, permission and unavailable-element blockers.                      |
-| OOC     | No model included.                                                            | Previous emulator attempts ended when the app closed itself.                                        | Core experience not explored.                                            |
+| OOC     | [Model](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/product-model.json) | 1 state, 0 transitions: the “Emulator Detected” dialog in version 0.1.20. | Emulator blocked; core experience not explored. |
+
+OOC's raw run status is `complete` because the explorer selected no entrances on the blocking dialog. This means its selected queue was empty, not that OOC's core experience was covered. The [screenshot](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.png) and [log](runs/ooc/2026-09-28T02-53-22-752Z-0901b2/explore.log) preserve the observed limitation.
 
 
 ## Setup

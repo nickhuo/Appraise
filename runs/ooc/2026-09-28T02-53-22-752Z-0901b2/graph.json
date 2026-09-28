@@ -1,0 +1,114 @@
+{
+ "runId": "2026-09-28T02-53-22-752Z-0901b2",
+ "app": {
+  "key": "ooc",
+  "packageId": "com.newai.ooc",
+  "version": "0.1.20"
+ },
+ "status": "complete",
+ "reason": "all entrances explored",
+ "startedAt": "2026-09-28T02:53:22.754Z",
+ "viewport": {
+  "width": 1080,
+  "height": 2400
+ },
+ "root": "n1",
+ "budget": {
+  "used": 0,
+  "max": 10
+ },
+ "screens": [
+  {
+   "id": "s1",
+   "name": "emulator_detected_dialog",
+   "description": "A blocking dialog says the app cannot run on an Android emulator and will close."
+  }
+ ],
+ "states": [
+  {
+   "id": "n1",
+   "screenId": "s1",
+   "variant": "default",
+   "summary": "The app reports “Emulator Detected” and offers an OK button that closes it.",
+   "activity": "yb.b",
+   "signature": "784f5c3401f2",
+   "actionKeys": [
+    "tap|TextView||OK(#)"
+   ],
+   "steps": [
+    0
+   ],
+   "elements": [
+    {
+     "number": 1,
+     "kind": "tap",
+     "name": "OK(9)",
+     "className": "TextView",
+     "resourceId": "",
+     "rect": {
+      "x": 797,
+      "y": 1470,
+      "width": 197,
+      "height": 105
+     },
+     "onScreen": true,
+     "enabled": true,
+     "repeated": false
+    }
+   ],
+   "entrances": [],
+   "monetization": []
+  }
+ ],
+ "edges": [],
+ "captures": {
+  "0": {
+   "step": 0,
+   "foreground": {
+    "packageName": "com.newai.ooc",
+    "activity": "yb.b"
+   },
+   "screenshot": "runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.png",
+   "marked": "runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000-marked.png",
+   "source": "runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.xml",
+   "elementTree": "runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.elements.json",
+   "elements": [
+    {
+     "number": 1,
+     "kind": "tap",
+     "name": "OK(9)",
+     "className": "TextView",
+     "resourceId": "",
+     "rect": {
+      "x": 797,
+      "y": 1470,
+      "width": 197,
+      "height": 105
+     },
+     "onScreen": true,
+     "enabled": true,
+     "repeated": false
+    }
+   ],
+   "texts": [
+    "Emulator Detected",
+    "Not allowed to launch the App on android emulator, app will get closed.",
+    "OK(9)"
+   ],
+   "loading": false,
+   "settled": true,
+   "signature": "784f5c3401f2",
+   "actionKeys": [
+    "tap|TextView||OK(#)"
+   ],
+   "scroll": null
+  }
+ },
+ "usage": [
+  {
+   "requests": 1,
+   "inputTokens": 3998,
+   "outputTokens": 150
+  }
+ ]
+}

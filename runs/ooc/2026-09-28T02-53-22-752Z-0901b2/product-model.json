@@ -1,0 +1,45 @@
+{
+  "runId": "2026-09-28T02-53-22-752Z-0901b2",
+  "runStatus": "complete",
+  "stopReason": "all entrances explored",
+  "app": {
+    "key": "ooc",
+    "packageId": "com.newai.ooc",
+    "version": "0.1.20"
+  },
+  "frontier": {
+    "pending": 0,
+    "blocked": 0
+  },
+  "states": [
+    {
+      "id": "n1",
+      "screen": "emulator_detected_dialog",
+      "variant": "default",
+      "summary": "The app reports “Emulator Detected” and offers an OK button that closes it.",
+      "isCore": true,
+      "isModal": false,
+      "viewport": {
+        "width": 1080,
+        "height": 2400
+      },
+      "visual": {
+        "copy": [
+          "Emulator Detected",
+          "Not allowed to launch the App on android emulator, app will get closed.",
+          "OK(9)"
+        ]
+      },
+      "groups": [],
+      "evidence": [
+        {
+          "step": 0,
+          "screenshot": "runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.png",
+          "elementTree": "runs/ooc/2026-09-28T02-53-22-752Z-0901b2/captures/000.elements.json"
+        }
+      ],
+      "monetization": []
+    }
+  ],
+  "transitions": []
+}

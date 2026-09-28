@@ -1,0 +1,14 @@
+[
+  {
+    "ref": "n1",
+    "type": "TextView",
+    "text": "OK(9)",
+    "coordinates": {
+      "x": 797,
+      "y": 1470,
+      "width": 197,
+      "height": 105
+    },
+    "enabled": true
+  }
+]

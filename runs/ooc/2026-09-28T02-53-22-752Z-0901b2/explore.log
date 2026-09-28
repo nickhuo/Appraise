@@ -1,0 +1,5 @@
+19:53:22 Exploring ooc (com.newai.ooc) · run 2026-09-28T02-53-22-752Z-0901b2 · up to 10 actions
+19:53:38 step 0: emulator_detected_dialog/default · new state · The app reports “Emulator Detected” and offers an OK button that closes it.
+19:53:38   entrances: none · 1 of 1 actions shown
+19:53:38 restart · at emulator_detected_dialog/default
+19:53:38 Stopped: complete (all entrances explored) · 1 states, 0 edges · 0 actions · 1 model calls · 4K input tokens
