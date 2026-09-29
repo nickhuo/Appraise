@@ -107,6 +107,7 @@ export async function runRecommend(options: {
     app: snapshot.app,
     runStatus: snapshot.runStatus,
     stopReason: snapshot.stopReason,
+    ...(snapshot.task && { task: snapshot.task }),
     states: snapshot.states.map((state) => ({
       id: state.id, screen: state.screen, variant: state.variant, summary: state.summary,
       isCore: state.isCore, isModal: state.isModal, copy: state.visual.copy,

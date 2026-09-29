@@ -29,7 +29,7 @@ function printProgress(message: string): void {
 }
 
 if (command !== "explore" && command !== "e2e" && command !== "recreate" && command !== "recommend" && command !== "present") {
-  console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--model <id>]\n       bun run src/cli.ts e2e --app <name> [--package <id>] [--device <id>] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
+  console.error("Usage: bun run src/cli.ts explore --app <name> [--package <id>] [--device <id>] [--max-actions 30] [--max-entrances <n>] [--task <goal>] [--model <id>]\n       bun run src/cli.ts e2e --app <name> [--package <id>] [--device <id>] [--max-entrances <n>] [--task <goal>] [--model <id>]\n       bun run src/cli.ts recreate --app <name> --run <run-id>\n       bun run src/cli.ts recommend --app <name> --run <run-id> [--context <file>] [--previous-dir <dir>] [--model <id>]\n       bun run src/cli.ts present --app <name> --run <run-id> --recommend-dir <dir> --mock-dir <dir> [--proposal-id <id>]");
   process.exit(2);
 }
 
@@ -39,6 +39,7 @@ if (command === "explore" || command === "e2e") {
     args: argumentsList,
     options: {
       app: { type: "string" }, package: { type: "string" }, device: { type: "string" }, model: { type: "string" },
+      "max-entrances": { type: "string" }, task: { type: "string" },
       ...(command === "explore" && { "max-actions": { type: "string" } }),
     },
     strict: true,
@@ -49,16 +50,23 @@ if (command === "explore" || command === "e2e") {
   if (!packageId) throw new Error(`No package ID for ${values.app}; pass --package`);
   const maxActions = command === "e2e" ? E2E_MAX_ACTIONS : Number(values["max-actions"] ?? 30);
   if (!Number.isInteger(maxActions) || maxActions < 1 || maxActions > 200) throw new Error("--max-actions must be an integer from 1 to 200");
+  const maxEntrances = values["max-entrances"] === undefined ? undefined : Number(values["max-entrances"]);
+  if (maxEntrances !== undefined && (!Number.isSafeInteger(maxEntrances) || maxEntrances < 1)) {
+    throw new Error("--max-entrances must be a positive safe integer");
+  }
+  const task = values.task?.trim();
+  if (task === "") throw new Error("--task must not be empty");
+  if (task && maxEntrances !== undefined && maxEntrances !== 1) throw new Error("--task requires --max-entrances 1");
   const device = await AndroidDevice.connect(values.device);
   if (command === "e2e") {
     const result = await runPipeline({
-      appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: printProgress,
+      appKey: values.app, packageId, device, projectRoot, maxActions, maxEntrances, task, model: values.model, log: printProgress,
     }).finally(() => device.close());
     console.log(`\n━━ Done ━━\n  mock   ${result.mock}\n  slides ${result.slides}`);
     process.exit(0);
   }
   const graph = await exploreApp({
-    appKey: values.app, packageId, device, projectRoot, maxActions, model: values.model, log: printProgress,
+    appKey: values.app, packageId, device, projectRoot, maxActions, maxEntrances, task, model: values.model, log: printProgress,
   }).finally(() => device.close());
   console.log(JSON.stringify({
     runId: graph.runId, status: graph.status, reason: graph.reason, states: graph.states.length, edges: graph.edges.length,

@@ -98,9 +98,16 @@ bun present --app luzia --run <run-id> \
 
 ## Options
 
+- `--task <goal>`: follow one user task, for `explore` and `e2e`. Automatically uses `--max-entrances 1`; an explicit different value is rejected. Reassesses the task after each action, including on known screens, and stops on observed completion, a blocker, or the action budget. The goal, history, and completion evidence are saved in `graph.json` and `product-model.json`.
+- `--max-entrances <n>`: maximum entrances selected per analysis, for `explore` and `e2e`; a positive integer, default `3` without a task. Setting it to `1` alone limits branching without defining a task or detecting its completion.
 - `--package <id>`: an app that is not in `apps.json`.
 - `--device <id>`: pick a device when more than one is online.
 - `--model <id>` or `OPENAI_MODEL`: change the model, for `explore` and `recommend`. The default is `gpt-6-sol`.
+
+
+```bash
+bun explore --app luzia --task "Ask a travel question and stop after receiving the complete answer" --max-actions 30
+```
 
 ## Checks
 

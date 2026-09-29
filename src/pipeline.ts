@@ -16,6 +16,8 @@ export async function runPipeline(options: {
   device: AndroidDevice;
   projectRoot: string;
   maxActions: number;
+  maxEntrances?: number;
+  task?: string;
   model?: string;
   log: (line: string) => void;
 }): Promise<{ runId: string; mock: string; slides: string }> {

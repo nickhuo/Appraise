@@ -2,7 +2,7 @@ import type { DeviceAction, MonetizationFact } from "./observation.ts";
 
 /**
  * Why an exploration run stopped; `stopReason` carries the specific cause.
- * - complete: every discovered core entrance group was explored, with none blocked.
+ * - complete: the requested task was completed, or every discovered core entrance group was explored.
  * - incomplete: a limit or navigation failure left groups pending.
  * - blocked: human input, the app, device, or environment prevented progress.
  * - failed: our side threw an error; the snapshot is only what was recorded before the crash.
@@ -25,6 +25,11 @@ export type ProductModel = {
   runStatus: RunStatus;
   stopReason: string;
   app: { key: string; packageId: string; version: string | null };
+  task?: {
+    goal: string;
+    history: string[];
+    assessments: Array<{ step: number; status: "in_progress" | "complete" | "blocked"; reason: string }>;
+  };
   frontier?: { pending: number; blocked: number };
   barriers?: Array<{ stateId: string; groupKey: string | null; reason: string; evidence: Evidence }>;
   states: Array<{
@@ -86,6 +91,9 @@ export function validateSnapshot(snapshot: ProductModel): void {
       }
       observedSteps.add(observation.step);
     }
+  }
+  for (const assessment of snapshot.task?.assessments ?? []) {
+    if (!observedSteps.has(assessment.step)) throw new Error("Task assessment has no supporting observation");
   }
   for (const transition of snapshot.transitions) {
     if (!stateIds.has(transition.from) || (transition.to !== null && !stateIds.has(transition.to)) ||

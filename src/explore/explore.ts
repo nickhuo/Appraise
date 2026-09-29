@@ -7,7 +7,7 @@ import type { Model } from "@openai/agents";
 import { Analyst, type KnownScreen } from "./analyst.ts";
 import type { AndroidDevice } from "./device.ts";
 import {
-  difference, type Entrance, type Graph, type GraphEdge, type GraphState, type Locator, locatorOf, namedElements, newMonetization, routeToScreen,
+  difference, type Entrance, type Graph, type GraphEdge, type Locator, locatorOf, namedElements, newMonetization, routeToScreen,
   toEntrances, toProductModel,
 } from "./graph.ts";
 import { capture, isSameState, peek, reveal } from "./page.ts";
@@ -33,10 +33,16 @@ export async function exploreApp(options: {
   device: AndroidDevice;
   projectRoot: string;
   maxActions: number;
+  maxEntrances?: number;
+  task?: string;
   model?: string | Model;
   log?: (line: string) => void;
 }): Promise<Graph> {
   const { device, packageId, projectRoot } = options;
+  const task = options.task?.trim();
+  if (task === "") throw new Error("task must not be empty");
+  const maxEntrances = options.maxEntrances ?? (task ? 1 : undefined);
+  if (task && maxEntrances !== 1) throw new Error("task requires maxEntrances to be 1");
   const runId = `${new Date().toISOString().replace(/[:.]/g, "-")}-${randomUUID().slice(0, 6)}`;
   const runDirectory = join(projectRoot, "runs", options.appKey, runId);
   const captureDirectory = join(runDirectory, "captures");
@@ -47,15 +53,17 @@ export async function exploreApp(options: {
     options.log?.(stamped);
     await appendFile(join(runDirectory, "explore.log"), `${stamped}\n`);
   };
-  const analyst = new Analyst(options.model ?? process.env.OPENAI_MODEL ?? "gpt-6-sol", options.appKey, projectRoot, log);
+  const analyst = new Analyst(options.model ?? process.env.OPENAI_MODEL ?? "gpt-6-sol", options.appKey, projectRoot, log, maxEntrances);
   const graph: Graph = {
     runId, app: { key: options.appKey, packageId, version: null }, status: "running", reason: "", startedAt: new Date().toISOString(),
     viewport: device.viewport,
+    ...(task && { task: { goal: task, history: [], assessments: [] } }),
     root: null, budget: { used: 0, max: options.maxActions }, screens: [], states: [], edges: [], captures: {}, usage: analyst.usage,
   };
   let step = 0;
   let current: string | null = null;
   let path: string[] = [];
+  let taskEntrance: Entrance | undefined;
 
   const stateById = (id: string) => graph.states.find((state) => state.id === id)!;
   const screenOf = (id: string) => stateById(id).screenId;
@@ -104,13 +112,14 @@ export async function exploreApp(options: {
       graph.captures[evidence.step] = evidence;
       const matches = graph.states.filter((state) => state.activity === evidence.foreground.activity && isSameState(state, evidence));
       const known = matches.find((state) => state.signature === evidence.signature) ?? matches[0];
-      if (known) {
+      if (known && !task) {
         known.steps.push(evidence.step);
         await log(`step ${evidence.step}: ${label(known.id)} · known state · reusing queued entrances; no agent selection`);
         return { kind: "state", stateId: known.id, step: evidence.step };
       }
-      const analysis = await analyst.analyze(evidence, knownScreens());
-      if (analysis.isLoading && Date.now() < deadline) {
+      const analysis = await analyst.analyze(evidence, knownScreens(), graph.task);
+      const isLoading = analysis.isLoading || (Boolean(task) && evidence.loading);
+      if (isLoading && Date.now() < deadline) {
         // Waiting is cheap without the model: poll until what is visible stops changing (a streamed reply ended).
         await log(`step ${evidence.step}: still loading (${analysis.summary}); waiting for the screen to stop changing`);
         delete graph.captures[evidence.step];
@@ -123,29 +132,40 @@ export async function exploreApp(options: {
         }
         continue;
       }
-      if (analysis.isLoading) return { kind: "timeout" };
+      if (isLoading) return { kind: "timeout" };
       // Action names carry content (another character, another article), so the analyst decides when a new
       // capture is a known screen in a known condition; the action sets alone cannot.
       const sameCondition = graph.states.find((state) => state.screenId === analysis.existingScreenId && state.variant === analysis.variantName);
-      if (sameCondition) {
-        sameCondition.steps.push(evidence.step);
-        sameCondition.monetization.push(...newMonetization(sameCondition, analysis, evidence.step));
-        await log(`step ${evidence.step}: ${label(sameCondition.id)} · same screen and condition, different content · reusing queued entrances`);
-        return { kind: "state", stateId: sameCondition.id, step: evidence.step };
+      let state = sameCondition;
+      if (state) {
+        state.steps.push(evidence.step);
+        state.monetization.push(...newMonetization(state, analysis, evidence.step));
+        if (!task) {
+          await log(`step ${evidence.step}: ${label(state.id)} · same screen and condition, different content · reusing queued entrances`);
+          return { kind: "state", stateId: state.id, step: evidence.step };
+        }
+        state.entrances.push(...toEntrances(evidence, analysis, state.entrances.length));
+      } else {
+        let screenId = analysis.existingScreenId;
+        if (!screenId) {
+          screenId = `s${graph.screens.length + 1}`;
+          graph.screens.push({ id: screenId, name: analysis.screenName, description: analysis.screenDescription });
+        }
+        state = {
+          id: `n${graph.states.length + 1}`, screenId, variant: analysis.variantName, summary: analysis.summary,
+          activity: evidence.foreground.activity, signature: evidence.signature, actionKeys: evidence.actionKeys, steps: [evidence.step],
+          elements: namedElements(evidence, analysis), entrances: toEntrances(evidence, analysis, 0), monetization: [],
+        };
+        state.monetization = newMonetization(state, analysis, evidence.step);
+        graph.states.push(state);
       }
-      let screenId = analysis.existingScreenId;
-      if (!screenId) {
-        screenId = `s${graph.screens.length + 1}`;
-        graph.screens.push({ id: screenId, name: analysis.screenName, description: analysis.screenDescription });
+      if (graph.task) {
+        graph.task.assessments.push({ step: evidence.step, ...analysis.task! });
+        graph.task.history.push(`step ${evidence.step}: ${analysis.summary}`);
+        taskEntrance = state.entrances.find((entrance) => entrance.step === evidence.step);
+        await log(`  task ${analysis.task!.status}: ${analysis.task!.reason}`);
       }
-      const state: GraphState = {
-        id: `n${graph.states.length + 1}`, screenId, variant: analysis.variantName, summary: analysis.summary,
-        activity: evidence.foreground.activity, signature: evidence.signature, actionKeys: evidence.actionKeys, steps: [evidence.step],
-        elements: namedElements(evidence, analysis), entrances: toEntrances(evidence, analysis, 0), monetization: [],
-      };
-      state.monetization = newMonetization(state, analysis, evidence.step);
-      graph.states.push(state);
-      await log(`\nstep ${evidence.step}: ${label(state.id)} · new state\n  ${analysis.summary}`);
+      await log(`\nstep ${evidence.step}: ${label(state.id)} · ${sameCondition ? "known" : "new"} state\n  ${analysis.summary}`);
       if (state.monetization.length) await log(`  monetization: ${state.monetization.map((fact) => `${fact.kind}: ${fact.description}`).join(" · ")}`);
       if (!evidence.settled) await log("  screen kept changing");
       return { kind: "state", stateId: state.id, step: evidence.step };
@@ -173,6 +193,7 @@ export async function exploreApp(options: {
     // Edge-to-edge layouts extend buttons under the system bars; aim at the part the app receives.
     const y = (Math.max(element.rect.y, device.appArea.top) + Math.min(element.rect.y + element.rect.height, device.appArea.bottom)) / 2;
     spend();
+    graph.task?.history.push(`Action ${graph.budget.used}: ${locator.kind} ${JSON.stringify(locator.name)} text=${JSON.stringify(action.text)} submit=${action.submit}`);
     await device.tap(x, y);
     if (locator.kind === "type" && action.text) {
       await Bun.sleep(500);
@@ -195,6 +216,7 @@ export async function exploreApp(options: {
 
   async function returnToApp(): Promise<void> {
     spend();
+    graph.task?.history.push("Return to the app using system Back.");
     await device.press("BACK");
     await Bun.sleep(POST_ACTION_MS);
     const arrival = await observe();
@@ -211,6 +233,7 @@ export async function exploreApp(options: {
   }
 
   async function restart(): Promise<void> {
+    graph.task?.history.push("Launch the app from its current saved state.");
     await device.terminate(packageId);
     await device.launch(packageId);
     await Bun.sleep(POST_ACTION_MS * 2);
@@ -228,6 +251,11 @@ export async function exploreApp(options: {
     await log(`\n  → ${entrance.locator.kind === "type" ? `type ${JSON.stringify(entrance.text)} into` : "tap"} "${entrance.name}"${entrance.submit ? " and submit" : ""}\n    ${entrance.reason}`);
     const result = await attempt(entrance.locator, entrance);
     if (result.kind === "moved") {
+      if (task) {
+        entrance.status = "unreachable";
+        entrance.note = "the screen changed before acting";
+        graph.task!.history.push(entrance.note);
+      }
       await log("  the screen changed before acting; looking again");
       const arrival = await observe();
       if (arrival.kind === "state") arrive(arrival.stateId, arrival.stateId === from.id ? "back" : "navigated");
@@ -235,6 +263,7 @@ export async function exploreApp(options: {
       return;
     }
     entrance.attempts++;
+    graph.task?.history.push(`Result of ${JSON.stringify(entrance.name)}: ${result.kind}`);
     if (result.kind === "disabled" || result.kind === "timeout") {
       entrance.status = result.kind;
       await log(`  result: ${entrance.status}`);
@@ -245,7 +274,7 @@ export async function exploreApp(options: {
     // with no effect hit the wrong one: either way, let the analyst point at the element with the same intent here.
     if (result.kind === "missing" || result.kind === "no_effect") {
       const alternative = entrance.attempts <= MAX_ALTERNATIVES
-        ? await analyst.alternative(graph.captures[fromStep]!, { ...entrance, kind: entrance.locator.kind }) : null;
+        ? await analyst.alternative(graph.captures[fromStep]!, { ...entrance, kind: entrance.locator.kind }, graph.task) : null;
       const element = graph.captures[fromStep]!.elements.find((item) => item.number === alternative);
       const problem = result.kind === "missing" ? "not on this page" : "no visible effect";
       if (element) {
@@ -283,7 +312,7 @@ export async function exploreApp(options: {
     arrive(result.stateId, "navigated");
     // Typing can reveal controls, like a send button, that did not exist when the entrances were chosen. Only typing:
     // opening another article in place is new content on the same state, and following its links never ends.
-    if (edge.action.kind === "type" && edge.outcome === "changed_in_place" && edge.change.added.length > 0) {
+    if (!task && edge.action.kind === "type" && edge.outcome === "changed_in_place" && edge.change.added.length > 0) {
       const evidence = graph.captures[result.step]!;
       const followUps = toEntrances(evidence, await analyst.analyze(evidence, knownScreens()), from.entrances.length)
         .filter((entrance) => edge.change.added.includes(entrance.name) && !from.entrances.some((item) => item.name === entrance.name));
@@ -346,7 +375,8 @@ export async function exploreApp(options: {
   }
 
   try {
-    await log(`Exploring ${options.appKey} (${packageId}) · run ${runId} · up to ${options.maxActions} actions`);
+    await log(`Exploring ${options.appKey} (${packageId}) · run ${runId} · up to ${options.maxActions} actions · up to ${analyst.maxEntrances} entrances per analysis`);
+    if (task) await log(`Task: ${task}`);
     await restart();
     await save();
     let recoveries = 0;
@@ -361,6 +391,23 @@ export async function exploreApp(options: {
       await restart();
     };
     for (;;) {
+      if (graph.task) {
+        const assessment = graph.task.assessments.at(-1)!;
+        if (assessment.status !== "in_progress") {
+          graph.status = assessment.status;
+          graph.reason = `task ${assessment.status}: ${assessment.reason}`;
+          break;
+        }
+        if (!taskEntrance || taskEntrance.status !== "pending") {
+          graph.status = "blocked";
+          graph.reason = `task blocked: ${taskEntrance?.note ?? taskEntrance?.status ?? "no valid next action"}`;
+          break;
+        }
+        const entrance = taskEntrance;
+        await explore(entrance).catch((error: unknown) => recover(error, [entrance]));
+        await save();
+        continue;
+      }
       const pending = stateById(current!).entrances.find((entrance) => entrance.status === "pending") ?? pendingOn(screenOf(current!));
       if (pending) {
         await explore(pending).catch((error: unknown) => recover(error, [pending]));

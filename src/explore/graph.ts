@@ -66,6 +66,7 @@ export type Graph = {
   edges: GraphEdge[];
   captures: Record<string, Capture>;
   usage: Usage[];
+  task?: ProductModel["task"];
 };
 
 /** The analysis's monetization facts that the state does not already record. */
@@ -142,6 +143,7 @@ export function toProductModel(graph: Graph): ProductModel {
     runStatus: graph.status === "running" ? "incomplete" : graph.status,
     stopReason: graph.reason || "running",
     app: graph.app,
+    ...(graph.task && { task: graph.task }),
     frontier: {
       pending: graph.states.flatMap((state) => state.entrances).filter((entrance) => entrance.status === "pending").length,
       blocked: graph.states.flatMap((state) => state.entrances).filter((entrance) => !["pending", "explored"].includes(entrance.status)).length,

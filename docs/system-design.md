@@ -93,7 +93,7 @@ Code first checks whether the observation matches a known State. If it does, the
 - **A matching control list** with each element's number, action, label, Android details and status. Repeated cards are sampled to keep the list manageable.
 - **A catalog of known Screens and Variants** to distinguish familiar screens and conditions from new ones.
 
-For a new State, the agent proposes up to ++six++ core entrances in priority order, including targets, reasons, input text and execution restrictions. If it identifies a known State, the explorer keeps that State's existing entrances.
+For a new State, the agent proposes up to three core entrances by default (`--max-entrances` controls the limit per analysis) in priority order, including targets, reasons, input text and execution restrictions. If it identifies a known State, the explorer keeps that State's existing entrances.
 
 ### 2. Execute an action and observe the result
 
@@ -126,7 +126,9 @@ The navigation path acts as a stack for **depth-first exploration**. Completed e
 
 ### 4. Stop and record the outcome
 
-The run ends when all discovered entrances have been explored, the remaining work is blocked, the action budget is exhausted, or an unrecovered error occurs. It records the run status and reason for stopping alongside the observed journey.
+With `--task`, the explorer selects one next action and reassesses the task on every settled observation, even on a known State. It does not backtrack through the exploration queue. Task completion requires a model assessment grounded in the observed result; loading is waited out before accepting that assessment. A blocker or action budget also stops the task. The task goal, history, and assessments with observation steps are retained in both graph and product model.
+
+Without `--task`, the run ends when all discovered entrances have been explored, the remaining work is blocked, the action budget is exhausted, or an unrecovered error occurs. It records the run status and reason for stopping alongside the observed journey.
 
 Completing exploration does not guarantee full-app coverage or successful completion of a user's task.
 
