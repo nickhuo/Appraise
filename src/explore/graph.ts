@@ -34,7 +34,6 @@ export type GraphState = {
   signature: string;
   actionKeys: string[];
   steps: number[];
-  elements: PageElement[];
   entrances: Entrance[];
   // Facts seen on any capture the analyst read for this state; different content can show different ones.
   monetization: Array<MonetizationFact & { step: number }>;
@@ -75,21 +74,17 @@ export function newMonetization(state: Pick<GraphState, "monetization">, analysi
   return analysis.monetization.filter((fact) => !known.has(fact.description)).map((fact) => ({ ...fact, basis: "observed" as const, step }));
 }
 
-export function namedElements(evidence: Capture, analysis: Analysis): PageElement[] {
-  const names = new Map(analysis.elementNames.map((item) => [item.number, item.name]));
-  return evidence.elements.map((element) => ({ ...element, name: element.name || names.get(element.number) || "" }));
-}
-
 // The locator keeps the accessibility name so the element can be found again; the display name may come from the analyst.
 export function toEntrances(evidence: Capture, analysis: Analysis, offset: number): Entrance[] {
-  const elements = namedElements(evidence, analysis);
+  const names = new Map(analysis.elementNames.map((item) => [item.number, item.name]));
   return analysis.entrances.map((entrance, index) => {
-    const name = elements.find((item) => item.number === entrance.number)!.name || `element ${entrance.number}`;
+    const locator = locatorOf(evidence, entrance.number);
+    const name = locator.name || names.get(entrance.number) || `element ${entrance.number}`;
     const blockedReason = entrance.blockedReason ?? (PAYMENT.test(name) ? "payment" : ACCOUNT_CHANGE.test(name) ? "account_change" : null);
     return {
       key: `${offset + index + 1}_${name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").slice(0, 32) || "element"}`,
       name, reason: entrance.reason, text: entrance.text, submit: entrance.submit, blockedReason,
-      locator: locatorOf(evidence, entrance.number), step: evidence.step,
+      locator, step: evidence.step,
       status: blockedReason ? "blocked" : "pending", note: blockedReason, attempts: 0,
     };
   });
@@ -156,8 +151,7 @@ export function toProductModel(graph: Graph): ProductModel {
         viewport: graph.viewport,
         visual: { copy: first.texts.slice(0, 40) },
         groups: state.entrances.map((entrance) => ({
-          key: entrance.key, description: entrance.name, isCore: true, explored: entrance.status === "explored",
-          coverage: entrance.status === "pending" ? "pending" as const : entrance.status === "explored" ? "explored" as const : "blocked" as const,
+          key: entrance.key, description: entrance.name, isCore: true,
           blockReason: ["pending", "explored"].includes(entrance.status) ? undefined : entrance.note ?? entrance.status,
           status: entrance.status,
           location: { step: entrance.step, bounds: entrance.locator.rect, onScreen: entrance.locator.onScreen },

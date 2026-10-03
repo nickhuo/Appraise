@@ -7,7 +7,7 @@ import type { Model } from "@openai/agents";
 import { Analyst, type KnownScreen } from "./analyst.ts";
 import type { AndroidDevice } from "./device.ts";
 import {
-  difference, type Entrance, type Graph, type GraphEdge, type Locator, locatorOf, namedElements, newMonetization, routeToScreen,
+  difference, type Entrance, type Graph, type GraphEdge, type Locator, locatorOf, newMonetization, routeToScreen,
   toEntrances, toProductModel,
 } from "./graph.ts";
 import { capture, isSameState, peek, reveal } from "./page.ts";
@@ -154,7 +154,7 @@ export async function exploreApp(options: {
         state = {
           id: `n${graph.states.length + 1}`, screenId, variant: analysis.variantName, summary: analysis.summary,
           activity: evidence.foreground.activity, signature: evidence.signature, actionKeys: evidence.actionKeys, steps: [evidence.step],
-          elements: namedElements(evidence, analysis), entrances: toEntrances(evidence, analysis, 0), monetization: [],
+          entrances: toEntrances(evidence, analysis, 0), monetization: [],
         };
         state.monetization = newMonetization(state, analysis, evidence.step);
         graph.states.push(state);

@@ -45,11 +45,12 @@ export type ProductModel = {
       key: string;
       description: string;
       isCore: boolean;
-      explored: boolean;
+      status?: EntranceStatus;
+      // Legacy snapshots store explored and coverage; new exports only store status.
+      explored?: boolean;
       coverage?: "pending" | "explored" | "blocked" | "covered" | "skipped" | "deferred";
       coveredBy?: string | null;
       blockReason?: string | null;
-      status?: EntranceStatus;
       location?: { step: number; bounds: { x: number; y: number; width: number; height: number }; onScreen: boolean };
     }>;
     evidence: Evidence[];

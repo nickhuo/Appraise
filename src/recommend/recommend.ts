@@ -112,7 +112,11 @@ export async function runRecommend(options: {
       id: state.id, screen: state.screen, variant: state.variant, summary: state.summary,
       isCore: state.isCore, isModal: state.isModal, copy: state.visual.copy,
       groups: state.groups.map((group) => ({
-        key: group.key, description: group.description, isCore: group.isCore, coverage: group.coverage,
+        key: group.key, description: group.description, isCore: group.isCore,
+        // Preserve legacy coverage, including its absence, in model input.
+        coverage: group.explored !== undefined || group.coverage !== undefined || group.status === undefined
+          ? group.coverage
+          : group.status === "pending" ? "pending" : group.status === "explored" ? "explored" : "blocked",
       })),
       monetization: state.monetization,
       observationSteps: state.evidence.map((evidence) => evidence.step),
